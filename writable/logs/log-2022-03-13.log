@@ -1,0 +1,2 @@
+ERROR - 2022-03-13 05:56:34 --> Unknown table 'siejaku.db_customers'
+ERROR - 2022-03-13 05:56:34 --> Error connecting to the database: Class 'SQLite3' not found

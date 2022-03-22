@@ -1,0 +1,196 @@
+CRITICAL - 2022-03-15 00:09:37 --> Class 'App\Controllers\CustomerModel' not found
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->index()
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-03-15 00:09:47 --> Undefined variable: Customers
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Stock.php(15): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 15, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->index()
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-15 00:14:25 --> Undefined variable: telp12
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 65, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:15:26 --> Undefined variable: telp12
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 65, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:15:35 --> Undefined variable: telp12
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 65, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:16:50 --> Undefined variable: telp12
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 66, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:17:01 --> Undefined variable: telp12
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 66, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:18:11 --> Undefined variable: telp12
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 69, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:18:29 --> Undefined variable: telp12
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 71, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:18:39 --> Undefined variable: telp12
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 71, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:18:47 --> Undefined variable: telp12
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 71, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:19:05 --> syntax error, unexpected ';', expecting ')'
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-15 00:19:09 --> Undefined offset: 1
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(71): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 71, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:20:08 --> Undefined variable: ntelp1
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 59, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:20:26 --> Undefined variable: ntelp1
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 59, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:20:34 --> Undefined variable: ntelp1
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 59, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:21:35 --> Undefined variable: telp13
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 67, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-15 00:40:29 --> syntax error, unexpected '*'
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-15 00:40:36 --> Undefined variable: wa12
+#0 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Views\v_customer.php(97): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 97, Array)
+#1 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_customer', Array, true)
+#4 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\app\Controllers\Customers.php(24): view('v_customer', Array)
+#5 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Customers->index()
+#6 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+#7 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\SIE_PENJUALAN_KAYU\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
