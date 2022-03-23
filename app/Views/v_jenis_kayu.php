@@ -37,9 +37,8 @@
                         <thead>
                         <tr>
                           <th>No</th>
-                          <th>#Customers</th>
-                          <th>Nomer Telp/Hp/WA</th>
-                          <th>Alamat</th>
+                          <th>#id_Jenis_Kayu</th> 
+                          <th>Nama Jenis Kayu</th>
                           <th>Tanggal<br>Pembuatan</th>
                           <th>Opsi</th> 
                         </tr>
