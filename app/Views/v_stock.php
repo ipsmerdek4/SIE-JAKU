@@ -10,7 +10,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url(); ?>">Home</a></li> 
-              <li class="breadcrumb-item active">Stock</li>
+              <li class="breadcrumb-item active">Persediaan Kayu</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -24,7 +24,7 @@
         <div class="container"> 
             <div class="card card-dark ">
               <div class="card-header">
-                <h3 class="card-title text-lg"> <b>Data Stock</b> </h3>
+                <h3 class="card-title text-lg"> <b>Data Persediaan Kayu</b> </h3>
               </div>
 
 

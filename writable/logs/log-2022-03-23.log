@@ -9,3 +9,12 @@ CRITICAL - 2022-03-23 00:55:58 --> Undefined variable: datacustomers
 #7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #9 {main}
+ERROR - 2022-03-23 08:17:08 --> No database selected
+CRITICAL - 2022-03-23 08:17:08 --> Call to a member function getFirstRow() on bool
+#0 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/BaseModel.php(622): CodeIgniter\Model->doFirst()
+#1 /opt/lampp/htdocs/sie-jaku/app/Controllers/Login.php(33): CodeIgniter\BaseModel->first()
+#2 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Login->process()
+#3 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 /opt/lampp/htdocs/sie-jaku/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

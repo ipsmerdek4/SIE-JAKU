@@ -106,7 +106,7 @@
       }elseif ($menu == '3a') {
         $mactive3 = 'font-weight-bold active';
       }elseif ($menu == '4a') {
-        $mactive3 = 'font-weight-bold active';
+        $mactive4 = 'font-weight-bold active';
       }
 
       
@@ -122,45 +122,24 @@
           </li>
           <li class="nav-item">
             <a href="<?=base_url('customers') ?>" class="nav-link <?=$mactive2?>">Customer</a>
-          </li>
-          <li class="nav-item">
-            <a href="<?=base_url('stock') ?>" class="nav-link <?=$mactive3?>" >Stock</a>
-          </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link <?=$mactive4?>">Transaksi</a>
-          </li>
-          <!--li class="nav-item dropdown">
-            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
+          </li> 
+          <li class="nav-item dropdown" >
+            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle <?=$mactive3?>">Persedian</a>
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              <li><a href="#" class="dropdown-item">Some action </a></li>
-              <li><a href="#" class="dropdown-item">Some other action</a></li>
+              <li><a href="<?=base_url('jenis-kayu') ?>" class="dropdown-item">Jenis Kayu </a></li>
+              <li><a href="<?=base_url('tipe-kayu') ?>" class="dropdown-item">Tipe Kayu</a></li>
+              <li><a href="<?=base_url('ukuran-kayu') ?>" class="dropdown-item">Ukuran Kayu</a></li>
 
               <li class="dropdown-divider"></li>
+              <li><a href="<?=base_url('persediaan-kayu') ?>" class="dropdown-item">Persediaan Kayu</a></li>
 
-              <!-- Level two dropdown-->
-              <!--li class="dropdown-submenu dropdown-hover">
-                <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Hover for action</a>
-                <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
-                  <li>
-                    <a tabindex="-1" href="#" class="dropdown-item">level 2</a>
-                  </li>
-
-                  <!-- Level three dropdown-->
-                  <!--li class="dropdown-submenu">
-                    <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
-                    <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
-                      <li><a href="#" class="dropdown-item">3rd level</a></li>
-                      <li><a href="#" class="dropdown-item">3rd level</a></li>
-                    </ul>
-                  </li>
-                  <!-- End Level three -->
-
-                  <!--li><a href="#" class="dropdown-item">level 2</a></li>
-                  <li><a href="#" class="dropdown-item">level 2</a></li>
-                </ul>
-              </li>
-              <!-- End Level two -->
             </ul>
+          </li>
+
+
+
+          <li class="nav-item">
+            <a href="#" class="nav-link <?=$mactive4?>">Transaksi</a>
           </li>
         </ul>
  
