@@ -481,7 +481,57 @@
 
       <?php  
       }elseif ($batascss == 'c4') {
-        $btsjv = '';
+        $btsjv = '
+          <!-- DataTables  & Plugins -->
+          <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+          <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+          <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+          <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+          <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+          <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+          <script src="../../plugins/jszip/jszip.min.js"></script>
+          <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+          <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+          <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+          <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+          <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>  
+      '; 
+      ?>
+
+        <script>
+        $(document).ready(function() {
+
+                $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
+                var table =$('#vjenis_kayu').DataTable( { 
+                    buttons: [
+                        {
+                          text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
+                          className: ' btn-primary',
+                          action:     function ( e, dt, node, config ) {
+                                        window.location.href = '/jenis-kayu';
+                                      }
+                        }
+                    ],
+                    order: [[3, "asc" ]],
+                    responsive: true, 
+                    lengthChange: false, 
+                    autoWidth: false,   
+                } );
+                table.on( 'order.dt search.dt', function () {
+                  table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+                        cell.innerHTML = i+1;
+                    } );
+                } ).draw();
+                table.buttons().container().appendTo("#vjenis_kayu_wrapper .col-md-6:eq(0)"); 
+
+        } );
+
+        </script>
+
+
+
+      <?php 
+      }elseif ($batascss == 'c4') {
       }
  
       ?>

@@ -33,6 +33,22 @@
                <!-- /.card-header -->
                <div class="card-body">  
 
+                    <table id="vjenis_kayu" class="table table-bordered table-striped display">
+                        <thead>
+                        <tr>
+                          <th>No</th>
+                          <th>#Customers</th>
+                          <th>Nomer Telp/Hp/WA</th>
+                          <th>Alamat</th>
+                          <th>Tanggal<br>Pembuatan</th>
+                          <th>Opsi</th> 
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+
 
                </div>
             </div>
