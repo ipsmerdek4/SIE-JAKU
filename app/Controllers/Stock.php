@@ -10,7 +10,7 @@ class Stock extends Controller{
     {   
         $data = array(
 			'menu' => '3a',
-			'title' => 'Customer [SIE-JAKU]', 
+			'title' => 'Stock [SIE-JAKU]', 
             'batascss' => 'c4', 
 		);   
         echo view('section/header', $data);
