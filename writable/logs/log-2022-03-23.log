@@ -18,3 +18,12 @@ CRITICAL - 2022-03-23 08:17:08 --> Call to a member function getFirstRow() on bo
 #4 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #5 /opt/lampp/htdocs/sie-jaku/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #6 {main}
+ERROR - 2022-03-23 20:36:50 --> No database selected
+CRITICAL - 2022-03-23 20:36:50 --> Call to a member function getFirstRow() on bool
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#1 D:\xampp\htdocs\sie-jaku\app\Controllers\Login.php(33): CodeIgniter\BaseModel->first()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Login->process()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}

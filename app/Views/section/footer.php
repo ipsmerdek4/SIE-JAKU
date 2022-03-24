@@ -480,7 +480,7 @@
 
 
       <?php  
-      }elseif ($batascss == 'c4') {
+      }elseif ($batascss == 'c4a') {
         $btsjv = '
           <!-- DataTables  & Plugins -->
           <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
@@ -508,7 +508,7 @@
                           text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
                           className: ' btn-primary',
                           action:     function ( e, dt, node, config ) {
-                                        window.location.href = '/jenis-kayu';
+                                        window.location.href = '/jenis-kayu/add';
                                       }
                         }
                     ],
@@ -524,7 +524,45 @@
                 } ).draw();
                 table.buttons().container().appendTo("#vjenis_kayu_wrapper .col-md-6:eq(0)"); 
 
+   /*  */
+
+                    <?php if(session()->has("alert")) { ?>
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            text: '<?= session("alert") ?>',
+                            showConfirmButton: false,
+                            timer: 2500 
+                            })
+                    <?php } ?> 
+
+                    /*  */
+
+
+
         } );
+
+
+          
+              $('.btnremove').on('click', function (e)
+              {
+                  e.preventDefault();
+                  const href = $(this).attr('href');
+
+                    Swal.fire({
+                          title: 'Apakah anda yakin?', 
+                          icon: 'warning',
+                          showCancelButton: true,
+                          confirmButtonColor: '#3085d6',
+                          cancelButtonColor: '#d33',
+                          confirmButtonText: 'Ya, Hapus!'
+                    }).then((result) => {
+                      if (result.value) {
+                          document.location.href = href; 
+                      }
+                    })  
+              });
+
 
         </script>
 

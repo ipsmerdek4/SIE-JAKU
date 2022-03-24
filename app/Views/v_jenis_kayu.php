@@ -36,8 +36,7 @@
                     <table id="vjenis_kayu" class="table table-bordered table-striped display">
                         <thead>
                         <tr>
-                          <th>No</th>
-                          <th>#id_Jenis_Kayu</th> 
+                          <th>No</th> 
                           <th>Nama Jenis Kayu</th>
                           <th>Tanggal<br>Pembuatan</th>
                           <th>Opsi</th> 
@@ -45,9 +44,36 @@
                         </thead>
                         <tbody>
 
+                        
+                                    <?php  foreach ($JenisKayuModels as $item):  ?>
+                                        <tr>
+                                            <td></td> 
+                                            <td>
+                                                <?=$item->nama_jenis_kayu?> 
+                                            </td>
+                                            <td>
+                                                <?=$item->created_at?> 
+                                            </td>
+                                            <td>
+                                                    <div class="row h-100 justify-content-center align-items-center">
+                                                        <div class="btn-group"> 
+                
+                                                                    <a href="<?=base_url("/jenis-kayu/".$item->id_jenis_kayu );?>" class="btn btn-success" >
+                                                                        <i class="fa-solid fa-user-pen py-1 pl-1"></i>
+                                                                    </a>
+                                                                    <a href="<?=base_url("/jenis-kayu/d/".$item->id_jenis_kayu );?>" class="btn btn-danger btnremove">
+                                                                        <i class="fa-solid fa-trash-can-arrow-up py-1 px-1"></i>
+                                                                    </a>  
+                                                        
+                                                        </div>
+                                                    </div> 
+
+                                            </td>
+                                        </tr>
+
+                                    <?php endforeach; ?>
                         </tbody>
                     </table>
-
 
                </div>
             </div>
