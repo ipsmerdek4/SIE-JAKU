@@ -97,6 +97,20 @@ $routes->post('/tipe-kayu/e/(:any)', 'Stock::tipe_editproses/$1',['filter' => 'a
 //ukuran kayu
 $routes->get('/ukuran-kayu', 'Stock::ukuran',['filter' => 'auth']);
 
+$routes->get('/ukuran-kayu/g-tipe-kayu/(:any)', 'Stock::add_ajax_tkayu/$1',['filter' => 'auth']);
+
+$routes->get('/ukuran-kayu/add', 'Stock::add_ukuran_kayu',['filter' => 'auth']);
+$routes->post('/ukuran-kayu/add/p', 'Stock::ukuran_process',['filter' => 'auth']);
+
+$routes->get('/ukuran-kayu/d/(:any)', 'Stock::ukuran_deletedata/$1',['filter' => 'auth']); 
+
+$routes->get('/ukuran-kayu/(:any)', 'Stock::ukuran_edit/$1',['filter' => 'auth']); 
+$routes->post('/ukuran-kayu/e/(:any)', 'Stock::ukuran_editproses/$1',['filter' => 'auth']);
+ 
+
+
+
+
 //persediaan kayu
 $routes->get('/persediaan-kayu', 'Stock::persediaan',['filter' => 'auth']);
 

@@ -37,7 +37,7 @@
                         <thead>
                         <tr>
                           <th>No</th>  
-                          <th>Nama Jenis Kayu</th> 
+                          <th>Jenis Kayu</th> 
                           <th>Opsi</th> 
                         </tr>
                         </thead>

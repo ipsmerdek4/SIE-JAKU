@@ -33,8 +33,8 @@
                         <thead>
                         <tr>
                           <th>No</th> 
-                          <th>Nama Jenis Kayu</th>
-                          <th>Tipe Jenis Kayu</th> 
+                          <th>Jenis Kayu</th>
+                          <th>Tipe Kayu</th> 
                           <th>Opsi</th> 
                         </tr>
                         </thead>
