@@ -26,12 +26,43 @@
               <div class="card-header">
                 <h3 class="card-title text-lg"> <b>Data Tipe Kayu</b> </h3>
               </div>
-
-
  
-              
-               <!-- /.card-header -->
-               <div class="card-body">  
+                <!-- /.card-header -->
+                <div class="card-body">  
+                    <table id="vtipe_kayu" class="table table-bordered table-striped display">
+                        <thead>
+                        <tr>
+                          <th>No</th> 
+                          <th>Nama Jenis Kayu</th>
+                          <th>Tipe Jenis Kayu</th> 
+                          <th>Opsi</th> 
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php  foreach ($DataTipeKayus as $item):  ?>
+
+                            <tr>
+                              <td></td>
+                              <td><?=$item->nama_jenis_kayu?></td>
+                              <td><?=$item->nama_tipe_kayu?></td>
+                              <td>
+                                  <div class="row h-100 justify-content-center align-items-center">
+                                      <div class="btn-group"> 
+
+                                                  <a href="<?=base_url("/tipe-kayu/".$item->id_tipe_kayu );?>" class="btn btn-success" >
+                                                      <i class="fa-solid fa-user-pen py-1 pl-1"></i>
+                                                  </a>
+                                                  <a href="<?=base_url("/tipe-kayu/d/".$item->id_tipe_kayu );?>" class="btn btn-danger btnremove">
+                                                      <i class="fa-solid fa-trash-can-arrow-up py-1 px-1"></i>
+                                                  </a>  
+                                      
+                                      </div>
+                                  </div>  
+                              </td> 
+                            </tr>
+                        <?php endforeach; ?> 
+                        </tbody>
+                </table>
 
 
                </div>

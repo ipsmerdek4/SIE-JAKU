@@ -142,3 +142,251 @@ CRITICAL - 2022-03-24 12:49:39 --> Undefined variable: users
 #3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-03-24 14:52:44 --> Call to undefined method App\Models\JenisKayuModel::getjoinall
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(163): CodeIgniter\Model->__call('getjoinall', Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-24 14:54:16 --> Trying to get property 'nama_jenis_kayu' of non-object
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_type_kayu.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'D:\\xampp\\htdocs...', 46, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_type_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(167): view('v_type_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-24 14:57:26 --> Trying to access array offset on value of type bool
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_type_kayu.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_type_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(167): view('v_type_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-24 14:57:39 --> Cannot use object of type stdClass as array
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_type_kayu', Array, true)
+#3 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(167): view('v_type_kayu', Array)
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe()
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-24 14:57:51 --> syntax error, unexpected '[', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_type_kayu', Array, true)
+#2 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(167): view('v_type_kayu', Array)
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe()
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+ERROR - 2022-03-24 15:00:54 --> Unknown column 'created_at' in 'field list'
+CRITICAL - 2022-03-24 15:00:54 --> Unknown column 'created_at' in 'field list'
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `db...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `db...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `db...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1771): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Model.php(239): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\BaseModel.php(738): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Model.php(625): CodeIgniter\BaseModel->insert(Array, true)
+#7 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(216): CodeIgniter\Model->insert(Array)
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_process()
+#9 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#10 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2022-03-24 15:23:46 --> Invalid file: v_edt_type_kayu.php
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_edt_type_kayu...')
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_type_kayu', Array, true)
+#2 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(256): view('v_edt_type_kayu', Array)
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-24 15:24:08 --> Invalid file: v_edt_type_kayu.php
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_edt_type_kayu...')
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_type_kayu', Array, true)
+#2 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(256): view('v_edt_type_kayu', Array)
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-24 15:24:18 --> Invalid file: v_edt_type_kayu.php
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('v_edt_type_kayu...')
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_type_kayu', Array, true)
+#2 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(256): view('v_edt_type_kayu', Array)
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-24 15:25:08 --> Undefined variable: dataJenisKayus
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_tipe_kayu.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 58, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(256): view('v_edt_tipe_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-24 15:33:22 --> Trying to get property 'id_jenis_kayu' of non-object
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_tipe_kayu.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'D:\\xampp\\htdocs...', 59, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-24 15:34:22 --> syntax error, unexpected '<', expecting end of file
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#2 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-24 15:34:57 --> Trying to get property 'id_jenis_kayu' of non-object
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_tipe_kayu.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'D:\\xampp\\htdocs...', 60, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-24 15:36:03 --> Trying to get property 'id_jenis_kayu' of non-object
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_tipe_kayu.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'D:\\xampp\\htdocs...', 53, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-24 15:37:37 --> Cannot use object of type stdClass as array
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#3 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-24 15:38:13 --> Cannot use object of type stdClass as array
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#3 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-24 15:38:13 --> Cannot use object of type stdClass as array
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#3 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-24 15:38:13 --> Cannot use object of type stdClass as array
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#3 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-24 15:38:56 --> Cannot use object of type stdClass as array
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include()
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#3 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('1')
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-03-24 15:43:08 --> Trying to get property 'nama_tipe_kayu' of non-object
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_tipe_kayu.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'D:\\xampp\\htdocs...', 65, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-24 15:43:15 --> Trying to access array offset on value of type null
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_tipe_kayu.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\xampp\\htdocs...', 65, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-24 15:43:16 --> Trying to access array offset on value of type null
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_tipe_kayu.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\xampp\\htdocs...', 65, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-24 15:43:16 --> Trying to access array offset on value of type null
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_tipe_kayu.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to acces...', 'D:\\xampp\\htdocs...', 65, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-24 15:43:33 --> Trying to get property 'nama_tipe_kayu' of non-object
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_tipe_kayu.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'D:\\xampp\\htdocs...', 65, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_tipe_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(260): view('v_edt_tipe_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->tipe_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

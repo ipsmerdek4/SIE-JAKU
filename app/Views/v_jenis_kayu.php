@@ -36,9 +36,8 @@
                     <table id="vjenis_kayu" class="table table-bordered table-striped display">
                         <thead>
                         <tr>
-                          <th>No</th> 
-                          <th>Nama Jenis Kayu</th>
-                          <th>Tanggal<br>Pembuatan</th>
+                          <th>No</th>  
+                          <th>Nama Jenis Kayu</th> 
                           <th>Opsi</th> 
                         </tr>
                         </thead>
@@ -47,13 +46,10 @@
                         
                                     <?php  foreach ($JenisKayuModels as $item):  ?>
                                         <tr>
-                                            <td></td> 
+                                            <td></td>  
                                             <td>
                                                 <?=$item->nama_jenis_kayu?> 
-                                            </td>
-                                            <td>
-                                                <?=$item->created_at?> 
-                                            </td>
+                                            </td> 
                                             <td>
                                                     <div class="row h-100 justify-content-center align-items-center">
                                                         <div class="btn-group"> 

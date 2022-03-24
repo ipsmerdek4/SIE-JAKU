@@ -78,14 +78,21 @@ $routes->get('/jenis-kayu/d/(:any)', 'Stock::deletedata/$1',['filter' => 'auth']
 
 $routes->get('/jenis-kayu/(:any)', 'Stock::edit/$1',['filter' => 'auth']); 
 $routes->post('/jenis-kayu/e/(:any)', 'Stock::editproses/$1',['filter' => 'auth']);
-
-
-
-
-
+ 
 
 //tipe kayu
 $routes->get('/tipe-kayu', 'Stock::tipe',['filter' => 'auth']);
+
+$routes->get('/tipe-kayu/add', 'Stock::add_tipe_kayu',['filter' => 'auth']);
+$routes->post('/tipe-kayu/add/p', 'Stock::tipe_process',['filter' => 'auth']);
+
+$routes->get('/tipe-kayu/d/(:any)', 'Stock::tipe_deletedata/$1',['filter' => 'auth']); 
+
+$routes->get('/tipe-kayu/(:any)', 'Stock::tipe_edit/$1',['filter' => 'auth']); 
+$routes->post('/tipe-kayu/e/(:any)', 'Stock::tipe_editproses/$1',['filter' => 'auth']);
+ 
+
+
 
 //ukuran kayu
 $routes->get('/ukuran-kayu', 'Stock::ukuran',['filter' => 'auth']);

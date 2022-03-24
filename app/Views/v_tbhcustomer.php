@@ -92,7 +92,7 @@
                     <div class="col-md-6">  
                             <div class="form-group">
                                 <label for="username" class="form-label">Provinsi <b class="text-danger">*</b></label>
-                                <select name="provinsi_id" id="provinsi" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> >  
+                                <select name="provinsi_id" id="provinsi" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
                                     <option value=''>Select Provinsi -</option>
                                     <?php  foreach ($dataprovinsi as $item1): ?>  
                                         <?='<option value="'.$item1->id.'">'.$item1->nm_provinsi.'</option>'?> 
