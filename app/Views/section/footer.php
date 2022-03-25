@@ -780,7 +780,31 @@
       ?>
          
     <script>
+
+
+            function hanyaAngka(evt) {
+              var charCode = (evt.which) ? evt.which : event.keyCode
+              if (charCode > 31 && (charCode < 48 || charCode > 57))
+
+              return false;
+              return true;
+            }
             $(document).ready(function() {
+
+               //Initialize Select2 Elements
+                $('.select2').select2() 
+
+                $("#j_kayu").change(function (){ 
+                  var url = "<?php echo site_url('/persediaan-kayu/g-tipe-kayu');?>/"+$(this).val();
+                  $('#t_kayu').load(url);
+                  return false; 
+                })
+
+                 $("#t_kayu").change(function (){ 
+                  var url = "<?php echo site_url('/persediaan-kayu/g-ukuran-kayu');?>/"+$(this).val();
+                  $('#ukayu').load(url);
+                  return false; 
+                })
 
                 $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
                 var table =$('#vpersediaan').DataTable( { 

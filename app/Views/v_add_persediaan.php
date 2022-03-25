@@ -39,38 +39,57 @@
 
 
 
-                    <form method="post" action="<?= base_url(); ?>/tipe-kayu/add/p"> 
+                    <form method="post" action="<?= base_url(); ?>/persediaan-kayu/add/p"> 
                         <?= csrf_field(); ?>
     
                         <div class="row"> 
                         <div class="col-md-6"> 
                             <div class="form-group">
                                 <label for="name" class="form-label">Jenis Kayu</label>
-                                <select name="jkayu" id="" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                <select name="j_kayu" id="j_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
                                     <option value=''>Select Jenis Kayu -</option> 
+                                        <?php  foreach ($dataJenisKayus as $item1): ?>  
+                                            <?='<option value="'.$item1->id_jenis_kayu .'">'.$item1->nama_jenis_kayu.'</option>'?> 
+                                        <?php endforeach; ?>  
                                 </select> 
                             </div>
                             <div class="form-group">
                                 <label for="name" class="form-label">Tipe Kayu</label>
-                                <input type="text" name="tkayu" class="form-control" placeholder="Silahkan Ketikan Tipe Kayu." >
+                                <select name="t_kayu" id="t_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                    <option value=''>Select Tipe Kayu -</option> 
+                                </select> 
                             </div>
                             <div class="form-group">
                                 <label for="name" class="form-label">Ukuran Kayu</label>
-                                <input type="text" name="tkayu" class="form-control" placeholder="Silahkan Ketikan Tipe Kayu." >
+                                <select name="ukayu" id="ukayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                    <option value=''>Select Ukuran Kayu -</option> 
+                                </select> 
                             </div>
 
                         </div>
-                        <div class="col-md-6">  
-                            
+                        <div class="col-md-6">   
+
                             <div class="form-group">
                                 <label for="name" class="form-label">Persediaan</label>
-                                <input type="text" class="form-control "  placeholder="dalam hitungan angka">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa-solid fa-cubes"></i></span>
+                                    </div>
+                                <input type="text" name="p_kayu" class="form-control" placeholder="Masukan Persedian Kayu Dalam Angka." onkeypress="return hanyaAngka(event)">
+                                </div>
                             </div> 
+
+ 
 
                         
                             <div class="form-group">
                                 <label for="name" class="form-label">Harga</label>
-                                <input type="text" class="form-control "  placeholder="Harga Satuan">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa-solid fa-rupiah-sign"></i></span>
+                                    </div>
+                                    <input type="text" name="harga" class="form-control "  placeholder="Harga Satuan" onkeypress="return hanyaAngka(event)">
+                                </div>
                             </div> 
 
 

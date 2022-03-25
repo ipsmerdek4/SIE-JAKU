@@ -5,6 +5,7 @@ use CodeIgniter\Controller;
 use App\Models\JenisKayuModel;
 use App\Models\TipeKayuModel;
 use App\Models\UkuranKayuModel;
+use App\Models\PersediaanKayuModel;
 
 
 
@@ -488,9 +489,20 @@ class Stock extends Controller{
         foreach ($dataTipeKayus as $value) {
           $data .= "<option value='".$value->id_tipe_kayu."'>".$value->nama_tipe_kayu."</option>";
         } 
-        echo $data; 
-         
-      
+        echo $data;  
+  }
+
+ 
+ 
+  function add_ajax_ukayu($id = null)
+  { 
+        $UkuranKayus = new UkuranKayuModel(); 
+        $dataUkuranKayus = $UkuranKayus->where('id_tipe_kayu', $id)->findAll(); 
+        $data = "<option value=''>- Select Tipe Kayu -</option>"; 
+        foreach ($dataUkuranKayus as $value) {
+          $data .= "<option value='".$value->id_ukuran_kayu."'>".$value->nama_Ukuran_kayu."</option>";
+        } 
+        echo $data;  
   }
 
  
@@ -518,11 +530,13 @@ class Stock extends Controller{
   public function add_persediaan_kayu()
   {   
         
-        
+        $JenisKayus = new JenisKayuModel();  
+
         $data = array(
             'menu' => '3a',
             'title' => 'Tambah Ukuran Kayu [SIE-JAKU]', 
             'batascss' => 'c4persediaan', 
+            'dataJenisKayus' => $JenisKayus->findAll(), 
              
         );   
         echo view('section/header', $data);
@@ -532,6 +546,61 @@ class Stock extends Controller{
   }
 
 
+
+  public function persediaan_process()
+  {    
+  
+            if (!$this->validate([ 
+                'p_kayu' => [
+                    'rules' => 'required|max_length[5]',
+                    'errors' => [
+                        'required'   => 'Persediaan Kayu Harus diisi', 
+                        'max_length' => 'Persediaan Kayu Maksimal 5 Angka',  
+                    ]
+                ], 
+                'harga' => [
+                    'rules' => 'required|max_length[20]',
+                    'errors' => [
+                        'required'   => 'Harga Satuan Harus diisi', 
+                        'max_length' => 'Harga Satua Maksimal 20 Angka',  
+                    ]
+                ], 
+                'j_kayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Jenis Kayu Harus dipilih', 
+                    ]
+                ], 
+                't_kayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Tipe Kayu Harus dipilih', 
+                    ]
+                ], 
+                'ukayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Ukuran Kayu Harus dipilih', 
+                    ]
+                ],  
+            ])) {
+                session()->setFlashdata('error', $this->validator->listErrors());
+                return redirect()->to(base_url('/persediaan-kayu/add'))->withInput(); 
+            } 
+  
+            $PersediaanKayus = new PersediaanKayuModel(); 
+            $PersediaanKayus->insert([ 
+                'jml_persediaan' => $this->request->getVar('p_kayu'),
+                'Harga_satuan' => $this->request->getVar('harga'),
+                'id_jenis_kayu' => $this->request->getVar('j_kayu'),
+                'id_tipe_kayu' => $this->request->getVar('t_kayu'),
+                'id_ukuran_kayu' => $this->request->getVar('ukayu'),
+            ]);
+            session()->setFlashdata('alert', 'Berhasil Menambah Data.');
+            return redirect()->to(base_url('persediaan-kayu/'))->withInput(); 
+       
+ 
+  }
 
 
 

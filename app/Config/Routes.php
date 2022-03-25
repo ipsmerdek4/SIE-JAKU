@@ -117,6 +117,8 @@ $routes->get('/persediaan-kayu', 'Stock::persediaan',['filter' => 'auth']);
 $routes->get('/persediaan-kayu/add', 'Stock::add_persediaan_kayu',['filter' => 'auth']);
 $routes->post('/persediaan-kayu/add/p', 'Stock::persediaan_process',['filter' => 'auth']);
 
+$routes->get('/persediaan-kayu/g-tipe-kayu/(:any)', 'Stock::add_ajax_tkayu/$1',['filter' => 'auth']);
+$routes->get('/persediaan-kayu/g-ukuran-kayu/(:any)', 'Stock::add_ajax_ukayu/$1',['filter' => 'auth']);
 
 
 
