@@ -10,8 +10,8 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="<?= base_url(); ?>">Home</a></li> 
-              <li class="breadcrumb-item"><a href="<?= base_url('tipe-kayu'); ?>">Tipe Kayu</a></li> 
-              <li class="breadcrumb-item active">Tambah Tipe Kayu</li>
+              <li class="breadcrumb-item"><a href="<?= base_url('ukuran-kayu'); ?>">Ukuran Kayu</a></li> 
+              <li class="breadcrumb-item active">Tambah Ukuran Kayu</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -25,7 +25,7 @@
         <div class="col-lg-5 container"> 
             <div class="card card-dark ">
               <div class="card-header">
-                <h3 class="card-title text-lg"> <b>Tambah Tipe Kayu</b> </h3>
+                <h3 class="card-title text-lg"> <b>Tambah Ukuran Kayu</b> </h3>
               </div>
 
 

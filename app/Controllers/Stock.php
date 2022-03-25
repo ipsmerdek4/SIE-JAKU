@@ -504,17 +504,32 @@ class Stock extends Controller{
   public function persediaan()
   {   
     $data = array(
-    'menu' => '3a',
-    'title' => 'Persedian Kayu [SIE-JAKU]', 
-    'batascss' => 'c4', 
+            'menu' => '3a',
+            'title' => 'Persedian Kayu [SIE-JAKU]', 
+            'batascss' => 'c4persediaan', 
     );   
     echo view('section/header', $data);
-    echo view('v_stock', $data);
+    echo view('v_persediaan', $data);
     echo view('section/footer', $data); 
 
   }
 
 
+  public function add_persediaan_kayu()
+  {   
+        
+        
+        $data = array(
+            'menu' => '3a',
+            'title' => 'Tambah Ukuran Kayu [SIE-JAKU]', 
+            'batascss' => 'c4persediaan', 
+             
+        );   
+        echo view('section/header', $data);
+        echo view('v_add_persediaan', $data);
+        echo view('section/footer', $data); 
+
+  }
 
 
 

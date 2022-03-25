@@ -33,6 +33,25 @@
                <!-- /.card-header -->
                <div class="card-body">  
 
+                    <table id="vpersediaan" class="table table-bordered table-striped display">
+
+                        <thead>
+                          <tr>
+                            <th>No</th>  
+                            <th>Jenis Kayu</th> 
+                            <th>Opsi</th> 
+                          </tr>
+                        </thead>
+                        <tbody> 
+                          <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                          </tr>
+
+
+                         </tbody>
+                    </table>
 
                </div>
             </div>

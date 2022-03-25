@@ -59,3 +59,41 @@ CRITICAL - 2022-03-25 00:21:32 --> Undefined offset: 0
 #3 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 /opt/lampp/htdocs/sie-jaku/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+ERROR - 2022-03-25 09:55:00 --> Error connecting to the database: No connection could be made because the target machine actively refused it.
+
+CRITICAL - 2022-03-25 11:32:36 --> Invalid file: persediaan.php
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('persediaan.php')
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('persediaan', Array, true)
+#2 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(512): view('persediaan', Array)
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->persediaan()
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-03-25 11:32:58 --> Undefined variable: JenisKayuModels
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_persediaan.php(47): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 47, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_persediaan', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(512): view('v_persediaan', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->persediaan()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-25 11:43:23 --> Undefined variable: dataJenisKayus
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_add_persediaan.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 58, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_add_persediaa...', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(529): view('v_add_persediaa...', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->add_persediaan_kayu()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+ERROR - 2022-03-25 12:16:43 --> Incorrect column name 'id_ukuran_kayu '
+ERROR - 2022-03-25 12:17:08 --> Incorrect column name 'id_ukuran_kayu '
+ERROR - 2022-03-25 12:17:37 --> Incorrect column name 'id_ukuran_kayu '
+ERROR - 2022-03-25 12:18:43 --> Incorrect column name 'id_ukuran_kayu '
+ERROR - 2022-03-25 12:22:04 --> Incorrect column name 'id_ukuran_kayu '

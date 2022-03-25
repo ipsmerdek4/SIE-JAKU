@@ -114,6 +114,25 @@ $routes->post('/ukuran-kayu/e/(:any)', 'Stock::ukuran_editproses/$1',['filter' =
 //persediaan kayu
 $routes->get('/persediaan-kayu', 'Stock::persediaan',['filter' => 'auth']);
 
+$routes->get('/persediaan-kayu/add', 'Stock::add_persediaan_kayu',['filter' => 'auth']);
+$routes->post('/persediaan-kayu/add/p', 'Stock::persediaan_process',['filter' => 'auth']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
 
