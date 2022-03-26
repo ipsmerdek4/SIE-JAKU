@@ -39,7 +39,7 @@ class Stock extends Controller{
     {   
       $data = array(
       'menu' => '3a',
-      'title' => 'Tambah Jenis Kayu [SIE-JAKU]', 
+      'title' => 'Jenis Kayu [SIE-JAKU]', 
       'batascss' => 'c4a', 
       );   
       echo view('section/header', $data);
@@ -105,7 +105,7 @@ class Stock extends Controller{
       
        $data = array(
             'menu' => '3a',
-            'title' => 'Edit Jenis Kayu [SIE-JAKU]', 
+            'title' => 'Jenis Kayu [SIE-JAKU]', 
             'batascss' => 'c4a', 
             'datajeniskayu' => $JenisKayuModels->find($id), 
       );   
@@ -182,7 +182,7 @@ class Stock extends Controller{
 
           $data = array(
               'menu' => '3a',
-              'title' => 'Tambah Tipe Kayu [SIE-JAKU]', 
+              'title' => 'Tipe Kayu [SIE-JAKU]', 
               'batascss' => 'c4b', 
               'dataJenisKayus' => $JenisKayus->findall(), 
           );   
@@ -338,7 +338,7 @@ class Stock extends Controller{
         
         $data = array(
             'menu' => '3a',
-            'title' => 'Tambah Ukuran Kayu [SIE-JAKU]', 
+            'title' => 'Ukuran Kayu [SIE-JAKU]', 
             'batascss' => 'c4c', 
             'dataJenisKayus' => $JenisKayus->findall(), 
         );   
@@ -418,7 +418,7 @@ class Stock extends Controller{
   
       $data = array(
           'menu' => '3a',
-          'title' => 'Tipe Kayu [SIE-JAKU]', 
+          'title' => 'Ukuran Kayu [SIE-JAKU]', 
           'batascss' => 'c4c',  
           'dataTipeKayus' => $data2,
           'dataTipeKayusall' => $TipeKayus->where('id_jenis_kayu', $data3[0]->id_jenis_kayu)->findAll(),
@@ -515,18 +515,26 @@ class Stock extends Controller{
 /*  */
   public function persediaan()
   {   
+
+    $PersediaanKayus = new PersediaanKayuModel(); 
+    $UkuranKayus = new UkuranKayuModel(); 
+    $JenisKayus = new JenisKayuModel();  
+    $TipeKayus = new TipeKayuModel();
+ 
+
     $data = array(
             'menu' => '3a',
             'title' => 'Persedian Kayu [SIE-JAKU]', 
-            'batascss' => 'c4persediaan', 
+            'batascss' => 'c4persediaan',  
+            'dataPersediaanKayus' => $PersediaanKayus->getjoinall(), 
+
     );   
     echo view('section/header', $data);
     echo view('v_persediaan', $data);
     echo view('section/footer', $data); 
 
   }
-
-
+ 
   public function add_persediaan_kayu()
   {   
         
@@ -534,7 +542,7 @@ class Stock extends Controller{
 
         $data = array(
             'menu' => '3a',
-            'title' => 'Tambah Ukuran Kayu [SIE-JAKU]', 
+            'title' => 'Persediaan Kayu [SIE-JAKU]', 
             'batascss' => 'c4persediaan', 
             'dataJenisKayus' => $JenisKayus->findAll(), 
              
@@ -544,9 +552,7 @@ class Stock extends Controller{
         echo view('section/footer', $data); 
 
   }
-
-
-
+  
   public function persediaan_process()
   {    
   
@@ -601,12 +607,123 @@ class Stock extends Controller{
        
  
   }
+ 
+  public function persediaan_deletedata($id = null)
+  {
+        $PersediaanKayus = new PersediaanKayuModel(); 
+
+        if($PersediaanKayus->find($id)){
+            $PersediaanKayus->delete($id); 
+
+            session()->setFlashdata('alert', 'Berhasil Menghapus Data. Dengan [ ID = #'.$id.' ]');
+            return redirect()->to(base_url('persediaan-kayu'))->withInput();  
+        }else{
+            session()->setFlashdata('alert', 'Terjadi Kesalahan Saat Menghapus Data. Dengan [ ID = #'.$id.' ]');
+            return redirect()->to(base_url('persediaan-kayu'))->withInput(); 
+        }
+
+  }
+
+ 
+
+  public function persediaan_edit($id = null)
+  {
+        $PersediaanKayus = new PersediaanKayuModel();  
+        $UkuranKayus = new UkuranKayuModel(); 
+        $JenisKayus = new JenisKayuModel();  
+        $TipeKayus = new TipeKayuModel();
+
+ 
+        $data1 = $PersediaanKayus->where('id_persediaan', $id)->findAll(); 
+        $data3 = $TipeKayus->where('id_jenis_kayu', $data1[0]->id_jenis_kayu)->findAll(); 
+        $data4 = $UkuranKayus->where('id_tipe_kayu', $data1[0]->id_tipe_kayu)->findAll(); 
+ 
+ 
+   
+      $data = array(
+          'menu' => '3a',
+          'title' => 'Persediaan Kayu [SIE-JAKU]', 
+          'batascss' => 'c4persediaan',  
+          'datapersediaan' => $data1, 
+          'dataJenisKayus' => $JenisKayus->findAll(), 
+          'dataTipeKayus' => $data3, 
+          'dataUkuranKayus' => $data4, 
+
+
+      );   
+      echo view('section/header', $data);
+      echo view('v_edt_persediaan', $data);
+      echo view('section/footer', $data);  
+
+
+      
+       
+  } 
 
 
 
+  public function persediaan_editproses($id = null)
+  {
+   
+ 
+            if (!$this->validate([
+                'p_kayu' => [
+                    'rules' => 'required|max_length[5]',
+                    'errors' => [
+                        'required'   => 'Persediaan Kayu Harus diisi', 
+                        'max_length' => 'Persediaan Kayu Maksimal 5 Angka',  
+                    ]
+                ], 
+                'harga' => [
+                    'rules' => 'required|max_length[20]',
+                    'errors' => [
+                        'required'   => 'Harga Satuan Harus diisi', 
+                        'max_length' => 'Harga Satua Maksimal 20 Angka',  
+                    ]
+                ], 
+                'j_kayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Jenis Kayu Harus dipilih', 
+                    ]
+                ], 
+                't_kayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Tipe Kayu Harus dipilih', 
+                    ]
+                ], 
+                'ukayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Ukuran Kayu Harus dipilih', 
+                    ]
+                ],  
+            ])) {
+                session()->setFlashdata('error', $this->validator->listErrors());
+                return redirect()->to(base_url('/persediaan-kayu/'.$id))->withInput(); 
+            } 
 
+ 
+        $PersediaanKayus = new PersediaanKayuModel();   
+        $data = [
+            'jml_persediaan' => $this->request->getVar('p_kayu'),
+            'Harga_satuan' => $this->request->getVar('harga'),
+            'id_jenis_kayu' => $this->request->getVar('j_kayu'),
+            'id_tipe_kayu' => $this->request->getVar('t_kayu'),
+            'id_ukuran_kayu' => $this->request->getVar('ukayu'),
+            'created_at'     => date("Y-m-d H:i:s"),   
 
+        ];  
+        $PersediaanKayus->update($id, $data);
+        
+        session()->setFlashdata('alert', 'Berhasil Merubah Data. Dengan [ ID = #'.$id.' ]');
+        return redirect()->to(base_url('persediaan-kayu'))->withInput();  
 
+ 
+  }
+
+ 
 
 
 

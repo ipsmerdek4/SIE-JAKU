@@ -1,0 +1,11 @@
+CRITICAL - 2022-03-26 10:11:46 --> Undefined property: stdClass::$nama_ukuran_kayu
+#0 /opt/lampp/htdocs/sie-jaku/app/Views/v_persediaan.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', '/opt/lampp/htdo...', 56, Array)
+#1 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/View/View.php(210): include('/opt/lampp/htdo...')
+#2 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/View/View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/Common.php(1089): CodeIgniter\View\View->render('v_persediaan', Array, true)
+#4 /opt/lampp/htdocs/sie-jaku/app/Controllers/Stock.php(537): view('v_persediaan', Array)
+#5 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/CodeIgniter.php(832): App\Controllers\Stock->persediaan()
+#6 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 /opt/lampp/htdocs/sie-jaku/public/index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
