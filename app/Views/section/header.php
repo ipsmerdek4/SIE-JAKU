@@ -143,10 +143,31 @@
             }
             </style>
         ';
-      }elseif ($batascss == 'cHome') {
+      }elseif ($batascss == 'c5') {
+        $btscss = '
+            <!-- DataTables -->
+            <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+            <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+            <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+            <!-- Select2 -->
+            <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
+            <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
 
-        //null
+            <style>
 
+            .select2-selection__rendered {
+                line-height: 27px !important; 
+            }
+            .select2-container .select2-selection--single {
+                height: calc(2.25rem + 2px) !important;
+                border: 1px solid #ced4da
+            }
+            .select2-selection__arrow {
+                height: 37px !important;
+            }
+            </style>
+        ';
+        
       } 
  
     ?>
@@ -222,7 +243,7 @@
 
 
           <li class="nav-item">
-            <a href="#" class="nav-link <?=$mactive4?>">Transaksi</a>
+            <a href="<?=base_url('transaksi') ?>" class="nav-link <?=$mactive4?>">Transaksi</a>
           </li>
         </ul>
  
@@ -244,9 +265,9 @@
             </span>
 
             <div class="dropdown-divider"></div>  
-            <a href="#" class="dropdown-item">
+            <!--a href="#" class="dropdown-item">
               <i class="fas fa-eye mr-2"></i> Profil
-            </a> 
+            </a--> 
 
             <div class="dropdown-divider"></div>  
             <a href="/userlogin" class="dropdown-item">

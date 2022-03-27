@@ -125,8 +125,10 @@ $routes->get('/persediaan-kayu/d/(:any)', 'Stock::persediaan_deletedata/$1',['fi
 $routes->get('/persediaan-kayu/(:any)', 'Stock::persediaan_edit/$1',['filter' => 'auth']); 
 $routes->post('/persediaan-kayu/e/(:any)', 'Stock::persediaan_editproses/$1',['filter' => 'auth']);
  
+//transaksi 
+$routes->get('/transaksi', 'Transaksi::index',['filter' => 'auth']);
 
-
+$routes->get('/transaksi/add', 'Transaksi::add_transaksi',['filter' => 'auth']);
 
 
 

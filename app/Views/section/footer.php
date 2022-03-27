@@ -875,13 +875,114 @@
          
 
 
-
-
-
-
-
-      <?php 
+      <?php  
       }elseif ($batascss == 'c5') {
+        $btsjv = '
+            <!-- Select2 -->
+            <script src="../../plugins/select2/js/select2.full.min.js"></script> 
+            <!-- DataTables  & Plugins -->
+            <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+            <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+            <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+            <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+            <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+            <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+            <script src="../../plugins/jszip/jszip.min.js"></script>
+            <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+            <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+            <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+            <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+            <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>  
+        
+
+        ';  
+      ?>
+
+         
+          <script>
+
+            window.setTimeout("waktu()",1000);  
+            function waktu() {   
+              var namabulan = ("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember");
+                  namabulan = namabulan.split(" ");
+              var tanggal = new Date();  
+              setTimeout("waktu()",1000);   
+              document.getElementById("jam").value = tanggal.getDate()+"-"+namabulan[tanggal.getMonth()]+"-"+tanggal.getFullYear()+" "+tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+            }
+
+
+ 
+ 
+          $(document).ready(function() {
+
+              $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
+              var table =$('#vtransaksi').DataTable( { 
+                  buttons: [
+                      {
+                        text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
+                        className: ' btn-primary',
+                        action:     function ( e, dt, node, config ) {
+                                      window.location.href = '/transaksi/add';
+                                    }
+                      }
+                  ],
+                  order: [[1, "asc" ]],
+                  responsive: true, 
+                  lengthChange: false, 
+                  autoWidth: false,   
+              } );
+              table.on( 'order.dt search.dt', function () {
+                table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+                      cell.innerHTML = i+1;
+                  } );
+              } ).draw();
+              table.buttons().container().appendTo("#vtransaksi_wrapper .col-md-6:eq(0)"); 
+
+                  /*  */
+
+                  <?php if(session()->has("alert")) { ?>
+                      Swal.fire({
+                          position: 'top-end',
+                          icon: 'success',
+                          text: '<?= session("alert") ?>',
+                          showConfirmButton: false,
+                          timer: 2500 
+                          })
+                  <?php } ?> 
+
+                  /*  */
+
+
+
+          } );
+
+
+
+            $('.btnremove').on('click', function (e)
+            {
+                e.preventDefault();
+                const href = $(this).attr('href');
+
+                  Swal.fire({
+                        title: 'Apakah anda yakin?', 
+                        icon: 'warning',
+                        showCancelButton: true,
+                        confirmButtonColor: '#3085d6',
+                        cancelButtonColor: '#d33',
+                        confirmButtonText: 'Ya, Hapus!'
+                  }).then((result) => {
+                    if (result.value) {
+                        document.location.href = href; 
+                    }
+                  })  
+            });
+
+
+          </script>
+
+
+
+      <?php  
       }
  
       ?>
