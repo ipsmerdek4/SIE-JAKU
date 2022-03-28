@@ -915,6 +915,38 @@
  
           $(document).ready(function() {
 
+
+                $('.select2').select2() 
+
+                $("#j_kayu").change(function (){ 
+                  var url = "<?php echo site_url('/transaksi/g-tipe-kayu');?>/"+$(this).val();
+                  $('#t_kayu').load(url);
+                  return false; 
+                })
+
+                 $("#t_kayu").change(function (){ 
+                  var url = "<?php echo site_url('/transaksi/g-ukuran-kayu');?>/"+$(this).val();
+                  $('#u_kayu').load(url);
+                  return false; 
+                })
+
+
+
+                $("#u_kayu").change(function (){ 
+                  var url = "<?php echo site_url('/transaksi/g-jmlp-kayu');?>/"+$(this).val();
+                  $('#j_pem').load(url);
+                  return false; 
+                })
+
+
+                $("#j_pem").change(function (){ 
+                  var url = "<?php echo site_url('/transaksi/g-gharga-kayu');?>/"+$(this).val();
+                  $('#get_harga').load(url);
+                  return false; 
+                })
+
+
+
               $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
               var table =$('#vtransaksi').DataTable( { 
                   buttons: [

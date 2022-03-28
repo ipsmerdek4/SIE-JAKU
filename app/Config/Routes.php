@@ -133,7 +133,11 @@ $routes->get('/transaksi/add', 'Transaksi::add_transaksi',['filter' => 'auth']);
 
 
 
-
+//traksaksi
+$routes->get('/transaksi/g-tipe-kayu/(:any)', 'Transaksi::add_ajax_tkayu/$1',['filter' => 'auth']);
+$routes->get('/transaksi/g-ukuran-kayu/(:any)', 'Transaksi::add_ajax_ukayu/$1',['filter' => 'auth']);
+$routes->get('/transaksi/g-jmlp-kayu/(:any)', 'Transaksi::add_ajax_jmlp/$1',['filter' => 'auth']);
+$routes->get('/transaksi/g-gharga-kayu/(:any)', 'Transaksi::add_ajax_gharga/$1',['filter' => 'auth']);
 
 
 
