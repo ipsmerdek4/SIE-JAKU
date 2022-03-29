@@ -31,86 +31,93 @@
 
  
               
-               <!-- /.card-header -->
-               <div class="card-body">  
-
-                        
-                        <div class="row"> 
-                            <div class="col-md-6">
-
-                             
-                                    <!--div class="form-group"> 
-                                        <input type="text" class="form-control " disabled  id="jam">
-                                     </div-->
-
-                                <form method="post" action="<?= base_url(); ?>/tipe-kayu/add/p"> 
-                                    <?= csrf_field(); ?>
-                
+                <!-- /.card-header -->
+                <div class="card-body">  
  
-                                    <div class="form-group">
-                                        <label for="name" class="form-label">Jenis Kayu</label>
-                                        <select name="jkayu" id="j_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
-                                            <option value=''>Select Jenis Kayu -</option> 
-                                            <?php  foreach ($dataJenisKayus as $item1): ?>  
-                                                <?='<option value="'.$item1->id_jenis_kayu .'">'.$item1->nama_jenis_kayu.'</option>'?> 
-                                            <?php endforeach; ?>  
-                                        </select> 
-                                    </div>
+                            <?php if (!empty(session()->getFlashdata('error'))) : ?>
+                            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <h4>Periksa Entrian Form</h4>
+                                </hr />
+                                <?php echo session()->getFlashdata('error'); ?>
+                            </div>
+                            <?php endif; ?> 
 
-                                    <div class="form-group">
-                                        <label for="name" class="form-label">Tipe Kayu</label>
-                                        <select name="t_kayu" id="t_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
-                                            <option value=''>Select Tipe Kayu -</option> 
-                                        </select> 
-                                    </div>
+
+                            <!--div class="form-group"> 
+                            <input type="text" class="form-control " disabled  id="jam">
+                            </div-->
+
+                        <form method="post" action="<?= base_url(); ?>/transaksi/add/p"> 
+                        <?= csrf_field(); ?>
+
+
+                            <div class="row"> 
+                                    <div class="col-md-6">
  
+                                            <div class="form-group">
+                                                <label for="name" class="form-label">Jenis Kayu</label>
+                                                <select name="jkayu" id="j_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                    <option value=''>Select Jenis Kayu -</option> 
+                                                    <?php  foreach ($dataJenisKayus as $item1): ?>  
+                                                        <?='<option value="'.$item1->id_jenis_kayu .'">'.$item1->nama_jenis_kayu.'</option>'?> 
+                                                    <?php endforeach; ?>  
+                                                </select> 
+                                            </div>
 
-                                    <div class="form-group">
-                                        <label for="name" class="form-label">Ukuran Kayu</label>
-                                        <select name="u_kayu" id="u_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
-                                            <option value=''>Select Ukuran Kayu -</option> 
-                                        </select> 
+                                            <div class="form-group">
+                                                <label for="name" class="form-label">Tipe Kayu</label>
+                                                <select name="t_kayu" id="t_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                    <option value=''>Select Tipe Kayu -</option> 
+                                                </select> 
+                                            </div>
+        
+                                            <div class="form-group">
+                                                <label for="name" class="form-label">Ukuran Kayu</label>
+                                                <select name="u_kayu" id="u_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                    <option value=''>Select Ukuran Kayu -</option> 
+                                                </select> 
+                                            </div>
+    
+                                    </div>
+                                    <div class="col-md-6"> 
+                                            <div class="form-group ">
+                                                <label for="name" class="form-label">Kode Transaksi</label>
+                                                <input type="text" name="kodetransaksi" class="form-control " readonly  id="" value="#JAKUTRANS<?=date("HmsdYm")?>   ">
+                                            </div>
+
+                                            <div class="form-group ">
+                                                <label for="name" class="form-label">Jumlah Pembelian</label>
+                                                <select name="j_pem" id="j_pem" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                    <option value=''>Select Jumlah Pembelian -</option> 
+                                                </select> 
+                                                
+                                            </div>
+
+                                            <div class="form-group ">
+                                                <label for="name" class="form-label">Total Harga</label>
+                                                <div id="get_harga"> 
+                                                    <input type="text" name="ttl_harga" class="form-control " readonly  value="Rp 0,00">
+                                                </div> 
+
+                                            
+                                            </div>
                                     </div>
 
+                                    <div class="col-md-12"> 
+                                            <br><br>
+                                            <hr class="bg-danger">
+                                            <div class="form-group d-flex justify-content-center"> 
+                                                <button type="submit" class="btn btn-block bg-primary btn-lg col-md-5"> <b> Simpan </b></button>
+                                            </div>
 
-                                    
-
-                                </form> 
+                                    </div> 
+                               
+                                </div>
                             </div>
-                            <div class="col-md-6"> 
-                                    <div class="form-group ">
-                                        <label for="name" class="form-label">Kode Transaksi</label>
-                                        <input type="text" class="form-control " disabled  id="" value="#JAKUTRANS<?=date("HmsdYm")?>   ">
-                                    </div>
-                                    <div class="form-group ">
-                                        <label for="name" class="form-label">Jumlah Pembelian</label>
-                                        <select name="j_pem" id="j_pem" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
-                                            <option value=''>Select Jumlah Pembelian -</option> 
-                                        </select> 
-                                        
-                                    </div>
-                                    <div class="form-group ">
-                                        <label for="name" class="form-label">Total Harga</label>
-                                         <div id="get_harga"> 
-                                            <input type="text" class="form-control " disabled  id="" value="Total : Rp 0,00 ">
-                                        </div> 
+     
+                        </form> 
+                </div>
 
-                                       
-                                    </div>
-                            </div>
-                            <div class="col-md-12"> 
-                                    <br><br>
-                                    <hr class="bg-danger">
-                                    <div class="form-group d-flex justify-content-center"> 
-                                        <button type="submit" class="btn btn-block bg-primary btn-lg col-md-5"> <b> Simpan </b></button>
-                                    </div>
-
-                            </div>
-
-                        </div>
- 
-
-               </div>
             </div>
         </div>
     </div>

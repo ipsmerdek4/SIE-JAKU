@@ -29,6 +29,7 @@ class Transaksi extends Controller{
 
     public function add_transaksi()
     {  
+
         $UkuranKayus = new UkuranKayuModel(); 
         $JenisKayus = new JenisKayuModel();  
         $TipeKayus = new TipeKayuModel();
@@ -50,6 +51,85 @@ class Transaksi extends Controller{
 		echo view('section/footer', $data);
  
     }
+
+    public function transaksi_process()
+    {  
+
+ 
+            if (!$this->validate([
+                'kodetransaksi' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required'   => 'Kode Transaksi Harus diisi Harus diisi', 
+                        'max_length' => 'Persediaan Kayu Maksimal 100 Angka',  
+                    ]
+                ], 
+                'ttl_harga' => [
+                    'rules' => 'required|max_length[20]',
+                    'errors' => [
+                        'required'   => 'Total Harga Harus diisi', 
+                        'max_length' => 'Total Harga Maksimal 20 Angka',  
+                    ]
+                ], 
+                'j_pem' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Jumlah Pembelian Harus dipilih', 
+                    ]
+                ], 
+                'jkayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Jenis Kayu Harus dipilih', 
+                    ]
+                ], 
+                't_kayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Tipe Kayu Harus dipilih', 
+                    ]
+                ], 
+                'u_kayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Ukuran Kayu Harus dipilih', 
+                    ]
+                ],  
+            ])) {
+                session()->setFlashdata('error', $this->validator->listErrors());
+                return redirect()->to(base_url('/transaksi/add'))->withInput(); 
+            } 
+
+
+            $PersediaanKayus = new PersediaanKayuModel(); 
+ 
+            
+            $jml_persediaan = explode("#",$this->request->getVar('kodetransaksi'));  
+            $jml_persediaan1 = $jml_persediaan[1];
+  
+            $j_pem = explode("-",$this->request->getVar('j_pem'));  
+            $id_jenis_kayu = $j_pem[0];
+            $id_tipe_kayu = $j_pem[1];
+            $id_ukuran_kayu = $j_pem[2];
+            $jmlpembelian = $j_pem[3];
+ 
+            $ttl_harga = $PersediaanKayus->where('id_jenis_kayu', $id_jenis_kayu, 'id_tipe_kayu', $id_tipe_kayu, 'id_ukuran_kayu', $id_ukuran_kayu,)->findAll(); 
+            $ttl_harga2 = $ttl_harga[0]->Harga_satuan * $jmlpembelian;
+ 
+
+
+ 
+ 
+    }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -114,8 +194,7 @@ class Transaksi extends Controller{
         $dataPersediaanKayus = $PersediaanKayus->where('id_jenis_kayu', $id_jenis_kayu, 'id_tipe_kayu', $id_tipe_kayu, 'id_ukuran_kayu', $id_ukuran_kayu,)->findAll(); 
 
 
-        echo  "
-            <input type='text' class='form-control' disabled  id='' value='Rp " . number_format(($jmlpembelian * $dataPersediaanKayus[0]->Harga_satuan),2,',','.')." '>" ;
+        echo  "  <input type='text' class='form-control' readonly  name='ttl_harga' value='Rp " . number_format(($jmlpembelian * $dataPersediaanKayus[0]->Harga_satuan),2,',','.')." '>" ;
  
  
     }
