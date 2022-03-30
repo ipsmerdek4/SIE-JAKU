@@ -137,6 +137,7 @@ $routes->get('/transaksi/g-ukuran-kayu/(:any)', 'Transaksi::add_ajax_ukayu/$1',[
 $routes->get('/transaksi/g-jmlp-kayu/(:any)', 'Transaksi::add_ajax_jmlp/$1',['filter' => 'auth']);
 $routes->get('/transaksi/g-gharga-kayu/(:any)', 'Transaksi::add_ajax_gharga/$1',['filter' => 'auth']);
 
+$routes->get('/transaksi/d/(:any)', 'Transaksi::transaksi_deletedata/$1',['filter' => 'auth']); 
 
 
 

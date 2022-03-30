@@ -7,8 +7,8 @@ class TipeKayuModel extends Model{
     protected $table = "db_tipe_kayu";
     protected $primaryKey = "id_tipe_kayu";
     protected $returnType = "object";
-    protected $useTimestamps = true;
-    protected $allowedFields = ['id_jenis_kayu','nama_tipe_kayu'];
+   // protected $useTimestamps = true;
+    protected $allowedFields = ['id_jenis_kayu','nama_tipe_kayu','tgl_tipe_kayu'];
 
 
     function getjoinall()

@@ -9,6 +9,12 @@ class DbTransaksi extends Migration
     public function up()
     {
         $this->forge->addField([
+            'id_transaksi'          => [
+                'type'           => 'INT',
+                'constraint'     => 20,
+                'unsigned'       => true,
+                'auto_increment' => true
+            ],
 			'kode_transaksi'          => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',
@@ -33,6 +39,10 @@ class DbTransaksi extends Migration
                 'type'           => 'INT',
                 'constraint'     => 5,
 			],
+			'tgl_transaksi' => [
+				'type'           => 'DATETIME',
+			],
+			/*
 			'created_at' => [
 				'type'           => 'DATETIME',
 				'null'       	 => true,
@@ -40,10 +50,10 @@ class DbTransaksi extends Migration
 			'updated_at' => [
 				'type'           => 'DATETIME',
 				'null'       	 => true,
-			]
+			]*/
  
 		]);
-		$this->forge->addPrimaryKey('kode_transaksi', true);
+		$this->forge->addPrimaryKey('id_transaksi', true);
 		$this->forge->createTable('db_transaksi');
     }
 

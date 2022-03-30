@@ -72,7 +72,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="name" class="form-label">Tanggal</label>
-                                        <input type="text" class="form-control " disabled value="<?=date("d-M-Y H:i:s")?>">
+                                        <input type="text" name="tgl" class="form-control " readonly value="<?=date("Y-m-d H:i:s")?>">
                                     </div>
 
 

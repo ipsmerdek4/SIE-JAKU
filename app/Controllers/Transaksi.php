@@ -6,6 +6,7 @@ use App\Models\JenisKayuModel;
 use App\Models\TipeKayuModel;
 use App\Models\UkuranKayuModel;
 use App\Models\PersediaanKayuModel;
+use App\Models\TransaksiModel;
 
 
 class Transaksi extends Controller{
@@ -14,10 +15,16 @@ class Transaksi extends Controller{
     public function index()
     {  
  
+
+        $Transaksis = new TransaksiModel(); 
+
+
+
         $data = array(
 			'menu' => '4a',
 			'title' => 'Transaksi [SIE-JAKU]', 
             'batascss' => 'c5', 
+            'datatransaksi' => $Transaksis->getjoinall(), 
 
 		);
 
@@ -102,11 +109,13 @@ class Transaksi extends Controller{
 
 
             $PersediaanKayus = new PersediaanKayuModel(); 
- 
+            $Transaksis = new TransaksiModel(); 
+
             
-            $jml_persediaan = explode("#",$this->request->getVar('kodetransaksi'));  
-            $jml_persediaan1 = $jml_persediaan[1];
-  
+            $kodetransaksi = explode("#",$this->request->getVar('kodetransaksi'));  
+            $kodetransaksi1 = explode(" ",$kodetransaksi[1]);   
+            $kodetransaksi2 = $kodetransaksi1[0];
+ 
             $j_pem = explode("-",$this->request->getVar('j_pem'));  
             $id_jenis_kayu = $j_pem[0];
             $id_tipe_kayu = $j_pem[1];
@@ -115,14 +124,53 @@ class Transaksi extends Controller{
  
             $ttl_harga = $PersediaanKayus->where('id_jenis_kayu', $id_jenis_kayu, 'id_tipe_kayu', $id_tipe_kayu, 'id_ukuran_kayu', $id_ukuran_kayu,)->findAll(); 
             $ttl_harga2 = $ttl_harga[0]->Harga_satuan * $jmlpembelian;
- 
 
+            $sisa =  $ttl_harga[0]->jml_persediaan  - $jmlpembelian ;
+           
+ 
+ 
+            $Transaksis->insert([ 
+                'kode_transaksi' => $kodetransaksi2,
+                'jumlah_pembelian' => $jmlpembelian,
+                'total_harga' => $ttl_harga2,
+                'id_jenis_kayu' => $id_jenis_kayu,
+                'id_tipe_kayu' => $id_tipe_kayu,
+                'id_ukuran_kayu' => $id_ukuran_kayu,
+                'tgl_transaksi' => date("Y-m-d H:i:s"),
+            ]);
+
+     
+            $dataubahsisa = [
+                'jml_persediaan' => $sisa,     
+            ];  
+            $PersediaanKayus->update($ttl_harga[0]->id_persediaan, $dataubahsisa);
 
  
+            session()->setFlashdata('alert', 'Berhasil Menambah Data.');
+            return redirect()->to(base_url('transaksi/'))->withInput(); 
+             
  
     }
 
 
+    public function transaksi_deletedata($id = null)
+    {
+          $Transaksis = new TransaksiModel(); 
+  
+          if($Transaksis->find($id)){
+              $Transaksis->delete($id); 
+  
+              session()->setFlashdata('alert', 'Berhasil Menghapus Data.');
+              return redirect()->to(base_url('transaksi'))->withInput();  
+          }else{
+              session()->setFlashdata('alert', 'Terjadi Kesalahan Saat Menghapus Data. Dengan [ ID = #'.$id.' ]');
+              return redirect()->to(base_url('transaksi'))->withInput(); 
+          }
+  
+    }
+  
+   
+  
 
 
 
@@ -168,15 +216,21 @@ class Transaksi extends Controller{
         $id_ukuran_kayu = $pecah[2];
 
 
+        
+
+
         $PersediaanKayus = new PersediaanKayuModel();  
-        $dataPersediaanKayus = $PersediaanKayus->where('id_jenis_kayu', $id_jenis_kayu, 'id_tipe_kayu', $id_tipe_kayu, 'id_ukuran_kayu', $id_ukuran_kayu,)->findAll(); 
+        $dataPersediaanKayus = $PersediaanKayus->where('id_ukuran_kayu', $id_ukuran_kayu, 'id_jenis_kayu', $id_jenis_kayu, 'id_tipe_kayu', $id_tipe_kayu )->findAll(); 
 
 
- 
-        for ($x = 0; $x <= $dataPersediaanKayus[0]->jml_persediaan  ; $x++) {
-            echo "<option value='".$id."-".$x."'>".$x." / ".$dataPersediaanKayus[0]->jml_persediaan ."</option>";
-        } 
-  
+        if ($dataPersediaanKayus == false) {
+            echo "<option value=''>0</option>";
+        }else{ 
+            for ($x = 0; $x <= $dataPersediaanKayus[0]->jml_persediaan  ; $x++) {
+                echo "<option value='".$id."-".$x."'>".$x." / ".$dataPersediaanKayus[0]->jml_persediaan ."</option>";
+            }  
+        }
+
     }
   
 

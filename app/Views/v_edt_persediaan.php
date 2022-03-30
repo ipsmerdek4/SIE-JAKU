@@ -92,13 +92,8 @@
                                     </div>
                                     <input type="text" name="harga" class="form-control "  placeholder="Harga Satuan" onkeypress="return hanyaAngka(event)" value="<?=$datapersediaan[0]->Harga_satuan?>">
                                 </div>
-                            </div>  
-
-                            <div class="form-group">
-                                <label for="name" class="form-label">Tanggal</label>
-                                <input type="text" class="form-control " disabled value="<?=date("d-M-Y H:i:s")?>">
-                            </div> 
-
+                            </div>   
+                            
                         </div>  
                         <div class="col-md-12 "> 
                             <br><br><hr class="bg-danger">

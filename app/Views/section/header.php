@@ -233,6 +233,7 @@
               <li><a href="<?=base_url('jenis-kayu') ?>" class="dropdown-item">Jenis Kayu </a></li>
               <li><a href="<?=base_url('tipe-kayu') ?>" class="dropdown-item">Tipe Kayu</a></li>
               <li><a href="<?=base_url('ukuran-kayu') ?>" class="dropdown-item">Ukuran Kayu</a></li>
+              <li><a href="<?=base_url('harga-kayu') ?>" class="dropdown-item">Harga Satuan Kayu</a></li>
 
               <li class="dropdown-divider"></li>
               <li><a href="<?=base_url('persediaan-kayu') ?>" class="dropdown-item">Persediaan Kayu</a></li>

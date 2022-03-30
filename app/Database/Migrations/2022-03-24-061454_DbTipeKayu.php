@@ -23,6 +23,10 @@ class DbTipeKayu extends Migration
 				'type'           => 'TEXT',
                 'null'           => true,
 			], 
+			'tgl_tipe_kayu'       => [
+				'type'           => 'DATETIME',
+			], 
+			/*
 			'created_at' => [
 				'type'           => 'DATETIME',
 				'null'       	 => true,
@@ -30,7 +34,7 @@ class DbTipeKayu extends Migration
 			'updated_at' => [
 				'type'           => 'DATETIME',
 				'null'       	 => true,
-			]
+			]*/
  
 		]);
 		$this->forge->addPrimaryKey('id_tipe_kayu', true);

@@ -34,6 +34,11 @@ class DbPersediaanKayu extends Migration
                 'type'           => 'BIGINT',
                 'constraint'     => 20,
 			],
+			'Tanggal_persediaan' => [
+				'type'           => 'DATETIME', 
+			],
+
+            /*
 			'created_at' => [
 				'type'           => 'DATETIME',
 				'null'       	 => true,
@@ -41,7 +46,7 @@ class DbPersediaanKayu extends Migration
 			'updated_at' => [
 				'type'           => 'DATETIME',
 				'null'       	 => true,
-            ],
+            ], */
  
 		]);
 		$this->forge->addPrimaryKey('id_persediaan', true);

@@ -27,21 +27,78 @@
                 <h3 class="card-title text-lg"> <b>Data Transaksi</b> </h3>
               </div>
  
+
+
+
+              <style>
+
+                  @media only screen and (max-width:500px) {
+                    .footertransaksi{
+                      display: none;
+                    }
+                  }
+
+                  @media only screen and (min-width:768px) {
+                    .footertransaksi2{
+                      display: none;
+                    } 
+                  }
+
+              </style>
+
+
+
+
                 <!-- /.card-header -->
                 <div class="card-body">  
                     <table id="vtransaksi" class="table table-bordered table-striped display">
                         <thead>
                         <tr>
                           <th>No</th> 
-                          <th>Jenis Kayu</th>
-                          <th>Tipe Kayu</th> 
+                          <th>Kode Transaksi</th>
+                          <th>Jenis, Tipe, dan Ukuran Kayu</th>
+                          <th>Jumlah<br>Pembelian</th> 
+                          <th>Total<br>Harga</th> 
                           <th>Opsi</th> 
                         </tr>
                         </thead>
                         <tbody> 
-
-
+                        <?php $no=0; foreach ($datatransaksi as $item): $no++; ?>
+                            
+                          <tr>
+                            <td><?=$no?></td> 
+                            <td>#<?=$item->kode_transaksi?></td> 
+                            <td>
+                            <?=$item->nama_jenis_kayu?>, <?=$item->nama_tipe_kayu?>, <?=$item->nama_Ukuran_kayu?>
+                            </td>
+                            <td><?=$item->jumlah_pembelian?> </td>
+                            <td><?=$item->total_harga?> </td> 
+                            <td>
+                                      <div class="row h-100 justify-content-center align-items-center">
+                                          <div class="btn-group">  
+                                                <a href="<?=base_url("/transaksi/".$item->id_transaksi );?>" class="btn btn-success" >
+                                                    <i class="fa-solid fa-user-pen py-1 pl-1"></i>
+                                                </a>
+                                                <a href="<?=base_url("/transaksi/d/".$item->id_transaksi );?>" class="btn btn-danger btnremove">
+                                                    <i class="fa-solid fa-trash-can-arrow-up py-1 px-1"></i>
+                                                </a>   
+                                          </div>
+                                      </div>  
+                            </td> 
+                          </tr>
+                          
+                        <?php endforeach; ?>  
                         </tbody>
+                        <tfoot>
+                            <tr>
+                                <th></th> 
+                                <th></th>
+                                <th></th>  
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
                 </table>
 
 

@@ -7,8 +7,8 @@ class UkuranKayuModel extends Model{
     protected $table = "db_ukuran_kayu";
     protected $primaryKey = "id_ukuran_kayu";
     protected $returnType = "object";
-    protected $useTimestamps = true;
-    protected $allowedFields = ['id_tipe_kayu', 'nama_Ukuran_kayu'];
+   // protected $useTimestamps = true;
+    protected $allowedFields = ['id_tipe_kayu', 'nama_Ukuran_kayu', 'tgl_ukuran_kayu'];
 
     function getjoinall()
     {

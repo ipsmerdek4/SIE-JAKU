@@ -70,7 +70,8 @@ class Stock extends Controller{
 
  
         $JenisKayuModels->insert([ 
-            'nama_jenis_kayu' => $this->request->getVar('jeniskayu')
+            'nama_jenis_kayu' => $this->request->getVar('jeniskayu'),
+            'tgl_jenis_kayu' => $this->request->getVar('tgl')
         ]);
         session()->setFlashdata('alert', 'Berhasil Menambah Data. Dengan [ Nama Kayu= '.'#'.$this->request->getVar('jeniskayu').' ]');
         return redirect()->to(base_url('jenis-kayu/'))->withInput(); 
@@ -219,7 +220,8 @@ class Stock extends Controller{
  
               $TipeKayus->insert([ 
                   'nama_tipe_kayu' => $this->request->getVar('tkayu'),
-                  'id_jenis_kayu' => $this->request->getVar('jkayu')
+                  'id_jenis_kayu' => $this->request->getVar('jkayu'),
+                  'tgl_tipe_kayu' => $this->request->getVar('tgl')
               ]);
               session()->setFlashdata('alert', 'Berhasil Menambah Data. Dengan [ Nama Tipe = '.'#'.$this->request->getVar('tkayu').' ]');
               return redirect()->to(base_url('tipe-kayu/'))->withInput(); 
@@ -269,6 +271,9 @@ class Stock extends Controller{
     {
      
               $TipeKayus = new TipeKayuModel();
+
+
+
 
               if (!$this->validate([
                   'tkayu' => [
@@ -379,7 +384,8 @@ class Stock extends Controller{
             $UkuranKayus = new UkuranKayuModel(); 
             $UkuranKayus->insert([ 
                 'nama_Ukuran_kayu' => $this->request->getVar('ukayu'),
-                'id_tipe_kayu' => $this->request->getVar('tkayu')
+                'id_tipe_kayu' => $this->request->getVar('tkayu'),
+                'tgl_ukuran_kayu' => $this->request->getVar('tgl')
             ]);
             session()->setFlashdata('alert', 'Berhasil Menambah Data.');
             return redirect()->to(base_url('ukuran-kayu/'))->withInput(); 
@@ -521,7 +527,7 @@ class Stock extends Controller{
     $JenisKayus = new JenisKayuModel();  
     $TipeKayus = new TipeKayuModel();
  
-
+ 
     $data = array(
             'menu' => '3a',
             'title' => 'Persedian Kayu [SIE-JAKU]', 
@@ -532,7 +538,7 @@ class Stock extends Controller{
     echo view('section/header', $data);
     echo view('v_persediaan', $data);
     echo view('section/footer', $data); 
-
+ 
   }
  
   public function add_persediaan_kayu()
@@ -595,16 +601,23 @@ class Stock extends Controller{
             } 
   
             $PersediaanKayus = new PersediaanKayuModel(); 
+
+
+           // print_r($this->request->getVar('tgl'));
+            
             $PersediaanKayus->insert([ 
+                'Tanggal_persediaan' => $this->request->getVar('tgl'),
                 'jml_persediaan' => $this->request->getVar('p_kayu'),
                 'Harga_satuan' => $this->request->getVar('harga'),
                 'id_jenis_kayu' => $this->request->getVar('j_kayu'),
                 'id_tipe_kayu' => $this->request->getVar('t_kayu'),
                 'id_ukuran_kayu' => $this->request->getVar('ukayu'),
             ]);
+ 
+
             session()->setFlashdata('alert', 'Berhasil Menambah Data.');
             return redirect()->to(base_url('persediaan-kayu/'))->withInput(); 
-       
+
  
   }
  
@@ -684,7 +697,7 @@ class Stock extends Controller{
                 'j_kayu' => [
                     'rules' => 'required',
                     'errors' => [
-                        'required'   => 'Jenis Kayu Harus dipilih', 
+                        'required'   => 'Jenis Kayu Harus dipilih',   
                     ]
                 ], 
                 't_kayu' => [
@@ -711,8 +724,7 @@ class Stock extends Controller{
             'Harga_satuan' => $this->request->getVar('harga'),
             'id_jenis_kayu' => $this->request->getVar('j_kayu'),
             'id_tipe_kayu' => $this->request->getVar('t_kayu'),
-            'id_ukuran_kayu' => $this->request->getVar('ukayu'),
-            'created_at'     => date("Y-m-d H:i:s"),   
+            'id_ukuran_kayu' => $this->request->getVar('ukayu'), 
 
         ];  
         $PersediaanKayus->update($id, $data);

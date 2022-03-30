@@ -947,27 +947,120 @@
 
 
 
+                const rupiah = (number)=>{
+                  return new Intl.NumberFormat("id-ID", {
+                    style: "currency",
+                    currency: "IDR"
+                  }).format(number);
+                }
+ 
+   
+ 
+
               $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
               var table =$('#vtransaksi').DataTable( { 
+
+
+                
+
+                footerCallback : function ( row, data, start, end, display ) {
+                      var api = this.api();
+          
+                      // Remove the formatting to get integer data for summation
+                      var intVal = function ( i ) {
+                          return typeof i === 'string' ?
+                              i.replace(/[\$,]/g, ' ')*1 :
+                              typeof i === 'number' ?
+                                  i : 0;
+                      };
+          
+                      // Total over all pages
+                      total = api
+                          .column( 4 )
+                          .data()
+                          .reduce( function (a, b) {
+                              return intVal(a) + intVal(b);
+                          }, 0 );
+          
+                      // Total over this page
+                      pageTotal = api
+                          .column( 4, { page: 'current'} )
+                          .data()
+                          .reduce( function (a, b) {
+                              return intVal(a) + intVal(b);
+                          }, 0 );
+          
+
+                      if ($(window).width() >= 1000 ) {
+                          // Update footer
+                          $( api.column( 3 ).footer() ).html( 
+                                'Total :' 
+                          );
+                          // Update footer
+                          $( api.column( 4 ).footer() ).html( 
+                              ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
+                          );
+                      }else if($(window).width() >= 285 ){
+                          // Update footer
+                          $( api.column( 0 ).footer() ).html( 
+                                'Total :' 
+                          );
+                            // Update footer
+                            $( api.column( 1 ).footer() ).html( 
+                            ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
+                          );
+                      }else{  
+                          // Update footer
+                          $( api.column( 0 ).footer() ).html( 
+                            ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
+                          );
+
+                      }
+
+                  },
                   buttons: [
                       {
                         text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
                         className: ' btn-primary',
                         action:     function ( e, dt, node, config ) {
                                       window.location.href = '/transaksi/add';
-                                    }
-                      }
+                                    },
+                                    
+                      },  /*
+                      {
+                          extend: 'print',
+                          text: '<i class="fa-solid fa-print"></i> <b>| Cetak</b>',
+                          className: ' btn-danger ml-3', 
+                          footer: true,  
+                      }  */
                   ],
-                  order: [[1, "asc" ]],
+                  //order: [[1, "asc" ]],
                   responsive: true, 
-                  lengthChange: false, 
+                  lengthChange: true, 
                   autoWidth: false,   
-              } );
+                  columnDefs : [     
+                                {
+                                    targets: 0,
+                                    className: ' text-sm-center', 
+                                },
+                                {
+                                    targets: 3,
+                                    className: ' text-sm-center', 
+                                },
+                                {
+                                    targets: 4,
+                                    className: ' text-sm-center',
+                                    render: $.fn.dataTable.render.number( ',', '.', 2, 'Rp ' ),
+                                },
+                              ]
+
+              } ); 
               table.on( 'order.dt search.dt', function () {
                 table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
                       cell.innerHTML = i+1;
                   } );
-              } ).draw();
+              } ).draw();  
+
               table.buttons().container().appendTo("#vtransaksi_wrapper .col-md-6:eq(0)"); 
 
                   /*  */
