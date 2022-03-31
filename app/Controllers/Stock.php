@@ -205,14 +205,13 @@ class Stock extends Controller{
                       'errors' => [
                           'required'   => 'Tipe Kayu Harus diisi',
                           'min_length' => 'Tipe Kayu Minimal 4 Karakter',
-                          'max_length' => 'Tipe Kayu Maksimal 100 Karakter',  
+                          'max_length' => 'Tipe Kayu Maksimal 100 Karakter',   
                       ]
                   ],   
                   'jkayu' => [
-                      'rules' => 'required|is_unique[db_tipe_kayu.id_jenis_kayu]',
+                      'rules' => 'required',
                       'errors' => [
                           'required'   => 'Jenis Kayu Harus dipilih', 
-                          'is_unique' => 'Jenis Kayu sudah digunakan sebelumnya'
                       ]
                   ], 
               ])) {
@@ -373,10 +372,9 @@ class Stock extends Controller{
                     ]
                 ],   
                 'tkayu' => [
-                    'rules' => 'required|is_unique[db_ukuran_kayu.id_tipe_kayu]',
+                    'rules' => 'required',
                     'errors' => [
-                        'required'   => 'Tipe Kayu Harus dipilih', 
-                        'is_unique' => 'Jenis dan tipe Kayu sudah digunakan sebelumnya'
+                        'required'   => 'Tipe Kayu Harus dipilih',  
                     ]
                 ], 
             ])) {

@@ -7,6 +7,7 @@ use App\Models\TipeKayuModel;
 use App\Models\UkuranKayuModel;
 use App\Models\PersediaanKayuModel;
 use App\Models\TransaksiModel;
+use App\Models\HargaKayuModel;
 
 
 class Transaksi extends Controller{
@@ -72,10 +73,9 @@ class Transaksi extends Controller{
                     ]
                 ], 
                 'ttl_harga' => [
-                    'rules' => 'required|max_length[20]',
+                    'rules' => 'required',
                     'errors' => [
-                        'required'   => 'Total Harga Harus diisi', 
-                        'max_length' => 'Total Harga Maksimal 20 Angka',  
+                        'required'   => 'Total harga Harus dipilih', 
                     ]
                 ], 
                 'j_pem' => [
@@ -117,22 +117,24 @@ class Transaksi extends Controller{
             $kodetransaksi2 = $kodetransaksi1[0];
  
             $j_pem = explode("-",$this->request->getVar('j_pem'));  
+            
             $id_jenis_kayu = $j_pem[0];
             $id_tipe_kayu = $j_pem[1];
             $id_ukuran_kayu = $j_pem[2];
-            $jmlpembelian = $j_pem[3];
+            $id_persediaan = $j_pem[3];
+            $jmlpembelian = $j_pem[4];
  
-            $ttl_harga = $PersediaanKayus->where('id_jenis_kayu', $id_jenis_kayu, 'id_tipe_kayu', $id_tipe_kayu, 'id_ukuran_kayu', $id_ukuran_kayu,)->findAll(); 
-            $ttl_harga2 = $ttl_harga[0]->Harga_satuan * $jmlpembelian;
-
-            $sisa =  $ttl_harga[0]->jml_persediaan  - $jmlpembelian ;
+            $darapersediaan = $PersediaanKayus->where('id_persediaan', $id_persediaan)->findAll(); 
+ 
+            $sisa =  $darapersediaan[0]->jml_persediaan - $jmlpembelian ;
            
- 
- 
+  
             $Transaksis->insert([ 
                 'kode_transaksi' => $kodetransaksi2,
                 'jumlah_pembelian' => $jmlpembelian,
-                'total_harga' => $ttl_harga2,
+                'total_harga' => $this->request->getVar('ttl_harga'),
+                'tipe_pesanan' => $this->request->getVar('tipe_pesanan'),
+                'id_persediaan' => $id_persediaan,
                 'id_jenis_kayu' => $id_jenis_kayu,
                 'id_tipe_kayu' => $id_tipe_kayu,
                 'id_ukuran_kayu' => $id_ukuran_kayu,
@@ -143,12 +145,13 @@ class Transaksi extends Controller{
             $dataubahsisa = [
                 'jml_persediaan' => $sisa,     
             ];  
-            $PersediaanKayus->update($ttl_harga[0]->id_persediaan, $dataubahsisa);
+            $PersediaanKayus->update($id_persediaan, $dataubahsisa);
 
  
             session()->setFlashdata('alert', 'Berhasil Menambah Data.');
             return redirect()->to(base_url('transaksi/'))->withInput(); 
-             
+        
+            
  
     }
 
@@ -205,8 +208,70 @@ class Transaksi extends Controller{
           } 
           echo $data;   
     }
+
+    
+
+    function add_ajax_persediaan($id = null)
+    { 
+          $pecah = explode("-",$id); 
+
+            $id_jenis_kayu = $pecah[0];
+            $id_tipe_kayu = $pecah[1];
+            $id_ukuran_kayu = $pecah[2];
+
+
+            $PersediaanKayus = new PersediaanKayuModel();  
+            $dataPersediaanKayus = $PersediaanKayus->where('id_ukuran_kayu', $id_ukuran_kayu, 'id_tipe_kayu', $id_tipe_kayu, 'id_jenis_kayu', $id_jenis_kayu, )->findAll(); 
+     
+            function bulan($bulan)
+            {
+                Switch ($bulan){
+                case 1 : $bulan="Januari";
+                    Break;
+                case 2 : $bulan="Februari";
+                    Break;
+                case 3 : $bulan="Maret";
+                    Break;
+                case 4 : $bulan="April";
+                    Break;
+                case 5 : $bulan="Mei";
+                    Break;
+                case 6 : $bulan="Juni";
+                    Break;
+                case 7 : $bulan="Juli";
+                    Break;
+                case 8 : $bulan="Agustus";
+                    Break;
+                case 9 : $bulan="September";
+                    Break;
+                case 10 : $bulan="Oktober";
+                    Break;
+                case 11 : $bulan="November";
+                    Break;
+                case 12 : $bulan="Desember";
+                    Break;
+                }
+                return $bulan;
+            }
+
+          $data = "<option value=''>- Select Persediaan Kayu -</option>"; 
+          foreach ($dataPersediaanKayus as $value) {
+              
+            $pecahtgl1 = explode(" ",$value->Tanggal_persediaan); 
+            $pecahtgl2 = explode("-",$pecahtgl1[0]); 
+            $newtgl = $pecahtgl2[2].'/'.bulan($pecahtgl2[1]).'/'.$pecahtgl2[0].' '.$pecahtgl1[1];
+            
+            if ($value->jml_persediaan > 0) {
+                $data .= "<option value='".$id."-".$value->id_persediaan."'>".$newtgl. "</option>";
+            }
   
+          } 
+          echo $data;   
+    }
    
+
+
+
     function add_ajax_jmlp($id = null)
     {
         $pecah = explode("-",$id); 
@@ -214,22 +279,22 @@ class Transaksi extends Controller{
         $id_jenis_kayu = $pecah[0];
         $id_tipe_kayu = $pecah[1];
         $id_ukuran_kayu = $pecah[2];
+        $id_persediaan = $pecah[3];
 
 
-        
-
-
+ 
         $PersediaanKayus = new PersediaanKayuModel();  
-        $dataPersediaanKayus = $PersediaanKayus->where('id_ukuran_kayu', $id_ukuran_kayu, 'id_jenis_kayu', $id_jenis_kayu, 'id_tipe_kayu', $id_tipe_kayu )->findAll(); 
-
-
+        $dataPersediaanKayus = $PersediaanKayus->where('id_persediaan', $id_persediaan, 'id_ukuran_kayu', $id_ukuran_kayu, 'id_tipe_kayu', $id_tipe_kayu, 'id_jenis_kayu', $id_jenis_kayu, )->findAll(); 
+ 
+        
         if ($dataPersediaanKayus == false) {
             echo "<option value=''>0</option>";
-        }else{ 
-            for ($x = 0; $x <= $dataPersediaanKayus[0]->jml_persediaan  ; $x++) {
+        }else{  
+            for ($x = 0; $x <= $dataPersediaanKayus[0]->jml_persediaan; $x++) {
                 echo "<option value='".$id."-".$x."'>".$x." / ".$dataPersediaanKayus[0]->jml_persediaan ."</option>";
             }  
         }
+          
 
     }
   
@@ -242,13 +307,17 @@ class Transaksi extends Controller{
         $id_jenis_kayu = $pecah[0];
         $id_tipe_kayu = $pecah[1];
         $id_ukuran_kayu = $pecah[2];
-        $jmlpembelian = $pecah[3];
+        $jmlpembelian = $pecah[4];
 
         $PersediaanKayus = new PersediaanKayuModel();  
+        $HargaKayus = new HargaKayuModel();  
+
         $dataPersediaanKayus = $PersediaanKayus->where('id_jenis_kayu', $id_jenis_kayu, 'id_tipe_kayu', $id_tipe_kayu, 'id_ukuran_kayu', $id_ukuran_kayu,)->findAll(); 
-
-
-        echo  "  <input type='text' class='form-control' readonly  name='ttl_harga' value='Rp " . number_format(($jmlpembelian * $dataPersediaanKayus[0]->Harga_satuan),2,',','.')." '>" ;
+        $dataHargaKayus = $HargaKayus->where('id_harga_kayu', $dataPersediaanKayus[0]->id_harga_kayu)->findAll(); 
+ 
+        $totalharga = ($jmlpembelian * $dataHargaKayus[0]->nama_harga_kayu);
+        echo "<option value='".$totalharga."'> Rp " . number_format($totalharga,2,',','.')." </option>";
+  
  
  
     }

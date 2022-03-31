@@ -58,7 +58,8 @@
                           <th>Kode Transaksi</th>
                           <th>Jenis, Tipe, dan Ukuran Kayu</th>
                           <th>Jumlah<br>Pembelian</th> 
-                          <th>Total<br>Harga</th> 
+                          <th>Total<br>Harga</th>
+                          <th>Tipe<br>Pesanan</th> 
                           <th>Opsi</th> 
                         </tr>
                         </thead>
@@ -73,6 +74,7 @@
                             </td>
                             <td><?=$item->jumlah_pembelian?> </td>
                             <td><?=$item->total_harga?> </td> 
+                            <td><?=$item->tipe_pesanan	?> </td> 
                             <td>
                                       <div class="row h-100 justify-content-center align-items-center">
                                           <div class="btn-group">  
@@ -94,6 +96,7 @@
                                 <th></th> 
                                 <th></th>
                                 <th></th>  
+                                <th></th>
                                 <th></th>
                                 <th></th>
                                 <th></th>

@@ -39,6 +39,14 @@ class DbTransaksi extends Migration
                 'type'           => 'INT',
                 'constraint'     => 5,
 			],
+			'id_persediaan' => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+			],
+			'tipe_pesanan' => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '25',
+			],
 			'tgl_transaksi' => [
 				'type'           => 'DATETIME',
 			],

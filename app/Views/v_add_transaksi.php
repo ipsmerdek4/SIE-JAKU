@@ -86,21 +86,40 @@
                                             </div>
 
                                             <div class="form-group ">
-                                                <label for="name" class="form-label">Jumlah Pembelian</label>
-                                                <select name="j_pem" id="j_pem" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
-                                                    <option value=''>Select Jumlah Pembelian -</option> 
-                                                </select> 
-                                                
+                                                <div class="row"> 
+                                                    <div class="col-sm-6">
+                                                        <label for="name" class="form-label">Persediaan</label> 
+                                                        <select name="persediaan" id="persediaan" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                            <option value=''>Select Persediaan -</option> 
+                                                        </select>
+                                                    </div>
+                                                    <div class="col-sm-6">
+                                                        <label for="name" class="form-label">Jumlah Pembelian</label> 
+                                                        <select name="j_pem" id="j_pem" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                            <option value=''>Select Jumlah Pembelian -</option> 
+                                                        </select>
+                                                    </div> 
+                                                </div> 
                                             </div>
 
                                             <div class="form-group ">
-                                                <label for="name" class="form-label">Total Harga</label>
-                                                <div id="get_harga"> 
-                                                    <input type="text" name="ttl_harga" class="form-control " readonly  value="Rp 0,00">
-                                                </div> 
-
-                                            
+                                                <label for="name" class="form-label">Total Harga</label> 
+                                                <select name="ttl_harga"  id="get_harga" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                    <option value=''>Rp 0,00-</option> 
+                                                </select>       
                                             </div>
+
+                                            <div class="form-group ">
+                                                <label for="name" class="form-label">Tipe Pemesanan</label> 
+                                                <select name="tipe_pesanan"  id="tipe_pesanan" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                        <option value='Online order'>Online order</option> 
+                                                        <option value='Offline order'>Offline order</option> 
+                                                        <option value='Cash on Delivery'>Cash on Delivery</option> 
+                                                </select>       
+                                            </div>
+
+
+
                                     </div>
 
                                     <div class="col-md-12"> 

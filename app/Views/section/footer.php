@@ -1091,6 +1091,12 @@
 
 
                       $("#u_kayu").change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-persediaan-kayu');?>/"+$(this).val();
+                        $('#persediaan').load(url);
+                        return false; 
+                      })
+
+                      $("#persediaan").change(function (){ 
                         var url = "<?php echo site_url('/transaksi/g-jmlp-kayu');?>/"+$(this).val();
                         $('#j_pem').load(url);
                         return false; 
