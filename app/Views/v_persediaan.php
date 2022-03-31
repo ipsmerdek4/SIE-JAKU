@@ -55,7 +55,7 @@
                                   <td><?=$item->nama_tipe_kayu?></td>  
                                   <td><?=$item->nama_Ukuran_kayu?></td>  
                                   <td><?=$item->jml_persediaan?></td>  
-                                  <td><?="Rp " . number_format($item->Harga_satuan,2,',','.') ?></td>   
+                                  <td><?="Rp " . number_format($item->nama_harga_kayu	,2,',','.') ?></td>   
                                   <td><?=$item->Tanggal_persediaan?></td>  
                                   <td>
                                       <div class="row h-100 justify-content-center align-items-center">

@@ -6,6 +6,7 @@ use App\Models\JenisKayuModel;
 use App\Models\TipeKayuModel;
 use App\Models\UkuranKayuModel;
 use App\Models\PersediaanKayuModel;
+use App\Models\HargaKayuModel;
 
 
 
@@ -206,11 +207,12 @@ class Stock extends Controller{
                           'min_length' => 'Tipe Kayu Minimal 4 Karakter',
                           'max_length' => 'Tipe Kayu Maksimal 100 Karakter',  
                       ]
-                  ], 
+                  ],   
                   'jkayu' => [
-                      'rules' => 'required',
+                      'rules' => 'required|is_unique[db_tipe_kayu.id_jenis_kayu]',
                       'errors' => [
                           'required'   => 'Jenis Kayu Harus dipilih', 
+                          'is_unique' => 'Jenis Kayu sudah digunakan sebelumnya'
                       ]
                   ], 
               ])) {
@@ -369,11 +371,12 @@ class Stock extends Controller{
                     'errors' => [
                         'required'   => 'Jenis Kayu Harus dipilih', 
                     ]
-                ], 
+                ],   
                 'tkayu' => [
-                    'rules' => 'required',
+                    'rules' => 'required|is_unique[db_ukuran_kayu.id_tipe_kayu]',
                     'errors' => [
                         'required'   => 'Tipe Kayu Harus dipilih', 
+                        'is_unique' => 'Jenis dan tipe Kayu sudah digunakan sebelumnya'
                     ]
                 ], 
             ])) {
@@ -487,34 +490,205 @@ class Stock extends Controller{
   }
 
  
-  function add_ajax_tkayu($id = null)
-  { 
-        $TipeKayus = new TipeKayuModel(); 
-        $dataTipeKayus = $TipeKayus->where('id_jenis_kayu', $id)->findAll(); 
-        $data = "<option value=''>- Select Tipe Kayu -</option>"; 
-        foreach ($dataTipeKayus as $value) {
-          $data .= "<option value='".$value->id_tipe_kayu."'>".$value->nama_tipe_kayu."</option>";
-        } 
-        echo $data;  
-  }
-
- 
- 
-  function add_ajax_ukayu($id = null)
-  { 
-        $UkuranKayus = new UkuranKayuModel(); 
-        $dataUkuranKayus = $UkuranKayus->where('id_tipe_kayu', $id)->findAll(); 
-        $data = "<option value=''>- Select Tipe Kayu -</option>"; 
-        foreach ($dataUkuranKayus as $value) {
-          $data .= "<option value='".$value->id_ukuran_kayu."'>".$value->nama_Ukuran_kayu."</option>";
-        } 
-        echo $data;  
-  }
-
  
 
 
 /* END UKURAN KAYU  */
+
+
+
+/* HARGA KAYU */
+
+  public function harga()
+  {   
+
+            $HargaKayus = new HargaKayuModel(); 
+
+
+            $data = array(
+            'menu' => '3a',
+            'title' => 'Harga Kayu [SIE-JAKU]', 
+            'batascss' => 'c4d',   
+            'dataHargaKayus' => $HargaKayus->getjoinall(), 
+        
+            );   
+            echo view('section/header', $data);
+            echo view('v_harga_kayu', $data);
+            echo view('section/footer', $data); 
+
+  }
+ 
+  public function add_harga_kayu()
+  {   
+        $JenisKayus = new JenisKayuModel(); 
+        
+        $data = array(
+            'menu' => '3a',
+            'title' => 'Harga Kayu [SIE-JAKU]', 
+            'batascss' => 'c4d', 
+            'dataJenisKayus' => $JenisKayus->findall(), 
+        );   
+        echo view('section/header', $data);
+        echo view('v_add_harga', $data);
+        echo view('section/footer', $data); 
+
+  }
+ 
+  public function harga_process()
+  {    
+            if (!$this->validate([
+                'harga' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required'   => 'Harga Kayu Harus diisi', 
+                        'max_length' => 'Harga Kayu Maksimal 100 Karakter',  
+                    ]
+                ], 
+                'jkayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Jenis Kayu Harus dipilih', 
+                    ]
+                ], 
+                'tkayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Tipe Kayu Harus dipilih', 
+                    ]
+                ], 
+                'ukayu' => [
+                    'rules' => 'required|is_unique[db_harga_kayu.id_ukuran_kayu]',
+                    'errors' => [
+                        'required'   => ' Kayu Harus dipilih', 
+                        'is_unique' => 'Jenis, tipe Dan Ukuran Kayu sudah digunakan sebelumnya'
+                    ]
+                ], 
+            ])) {
+                session()->setFlashdata('error', $this->validator->listErrors());
+                return redirect()->to(base_url('/harga-kayu/add'))->withInput(); 
+            } 
+ 
+            $HargaKayus = new HargaKayuModel(); 
+            $HargaKayus->insert([ 
+                'nama_harga_kayu' => $this->request->getVar('harga'),
+                'id_ukuran_kayu' => $this->request->getVar('ukayu'),
+                'tgl_harga_kayu' => $this->request->getVar('tgl')
+            ]);
+
+            session()->setFlashdata('alert', 'Berhasil Menambah Data.');
+            return redirect()->to(base_url('harga-kayu/'))->withInput(); 
+        
+
+  }
+ 
+  public function harga_deletedata($id = null)
+  {
+        $HargaKayus = new HargaKayuModel(); 
+
+        if($HargaKayus->find($id)){
+            $HargaKayus->delete($id); 
+
+            session()->setFlashdata('alert', 'Berhasil Menghapus Data. Dengan [ ID = #'.$id.' ]');
+            return redirect()->to(base_url('harga-kayu'))->withInput();  
+        }else{
+            session()->setFlashdata('alert', 'Terjadi Kesalahan Saat Menghapus Data. Dengan [ ID = #'.$id.' ]');
+            return redirect()->to(base_url('harga-kayu'))->withInput(); 
+        }
+
+  }
+ 
+  public function harga_edit($id = null)
+  {
+        $HargaKayus = new HargaKayuModel(); 
+
+        $JenisKayus = new JenisKayuModel();  
+        $TipeKayus = new TipeKayuModel();
+        $UkuranKayus = new UkuranKayuModel(); 
+
+        $data1 = $HargaKayus->where('id_harga_kayu', $id)->findAll(); 
+        $data2 = $UkuranKayus->where('id_ukuran_kayu', $data1[0]->id_ukuran_kayu)->findAll(); 
+        $data3 = $TipeKayus->where('id_tipe_kayu', $data2[0]->id_tipe_kayu)->findAll(); 
+        $data4 = $JenisKayus->where('id_jenis_kayu', $data3[0]->id_jenis_kayu)->findAll(); 
+
+ 
+      $data = array(
+            'menu' => '3a',
+            'title' => 'Ukuran Kayu [SIE-JAKU]', 
+            'batascss' => 'c4d',  
+            'data1' => $data1, //harga kayu
+            'data2' => $data2,
+            'data3' => $data3,
+            'data4' => $data4,
+            'dataJenisKayus' => $JenisKayus->findall(),  
+            'dataTipeKayus' => $TipeKayus->where('id_jenis_kayu', $data4[0]->id_jenis_kayu)->findAll(),   
+            'dataukuranKayus' => $UkuranKayus->where('id_tipe_kayu', $data3[0]->id_tipe_kayu)->findAll(),  
+ 
+
+      );   
+      echo view('section/header', $data);
+      echo view('v_edt_harga', $data);
+      echo view('section/footer', $data);   
+       
+  } 
+ 
+  public function harga_editproses($id = null)
+  {
+   
+    
+ 
+             if (!$this->validate([
+                'harga' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required'   => 'Harga Kayu Harus diisi', 
+                        'max_length' => 'Harga Kayu Maksimal 100 Karakter',  
+                    ]
+                ], 
+                'jkayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Jenis Kayu Harus dipilih', 
+                    ]
+                ], 
+                'tkayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Tipe Kayu Harus dipilih', 
+                    ]
+                ], 
+                'ukayu' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => ' Kayu Harus dipilih',  
+                    ]
+                ], 
+            ])) {
+                session()->setFlashdata('error', $this->validator->listErrors());
+                return redirect()->to(base_url('/harga-kayu/'.$id ))->withInput(); 
+            } 
+
+                $HargaKayus = new HargaKayuModel(); 
+
+
+                $data = [
+                    'nama_harga_kayu' => $this->request->getpost('harga'),
+                    'id_ukuran_kayu' => $this->request->getpost('ukayu'),
+                   // 'updated_at'     => date("Y-m-d H:i:s"),   
+
+                ];  
+                $HargaKayus->update($id, $data);
+                
+                session()->setFlashdata('alert', 'Berhasil Merubah Data. Dengan [ ID = #'.$id.' ]');
+                return redirect()->to(base_url('harga-kayu'))->withInput();  
+  
+ 
+
+  }
+
+
+
+
+/* END HARGA KAYU */
 
 
 
@@ -570,11 +744,10 @@ class Stock extends Controller{
                         'max_length' => 'Persediaan Kayu Maksimal 5 Angka',  
                     ]
                 ], 
-                'harga' => [
-                    'rules' => 'required|max_length[20]',
+                'harga_k' => [
+                    'rules' => 'required',
                     'errors' => [
-                        'required'   => 'Harga Satuan Harus diisi', 
-                        'max_length' => 'Harga Satua Maksimal 20 Angka',  
+                        'required'   => 'Harga Kayu Harus dipilih', 
                     ]
                 ], 
                 'j_kayu' => [
@@ -603,12 +776,13 @@ class Stock extends Controller{
             $PersediaanKayus = new PersediaanKayuModel(); 
 
 
-           // print_r($this->request->getVar('tgl'));
-            
+           // print_r($this->request->getVar('harga_k'));
+
+             
             $PersediaanKayus->insert([ 
                 'Tanggal_persediaan' => $this->request->getVar('tgl'),
                 'jml_persediaan' => $this->request->getVar('p_kayu'),
-                'Harga_satuan' => $this->request->getVar('harga'),
+                'id_harga_kayu' => $this->request->getVar('harga_k'),
                 'id_jenis_kayu' => $this->request->getVar('j_kayu'),
                 'id_tipe_kayu' => $this->request->getVar('t_kayu'),
                 'id_ukuran_kayu' => $this->request->getVar('ukayu'),
@@ -617,7 +791,7 @@ class Stock extends Controller{
 
             session()->setFlashdata('alert', 'Berhasil Menambah Data.');
             return redirect()->to(base_url('persediaan-kayu/'))->withInput(); 
-
+ 
  
   }
  
@@ -645,11 +819,13 @@ class Stock extends Controller{
         $UkuranKayus = new UkuranKayuModel(); 
         $JenisKayus = new JenisKayuModel();  
         $TipeKayus = new TipeKayuModel();
+        $HargaKayus = new HargaKayuModel(); 
 
  
         $data1 = $PersediaanKayus->where('id_persediaan', $id)->findAll(); 
         $data3 = $TipeKayus->where('id_jenis_kayu', $data1[0]->id_jenis_kayu)->findAll(); 
         $data4 = $UkuranKayus->where('id_tipe_kayu', $data1[0]->id_tipe_kayu)->findAll(); 
+        $data5 = $HargaKayus->where('id_harga_kayu', $data1[0]->id_harga_kayu)->findAll(); 
  
  
    
@@ -661,6 +837,7 @@ class Stock extends Controller{
           'dataJenisKayus' => $JenisKayus->findAll(), 
           'dataTipeKayus' => $data3, 
           'dataUkuranKayus' => $data4, 
+          'datHargaKayus' => $data5, 
 
 
       );   
@@ -687,11 +864,10 @@ class Stock extends Controller{
                         'max_length' => 'Persediaan Kayu Maksimal 5 Angka',  
                     ]
                 ], 
-                'harga' => [
-                    'rules' => 'required|max_length[20]',
+                'harga_k' => [
+                    'rules' => 'required',
                     'errors' => [
-                        'required'   => 'Harga Satuan Harus diisi', 
-                        'max_length' => 'Harga Satua Maksimal 20 Angka',  
+                        'required'   => 'Jenis Kayu Harus dipilih',   
                     ]
                 ], 
                 'j_kayu' => [
@@ -721,7 +897,7 @@ class Stock extends Controller{
         $PersediaanKayus = new PersediaanKayuModel();   
         $data = [
             'jml_persediaan' => $this->request->getVar('p_kayu'),
-            'Harga_satuan' => $this->request->getVar('harga'),
+            'id_harga_kayu' => $this->request->getVar('harga_k'),
             'id_jenis_kayu' => $this->request->getVar('j_kayu'),
             'id_tipe_kayu' => $this->request->getVar('t_kayu'),
             'id_ukuran_kayu' => $this->request->getVar('ukayu'), 
@@ -741,6 +917,48 @@ class Stock extends Controller{
 
 
 
+  function add_ajax_tkayu($id = null)
+  { 
+        $TipeKayus = new TipeKayuModel(); 
+        $dataTipeKayus = $TipeKayus->where('id_jenis_kayu', $id)->findAll(); 
+        $data = "<option value=''>- Select Tipe Kayu -</option>"; 
+        foreach ($dataTipeKayus as $value) {
+          $data .= "<option value='".$value->id_tipe_kayu."'>".$value->nama_tipe_kayu."</option>";
+        } 
+        echo $data;  
+  }
+
+ 
+ 
+  function add_ajax_ukayu($id = null)
+  { 
+        $UkuranKayus = new UkuranKayuModel(); 
+        $dataUkuranKayus = $UkuranKayus->where('id_tipe_kayu', $id)->findAll(); 
+        $data = "<option value=''>- Select Tipe Kayu -</option>"; 
+        foreach ($dataUkuranKayus as $value) {
+          $data .= "<option value='".$value->id_ukuran_kayu."'>".$value->nama_Ukuran_kayu."</option>";
+        } 
+        echo $data;  
+  }
+
+ 
+  function add_ajax_hargakayu($id = null)
+  { 
+        $HargaKayus = new HargaKayuModel(); 
+        $dataHargaKayus = $HargaKayus->where('id_ukuran_kayu', $id)->findAll(); 
+
+        if ($dataHargaKayus == false) {
+            $data = "<option value=''>Rp " . number_format(0,2,',','.')  ."  </option>";
+        }else{
+            $data = ""; 
+        foreach ($dataHargaKayus as $value) {
+            $data .= "<option value='".$value->id_harga_kayu ."'>Rp " . number_format($value->nama_harga_kayu,2,',','.')  ."  </option>";
+        } 
+        }
+
+        
+        echo $data;  
+  }
 
 
 

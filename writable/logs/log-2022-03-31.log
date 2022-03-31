@@ -15,3 +15,416 @@ CRITICAL - 2022-03-31 00:38:46 --> Undefined offset: 0
 #3 /opt/lampp/htdocs/sie-jaku/vendor/codeigniter4/framework/system/CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 /opt/lampp/htdocs/sie-jaku/public/index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-03-31 09:29:36 --> Undefined variable: dataUkuranKayus
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_harga_kayu.php(44): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 44, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_harga_kayu', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(535): view('v_harga_kayu', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 09:36:15 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(421): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 421, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->ukuran_edit('g-tipe-kayu')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 09:40:06 --> Cannot redeclare App\Controllers\Stock::add_ukuran_kayu()
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+ERROR - 2022-03-31 10:36:37 --> Incorrect column name 'id_ukuran_kayu '
+ERROR - 2022-03-31 10:37:08 --> Incorrect column name 'id_ukuran_kayu '
+CRITICAL - 2022-03-31 11:10:20 --> Undefined property: stdClass::$id_jenis_kayu
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\htdocs...', 59, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(658): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:18:33 --> Undefined property: stdClass::$nama_tipe_kayu
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(79): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\htdocs...', 79, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(659): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:22:33 --> Undefined variable: UkuranKayus
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(659): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:22:38 --> Undefined variable: UkuranKayus
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(659): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:22:47 --> Undefined variable: UkuranKayus
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(659): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:22:47 --> Undefined variable: UkuranKayus
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(659): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:22:47 --> Undefined variable: UkuranKayus
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(659): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:22:49 --> Undefined variable: UkuranKayus
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(659): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:24:54 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(424): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 424, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->ukuran_edit('g-tipe-kayu')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:37:49 --> Undefined property: stdClass::$Harga_satuan
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_persediaan.php(58): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\htdocs...', 58, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_persediaan', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(713): view('v_persediaan', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->persediaan()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:46:10 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '3')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:46:12 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '2')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:46:13 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '3')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:46:15 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:46:20 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:46:35 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:46:55 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:46:57 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:47:47 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:48:58 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:49:41 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:49:44 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:49:56 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:50:11 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:50:19 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '3')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:50:22 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(609): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 609, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '3')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:51:22 --> Undefined variable: data2
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(619): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 619, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '2')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:51:32 --> Undefined variable: data2
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(619): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 619, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '2')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:51:42 --> Undefined variable: data4
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(623): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 623, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:51:48 --> Undefined variable: data4
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(623): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 623, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 11:52:00 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(629): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:52:13 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(629): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:52:21 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(50): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 50, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(629): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:53:25 --> Undefined variable: data4
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 59, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(629): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:54:11 --> Undefined variable: dataTipeKayus
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 68, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(629): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 11:54:42 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(84): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 84, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(629): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('g-tipe-kayu', '1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 12:25:10 --> Undefined variable: data4
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_harga.php(59): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 59, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_harga', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(629): view('v_edt_harga', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->harga_edit('2')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-03-31 12:47:29 --> Undefined variable: data
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(948): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 948, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->add_ajax_hargakayu('2')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 12:47:51 --> Undefined variable: data
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(948): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 948, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->add_ajax_hargakayu('3')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 12:48:08 --> Undefined variable: data
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(948): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 948, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->add_ajax_hargakayu('3')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 12:48:15 --> Undefined offset: 0
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(825): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined offse...', 'D:\\xampp\\htdocs...', 825, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->persediaan_edit('g-harga-kayu')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 12:48:17 --> Undefined variable: data
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(948): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 948, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->add_ajax_hargakayu('3')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 12:48:18 --> Undefined variable: data
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(948): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 948, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->add_ajax_hargakayu('3')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 12:50:05 --> Undefined variable: data
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(949): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 949, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->add_ajax_hargakayu('1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 12:50:16 --> Undefined variable: data
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(949): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 949, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->add_ajax_hargakayu('1')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-03-31 12:51:39 --> Undefined property: stdClass::$Harga_satuan
+#0 D:\xampp\htdocs\sie-jaku\app\Views\v_edt_persediaan.php(93): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\htdocs...', 93, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('v_edt_persediaa...', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Stock.php(842): view('v_edt_persediaa...', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Stock->persediaan_edit('1')
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

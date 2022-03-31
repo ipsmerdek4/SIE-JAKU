@@ -108,8 +108,25 @@ $routes->get('/ukuran-kayu/(:any)', 'Stock::ukuran_edit/$1',['filter' => 'auth']
 $routes->post('/ukuran-kayu/e/(:any)', 'Stock::ukuran_editproses/$1',['filter' => 'auth']);
  
 
+//harga kayu
+ 
+$routes->get('/harga-kayu', 'Stock::harga',['filter' => 'auth']); 
 
 
+$routes->get('/harga-kayu/g-tipe-kayu/(:any)', 'Stock::add_ajax_tkayu/$1',['filter' => 'auth']);
+$routes->get('/harga-kayu/g-ukuran-kayu/(:any)', 'Stock::add_ajax_ukayu/$1',['filter' => 'auth']); 
+
+
+$routes->get('/harga-kayu/add', 'Stock::add_harga_kayu',['filter' => 'auth']);
+$routes->post('/harga-kayu/add/p', 'Stock::harga_process',['filter' => 'auth']);
+
+$routes->get('/harga-kayu/d/(:any)', 'Stock::harga_deletedata/$1',['filter' => 'auth']); 
+
+
+$routes->get('/harga-kayu/(:any)', 'Stock::harga_edit/$1',['filter' => 'auth']); 
+$routes->post('/harga-kayu/e/(:any)', 'Stock::harga_editproses/$1',['filter' => 'auth']);
+
+ 
 
 //persediaan kayu
 $routes->get('/persediaan-kayu', 'Stock::persediaan',['filter' => 'auth']);
@@ -119,12 +136,21 @@ $routes->post('/persediaan-kayu/add/p', 'Stock::persediaan_process',['filter' =>
 
 $routes->get('/persediaan-kayu/g-tipe-kayu/(:any)', 'Stock::add_ajax_tkayu/$1',['filter' => 'auth']);
 $routes->get('/persediaan-kayu/g-ukuran-kayu/(:any)', 'Stock::add_ajax_ukayu/$1',['filter' => 'auth']);
+$routes->get('/persediaan-kayu/g-harga-kayu/(:any)', 'Stock::add_ajax_hargakayu/$1',['filter' => 'auth']);
 
 $routes->get('/persediaan-kayu/d/(:any)', 'Stock::persediaan_deletedata/$1',['filter' => 'auth']); 
 
 $routes->get('/persediaan-kayu/(:any)', 'Stock::persediaan_edit/$1',['filter' => 'auth']); 
 $routes->post('/persediaan-kayu/e/(:any)', 'Stock::persediaan_editproses/$1',['filter' => 'auth']);
  
+
+
+
+
+
+
+
+
 //transaksi 
 $routes->get('/transaksi', 'Transaksi::index',['filter' => 'auth']);
 

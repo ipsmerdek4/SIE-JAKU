@@ -728,6 +728,9 @@
 
 
 
+
+
+
                   } );
 
 
@@ -755,6 +758,151 @@
           </script>
 
 
+      <?php 
+      }elseif ($batascss == 'c4d') {
+        $btsjv = ' 
+            <script src="../../plugins/select2/js/select2.full.min.js"></script> 
+            <!-- DataTables  & Plugins -->
+            <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+            <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+            <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+            <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+            <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+            <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+            <script src="../../plugins/jszip/jszip.min.js"></script>
+            <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+            <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+            <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+            <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+            <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>  
+        
+
+        ';
+      ?>
+      
+          <script> 
+                  function hanyaAngka(evt) {
+                    var charCode = (evt.which) ? evt.which : event.keyCode
+                    if (charCode > 31 && (charCode < 48 || charCode > 57))
+
+                    return false;
+                    return true;
+                  }
+
+
+
+                 
+ 
+                  
+                  $(document).ready(function() {
+         
+
+                    
+                      const rupiah = (number)=>{
+                        return new Intl.NumberFormat("id-ID", {
+                          style: "currency",
+                          currency: "IDR"
+                        }).format(number);
+                      }
+      
+                      //Initialize Select2 Elements
+                      $('.select2').select2() 
+
+     
+                      $("#j_kayu").change(function (){ 
+                        var url = "<?php echo site_url('/harga-kayu/g-tipe-kayu');?>/"+$(this).val();
+                        $('#t_kayu').load(url);
+                        return false; 
+                      })
+
+                      $("#t_kayu").change(function (){ 
+                        var url = "<?php echo site_url('/harga-kayu/g-ukuran-kayu');?>/"+$(this).val();
+                        $('#ukayu').load(url);
+                        return false; 
+                      })
+
+
+ 
+                      /*  */
+                      $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
+                      var table =$('#vharga_kayu').DataTable( { 
+                          buttons: [
+                              {
+                                text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
+                                className: ' btn-primary',
+                                action:     function ( e, dt, node, config ) {
+                                              window.location.href = '/harga-kayu/add';
+                                            }
+                              }
+                          ],
+                          order: [[3, "asc" ]],
+                          responsive: true, 
+                          lengthChange: false, 
+                          autoWidth: false,  
+                          columnDefs : [     
+                                      {
+                                          targets: 0,
+                                          className: ' text-sm-center', 
+                                      }, 
+                                      {
+                                          targets: 4,
+                                          className: ' text-sm-center',
+                                          render: $.fn.dataTable.render.number( ',', '.', 2, 'Rp ' ),
+                                      },
+                                    ] 
+                      } );
+                      table.on( 'order.dt search.dt', function () {
+                        table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+                              cell.innerHTML = i+1;
+                          } );
+                      } ).draw();
+                      table.buttons().container().appendTo("#vharga_kayu_wrapper .col-md-6:eq(0)"); 
+
+                      /* START alert */
+
+                      <?php if(session()->has("alert")) { ?>
+                          Swal.fire({
+                              position: 'top-end',
+                              icon: 'success',
+                              text: '<?= session("alert") ?>',
+                              showConfirmButton: false,
+                              timer: 2500 
+                              })
+                      <?php } ?> 
+
+                      /* END ALERT */
+
+
+ 
+                  } );
+ 
+
+                
+                    $('.btnremove').on('click', function (e)
+                    {
+                        e.preventDefault();
+                        const href = $(this).attr('href');
+
+                          Swal.fire({
+                                title: 'Apakah anda yakin?', 
+                                icon: 'warning',
+                                showCancelButton: true,
+                                confirmButtonColor: '#3085d6',
+                                cancelButtonColor: '#d33',
+                                confirmButtonText: 'Ya, Hapus!'
+                          }).then((result) => {
+                            if (result.value) {
+                                document.location.href = href; 
+                            }
+                          })  
+                    });
+
+
+
+
+
+          </script>
+
 
       <?php 
       }elseif ($batascss == 'c4persediaan') {
@@ -779,97 +927,107 @@
         '; 
       ?>
          
-    <script>
+        <script>
 
 
-            function hanyaAngka(evt) {
-              var charCode = (evt.which) ? evt.which : event.keyCode
-              if (charCode > 31 && (charCode < 48 || charCode > 57))
+                function hanyaAngka(evt) {
+                  var charCode = (evt.which) ? evt.which : event.keyCode
+                  if (charCode > 31 && (charCode < 48 || charCode > 57))
 
-              return false;
-              return true;
-            }
-            $(document).ready(function() {
+                  return false;
+                  return true;
+                }
+                $(document).ready(function() {
 
-               //Initialize Select2 Elements
-                $('.select2').select2() 
+                  //Initialize Select2 Elements
+                    $('.select2').select2() 
 
-                $("#j_kayu").change(function (){ 
-                  var url = "<?php echo site_url('/persediaan-kayu/g-tipe-kayu');?>/"+$(this).val();
-                  $('#t_kayu').load(url);
-                  return false; 
-                })
+                    $("#j_kayu").change(function (){ 
+                      var url = "<?php echo site_url('/persediaan-kayu/g-tipe-kayu');?>/"+$(this).val();
+                      $('#t_kayu').load(url);
+                      return false; 
+                    })
 
-                 $("#t_kayu").change(function (){ 
-                  var url = "<?php echo site_url('/persediaan-kayu/g-ukuran-kayu');?>/"+$(this).val();
-                  $('#ukayu').load(url);
-                  return false; 
-                })
+                    $("#t_kayu").change(function (){ 
+                      var url = "<?php echo site_url('/persediaan-kayu/g-ukuran-kayu');?>/"+$(this).val();
+                      $('#ukayu').load(url);
+                      return false; 
+                    })
 
-                $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
-                var table =$('#vpersediaan').DataTable( { 
-                    buttons: [
-                        {
-                          text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
-                          className: ' btn-primary',
-                          action:     function ( e, dt, node, config ) {
-                                        window.location.href = '/persediaan-kayu/add';
-                                      }
-                        }
-                    ],
-                    order: [[1, "asc" ]],
-                    responsive: true, 
-                    lengthChange: false, 
-                    autoWidth: false,   
-                } );
-                table.on( 'order.dt search.dt', function () {
-                  table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-                        cell.innerHTML = i+1;
+                    $("#ukayu").change(function (){ 
+                      var url = "<?php echo site_url('/persediaan-kayu/g-harga-kayu');?>/"+$(this).val();
+                      $('#harga_k').load(url);
+                      return false; 
+                    })
+
+
+
+
+
+                    $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
+                    var table =$('#vpersediaan').DataTable( { 
+                        buttons: [
+                            {
+                              text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
+                              className: ' btn-primary',
+                              action:     function ( e, dt, node, config ) {
+                                            window.location.href = '/persediaan-kayu/add';
+                                          }
+                            }
+                        ],
+                        order: [[1, "asc" ]],
+                        responsive: true, 
+                        lengthChange: false, 
+                        autoWidth: false,   
                     } );
-                } ).draw();
-                table.buttons().container().appendTo("#vpersediaan_wrapper .col-md-6:eq(0)"); 
+                    table.on( 'order.dt search.dt', function () {
+                      table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+                            cell.innerHTML = i+1;
+                        } );
+                    } ).draw();
+                    table.buttons().container().appendTo("#vpersediaan_wrapper .col-md-6:eq(0)"); 
 
-                    /*  */
+                        /*  */
 
-                    <?php if(session()->has("alert")) { ?>
+                        <?php if(session()->has("alert")) { ?>
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                text: '<?= session("alert") ?>',
+                                showConfirmButton: false,
+                                timer: 2500 
+                                })
+                        <?php } ?> 
+
+                        /*  */
+
+
+
+                } );
+
+
+              
+                  $('.btnremove').on('click', function (e)
+                  {
+                      e.preventDefault();
+                      const href = $(this).attr('href');
+
                         Swal.fire({
-                            position: 'top-end',
-                            icon: 'success',
-                            text: '<?= session("alert") ?>',
-                            showConfirmButton: false,
-                            timer: 2500 
-                            })
-                    <?php } ?> 
-
-                    /*  */
-
-
-
-            } );
-
-
-          
-              $('.btnremove').on('click', function (e)
-              {
-                  e.preventDefault();
-                  const href = $(this).attr('href');
-
-                    Swal.fire({
-                          title: 'Apakah anda yakin?', 
-                          icon: 'warning',
-                          showCancelButton: true,
-                          confirmButtonColor: '#3085d6',
-                          cancelButtonColor: '#d33',
-                          confirmButtonText: 'Ya, Hapus!'
-                    }).then((result) => {
-                      if (result.value) {
-                          document.location.href = href; 
-                      }
-                    })  
-              });
+                              title: 'Apakah anda yakin?', 
+                              icon: 'warning',
+                              showCancelButton: true,
+                              confirmButtonColor: '#3085d6',
+                              cancelButtonColor: '#d33',
+                              confirmButtonText: 'Ya, Hapus!'
+                        }).then((result) => {
+                          if (result.value) {
+                              document.location.href = href; 
+                          }
+                        })  
+                  });
 
 
-    </script>
+        </script>
 
 
          
@@ -901,206 +1059,206 @@
          
           <script>
 
-            window.setTimeout("waktu()",1000);  
-            function waktu() {   
-              var namabulan = ("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember");
-                  namabulan = namabulan.split(" ");
-              var tanggal = new Date();  
-              setTimeout("waktu()",1000);   
-              document.getElementById("jam").value = tanggal.getDate()+"-"+namabulan[tanggal.getMonth()]+"-"+tanggal.getFullYear()+" "+tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
-            }
+                  window.setTimeout("waktu()",1000);  
+                  function waktu() {   
+                    var namabulan = ("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember");
+                        namabulan = namabulan.split(" ");
+                    var tanggal = new Date();  
+                    setTimeout("waktu()",1000);   
+                    document.getElementById("jam").value = tanggal.getDate()+"-"+namabulan[tanggal.getMonth()]+"-"+tanggal.getFullYear()+" "+tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
+                  }
 
 
  
  
-          $(document).ready(function() {
+                  $(document).ready(function() {
 
 
-                $('.select2').select2() 
+                      $('.select2').select2() 
 
-                $("#j_kayu").change(function (){ 
-                  var url = "<?php echo site_url('/transaksi/g-tipe-kayu');?>/"+$(this).val();
-                  $('#t_kayu').load(url);
-                  return false; 
-                })
+                      $("#j_kayu").change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-tipe-kayu');?>/"+$(this).val();
+                        $('#t_kayu').load(url);
+                        return false; 
+                      })
 
-                 $("#t_kayu").change(function (){ 
-                  var url = "<?php echo site_url('/transaksi/g-ukuran-kayu');?>/"+$(this).val();
-                  $('#u_kayu').load(url);
-                  return false; 
-                })
-
-
-
-                $("#u_kayu").change(function (){ 
-                  var url = "<?php echo site_url('/transaksi/g-jmlp-kayu');?>/"+$(this).val();
-                  $('#j_pem').load(url);
-                  return false; 
-                })
-
-
-                $("#j_pem").change(function (){ 
-                  var url = "<?php echo site_url('/transaksi/g-gharga-kayu');?>/"+$(this).val();
-                  $('#get_harga').load(url);
-                  return false; 
-                })
+                      $("#t_kayu").change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-ukuran-kayu');?>/"+$(this).val();
+                        $('#u_kayu').load(url);
+                        return false; 
+                      })
 
 
 
-                const rupiah = (number)=>{
-                  return new Intl.NumberFormat("id-ID", {
-                    style: "currency",
-                    currency: "IDR"
-                  }).format(number);
-                }
- 
-   
- 
-
-              $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
-              var table =$('#vtransaksi').DataTable( { 
+                      $("#u_kayu").change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-jmlp-kayu');?>/"+$(this).val();
+                        $('#j_pem').load(url);
+                        return false; 
+                      })
 
 
+                      $("#j_pem").change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-gharga-kayu');?>/"+$(this).val();
+                        $('#get_harga').load(url);
+                        return false; 
+                      })
+
+
+
+                      const rupiah = (number)=>{
+                        return new Intl.NumberFormat("id-ID", {
+                          style: "currency",
+                          currency: "IDR"
+                        }).format(number);
+                      }
+      
+        
+      
+
+                    $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
+                    var table =$('#vtransaksi').DataTable( { 
+
+
+                      
+
+                      footerCallback : function ( row, data, start, end, display ) {
+                            var api = this.api();
+                
+                            // Remove the formatting to get integer data for summation
+                            var intVal = function ( i ) {
+                                return typeof i === 'string' ?
+                                    i.replace(/[\$,]/g, ' ')*1 :
+                                    typeof i === 'number' ?
+                                        i : 0;
+                            };
+                
+                            // Total over all pages
+                            total = api
+                                .column( 4 )
+                                .data()
+                                .reduce( function (a, b) {
+                                    return intVal(a) + intVal(b);
+                                }, 0 );
+                
+                            // Total over this page
+                            pageTotal = api
+                                .column( 4, { page: 'current'} )
+                                .data()
+                                .reduce( function (a, b) {
+                                    return intVal(a) + intVal(b);
+                                }, 0 );
                 
 
-                footerCallback : function ( row, data, start, end, display ) {
-                      var api = this.api();
-          
-                      // Remove the formatting to get integer data for summation
-                      var intVal = function ( i ) {
-                          return typeof i === 'string' ?
-                              i.replace(/[\$,]/g, ' ')*1 :
-                              typeof i === 'number' ?
-                                  i : 0;
-                      };
-          
-                      // Total over all pages
-                      total = api
-                          .column( 4 )
-                          .data()
-                          .reduce( function (a, b) {
-                              return intVal(a) + intVal(b);
-                          }, 0 );
-          
-                      // Total over this page
-                      pageTotal = api
-                          .column( 4, { page: 'current'} )
-                          .data()
-                          .reduce( function (a, b) {
-                              return intVal(a) + intVal(b);
-                          }, 0 );
-          
+                            if ($(window).width() >= 1000 ) {
+                                // Update footer
+                                $( api.column( 3 ).footer() ).html( 
+                                      'Total :' 
+                                );
+                                // Update footer
+                                $( api.column( 4 ).footer() ).html( 
+                                    ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
+                                );
+                            }else if($(window).width() >= 285 ){
+                                // Update footer
+                                $( api.column( 0 ).footer() ).html( 
+                                      'Total :' 
+                                );
+                                  // Update footer
+                                  $( api.column( 1 ).footer() ).html( 
+                                  ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
+                                );
+                            }else{  
+                                // Update footer
+                                $( api.column( 0 ).footer() ).html( 
+                                  ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
+                                );
 
-                      if ($(window).width() >= 1000 ) {
-                          // Update footer
-                          $( api.column( 3 ).footer() ).html( 
-                                'Total :' 
-                          );
-                          // Update footer
-                          $( api.column( 4 ).footer() ).html( 
-                              ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
-                          );
-                      }else if($(window).width() >= 285 ){
-                          // Update footer
-                          $( api.column( 0 ).footer() ).html( 
-                                'Total :' 
-                          );
-                            // Update footer
-                            $( api.column( 1 ).footer() ).html( 
-                            ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
-                          );
-                      }else{  
-                          // Update footer
-                          $( api.column( 0 ).footer() ).html( 
-                            ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
-                          );
+                            }
 
-                      }
+                        },
+                        buttons: [
+                            {
+                              text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
+                              className: ' btn-primary',
+                              action:     function ( e, dt, node, config ) {
+                                            window.location.href = '/transaksi/add';
+                                          },
+                                          
+                            },  /*
+                            {
+                                extend: 'print',
+                                text: '<i class="fa-solid fa-print"></i> <b>| Cetak</b>',
+                                className: ' btn-danger ml-3', 
+                                footer: true,  
+                            }  */
+                        ],
+                        //order: [[1, "asc" ]],
+                        responsive: true, 
+                        lengthChange: true, 
+                        autoWidth: false,   
+                        columnDefs : [     
+                                      {
+                                          targets: 0,
+                                          className: ' text-sm-center', 
+                                      },
+                                      {
+                                          targets: 3,
+                                          className: ' text-sm-center', 
+                                      },
+                                      {
+                                          targets: 4,
+                                          className: ' text-sm-center',
+                                          render: $.fn.dataTable.render.number( ',', '.', 2, 'Rp ' ),
+                                      },
+                                    ]
 
-                  },
-                  buttons: [
-                      {
-                        text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
-                        className: ' btn-primary',
-                        action:     function ( e, dt, node, config ) {
-                                      window.location.href = '/transaksi/add';
-                                    },
-                                    
-                      },  /*
-                      {
-                          extend: 'print',
-                          text: '<i class="fa-solid fa-print"></i> <b>| Cetak</b>',
-                          className: ' btn-danger ml-3', 
-                          footer: true,  
-                      }  */
-                  ],
-                  //order: [[1, "asc" ]],
-                  responsive: true, 
-                  lengthChange: true, 
-                  autoWidth: false,   
-                  columnDefs : [     
-                                {
-                                    targets: 0,
-                                    className: ' text-sm-center', 
-                                },
-                                {
-                                    targets: 3,
-                                    className: ' text-sm-center', 
-                                },
-                                {
-                                    targets: 4,
-                                    className: ' text-sm-center',
-                                    render: $.fn.dataTable.render.number( ',', '.', 2, 'Rp ' ),
-                                },
-                              ]
+                    } ); 
+                    table.on( 'order.dt search.dt', function () {
+                      table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+                            cell.innerHTML = i+1;
+                        } );
+                    } ).draw();  
 
-              } ); 
-              table.on( 'order.dt search.dt', function () {
-                table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-                      cell.innerHTML = i+1;
-                  } );
-              } ).draw();  
+                    table.buttons().container().appendTo("#vtransaksi_wrapper .col-md-6:eq(0)"); 
 
-              table.buttons().container().appendTo("#vtransaksi_wrapper .col-md-6:eq(0)"); 
+                        /*  */
 
-                  /*  */
+                        <?php if(session()->has("alert")) { ?>
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                text: '<?= session("alert") ?>',
+                                showConfirmButton: false,
+                                timer: 2500 
+                                })
+                        <?php } ?> 
 
-                  <?php if(session()->has("alert")) { ?>
+                        /*  */
+
+
+
+                } );
+
+
+
+                $('.btnremove').on('click', function (e)
+                {
+                    e.preventDefault();
+                    const href = $(this).attr('href');
+
                       Swal.fire({
-                          position: 'top-end',
-                          icon: 'success',
-                          text: '<?= session("alert") ?>',
-                          showConfirmButton: false,
-                          timer: 2500 
-                          })
-                  <?php } ?> 
-
-                  /*  */
-
-
-
-          } );
-
-
-
-            $('.btnremove').on('click', function (e)
-            {
-                e.preventDefault();
-                const href = $(this).attr('href');
-
-                  Swal.fire({
-                        title: 'Apakah anda yakin?', 
-                        icon: 'warning',
-                        showCancelButton: true,
-                        confirmButtonColor: '#3085d6',
-                        cancelButtonColor: '#d33',
-                        confirmButtonText: 'Ya, Hapus!'
-                  }).then((result) => {
-                    if (result.value) {
-                        document.location.href = href; 
-                    }
-                  })  
-            });
+                            title: 'Apakah anda yakin?', 
+                            icon: 'warning',
+                            showCancelButton: true,
+                            confirmButtonColor: '#3085d6',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Ya, Hapus!'
+                      }).then((result) => {
+                        if (result.value) {
+                            document.location.href = href; 
+                        }
+                      })  
+                });
 
 
           </script>

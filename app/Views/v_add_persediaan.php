@@ -59,6 +59,7 @@
                                     <option value=''>Select Tipe Kayu -</option> 
                                 </select> 
                             </div>
+                            
                             <div class="form-group">
                                 <label for="name" class="form-label">Ukuran Kayu</label>
                                 <select name="ukayu" id="ukayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
@@ -78,19 +79,14 @@
                                 <input type="text" name="p_kayu" class="form-control" placeholder="Masukan Persedian Kayu Dalam Angka." onkeypress="return hanyaAngka(event)">
                                 </div>
                             </div> 
-
  
 
-                        
                             <div class="form-group">
-                                <label for="name" class="form-label">Harga</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa-solid fa-rupiah-sign"></i></span>
-                                    </div>
-                                    <input type="text" name="harga" class="form-control "  placeholder="Harga Satuan" onkeypress="return hanyaAngka(event)">
-                                </div>
-                            </div> 
+                                <label for="name" class="form-label">Harga </label>
+                                <select name="harga_k" id="harga_k" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                    <option value=''>Select Harga Kayu -</option> 
+                                </select> 
+                            </div>
 
 
 

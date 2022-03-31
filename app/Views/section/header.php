@@ -119,6 +119,33 @@
             }
             </style>
         ';
+
+      }elseif ($batascss == 'c4d') {
+        $btscss = '
+            <!-- DataTables -->
+            <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+            <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+            <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+            <!-- Select2 -->
+            <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
+            <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+            <style>
+
+            .select2-selection__rendered {
+                line-height: 27px !important; 
+            }
+            .select2-container .select2-selection--single {
+                height: calc(2.25rem + 2px) !important;
+                border: 1px solid #ced4da
+            }
+            .select2-selection__arrow {
+                height: 37px !important;
+            }
+            </style>
+        ';
+
+
       }elseif ($batascss == 'c4persediaan') {
         $btscss = '
             <!-- DataTables -->
