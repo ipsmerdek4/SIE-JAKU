@@ -1211,6 +1211,7 @@
                                 footer: true,  
                             }  */
                         ],
+                        
                         //order: [[1, "asc" ]],
                         responsive: true, 
                         lengthChange: true, 
@@ -1239,7 +1240,7 @@
                     } ).draw();  
 
                     table.buttons().container().appendTo("#vtransaksi_wrapper .col-md-6:eq(0)"); 
-
+ 
                         /*  */
 
                         <?php if(session()->has("alert")) { ?>

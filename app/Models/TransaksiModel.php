@@ -24,6 +24,26 @@ class TransaksiModel extends Model{
         return $query->getResult();
     }
 
+    function getlike($id = null)
+    {
+        $builder = $this->db->table('db_transaksi');
+        $builder->join('db_jenis_kayu', 'db_jenis_kayu.id_jenis_kayu = db_transaksi.id_jenis_kayu');
+        $builder->join('db_tipe_kayu', 'db_tipe_kayu.id_tipe_kayu = db_transaksi.id_tipe_kayu'); 
+        $builder->join('db_ukuran_kayu', 'db_ukuran_kayu.id_ukuran_kayu = db_transaksi.id_ukuran_kayu'); 
+
+        $builder->like('nama_jenis_kayu', $id);   
+        $builder->orLike('nama_tipe_kayu', $id);   
+        $builder->orLike('nama_Ukuran_kayu', $id);   
+        $builder->orLike('jumlah_pembelian', $id);   
+        $builder->orLike('total_harga', $id);   
+        $builder->orLike('kode_transaksi', $id);   
+        $builder->orLike('tipe_pesanan', $id);    
+        $query = $builder->get();
+        
+        return $query->getResult();
+
+    }
+
 
 
 }

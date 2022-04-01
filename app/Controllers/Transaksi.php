@@ -2,6 +2,7 @@
 namespace App\Controllers;
 
 use \Dompdf\Dompdf;
+use Dompdf\Options;
 
 use CodeIgniter\Controller;
 use App\Models\JenisKayuModel;
@@ -194,12 +195,24 @@ class Transaksi extends Controller{
     {
        $dompdfs = new Dompdf;
 
+       $Transaksis = new TransaksiModel(); 
+
+        if ($id == "semua") {
+            $idnew = $Transaksis->getjoinall();
+        }else{
+            $idnew = $Transaksis->getlike($id); 
+        }
+
+
+       
         $data = array( 
-			'title' => 'Transaksi [SIE-JAKU]',  
-            'getdata' => $id,
+			'title' => 'Transaksi [SIE-JAKU]',   
+            'datatransaksi' => $idnew, 
 		); 
 
         $html = view('v_view_transksi', $data); 
+        $dompdfs->set_option('isRemoteEnabled', TRUE);
+        $dompdfs->set_option("isPhpEnabled", true); 
         $dompdfs->setPaper('A4', 'Portrait'); 
         $dompdfs->loadHtml($html); 
         $dompdfs->render();
@@ -208,6 +221,7 @@ class Transaksi extends Controller{
 
         ));
 
+ 
     }
 
 
