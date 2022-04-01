@@ -8,7 +8,7 @@ class PersediaanKayuModel extends Model{
     protected $primaryKey = "id_persediaan";
     protected $returnType = "object";
    // protected $useTimestamps = true;
-    protected $allowedFields = ['id_jenis_kayu','id_tipe_kayu','id_ukuran_kayu','jml_persediaan','id_harga_kayu','Tanggal_persediaan'];
+    protected $allowedFields = ['id_jenis_kayu','id_tipe_kayu','id_ukuran_kayu','jml_persediaan','sisa_persediaan','id_harga_kayu','Tanggal_persediaan'];
 
 
 

@@ -26,29 +26,7 @@
               <div class="card-header">
                 <h3 class="card-title text-lg"> <b>Data Transaksi</b> </h3>
               </div>
- 
-
-
-
-              <style>
-
-                  @media only screen and (max-width:500px) {
-                    .footertransaksi{
-                      display: none;
-                    }
-                  }
-
-                  @media only screen and (min-width:768px) {
-                    .footertransaksi2{
-                      display: none;
-                    } 
-                  }
-
-              </style>
-
-
-
-
+  
                 <!-- /.card-header -->
                 <div class="card-body">  
                     <table id="vtransaksi" class="table table-bordered table-striped display">
@@ -78,9 +56,7 @@
                             <td>
                                       <div class="row h-100 justify-content-center align-items-center">
                                           <div class="btn-group">  
-                                                <a href="<?=base_url("/transaksi/".$item->id_transaksi );?>" class="btn btn-success" >
-                                                    <i class="fa-solid fa-user-pen py-1 pl-1"></i>
-                                                </a>
+                                                
                                                 <a href="<?=base_url("/transaksi/d/".$item->id_transaksi );?>" class="btn btn-danger btnremove">
                                                     <i class="fa-solid fa-trash-can-arrow-up py-1 px-1"></i>
                                                 </a>   

@@ -1013,7 +1013,8 @@
                       const href = $(this).attr('href');
 
                         Swal.fire({
-                              title: 'Apakah anda yakin?', 
+                              title: 'Yakin Menghapus Data ini?', 
+                              html: '<hr class="mt-1 border-danger"><b>Menghapus Persediaan akan<br>mempengaruhi Data Transaksi.</b>',
                               icon: 'warning',
                               showCancelButton: true,
                               confirmButtonColor: '#3085d6',
@@ -1190,7 +1191,19 @@
                                             window.location.href = '/transaksi/add';
                                           },
                                           
-                            },  /*
+                            }, 
+                            {
+                                text: '<i class="fa-solid fa-print"></i> <b>| Cetak</b>',
+                                className: ' btn-danger ml-3', 
+                                action:     function ( e, dt, node, config ) {
+                                            var value = $('.dataTables_filter input').val(); 
+                                            if (value == false) {
+                                                  window.open('/transaksi/view/semua', '_blank'); 
+                                            } else {
+                                                  window.open('/transaksi/view/'+ value, '_blank');   
+                                            }
+                                          },  
+                            }  /*
                             {
                                 extend: 'print',
                                 text: '<i class="fa-solid fa-print"></i> <b>| Cetak</b>',

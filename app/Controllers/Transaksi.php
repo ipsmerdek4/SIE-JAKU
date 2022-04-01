@@ -1,6 +1,8 @@
 <?php 
 namespace App\Controllers;
 
+use \Dompdf\Dompdf;
+
 use CodeIgniter\Controller;
 use App\Models\JenisKayuModel;
 use App\Models\TipeKayuModel;
@@ -8,6 +10,9 @@ use App\Models\UkuranKayuModel;
 use App\Models\PersediaanKayuModel;
 use App\Models\TransaksiModel;
 use App\Models\HargaKayuModel;
+
+
+
 
 
 class Transaksi extends Controller{
@@ -126,7 +131,7 @@ class Transaksi extends Controller{
  
             $darapersediaan = $PersediaanKayus->where('id_persediaan', $id_persediaan)->findAll(); 
  
-            $sisa =  $darapersediaan[0]->jml_persediaan - $jmlpembelian ;
+            $sisa =  $darapersediaan[0]->sisa_persediaan - $jmlpembelian ;
            
   
             $Transaksis->insert([ 
@@ -143,7 +148,7 @@ class Transaksi extends Controller{
 
      
             $dataubahsisa = [
-                'jml_persediaan' => $sisa,     
+                'sisa_persediaan' => $sisa,     
             ];  
             $PersediaanKayus->update($id_persediaan, $dataubahsisa);
 
@@ -159,12 +164,23 @@ class Transaksi extends Controller{
     public function transaksi_deletedata($id = null)
     {
           $Transaksis = new TransaksiModel(); 
+          $PersediaanKayus = new PersediaanKayuModel(); 
   
-          if($Transaksis->find($id)){
-              $Transaksis->delete($id); 
-  
-              session()->setFlashdata('alert', 'Berhasil Menghapus Data.');
-              return redirect()->to(base_url('transaksi'))->withInput();  
+          if($datatrans = $Transaksis->find($id)){
+ 
+                $darapersediaan = $PersediaanKayus->where('id_persediaan', $datatrans->id_persediaan)->findAll();  
+                $kembalikan = $datatrans->jumlah_pembelian + $darapersediaan[0]->sisa_persediaan; 
+                $dataubahsisa = [
+                                    'sisa_persediaan' => $kembalikan,     
+                                ];  
+                $PersediaanKayus->update($darapersediaan[0]->id_persediaan , $dataubahsisa);
+
+                $Transaksis->delete($id); 
+    
+                session()->setFlashdata('alert', 'Berhasil Menghapus Data.');
+                return redirect()->to(base_url('transaksi'))->withInput();  
+ 
+
           }else{
               session()->setFlashdata('alert', 'Terjadi Kesalahan Saat Menghapus Data. Dengan [ ID = #'.$id.' ]');
               return redirect()->to(base_url('transaksi'))->withInput(); 
@@ -173,7 +189,26 @@ class Transaksi extends Controller{
     }
   
    
-  
+
+    public function cetak_transaksi($id = null)
+    {
+       $dompdfs = new Dompdf;
+
+        $data = array( 
+			'title' => 'Transaksi [SIE-JAKU]',  
+            'getdata' => $id,
+		); 
+
+        $html = view('v_view_transksi', $data); 
+        $dompdfs->setPaper('A4', 'Portrait'); 
+        $dompdfs->loadHtml($html); 
+        $dompdfs->render();
+        $dompdfs->stream('Transaksi'.date('Ymdhis').'.pdf', array(
+                "Attachment" => false
+
+        ));
+
+    }
 
 
 

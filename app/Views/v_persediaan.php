@@ -54,15 +54,12 @@
                                   <td><?=$item->nama_jenis_kayu?></td>  
                                   <td><?=$item->nama_tipe_kayu?></td>  
                                   <td><?=$item->nama_Ukuran_kayu?></td>  
-                                  <td><?=$item->jml_persediaan?></td>  
+                                  <td><?=$item->sisa_persediaan.'/'.$item->jml_persediaan?></td>  
                                   <td><?="Rp " . number_format($item->nama_harga_kayu	,2,',','.') ?></td>   
                                   <td><?=$item->Tanggal_persediaan?></td>  
                                   <td>
                                       <div class="row h-100 justify-content-center align-items-center">
-                                          <div class="btn-group">  
-                                                <a href="<?=base_url("/persediaan-kayu/".$item->id_persediaan );?>" class="btn btn-success" >
-                                                    <i class="fa-solid fa-user-pen py-1 pl-1"></i>
-                                                </a>
+                                          <div class="btn-group">   
                                                 <a href="<?=base_url("/persediaan-kayu/d/".$item->id_persediaan );?>" class="btn btn-danger btnremove">
                                                     <i class="fa-solid fa-trash-can-arrow-up py-1 px-1"></i>
                                                 </a>   

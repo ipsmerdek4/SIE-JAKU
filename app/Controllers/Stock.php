@@ -780,6 +780,7 @@ class Stock extends Controller{
             $PersediaanKayus->insert([ 
                 'Tanggal_persediaan' => $this->request->getVar('tgl'),
                 'jml_persediaan' => $this->request->getVar('p_kayu'),
+                'sisa_persediaan' => $this->request->getVar('p_kayu'),
                 'id_harga_kayu' => $this->request->getVar('harga_k'),
                 'id_jenis_kayu' => $this->request->getVar('j_kayu'),
                 'id_tipe_kayu' => $this->request->getVar('t_kayu'),
@@ -891,10 +892,17 @@ class Stock extends Controller{
                 return redirect()->to(base_url('/persediaan-kayu/'.$id))->withInput(); 
             } 
 
+
+            if ($this->request->getVar('p_kayu') > $this->request->getVar('tlp_kayu')) {
+                $inputstock = $this->request->getVar('tlp_kayu');
+             }else{
+                $inputstock =$this->request->getVar('p_kayu');
+            }
  
+
         $PersediaanKayus = new PersediaanKayuModel();   
         $data = [
-            'jml_persediaan' => $this->request->getVar('p_kayu'),
+            'sisa_persediaan' => $inputstock,
             'id_harga_kayu' => $this->request->getVar('harga_k'),
             'id_jenis_kayu' => $this->request->getVar('j_kayu'),
             'id_tipe_kayu' => $this->request->getVar('t_kayu'),
@@ -905,7 +913,7 @@ class Stock extends Controller{
         
         session()->setFlashdata('alert', 'Berhasil Merubah Data. Dengan [ ID = #'.$id.' ]');
         return redirect()->to(base_url('persediaan-kayu'))->withInput();  
-
+ 
  
   }
 

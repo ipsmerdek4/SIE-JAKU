@@ -30,6 +30,10 @@ class DbPersediaanKayu extends Migration
                 'type'           => 'INT',
                 'constraint'     => 5,
 			],
+			'sisa_persediaan' => [
+                'type'           => 'INT',
+                'constraint'     => 5,
+			],
 			'id_harga_kayu' => [
                 'type'           => 'INT',
                 'constraint'     => 5,

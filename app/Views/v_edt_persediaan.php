@@ -77,12 +77,22 @@
 
                             <div class="form-group">
                                 <label for="name" class="form-label">Persediaan</label>
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text"><i class="fa-solid fa-cubes"></i></span>
-                                    </div>
-                                <input type="text" name="p_kayu" class="form-control" placeholder="Masukan Persedian Kayu Dalam Angka." onkeypress="return hanyaAngka(event)" value="<?=$datapersediaan[0]->jml_persediaan?>">
-                                </div>
+                                
+<div class="row">                     
+<div class="col-md-6">   
+<div class="input-group">
+    <div class="input-group-prepend">
+        <span class="input-group-text"><i class="fa-solid fa-cubes"></i></span>
+    </div>
+    <input type="text" name="p_kayu" class="form-control" placeholder="Masukan Persedian Kayu Dalam Angka." onkeypress="return hanyaAngka(event)" value="<?=$datapersediaan[0]->sisa_persediaan?>">
+</div>
+</div>                      
+<div class="col-md-6">   
+    <input type="text" name="tlp_kayu" class="form-control" placeholder="Masukan Persedian Kayu Dalam Angka." readonly onkeypress="return hanyaAngka(event)" value="<?=$datapersediaan[0]->jml_persediaan?>">
+</div>  
+</div>      
+
+
                             </div>  
                                         
                             <div class="form-group">
@@ -93,12 +103,34 @@
                                     <?php endforeach; ?>  
                                 </select> 
                             </div>
+                            <div class="form-group"> 
+                                <sm >Note : <b class="text-danger">*</b> </sm> <br>
+                                <sm >
+                                    <ul>
+                                        <li>Dengan mengubah Data Persediaan, maka sisa Data Persediaan dapat di ubah tetapi untuk total persediaan tidak akan berubah. </li>
+                                        <li>Bila Sisa Data Persediaan melebihi dari Max Total Persediaan, maka Sisa akan mengikuti Max Total Persediaan. </li>
+                                    </ul>
+                                    
+                                
                             
+                                 </sm>
+                                 
+                            </div>
+                                
+
                         </div>  
-                        <div class="col-md-12 "> 
-                            <br><br><hr class="bg-danger">
+
+                        <div class="col-md-12 "><br><br><hr class="bg-danger"> </div> 
+
+                        <div class="col-md-3 ">  </div> 
+                        <div class="col-md-3 "> 
                             <div class="form-group d-flex justify-content-center"> 
-                                <button type="submit" class="btn btn-block bg-primary btn-lg col-md-5"> <b> Simpan </b></button>
+                                <a href="<?= base_url('persediaan-kayu');?>" class="btn btn-block bg-danger btn-lg ">Kembali</a> 
+                            </div>
+                        </div> 
+                        <div class="col-md-3 ">  
+                            <div class="form-group d-flex justify-content-center"> 
+                                <button type="submit" class="btn btn-block bg-primary btn-lg "> <b> Simpan </b></button>
                             </div>
                         </div> 
                         </div> 

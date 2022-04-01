@@ -192,8 +192,10 @@
             .select2-selection__arrow {
                 height: 37px !important;
             }
+ 
             </style>
         ';
+ 
         
       } 
  
