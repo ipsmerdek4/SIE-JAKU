@@ -1,4 +1,4 @@
-# WELCOME TO SISTEM INFORMASI EKSEKUTIF UNTUK PENJUALAN KAYU
+# SELAMAT DATANG DI SISTEM INFORMASI EKSEKUTIF UNTUK PENJUALAN KAYU
 
 INI adalah Project untuk para Eksekutif khususnya Penjualan Kayu agar dapat memonitoring penjualan kayu tersebut.
 
