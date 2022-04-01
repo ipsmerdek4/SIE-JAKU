@@ -1,6 +1,6 @@
-# WELCOME TO SISTEM INFORMARI ESEKUTIF UNTUK PENJUALAN KAYU
+# WELCOME TO SISTEM INFORMASI EKSEKUTIF UNTUK PENJUALAN KAYU
 
-INI adalah Project untuk para eksekutif khusunya penjualan kayu agar dapat memonitoring penjualan kayu tersebut.
+INI adalah Project untuk para Eksekutif khususnya Penjualan Kayu agar dapat memonitoring penjualan kayu tersebut.
 
 installasi :
 1. clone file : $ git clone https://github.com/ipsmerdek4/sie-jaku.git atau download langsung,<br />
