@@ -538,10 +538,17 @@ class Stock extends Controller{
                 'harga' => [
                     'rules' => 'required|max_length[100]',
                     'errors' => [
-                        'required'   => 'Harga Kayu Harus diisi', 
-                        'max_length' => 'Harga Kayu Maksimal 100 Karakter',  
+                        'required'   => 'Harga Jual Kayu Harus diisi', 
+                        'max_length' => 'Harga Jual Kayu Maksimal 100 Karakter',  
                     ]
                 ], 
+                'harga_modal' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required'   => 'Harga Modal Kayu Harus diisi', 
+                        'max_length' => 'Harga Modal Kayu Maksimal 100 Karakter',  
+                    ]
+                ],
                 'jkayu' => [
                     'rules' => 'required',
                     'errors' => [
@@ -568,6 +575,7 @@ class Stock extends Controller{
  
             $HargaKayus = new HargaKayuModel(); 
             $HargaKayus->insert([ 
+                'nama_harga_modal' => $this->request->getVar('harga_modal'),
                 'nama_harga_kayu' => $this->request->getVar('harga'),
                 'id_ukuran_kayu' => $this->request->getVar('ukayu'),
                 'tgl_harga_kayu' => $this->request->getVar('tgl')

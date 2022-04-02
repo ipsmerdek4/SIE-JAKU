@@ -845,6 +845,11 @@
                                           className: ' text-sm-center', 
                                       }, 
                                       {
+                                          targets: 5,
+                                          className: ' text-sm-center',
+                                          render: $.fn.dataTable.render.number( ',', '.', 2, 'Rp ' ),
+                                      },
+                                      {
                                           targets: 4,
                                           className: ' text-sm-center',
                                           render: $.fn.dataTable.render.number( ',', '.', 2, 'Rp ' ),

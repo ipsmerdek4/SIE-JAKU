@@ -17,6 +17,10 @@ class DbHargaKayu extends Migration{
                 'type'           => 'INT',
                 'constraint'     => 5, 
             ], 
+			'nama_harga_modal'       => [
+				'type'           => 'BIGINT',
+                'null'           => 20,
+			], 
 			'nama_harga_kayu'       => [
 				'type'           => 'BIGINT',
                 'null'           => 20,

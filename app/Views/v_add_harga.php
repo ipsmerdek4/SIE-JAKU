@@ -76,12 +76,22 @@
                                     </div> 
 
                                     <div class="form-group">
-                                        <label for="name" class="form-label">Harga</label>
+                                        <label for="name" class="form-label">Harga Modal</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text"><i class="fa-solid fa-rupiah-sign"></i></span>
                                             </div>
-                                            <input type="text" name="harga" class="form-control "  placeholder="Harga Satuan" onkeypress="return hanyaAngka(event)">
+                                            <input type="text" name="harga_modal" class="form-control "  placeholder="Harga Modal" onkeypress="return hanyaAngka(event)">
+                                        </div>
+                                    </div> 
+
+                                    <div class="form-group">
+                                        <label for="name" class="form-label">Harga Jual</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fa-solid fa-rupiah-sign"></i></span>
+                                            </div>
+                                            <input type="text" name="harga" class="form-control "  placeholder="Harga Jual" onkeypress="return hanyaAngka(event)">
                                         </div>
                                     </div> 
 

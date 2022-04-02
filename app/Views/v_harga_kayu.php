@@ -37,7 +37,8 @@
                           <th>Jenis Kayu</th>
                           <th>Tipe Kayu</th>
                           <th>Ukuran Kayu</th> 
-                          <th>Harga Satuan Kayu</th> 
+                          <th>Harga Modal</th> 
+                          <th>Harga Jual</th> 
                           <th>Opsi</th> 
                         </tr>
                         </thead>
@@ -47,7 +48,8 @@
                               <td></td>
                               <td><?=$item->nama_jenis_kayu?></td>
                               <td><?=$item->nama_tipe_kayu?></td>
-                              <td><?=$item->nama_Ukuran_kayu?></td>
+                              <td><p style="width:210px;"><?=$item->nama_Ukuran_kayu?></p></td>
+                              <td><?=$item->nama_harga_modal?></td>
                               <td><?=$item->nama_harga_kayu?></td>
                               <td>
                                   <div class="row h-100 justify-content-center align-items-center">

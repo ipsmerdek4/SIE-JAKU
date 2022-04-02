@@ -8,7 +8,7 @@ class HargaKayuModel extends Model{
     protected $primaryKey = "id_harga_kayu ";
     protected $returnType = "object";
    // protected $useTimestamps = true;
-    protected $allowedFields = ['id_ukuran_kayu', 'nama_harga_kayu', 'tgl_harga_kayu'];
+    protected $allowedFields = ['id_ukuran_kayu', 'nama_harga_modal', 'nama_harga_kayu', 'tgl_harga_kayu'];
 
 
     function getjoinall()

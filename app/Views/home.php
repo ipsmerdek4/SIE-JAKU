@@ -26,15 +26,50 @@
         <div class="card-body">  
 
         
-        <label for="">Dalam Bulan : Januari - Maret 2022</label>
+         
         <div class="row" >
 
+          <div class="col-12 col-sm-12 col-lg-1 mb-1"> 
+                   <label for="name" class="form-label mt-1 ">Bulan :</label>  
+          </div>
+          <div class="col-12 col-sm-12 col-lg-2 mb-3">
+                  <select name="jkayu" id="j_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;">  
+                      <option value='1'> Januari - Maret</option> 
+                      <option value='2'> April - Juni</option> 
+                      <option value='3'> Juli - September</option> 
+                      <option value='4'> Oktober - Desember</option>  
+                  </select> 
+          </div>
+          <div class="col-12 col-sm-12 col-lg-2 mb-3">
+                  <select name="jkayu" id="j_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;">  
+                      <?php 
+                          $jaraktahun = 2021;
+                          for ($i=$jaraktahun; $i < date('Y')+1 ; $i++) { 
+                              echo "<option value='".$i."'>".$i."</option>";
+                          }
+                      ?>
+                      
+                  </select> 
+          </div>
+          <div class="col-12 col-sm-12 col-lg-3">
+                          <button class="btn btn-danger">
+                         <i class="fa-solid fa-box-open"></i> | 
+                          Buka
+                        </button>
+ 
+          </div>
+
+          <div class="col-12 col-sm-12 col-lg-12">
+              <br>
+                  
+               
+          </div>
           <div class="col-12 col-sm-12 col-lg-3">
               <div class="info-box bg-dark">
                 <span class="info-box-icon bg-danger"> <i class="fa-solid fa-cart-shopping"></i>  </span>
                 <div class="info-box-content">
                   <span class="info-box-text text-lime"> <b>Product Sold </b> </span>
-                  <span class="info-box-number">41,410</span>
+                  <span class="info-box-number"><?=$productsold?></span>
                   <div class="progress">
                     <div class="progress-bar bg-info" style="width: 70%"></div>
                   </div>
@@ -51,7 +86,7 @@
               <span class="info-box-icon bg-success"> <i class="fa-solid fa-dollar-sign"></i> </span>
               <div class="info-box-content">
                 <span class="info-box-text text-lime"><b>Net Profit</b> </span>
-                <span class="info-box-number"> 1.000.000.000,-</span>
+                <span class="info-box-number"> <?="Rp " . number_format($getprofit,2,',','.')?></span>
                 <div class="progress">
                   <div class="progress-bar bg-info" style="width: 70%"></div>
                 </div>
@@ -68,7 +103,7 @@
               <span class="info-box-icon bg-warning"> <i class="fa-solid fa-users"></i> </span>
               <div class="info-box-content">
                 <span class="info-box-text text-lime"><b> New Costumers</b></span>
-                <span class="info-box-number">41,410 </span>
+                <span class="info-box-number"><?=$getcountcostumer?></span>
                 <div class="progress">
                   <div class="progress-bar bg-info" style="width: 70%"></div>
                 </div>
@@ -85,9 +120,9 @@
               <span class="info-box-icon bg-purple"><i class="fa-solid fa-box"></i></span>
               <div class="info-box-content">
                 <span class="info-box-text text-lime"><b> Stock</b></span>
-                <span class="info-box-number">80 % Redy</span>
+                <span class="info-box-number"><?=$presenstock?> % Redy</span>
                 <div class="progress">
-                  <div class="progress-bar bg-info" style="width: 70%"></div>
+                  <div class="progress-bar bg-info" style="width: <?=$presenstock?>%"></div>
                 </div>
                 <span class="progress-description text-warning">
                   Persedian Barang

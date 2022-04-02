@@ -12,6 +12,21 @@ class CustomerModel extends Model
     protected $allowedFields = ['customers', 'nama', 'telp', 'hp', 'wa', 'provinsi_id', 'kabupaten_id', 'kecamatan_id', 'desa_id', 'alamat'];
 
 
+
+     
+    function getlikeall($bln1 = null, $bln2 = null, $bln3 = null, $tahun = null)
+    {
+        $builder = $this->db->table('db_customers');
+        $builder->like('created_at', $bln1);  
+        $builder->orLike('created_at', $bln2);  
+        $builder->orLike('created_at', $bln3);  
+        $builder->like('created_at', $tahun);  
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
+
+
     function getjoinall()
     {
         $builder = $this->db->table('db_customers');

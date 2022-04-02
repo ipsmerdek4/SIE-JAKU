@@ -339,8 +339,8 @@ class Transaksi extends Controller{
         if ($dataPersediaanKayus == false) {
             echo "<option value=''>0</option>";
         }else{  
-            for ($x = 0; $x <= $dataPersediaanKayus[0]->jml_persediaan; $x++) {
-                echo "<option value='".$id."-".$x."'>".$x." / ".$dataPersediaanKayus[0]->jml_persediaan ."</option>";
+            for ($x = 0; $x <= $dataPersediaanKayus[0]->sisa_persediaan; $x++) {
+                echo "<option value='".$id."-".$x."'>".$x." / ".$dataPersediaanKayus[0]->sisa_persediaan ."</option>";
             }  
         }
           
@@ -361,9 +361,9 @@ class Transaksi extends Controller{
         $PersediaanKayus = new PersediaanKayuModel();  
         $HargaKayus = new HargaKayuModel();  
 
-        $dataPersediaanKayus = $PersediaanKayus->where('id_jenis_kayu', $id_jenis_kayu, 'id_tipe_kayu', $id_tipe_kayu, 'id_ukuran_kayu', $id_ukuran_kayu,)->findAll(); 
+        $dataPersediaanKayus = $PersediaanKayus->getwharepersediaan($id_jenis_kayu, $id_tipe_kayu, $id_ukuran_kayu);  
         $dataHargaKayus = $HargaKayus->where('id_harga_kayu', $dataPersediaanKayus[0]->id_harga_kayu)->findAll(); 
- 
+        
         $totalharga = ($jmlpembelian * $dataHargaKayus[0]->nama_harga_kayu);
         echo "<option value='".$totalharga."'> Rp " . number_format($totalharga,2,',','.')." </option>";
   

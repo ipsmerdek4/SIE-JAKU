@@ -39,7 +39,7 @@
                     <th>#Customers</th>
                     <th>Nomer Telp/Hp/WA</th>
                     <th>Alamat</th>
-                    <th>Tanggal<br>Pembuatan</th>
+                    <th>Tanggal</th>
                     <th>Opsi</th> 
                   </tr>
                   </thead>
