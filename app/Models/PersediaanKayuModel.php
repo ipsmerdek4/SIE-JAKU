@@ -36,13 +36,12 @@ class PersediaanKayuModel extends Model{
     }
 
    
-    function getlikeall($bln1 = null, $bln2 = null, $bln3 = null, $tahun = null)
+    function getlikeall($bln1 = null, $bln2 = null, $bln3 = null)
     {
         $builder = $this->db->table('db_persediaan_kayu');
         $builder->like('Tanggal_persediaan', $bln1);  
         $builder->orLike('Tanggal_persediaan', $bln2);  
-        $builder->orLike('Tanggal_persediaan', $bln3);  
-        $builder->like('Tanggal_persediaan', $tahun);  
+        $builder->orLike('Tanggal_persediaan', $bln3);   
         $query = $builder->get();
 
         return $query->getResult();

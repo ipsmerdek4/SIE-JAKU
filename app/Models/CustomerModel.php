@@ -14,13 +14,12 @@ class CustomerModel extends Model
 
 
      
-    function getlikeall($bln1 = null, $bln2 = null, $bln3 = null, $tahun = null)
+    function getlikeall($bln1 = null, $bln2 = null, $bln3 = null)
     {
         $builder = $this->db->table('db_customers');
-        $builder->like('created_at', $bln1);  
+        $builder->like('created_at', $bln1);   
         $builder->orLike('created_at', $bln2);  
         $builder->orLike('created_at', $bln3);  
-        $builder->like('created_at', $tahun);  
         $query = $builder->get();
 
         return $query->getResult();

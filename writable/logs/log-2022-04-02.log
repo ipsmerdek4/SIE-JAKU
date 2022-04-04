@@ -239,3 +239,447 @@ CRITICAL - 2022-04-02 13:02:44 --> Division by zero
 #3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 {main}
+CRITICAL - 2022-04-02 14:32:10 --> Undefined variable: getbulan
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 46, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-02 14:32:21 --> Undefined variable: datagetbulantransaksi
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(66): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 66, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-02 14:33:05 --> Undefined variable: getbulan
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(46): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 46, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-02 14:36:08 --> syntax error, unexpected ';'
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-04-02 14:40:57 --> Undefined variable: gettahun
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 65, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-02 14:44:09 --> syntax error, unexpected ',', expecting ')'
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('D:\\xampp\\htdocs...')
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-04-02 14:59:06 --> Argument 2 passed to CodeIgniter\Database\BaseBuilder::orLike() must be of the type string, null given, called in D:\xampp\htdocs\sie-jaku\app\Models\CustomerModel.php on line 22
+#0 D:\xampp\htdocs\sie-jaku\app\Models\CustomerModel.php(22): CodeIgniter\Database\BaseBuilder->orLike('created_at', NULL)
+#1 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(66): App\Models\CustomerModel->getlikeall('2021--04-', '2021--05-', '2021--06-')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-04-02 19:32:44 --> Use of undefined constant condition - assumed 'condition' (this will throw an Error in a future version of PHP)
+#0 D:\xampp\htdocs\sie-jaku\app\Views\home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'D:\\xampp\\htdocs...', 37, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(131): view('home', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 19:32:50 --> Use of undefined constant condition - assumed 'condition' (this will throw an Error in a future version of PHP)
+#0 D:\xampp\htdocs\sie-jaku\app\Views\home.php(37): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefine...', 'D:\\xampp\\htdocs...', 37, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(131): view('home', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 19:38:04 --> Undefined variable: tampil1
+#0 D:\xampp\htdocs\sie-jaku\app\Views\home.php(60): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 60, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(131): view('home', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 19:38:53 --> Undefined variable: tampil1
+#0 D:\xampp\htdocs\sie-jaku\app\Views\home.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 56, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(131): view('home', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 19:39:21 --> Undefined variable: tampil1
+#0 D:\xampp\htdocs\sie-jaku\app\Views\home.php(56): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 56, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('home', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(131): view('home', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 22:29:53 --> Undefined variable: variable
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 175, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(128): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 22:29:58 --> Undefined variable: variable
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 175, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(128): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 22:37:20 --> syntax error, unexpected '}'
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#2 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(131): view('section/footer', Array)
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-04-02 22:40:24 --> Trying to get property 'nama_jenis_kayu' of non-object
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(201): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'D:\\xampp\\htdocs...', 201, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(131): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 22:40:56 --> Trying to get property 'nama_jenis_kayu' of non-object
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(199): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get p...', 'D:\\xampp\\htdocs...', 199, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(131): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 22:41:03 --> Undefined property: stdClass::$nama_jenis_kayu
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(199): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\htdocs...', 199, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(131): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 22:41:11 --> Undefined property: stdClass::$nama_jenis_kayu
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(199): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\htdocs...', 199, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(131): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 22:52:06 --> array_count_values() expects parameter 1 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_count_val...', 'D:\\xampp\\htdocs...', 201, Array)
+#1 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(201): array_count_values('Kayu Meranti')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(132): view('section/footer', Array)
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-04-02 22:52:08 --> array_count_values() expects parameter 1 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_count_val...', 'D:\\xampp\\htdocs...', 201, Array)
+#1 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(201): array_count_values('Kayu Meranti')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(132): view('section/footer', Array)
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-04-02 23:00:40 --> array_count_values() expects parameter 1 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_count_val...', 'D:\\xampp\\htdocs...', 201, Array)
+#1 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(201): array_count_values('Kayu Meranti')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(132): view('section/footer', Array)
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-04-02 23:00:51 --> array_count_values() expects parameter 1 to be array, string given
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_count_val...', 'D:\\xampp\\htdocs...', 201, Array)
+#1 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(201): array_count_values('Kayu Meranti')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#4 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(132): view('section/footer', Array)
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-02 23:19:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*) AS *
+FROM `db_transaksi`
+GROUP BY `id_jenis_kayu`' at line 1
+CRITICAL - 2022-04-02 23:19:58 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '*) AS *
+FROM `db_transaksi`
+GROUP BY `id_jenis_kayu`' at line 1
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `id_jeni...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `id_jeni...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `id_jeni...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT `id_jeni...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(45): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-04-02 23:25:44 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::selectall()
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+ERROR - 2022-04-02 23:27:20 --> Column 'id_jenis_kayu' in field list is ambiguous
+CRITICAL - 2022-04-02 23:27:20 --> Column 'id_jenis_kayu' in field list is ambiguous
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, COUNT...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, COUNT...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, COUNT...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, COUNT...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-02 23:27:28 --> Column 'id_jenis_kayu' in field list is ambiguous
+CRITICAL - 2022-04-02 23:27:28 --> Column 'id_jenis_kayu' in field list is ambiguous
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(`i...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(`i...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(`i...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(`i...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-02 23:27:38 --> Column 'id_jenis_kayu' in field list is ambiguous
+CRITICAL - 2022-04-02 23:27:38 --> Column 'id_jenis_kayu' in field list is ambiguous
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, COUNT...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, COUNT...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, COUNT...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, COUNT...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(56): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-02 23:27:41 --> Column 'id_jenis_kayu' in field list is ambiguous
+CRITICAL - 2022-04-02 23:27:41 --> Column 'id_jenis_kayu' in field list is ambiguous
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *, COUNT...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *, COUNT...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *, COUNT...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT *, COUNT...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(55): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-02 23:28:16 --> Column 'id_jenis_kayu' in field list is ambiguous
+CRITICAL - 2022-04-02 23:28:16 --> Column 'id_jenis_kayu' in field list is ambiguous
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(`i...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(`i...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(`i...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(`i...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(51): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-02 23:28:29 --> Column 'id_jenis_kayu' in field list is ambiguous
+CRITICAL - 2022-04-02 23:28:29 --> Column 'id_jenis_kayu' in field list is ambiguous
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(`i...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(`i...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(`i...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(`i...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(54): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-02 23:28:32 --> Column 'id_jenis_kayu' in field list is ambiguous
+CRITICAL - 2022-04-02 23:28:32 --> Column 'id_jenis_kayu' in field list is ambiguous
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(`i...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(`i...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(`i...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(`i...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-02 23:28:33 --> Column 'id_jenis_kayu' in field list is ambiguous
+CRITICAL - 2022-04-02 23:28:33 --> Column 'id_jenis_kayu' in field list is ambiguous
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(`i...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(`i...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(`i...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(`i...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+ERROR - 2022-04-02 23:28:33 --> Column 'id_jenis_kayu' in field list is ambiguous
+CRITICAL - 2022-04-02 23:28:33 --> Column 'id_jenis_kayu' in field list is ambiguous
+#0 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(`i...', 0)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(`i...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(`i...')
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1455): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(`i...', Array, false)
+#4 D:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(53): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(112): App\Models\TransaksiModel->getcountall()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-04-02 23:41:09 --> Undefined variable: tez
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(205): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 205, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(135): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 23:41:35 --> Object of class stdClass could not be converted to int
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(200): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Object of class...', 'D:\\xampp\\htdocs...', 200, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(135): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 23:49:40 --> Undefined variable: datatransaksi2
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(130): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 130, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-02 23:49:55 --> Undefined variable: datatransaksi2
+#0 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(130): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 130, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 {main}
+CRITICAL - 2022-04-02 23:50:16 --> Undefined variable: datatransaksi2
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(198): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 198, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(136): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 23:50:25 --> Undefined property: stdClass::$kode_transaksi
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(203): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'D:\\xampp\\htdocs...', 203, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(137): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-04-02 23:51:29 --> Undefined variable: value
+#0 D:\xampp\htdocs\sie-jaku\app\Views\section\footer.php(175): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'D:\\xampp\\htdocs...', 175, Array)
+#1 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(210): include('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('section/footer', Array, true)
+#4 D:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(137): view('section/footer', Array)
+#5 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#6 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 D:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\sie-jaku\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 {main}

@@ -112,8 +112,8 @@
                                             <div class="form-group ">
                                                 <label for="name" class="form-label">Tipe Pemesanan</label> 
                                                 <select name="tipe_pesanan"  id="tipe_pesanan" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
-                                                        <option value='Online order'>Online order</option> 
-                                                        <option value='Offline order'>Offline order</option> 
+                                                        <option value='Online Order'>Online Order</option> 
+                                                        <option value='Offline Order'>Offline Prder</option> 
                                                         <option value='Cash on Delivery'>Cash on Delivery</option> 
                                                 </select>       
                                             </div>

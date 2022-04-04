@@ -17,13 +17,21 @@ class TransaksiModel extends Model{
 
     
      
-    function getlikeall($bln1 = null, $bln2 = null, $bln3 = null, $tahun = null)
+    function getlikeall($bln1 = null, $bln2 = null, $bln3 = null)
     {
         $builder = $this->db->table('db_transaksi');
+        $builder->join('db_jenis_kayu', 'db_jenis_kayu.id_jenis_kayu = db_transaksi.id_jenis_kayu');
+        $builder->join('db_tipe_kayu', 'db_tipe_kayu.id_tipe_kayu = db_transaksi.id_tipe_kayu'); 
+        $builder->join('db_ukuran_kayu', 'db_ukuran_kayu.id_ukuran_kayu = db_transaksi.id_ukuran_kayu'); 
+        $builder->join('db_persediaan_kayu', 'db_persediaan_kayu.id_persediaan  = db_transaksi.id_persediaan '); 
+
+
         $builder->like('tgl_transaksi', $bln1);  
         $builder->orLike('tgl_transaksi', $bln2);  
         $builder->orLike('tgl_transaksi', $bln3);  
-        $builder->like('tgl_transaksi', $tahun);  
+
+        $builder->orderBy('tgl_transaksi', 'DESC');
+
         $query = $builder->get();
 
         return $query->getResult();
@@ -31,7 +39,20 @@ class TransaksiModel extends Model{
 
     
 
+    function getcountall($bln1 = null, $bln2 = null, $bln3 = null, $count = null)
+    { 
+        $builder = $this->db->table('db_transaksi');  
+        $builder->select(); 
+        $builder->selectCount($count);
+        $builder->groupBy($count);
 
+        $builder->like('tgl_transaksi', $bln1);  
+        $builder->orLike('tgl_transaksi', $bln2);  
+        $builder->orLike('tgl_transaksi', $bln3);  
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
 
     function getjoinall()
     {

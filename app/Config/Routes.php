@@ -34,6 +34,10 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index',['filter' => 'auth']);
 $routes->match(['get','post'],'/home', 'Home::index',['filter' => 'auth']);
 
+ 
+
+
+
 $routes->get('/login', 'Login::index');
 $routes->post('/login/process', 'Login::process');
 
