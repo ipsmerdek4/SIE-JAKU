@@ -41,6 +41,19 @@
             width:150px;
             margin:auto;
         }
+        .row5{
+            width:100px;
+            margin:auto;
+        }
+        .row7{
+            width:150px;
+            margin:auto;
+        }
+        .rowt2{
+            width:150px;  
+            font-weight: bold;
+        }
+        
         .header-cetak-transaksi{
             text-align: center;
             font-size: 14px;
@@ -65,8 +78,13 @@
 <table class="table">  
     <thead>
         <tr>
-            <th>No</th> 
-            <th>Kode Transaksi</th>
+            <th rowspan="2">No</th>  
+            <th>Tanggal</th>  
+            <th colspan="2" class="rowt2">Kode Transaksi</th> 
+            <th colspan="1">Nama Costumer</th> 
+        </tr>
+        <tr>
+            
             <th>Jenis, Tipe, dan Ukuran Kayu</th>
             <th>Jumlah<br>Pembelian</th> 
             <th>Total<br>Harga</th>
@@ -76,12 +94,18 @@
     <tbody>
     <?php $no=0; foreach ($datatransaksi as $item): $no++; ?>
 
+        <tr> 
+            <td class="row1" rowspan="2"><?=$no?></td>
+            <td class="row2"><?=$item->tgl_transaksi?></td> 
+            <td class="rowt2" colspan="2"><?=$item->kode_transaksi?></td>
+            <td > <p class="row7" colspan="1"><?=$item->nama?></p></td>
+
+        </tr>
         <tr>
-            <td class="row1"><?=$no?></td>
-            <td class="row2"><?=$item->kode_transaksi?></td>
+           
             <td > <p class="row3"> <?=$item->nama_jenis_kayu?>, <?=$item->nama_tipe_kayu?>, <?=$item->nama_Ukuran_kayu?> </p></td>
             <td class="row4"><?=$item->jumlah_pembelian?></td>
-            <td class="row5"><?="Rp " . number_format($item->total_harga,2,',','.')?></td>
+            <td ><p class="row5"><?="Rp " . number_format($item->total_harga,2,',','.')?></p></td>
             <td class="row6"><?=$item->tipe_pesanan?></td>
         </tr>
     <?php endforeach; ?>  

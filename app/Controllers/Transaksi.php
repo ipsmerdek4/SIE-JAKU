@@ -11,6 +11,7 @@ use App\Models\UkuranKayuModel;
 use App\Models\PersediaanKayuModel;
 use App\Models\TransaksiModel;
 use App\Models\HargaKayuModel;
+use App\Models\CustomerModel;
 
 
 
@@ -21,12 +22,15 @@ class Transaksi extends Controller{
 
     public function index()
     {  
- 
-
+  
         $Transaksis = new TransaksiModel(); 
 
-
-
+        
+         /*    $datatransaksi = $Transaksis->getjoinall();
+            
+            echo "<pre>";
+            print_r($datatransaksi); */
+ 
         $data = array(
 			'menu' => '4a',
 			'title' => 'Transaksi [SIE-JAKU]', 
@@ -37,7 +41,7 @@ class Transaksi extends Controller{
 
         echo view('section/header', $data);
         echo view('v_transaksi', $data);
-		echo view('section/footer', $data);
+		echo view('section/footer', $data);  
  
     }
 
@@ -47,6 +51,7 @@ class Transaksi extends Controller{
         $UkuranKayus = new UkuranKayuModel(); 
         $JenisKayus = new JenisKayuModel();  
         $TipeKayus = new TipeKayuModel();
+        $Customers = new CustomerModel(); 
 
  
         $data = array(
@@ -56,6 +61,7 @@ class Transaksi extends Controller{
             'dataTipeKayus' => $TipeKayus->findAll(), 
             'dataJenisKayus' => $JenisKayus->findAll(), 
             'dataUkuranKayus' => $UkuranKayus->findAll(), 
+            'dataCustomers' => $Customers->findAll(), 
             
 
 		);
@@ -90,6 +96,12 @@ class Transaksi extends Controller{
                         'required'   => 'Jumlah Pembelian Harus dipilih', 
                     ]
                 ], 
+                'namacus' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Nama Customers Harus dipilih', 
+                    ]
+                ],  
                 'jkayu' => [
                     'rules' => 'required',
                     'errors' => [
@@ -140,6 +152,7 @@ class Transaksi extends Controller{
                 'jumlah_pembelian' => $jmlpembelian,
                 'total_harga' => $this->request->getVar('ttl_harga'),
                 'tipe_pesanan' => $this->request->getVar('tipe_pesanan'),
+                'id_customers' => $this->request->getVar('namacus'),
                 'id_persediaan' => $id_persediaan,
                 'id_jenis_kayu' => $id_jenis_kayu,
                 'id_tipe_kayu' => $id_tipe_kayu,

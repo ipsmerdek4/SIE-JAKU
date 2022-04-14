@@ -53,7 +53,10 @@
 
                             <div class="row"> 
                                     <div class="col-md-6">
- 
+                                            <div class="form-group ">
+                                                <label for="name" class="form-label">Kode Transaksi</label>
+                                                <input type="text" name="kodetransaksi" class="form-control " readonly  id="" value="#JAKUTRANS<?=date("HmsdYm")?>   ">
+                                            </div>
                                             <div class="form-group">
                                                 <label for="name" class="form-label">Jenis Kayu</label>
                                                 <select name="jkayu" id="j_kayu" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
@@ -80,11 +83,16 @@
     
                                     </div>
                                     <div class="col-md-6"> 
-                                            <div class="form-group ">
-                                                <label for="name" class="form-label">Kode Transaksi</label>
-                                                <input type="text" name="kodetransaksi" class="form-control " readonly  id="" value="#JAKUTRANS<?=date("HmsdYm")?>   ">
+                                            
+                                            <div class="form-group">
+                                                <label for="name" class="form-label">Nama Customers</label>
+                                                <select name="namacus"  class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                    <option value=''>Select Nama Customers -</option> 
+                                                    <?php  foreach ($dataCustomers as $item9): ?>  
+                                                        <?='<option value="'.$item9->id_customers .'">'.$item9->nama.'</option>'?> 
+                                                    <?php endforeach; ?>  
+                                                </select> 
                                             </div>
-
                                             <div class="form-group ">
                                                 <div class="row"> 
                                                     <div class="col-sm-6">

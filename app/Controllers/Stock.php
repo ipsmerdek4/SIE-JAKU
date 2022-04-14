@@ -57,11 +57,12 @@ class Stock extends Controller{
 
               if (!$this->validate([
                   'jeniskayu' => [
-                      'rules' => 'required|min_length[4]|max_length[100]',
+                      'rules' => 'required|min_length[2]|max_length[100]|is_unique[db_jenis_kayu.nama_jenis_kayu]',
                       'errors' => [
                           'required'   => 'Jenis Kayu Harus diisi',
-                          'min_length' => 'Jenis Kayu Minimal 4 Karakter',
+                          'min_length' => 'Jenis Kayu Minimal 2 Karakter',
                           'max_length' => 'Jenis Kayu Maksimal 100 Karakter',  
+                          'is_unique'  => $this->request->getVar('jeniskayu').' sudah digunakan sebelumnya'
                       ]
                   ], 
               ])) {
@@ -98,7 +99,7 @@ class Stock extends Controller{
           
     }  
 
-
+/* 
     public function edit($id = null)
     {
 
@@ -151,6 +152,8 @@ class Stock extends Controller{
 
 
     }
+ */
+
 
 /* END Jenis Kayu */
 
@@ -197,35 +200,59 @@ class Stock extends Controller{
     public function tipe_process()
     {    
               $TipeKayus = new TipeKayuModel();
-    
-
-              if (!$this->validate([
-                  'tkayu' => [
-                      'rules' => 'required|min_length[4]|max_length[100]',
-                      'errors' => [
-                          'required'   => 'Tipe Kayu Harus diisi',
-                          'min_length' => 'Tipe Kayu Minimal 4 Karakter',
-                          'max_length' => 'Tipe Kayu Maksimal 100 Karakter',   
-                      ]
-                  ],   
-                  'jkayu' => [
-                      'rules' => 'required',
-                      'errors' => [
-                          'required'   => 'Jenis Kayu Harus dipilih', 
-                      ]
-                  ], 
-              ])) {
-                  session()->setFlashdata('error', $this->validator->listErrors());
-                  return redirect()->to(base_url('/tipe-kayu/add'))->withInput(); 
-              } 
+              $JenisKayus = new JenisKayuModel();
  
-              $TipeKayus->insert([ 
-                  'nama_tipe_kayu' => $this->request->getVar('tkayu'),
-                  'id_jenis_kayu' => $this->request->getVar('jkayu'),
-                  'tgl_tipe_kayu' => $this->request->getVar('tgl')
-              ]);
-              session()->setFlashdata('alert', 'Berhasil Menambah Data. Dengan [ Nama Tipe = '.'#'.$this->request->getVar('tkayu').' ]');
-              return redirect()->to(base_url('tipe-kayu/'))->withInput(); 
+              
+                if (!$this->validate([
+                    'tkayu' => [
+                        'rules' => 'required|min_length[2]|max_length[100]',
+                        'errors' => [
+                            'required'   => 'Tipe Kayu Harus diisi.',
+                            'min_length' => 'Tipe Kayu Minimal 2 Karakter.',
+                            'max_length' => 'Tipe Kayu Maksimal 100 Karakter.',   
+                        ]
+                    ],   
+                    'jkayu' => [
+                        'rules' => 'required',
+                        'errors' => [
+                            'required'   => 'Jenis Kayu Harus dipilih.', 
+                        ]
+                    ], 
+                ])) {
+                    session()->setFlashdata('error', $this->validator->listErrors());
+                    return redirect()->to(base_url('/tipe-kayu/add'))->withInput(); 
+                } 
+
+
+              $dataTipeKayus = $TipeKayus->where([
+                'id_jenis_kayu ' => $this->request->getVar('jkayu'),
+                'nama_tipe_kayu ' => $this->request->getVar('tkayu'),
+              ])->first();
+
+              if($dataTipeKayus){ 
+                    if (!$this->validate([ 
+                        'tkayu' => [
+                            'rules' => 'is_unique[db_tipe_kayu.nama_tipe_kayu]',
+                            'errors' => [ 
+                                'is_unique'  => '['.$this->request->getVar('tkayu').'] sudah digunakan sebelumnya.'
+                            ]
+                        ],   
+                    ])) {
+                        session()->setFlashdata('error', $this->validator->listErrors());
+                        return redirect()->to(base_url('/tipe-kayu/add'))->withInput(); 
+                    }  
+              }else{
+                    $TipeKayus->insert([ 
+                        'nama_tipe_kayu' => $this->request->getVar('tkayu'),
+                        'id_jenis_kayu' => $this->request->getVar('jkayu'),
+                        'tgl_tipe_kayu' => $this->request->getVar('tgl')
+                    ]);
+                    session()->setFlashdata('alert', 'Berhasil Menambah Data. Dengan [ Nama Tipe = '.'#'.$this->request->getVar('tkayu').' ]');
+                    return redirect()->to(base_url('tipe-kayu/'))->withInput(); 
+              }
+
+
+             
 
  
 
@@ -247,7 +274,7 @@ class Stock extends Controller{
 
     }
 
-
+/* 
     public function tipe_edit($id = null)
     {
         
@@ -312,7 +339,7 @@ class Stock extends Controller{
 
     }
 
- 
+  */
 
 
 /* END TYPE KAYU  */
@@ -358,10 +385,10 @@ class Stock extends Controller{
   {    
             if (!$this->validate([
                 'ukayu' => [
-                    'rules' => 'required|min_length[4]|max_length[100]',
+                    'rules' => 'required|min_length[2]|max_length[100]',
                     'errors' => [
                         'required'   => 'Ukuran Kayu Harus diisi',
-                        'min_length' => 'Ukuran Kayu Minimal 4 Karakter',
+                        'min_length' => 'Ukuran Kayu Minimal 2 Karakter',
                         'max_length' => 'Ukuran Kayu Maksimal 100 Karakter',  
                     ]
                 ], 
@@ -383,13 +410,40 @@ class Stock extends Controller{
             } 
 
             $UkuranKayus = new UkuranKayuModel(); 
-            $UkuranKayus->insert([ 
-                'nama_Ukuran_kayu' => $this->request->getVar('ukayu'),
-                'id_tipe_kayu' => $this->request->getVar('tkayu'),
-                'tgl_ukuran_kayu' => $this->request->getVar('tgl')
-            ]);
-            session()->setFlashdata('alert', 'Berhasil Menambah Data.');
-            return redirect()->to(base_url('ukuran-kayu/'))->withInput(); 
+
+            
+            $dataUkuranKayus = $UkuranKayus->where([ 
+                'id_tipe_kayu ' => $this->request->getVar('tkayu'),
+                'nama_Ukuran_kayu ' => $this->request->getVar('ukayu'),
+            ])->first();
+
+
+            if($dataUkuranKayus){ 
+                if (!$this->validate([ 
+                    'ukayu' => [
+                        'rules' => 'is_unique[db_ukuran_kayu.nama_Ukuran_kayu]',
+                        'errors' => [ 
+                            'is_unique'  => '['.$this->request->getVar('ukayu').'] sudah digunakan sebelumnya.'
+                        ]
+                    ],   
+                ])) {
+                    session()->setFlashdata('error', $this->validator->listErrors());
+                    return redirect()->to(base_url('/ukuran-kayu/add'))->withInput(); 
+                }  
+            }else{ 
+                $UkuranKayus->insert([ 
+                    'nama_Ukuran_kayu' => $this->request->getVar('ukayu'),
+                    'id_tipe_kayu' => $this->request->getVar('tkayu'),
+                    'tgl_ukuran_kayu' => $this->request->getVar('tgl')
+                ]);
+                session()->setFlashdata('alert', 'Berhasil Menambah Data.');
+                return redirect()->to(base_url('ukuran-kayu/'))->withInput(); 
+            }
+
+
+
+
+
        
 
   }
@@ -410,7 +464,7 @@ class Stock extends Controller{
 
   }
 
- 
+ /* 
   public function ukuran_edit($id = null)
   {
         $UkuranKayus = new UkuranKayuModel(); 
@@ -487,7 +541,7 @@ class Stock extends Controller{
 
   }
 
- 
+  */
  
 
 
@@ -602,7 +656,7 @@ class Stock extends Controller{
         }
 
   }
- 
+ /* 
   public function harga_edit($id = null)
   {
         $HargaKayus = new HargaKayuModel(); 
@@ -690,7 +744,7 @@ class Stock extends Controller{
  
 
   }
-
+ */
 
 
 

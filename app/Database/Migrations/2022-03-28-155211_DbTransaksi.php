@@ -15,6 +15,10 @@ class DbTransaksi extends Migration
                 'unsigned'       => true,
                 'auto_increment' => true
             ],
+            'id_customers'          => [
+                'type'           => 'INT', 
+                'constraint'     => 5,
+            ],
 			'kode_transaksi'          => [
 				'type'           => 'VARCHAR',
 				'constraint'     => '100',

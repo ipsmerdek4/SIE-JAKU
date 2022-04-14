@@ -1523,7 +1523,7 @@
                 
                             // Total over all pages
                             total = api
-                                .column( 4 )
+                                .column( 6 )
                                 .data()
                                 .reduce( function (a, b) {
                                     return intVal(a) + intVal(b);
@@ -1531,7 +1531,7 @@
                 
                             // Total over this page
                             pageTotal = api
-                                .column( 4, { page: 'current'} )
+                                .column( 6, { page: 'current'} )
                                 .data()
                                 .reduce( function (a, b) {
                                     return intVal(a) + intVal(b);
@@ -1540,11 +1540,11 @@
 
                             if ($(window).width() >= 1000 ) {
                                 // Update footer
-                                $( api.column( 3 ).footer() ).html( 
+                                $( api.column( 5 ).footer() ).html( 
                                       'Total :' 
                                 );
                                 // Update footer
-                                $( api.column( 4 ).footer() ).html( 
+                                $( api.column( 6 ).footer() ).html( 
                                     ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
                                 );
                             }else if($(window).width() >= 285 ){
@@ -1604,11 +1604,11 @@
                                           className: ' text-sm-center', 
                                       },
                                       {
-                                          targets: 3,
+                                          targets: 5,
                                           className: ' text-sm-center', 
                                       },
                                       {
-                                          targets: 4,
+                                          targets: 6,
                                           className: ' text-sm-center',
                                           render: $.fn.dataTable.render.number( ',', '.', 2, 'Rp ' ),
                                       },

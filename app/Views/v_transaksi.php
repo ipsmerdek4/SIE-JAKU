@@ -33,7 +33,9 @@
                         <thead>
                         <tr>
                           <th>No</th> 
+                          <th>Tanggal</th> 
                           <th>Kode Transaksi</th>
+                          <th>Nama Costumer</th> 
                           <th>Jenis, Tipe, dan Ukuran Kayu</th>
                           <th>Jumlah<br>Pembelian</th> 
                           <th>Total<br>Harga</th>
@@ -45,8 +47,11 @@
                         <?php $no=0; foreach ($datatransaksi as $item): $no++; ?>
                             
                           <tr>
-                            <td><?=$no?></td> 
+                          
+                            <td><?=$no?></td>  
+                            <td><?=$item->tgl_transaksi?></td> 
                             <td>#<?=$item->kode_transaksi?></td> 
+                            <td><?=$item->nama?></td> 
                             <td>
                             <?=$item->nama_jenis_kayu?>, <?=$item->nama_tipe_kayu?>, <?=$item->nama_Ukuran_kayu?>
                             </td>
@@ -70,6 +75,8 @@
                         <tfoot>
                             <tr>
                                 <th></th> 
+                                <th></th>
+                                <th></th>
                                 <th></th>
                                 <th></th>  
                                 <th></th>
