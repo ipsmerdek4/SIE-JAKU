@@ -507,7 +507,7 @@
 
 
 
-  /*  */
+            /*  */
             var barChartOptions2 = {
                   responsive              : true,
                   maintainAspectRatio     : false,
@@ -737,24 +737,7 @@
              //Initialize Select2 Elements
               $('.select2').select2() 
 
-              $("#provinsi").change(function (){
-                var url = "<?php echo site_url('customers/add_ajax_kab');?>/"+$(this).val();
-                $('#kabupaten').load(url);
-                return false;
-              })
-
-              $("#kabupaten").change(function (){
-                var url = "<?php echo site_url('customers/add_ajax_kec');?>/"+$(this).val();
-                $('#kecamatan').load(url);
-                return false;
-              })
-
-              $("#kecamatan").change(function (){
-                var url = "<?php echo site_url('customers/add_ajax_desa');?>/"+$(this).val();
-                $('#desa').load(url);
-                return false;
-              })
-   
+              
               //Money Euro
               $('[data-mask]').inputmask()
 

@@ -35,21 +35,21 @@ class DbCustomers extends Migration
 				'type'           => 'VARCHAR',
 				'constraint'     => '20',
 			],
-			'provinsi_id'       => [
+			'nama_provinsi'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '2',
+				'constraint'     => '100',
 			],
-			'kabupaten_id'       => [
+			'nama_kabupaten'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '4',
+				'constraint'     => '100',
 			],
-			'kecamatan_id'       => [
+			'nama_kecamatan'       => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '7',
+				'constraint'     => '100',
 			],
-			'desa_id'            => [
+			'nama_desa'            => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '10',
+				'constraint'     => '100',
 			],
 			'alamat'			 => [
                 'type'           => 'TEXT',

@@ -92,30 +92,20 @@
                     <div class="col-md-6">  
                             <div class="form-group">
                                 <label for="username" class="form-label">Provinsi <b class="text-danger">*</b></label>
-                                <select name="provinsi_id" id="provinsi" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
-                                    <option value=''>Select Provinsi -</option>
-                                    <?php  foreach ($dataprovinsi as $item1): ?>  
-                                        <?='<option value="'.$item1->id.'">'.$item1->nm_provinsi.'</option>'?> 
-                                    <?php endforeach; ?> 
-                                </select> 
+                                <input type="text" name="provinsi_id" class="form-control">
+                                 
                             </div> 
                             <div class="form-group">
                                 <label for="username" class="form-label">Kabupaten <b class="text-danger">*</b></label>
-                                <select name="kabupaten_id" id="kabupaten" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> >   
-                                        <option value="">Select Kabupaten</option> 
-                                </select> 
+                                <input type="text" name="kabupaten_id" class="form-control"> 
                             </div> 
                             <div class="form-group">
                                 <label for="username" class="form-label">Kecamatan <b class="text-danger">*</b></label>
-                                <select name="kecamatan_id" id="kecamatan" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> >   
-                                        <option value="">Select Kecamatan</option> 
-                                </select> 
+                                <input type="text" name="kecamatan_id" class="form-control">  
                             </div> 
                             <div class="form-group">
                                 <label for="username" class="form-label">Desa <b class="text-danger">*</b></label>
-                                <select name="desa_id" id="desa" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> >   
-                                        <option value="">Select Desa</option> 
-                                </select> 
+                                <input type="text" name="desa_id" class="form-control">   
                             </div> 
 
                             <div class="form-group">

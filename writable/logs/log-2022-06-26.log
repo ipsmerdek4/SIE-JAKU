@@ -1,0 +1,905 @@
+ERROR - 2022-06-26 10:03:43 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:03:43 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:04:13 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:04:13 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-26 10:06:19 --> Call to undefined method App\Models\CustomerModel::getjoinall
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Customers.php(21): CodeIgniter\Model->__call('getjoinall', [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:06:28 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:06:28 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:06:30 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:06:30 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:06:31 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:06:31 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:06:31 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:06:31 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:06:34 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:06:34 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:06:35 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:06:35 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:06:35 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:06:35 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:06:35 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:06:35 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:07:15 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:07:15 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:07:16 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:07:16 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:07:18 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:07:18 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-26 10:10:40 --> Undefined variable $dataprovinsi
+in APPPATH\Views\v_tbhcustomer.php on line 97.
+ 1 APPPATH\Views\v_tbhcustomer.php(97): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataprovinsi', 'APPPATH\\Views\\v_tbhcustomer.php', 97)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_tbhcustomer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('v_tbhcustomer', [], true)
+ 5 APPPATH\Controllers\Customers.php(40): view('v_tbhcustomer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->customeradd()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:17:51 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:17:51 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:18:17 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:18:17 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:18:18 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:18:18 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:20:36 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:20:36 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:20:37 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:20:37 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:20:37 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:20:37 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:20:37 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:20:37 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(21): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:20:45 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:20:45 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(17): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:20:55 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:20:55 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(17): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:20:55 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:20:55 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(17): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:20:56 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+CRITICAL - 2022-06-26 10:20:56 --> Table 'siejaku.wilayah_provinsi' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_customers`
+JOIN `wilayah_provinsi` ON `db_customers`.`provinsi_id` = `wilayah_provinsi`.`id`
+JOIN `wilayah_kabupaten` ON `db_customers`.`kabupaten_id` = `wilayah_kabupaten`.`id`
+JOIN `wilayah_kecamatan` ON `db_customers`.`kecamatan_id` = `wilayah_kecamatan`.`id`
+JOIN `wilayah_desa` ON `db_customers`.`desa_id` = `wilayah_desa`.`id`', [], false)
+ 5 APPPATH\Models\CustomerModel.php(36): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Customers.php(17): App\Models\CustomerModel->getjoinall()
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-26 10:21:20 --> Call to undefined method App\Models\CustomerModel::getjoinall
+in SYSTEMPATH\Model.php on line 773.
+ 1 APPPATH\Controllers\Customers.php(17): CodeIgniter\Model->__call('getjoinall', [])
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-26 10:21:57 --> Undefined variable $datacustomers
+in APPPATH\Views\v_customer.php on line 47.
+ 1 APPPATH\Views\v_customer.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datacustomers', 'APPPATH\\Views\\v_customer.php', 47)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_customer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('v_customer', [], true)
+ 5 APPPATH\Controllers\Customers.php(19): view('v_customer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:23:47 --> Unknown column 'desa_id' in 'field list'
+CRITICAL - 2022-06-26 10:23:47 --> Unknown column 'desa_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `db_customers` (`customers`, `nama`, `telp`, `hp`, `wa`, `alamat`, `desa_id`, `created_at`, `updated_at`) VALUES (\'#onix\', \'Muhammad Fhauzan\', \'(+62 123) ___-____\', \'(+62 21) 312-___-___\', \'(+62 __) _31-232-131\', \'jalan imam bonjol gg.segina VI no.31\', \'312\', \'2022-06-26 10:23:47\', \'2022-06-26 10:23:47\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `db_customers` (`customers`, `nama`, `telp`, `hp`, `wa`, `alamat`, `desa_id`, `created_at`, `updated_at`) VALUES (\'#onix\', \'Muhammad Fhauzan\', \'(+62 123) ___-____\', \'(+62 21) 312-___-___\', \'(+62 __) _31-232-131\', \'jalan imam bonjol gg.segina VI no.31\', \'312\', \'2022-06-26 10:23:47\', \'2022-06-26 10:23:47\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `db_customers` (`customers`, `nama`, `telp`, `hp`, `wa`, `alamat`, `desa_id`, `created_at`, `updated_at`) VALUES (\'#onix\', \'Muhammad Fhauzan\', \'(+62 123) ___-____\', \'(+62 21) 312-___-___\', \'(+62 __) _31-232-131\', \'jalan imam bonjol gg.segina VI no.31\', \'312\', \'2022-06-26 10:23:47\', \'2022-06-26 10:23:47\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_customers` (`customers`, `nama`, `telp`, `hp`, `wa`, `alamat`, `desa_id`, `created_at`, `updated_at`) VALUES (:customers:, :nama:, :telp:, :hp:, :wa:, :alamat:, :desa_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Customers.php(120): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->process()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-06-26 10:24:19 --> Unknown column 'desa_id' in 'field list'
+CRITICAL - 2022-06-26 10:24:19 --> Unknown column 'desa_id' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `db_customers` (`customers`, `nama`, `telp`, `hp`, `wa`, `alamat`, `desa_id`, `created_at`, `updated_at`) VALUES (\'#onix\', \'Muhammad Fhauzan\', \'(+62 123) ___-____\', \'(+62 21) 312-___-___\', \'(+62 __) _31-232-131\', \'jalan imam bonjol gg.segina VI no.31\', \'312\', \'2022-06-26 10:24:18\', \'2022-06-26 10:24:18\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `db_customers` (`customers`, `nama`, `telp`, `hp`, `wa`, `alamat`, `desa_id`, `created_at`, `updated_at`) VALUES (\'#onix\', \'Muhammad Fhauzan\', \'(+62 123) ___-____\', \'(+62 21) 312-___-___\', \'(+62 __) _31-232-131\', \'jalan imam bonjol gg.segina VI no.31\', \'312\', \'2022-06-26 10:24:18\', \'2022-06-26 10:24:18\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `db_customers` (`customers`, `nama`, `telp`, `hp`, `wa`, `alamat`, `desa_id`, `created_at`, `updated_at`) VALUES (\'#onix\', \'Muhammad Fhauzan\', \'(+62 123) ___-____\', \'(+62 21) 312-___-___\', \'(+62 __) _31-232-131\', \'jalan imam bonjol gg.segina VI no.31\', \'312\', \'2022-06-26 10:24:18\', \'2022-06-26 10:24:18\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1904): CodeIgniter\Database\BaseConnection->query('INSERT INTO `db_customers` (`customers`, `nama`, `telp`, `hp`, `wa`, `alamat`, `desa_id`, `created_at`, `updated_at`) VALUES (:customers:, :nama:, :telp:, :hp:, :wa:, :alamat:, :desa_id:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(278): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(738): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(666): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Customers.php(120): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->process()
+10 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+11 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-26 10:37:51 --> syntax error, unexpected token "*", expecting "function" or "const"
+in APPPATH\Controllers\Customers.php on line 307.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-26 10:37:57 --> syntax error, unexpected token "*", expecting "function" or "const"
+in APPPATH\Controllers\Customers.php on line 307.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-26 10:37:58 --> syntax error, unexpected token "*", expecting "function" or "const"
+in APPPATH\Controllers\Customers.php on line 307.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-26 10:38:02 --> syntax error, unexpected token "*", expecting "function" or "const"
+in APPPATH\Controllers\Customers.php on line 307.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Customers.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Customers')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Customers')
+ 4 SYSTEMPATH\CodeIgniter.php(846): class_exists('\\App\\Controllers\\Customers', true)
+ 5 SYSTEMPATH\CodeIgniter.php(453): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-06-26 10:38:15 --> Undefined variable $dataprovinsi
+in APPPATH\Views\v_edtcustomer.php on line 96.
+ 1 APPPATH\Views\v_edtcustomer.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataprovinsi', 'APPPATH\\Views\\v_edtcustomer.php', 96)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_edtcustomer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('v_edtcustomer', [], true)
+ 5 APPPATH\Controllers\Customers.php(148): view('v_edtcustomer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Customers->customeredit('1')
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Customers))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

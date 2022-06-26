@@ -91,47 +91,20 @@
                     <div class="col-md-6">  
                             <div class="form-group">
                                 <label for="username" class="form-label">Provinsi <b class="text-danger">*</b></label>
-                                <select name="provinsi_id" id="provinsi" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> >  
-                                    <option value=''>Select Provinsi -</option>
-                                    <?php  foreach ($dataprovinsi as $item1): ?>  
-                                       <option value="<?=$item1->id?>" <?php echo ($item1->id == $datacustomers[0]->provinsi_id) ? "selected" : ""?>  >
-                                        <?php echo $item1->nm_provinsi ?> 
-                                    </option>
-                                    <?php endforeach; ?> 
-                                </select> 
+                                <input type="text" name="provinsi_id" class="form-control" value="<?=$datacustomers[0]->nama_provinsi?>">
+
                             </div> 
                             <div class="form-group">
                                 <label for="username" class="form-label">Kabupaten <b class="text-danger">*</b></label>
-                                <select name="kabupaten_id" id="kabupaten" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> >   
-                                        <option value="">Select Kabupaten</option> 
-                                        <?php  foreach ($datakabupaten as $item2): ?>  
-                                        <option value="<?=$item2->id?>" <?php echo ($item2->id == $datacustomers[0]->kabupaten_id) ? "selected" : ""?>  >
-                                            <?php echo $item2->nm_kabupaten ?> 
-                                        </option>
-                                        <?php endforeach; ?> 
-                                </select> 
+                                <input type="text" name="kabupaten_id" class="form-control" value="<?=$datacustomers[0]->nama_kabupaten?>"> 
                             </div> 
                             <div class="form-group">
                                 <label for="username" class="form-label">Kecamatan <b class="text-danger">*</b></label>
-                                <select name="kecamatan_id" id="kecamatan" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> >   
-                                        <option value="">Select Kecamatan</option>  
-                                        <?php  foreach ($datakecamatan as $item3): ?>  
-                                        <option value="<?=$item3->id?>" <?php echo ($item3->id == $datacustomers[0]->kecamatan_id) ? "selected" : ""?>  >
-                                            <?php echo $item3->nm_kecamatan ?> 
-                                        </option>
-                                        <?php endforeach; ?> 
-                                </select> 
+                                <input type="text" name="kecamatan_id" class="form-control" value="<?=$datacustomers[0]->nama_kecamatan?>"> 
                             </div> 
                             <div class="form-group">
                                 <label for="username" class="form-label">Desa <b class="text-danger">*</b></label>
-                                <select name="desa_id" id="desa" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> >   
-                                        <option value="">Select Desa</option> 
-                                        <?php  foreach ($datadesa as $item4): ?>  
-                                        <option value="<?=$item4->id?>" <?php echo ($item4->id == $datacustomers[0]->desa_id) ? "selected" : ""?>  >
-                                            <?php echo $item4->nm_desa ?> 
-                                        </option>
-                                        <?php endforeach; ?> 
-                                </select> 
+                                <input type="text" name="desa_id" class="form-control" value="<?=$datacustomers[0]->nama_desa?>">  
                             </div> 
 
                             <div class="form-group">

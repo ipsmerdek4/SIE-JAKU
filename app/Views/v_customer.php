@@ -104,7 +104,7 @@
                                     ?> 
                             </td>
                             <td>
-                                <?= $item->alamat.',<br> '.$item->nm_provinsi.', '.$item->nm_kabupaten.', '.$item->nm_kecamatan.', '.$item->nm_desa.'.'; ?> 
+                                <?= $item->alamat.',<br> '.$item->nama_provinsi.', '.$item->nama_kabupaten.', '.$item->nama_kecamatan.', '.$item->nama_desa.'.'; ?> 
                             </td>
                             <td>
                                 <?=$item->created_at?> 

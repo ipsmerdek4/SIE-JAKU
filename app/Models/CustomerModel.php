@@ -9,11 +9,11 @@ class CustomerModel extends Model
     protected $primaryKey = "id_customers";
     protected $returnType = "object";
     protected $useTimestamps = true;
-    protected $allowedFields = ['customers', 'nama', 'telp', 'hp', 'wa', 'provinsi_id', 'kabupaten_id', 'kecamatan_id', 'desa_id', 'alamat'];
+    protected $allowedFields = ['customers', 'nama', 'telp', 'hp', 'wa', 'nama_provinsi', 'nama_kabupaten', 'nama_kecamatan', 'nama_desa', 'alamat'];
 
 
 
-     
+     /* 
     function getlikeall($bln1 = null, $bln2 = null, $bln3 = null)
     {
         $builder = $this->db->table('db_customers');
@@ -50,7 +50,7 @@ class CustomerModel extends Model
 
         return $query->getResult();
     }
-
+ */
     
     
 }
