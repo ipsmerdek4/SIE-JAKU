@@ -24,62 +24,65 @@ class Home extends BaseController
         $Harga = new HargaKayuModel;
         $Customer = new CustomerModel;
 
-  
-        if (!$this->request->getpost('p_bulan')) { 
-                $getbulan = 0;
-                if ((date('m') == 1) or (date('m') == 2) or (date('m') == 3)) {
-                    $getbulan = 1;  
-                    $gettahun = date('Y');
-                }elseif ((date('m') == 4) or (date('m') == 5) or (date('m') == 6)) {
-                    $getbulan = 2; 
-                    $gettahun = date('Y');
-                }elseif ((date('m') == 7) or (date('m') == 8) or (date('m') == 9)) {
-                    $getbulan = 3; 
-                    $gettahun = date('Y');
-                }elseif ((date('m') == 10) or (date('m') == 11) or (date('m') == 12)) {
-                    $getbulan = 4; 
-                    $gettahun = date('Y');
-                }
-        }else{
-            $getbulan = $this->request->getpost('p_bulan');
-            $gettahun = $this->request->getpost('p_tahun');
-            
-        }
-  
-        
-        //$getbulan = 2; 
-        //$gettahun = '2022';
-        $datagetbulanCoustomer = "";
+        $getstatus = $this->request->getpost('getstatus'); 
+        if(isset($getstatus)){ 
+            if ($getstatus == 1) { 
+                $bulan = $this->request->getpost('bulan_view');
+                $tahun = $this->request->getpost('tahun_view');
 
-        if ($getbulan == 1) { 
-            $datagetbulanCoustomer = $Customer->getlikeall($gettahun.'-01-', $gettahun.'-02-', $gettahun.'-03-');    
-            $datagetbulantransaksi = $Transaksi->getlikeall($gettahun.'-01-', $gettahun.'-02-', $gettahun.'-03-');    
-            $datagetbulantransaksi2 = $Transaksi->getcountall($gettahun.'-01-', $gettahun.'-02-', $gettahun.'-03-', 'id_jenis_kayu');     
-            $datagetbulantransaksi3 = $Transaksi->getcountall($gettahun.'-01-', $gettahun.'-02-', $gettahun.'-03-', 'tipe_pesanan');     
-            $datagetbulanpersediaan = $Persediaan->getlikeall($gettahun.'-01-', $gettahun.'-02-', $gettahun.'-03-');    
-        }elseif ($getbulan == 2) { 
-            $datagetbulanCoustomer = $Customer->getlikeall($gettahun.'-04-', $gettahun.'-05-', $gettahun.'-06-');
-            $datagetbulantransaksi = $Transaksi->getlikeall($gettahun.'-04-', $gettahun.'-05-', $gettahun.'-06-'); 
-            $datagetbulantransaksi2 = $Transaksi->getcountall($gettahun.'-04-', $gettahun.'-05-', $gettahun.'-06-', 'id_jenis_kayu');  
-            $datagetbulantransaksi3 = $Transaksi->getcountall($gettahun.'-04-', $gettahun.'-05-', $gettahun.'-06-', 'tipe_pesanan');      
-            $datagetbulanpersediaan = $Persediaan->getlikeall($gettahun.'-04-', $gettahun.'-05-', $gettahun.'-06-');
-        }elseif ($getbulan == 3) { 
-            $datagetbulanCoustomer = $Customer->getlikeall($gettahun.'-07-', $gettahun.'-08-', $gettahun.'-09-');   
-            $datagetbulantransaksi = $Transaksi->getlikeall($gettahun.'-07-', $gettahun.'-08-', $gettahun.'-09-');  
-            $datagetbulantransaksi2 = $Transaksi->getcountall($gettahun.'-07-', $gettahun.'-08-', $gettahun.'-09-', 'id_jenis_kayu');   
-            $datagetbulantransaksi3 = $Transaksi->getcountall($gettahun.'-07-', $gettahun.'-08-', $gettahun.'-09-', 'tipe_pesanan');       
-            $datagetbulanpersediaan = $Persediaan->getlikeall($gettahun.'-07-', $gettahun.'-08-', $gettahun.'-09-'); 
-        }elseif ($getbulan == 4) { 
-            $datagetbulanCoustomer = $Customer->getlikeall($gettahun.'-10-', $gettahun.'-11-', $gettahun.'-12-');   
-            $datagetbulantransaksi = $Transaksi->getlikeall($gettahun.'-10-', $gettahun.'-11-', $gettahun.'-12-');   
-            $datagetbulantransaksi2 = $Transaksi->getcountall($gettahun.'-10-', $gettahun.'-11-', $gettahun.'-12-', 'id_jenis_kayu');  
-            $datagetbulantransaksi3 = $Transaksi->getcountall($gettahun.'-10-', $gettahun.'-11-', $gettahun.'-12-', 'tipe_pesanan');        
-            $datagetbulanpersediaan = $Persediaan->getlikeall($gettahun.'-10-', $gettahun.'-11-', $gettahun.'-12-');   
-        }
- 
+                $datagetbulantransaksi = $Transaksi->getwhere_bulanandtahun($bulan, $tahun);
+                $datatransaksi = $datagetbulantransaksi; 
+                /*  */ 
+                $datagetbulanCoustomer = $Customer->getwhere_bulanandtahun($bulan, $tahun);  
+                $datacountCoustomer =  $datagetbulanCoustomer;  
+                /*  */
+                $datagetbulanpersediaan = $Persediaan->getwhere_bulanandtahun($bulan, $tahun);    
+                /*  */
+                $datagetbulantransaksi2 = $Transaksi->getcountall($bulan, $tahun, 'id_jenis_kayu');       
+                /*  */
+                $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE($bulan, $tahun, 'tipe_pesanan');     
+                $datagetbulantransaksi32 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pesanan');    
 
-        
+                
+            } elseif ($getstatus == 2) {
+                $bulan = ''; 
+                $tahun = $this->request->getpost('tahun_view');
+
+                $datagetbulantransaksi = $Transaksi->getwhere_tahun($tahun);
+                $datatransaksi = $datagetbulantransaksi;  
+                /*  */
+                $datagetbulanCoustomer = $Customer->getwhere_tahun($tahun);  
+                $datacountCoustomer =  $datagetbulanCoustomer;  
+                /*  */
+                $datagetbulanpersediaan = $Persediaan->getwhere_tahun($tahun);
+                /*  */
+                $datagetbulantransaksi2 = $Transaksi->getcountall2($tahun, 'id_jenis_kayu');       
+                /*  */
+                $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE2($tahun, 'tipe_pesanan');    
+                $datagetbulantransaksi32 = $Transaksi->getcountall2($tahun, 'tipe_pesanan');    
+            }
+            $getstatus = $getstatus;
+
+        }else{ 
+            $bulan = date("m");
+            $tahun = date("Y"); 
+            $datagetbulantransaksi = $Transaksi->getwhere_bulanandtahun($bulan, $tahun);
             $datatransaksi = $datagetbulantransaksi; 
+            /*  */ 
+            $datagetbulanCoustomer = $Customer->getwhere_bulanandtahun($bulan, $tahun);  
+            $datacountCoustomer =  $datagetbulanCoustomer;  
+            /*  */
+            $datagetbulanpersediaan = $Persediaan->getwhere_bulanandtahun($bulan, $tahun);    
+            /*  */
+            $datagetbulantransaksi2 = $Transaksi->getcountall($bulan, $tahun, 'id_jenis_kayu');     
+            /*  */
+            $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE($bulan, $tahun, 'tipe_pesanan');  
+            $datagetbulantransaksi32 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pesanan');       
+            $getstatus = '1';
+
+        }
+        
+ 
             $productsold = 0;
             $getprofit = 0;
             foreach ($datatransaksi as $value) { 
@@ -95,11 +98,14 @@ class Home extends BaseController
                 $getprofit += $value->total_harga - $getmodal;
                 /* END get profit  */ 
             }
+ 
 
             /* start total costumer */
-            $datacountCoustomer =  $datagetbulanCoustomer;  
             $getcountcostumer = count($datacountCoustomer); 
             /* end total costumer  */
+
+
+
 
             /* getpersentase stock  */
             $gettotal = 0;
@@ -117,16 +123,18 @@ class Home extends BaseController
             /* END getpersentase stock  */
           
  
-            $datatransaksi2 = $datagetbulantransaksi2;
+
+            $datatransaksi2 = $datagetbulantransaksi2; 
             $datatransaksi3 = $datagetbulantransaksi3;
-   
-           
-           
+            $datatransaksi32 = $datagetbulantransaksi32;
+            
+            
            
            /* 
             echo "<pre>";
             print_r($datagetbulantransaksi3);
                     */    
+ 
  
  
         $data = array(
@@ -136,10 +144,12 @@ class Home extends BaseController
             'productsold' => $productsold,
             'getprofit' => $getprofit,
             'getcountcostumer' => $getcountcostumer,
-            'presenstock' => $presenstock,
-            'getbulan' => $getbulan,
-            'gettahun' => $gettahun,
+            'presenstock' => $presenstock, 
+              'getstatus' => $getstatus,
+              'getbulan' => $bulan, 
+              'gettahun' => $tahun,  
            // footer 
+           'datatransaksi32'    => $datatransaksi32,
             'datatransaksi3' => $datatransaksi3,
             'datatransaksi2' => $datatransaksi2,
             'datatransaksi' => $datatransaksi,

@@ -36,19 +36,28 @@ class PersediaanKayuModel extends Model{
     }
 
    
-    function getlikeall($bln1 = null, $bln2 = null, $bln3 = null)
+
+
+
+    function getwhere_bulanandtahun($bln = null, $thn = null)
     {
         $builder = $this->db->table('db_persediaan_kayu');
-        $builder->like('Tanggal_persediaan', $bln1);  
-        $builder->orLike('Tanggal_persediaan', $bln2);  
-        $builder->orLike('Tanggal_persediaan', $bln3);   
+        $builder->like('Tanggal_persediaan', $thn.'-'.$bln);    
         $query = $builder->get();
 
         return $query->getResult();
     }
 
-    
+     
 
+    function getwhere_tahun($thn = null)
+    {
+        $builder = $this->db->table('db_persediaan_kayu');
+        $builder->like('Tanggal_persediaan', $thn.'-');    
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
 
 
 

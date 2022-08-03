@@ -17,20 +17,16 @@ class TransaksiModel extends Model{
 
     
      
-    function getlikeall($bln1 = null, $bln2 = null, $bln3 = null)
+    function getwhere_bulanandtahun($bln = null, $thn = null)
     {
         $builder = $this->db->table('db_transaksi');
         $builder->join('db_jenis_kayu', 'db_jenis_kayu.id_jenis_kayu = db_transaksi.id_jenis_kayu');
         $builder->join('db_tipe_kayu', 'db_tipe_kayu.id_tipe_kayu = db_transaksi.id_tipe_kayu'); 
         $builder->join('db_ukuran_kayu', 'db_ukuran_kayu.id_ukuran_kayu = db_transaksi.id_ukuran_kayu'); 
         $builder->join('db_persediaan_kayu', 'db_persediaan_kayu.id_persediaan  = db_transaksi.id_persediaan '); 
-        $builder->join('db_customers', 'db_customers.id_customers = db_transaksi.id_customers');
+        $builder->join('db_customers', 'db_customers.id_customers = db_transaksi.id_customers');  
 
-
-        $builder->like('tgl_transaksi', $bln1);  
-        $builder->orLike('tgl_transaksi', $bln2);  
-        $builder->orLike('tgl_transaksi', $bln3);  
-
+        $builder->like('tgl_transaksi', $thn.'-'.$bln);    
         $builder->orderBy('tgl_transaksi', 'DESC');
 
         $query = $builder->get();
@@ -39,21 +35,88 @@ class TransaksiModel extends Model{
     }
 
     
+    function getwhere_tahun($thn = null)
+    {
+        $builder = $this->db->table('db_transaksi');
+        $builder->join('db_jenis_kayu', 'db_jenis_kayu.id_jenis_kayu = db_transaksi.id_jenis_kayu');
+        $builder->join('db_tipe_kayu', 'db_tipe_kayu.id_tipe_kayu = db_transaksi.id_tipe_kayu'); 
+        $builder->join('db_ukuran_kayu', 'db_ukuran_kayu.id_ukuran_kayu = db_transaksi.id_ukuran_kayu'); 
+        $builder->join('db_persediaan_kayu', 'db_persediaan_kayu.id_persediaan  = db_transaksi.id_persediaan '); 
+        $builder->join('db_customers', 'db_customers.id_customers = db_transaksi.id_customers');  
 
-    function getcountall($bln1 = null, $bln2 = null, $bln3 = null, $count = null)
+        $builder->like('tgl_transaksi', $thn.'-');    
+        $builder->orderBy('tgl_transaksi', 'DESC');
+
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
+ 
+    function getcountall($bln = null, $thn = null, $count = null)
     { 
         $builder = $this->db->table('db_transaksi');  
         $builder->select(); 
         $builder->selectCount($count);
         $builder->groupBy($count);
-
-        $builder->like('tgl_transaksi', $bln1);  
-        $builder->orLike('tgl_transaksi', $bln2);  
-        $builder->orLike('tgl_transaksi', $bln3);  
+        $builder->like('tgl_transaksi', $thn.'-'.$bln);    
+ 
         $query = $builder->get();
 
         return $query->getResult();
     }
+ 
+    function getcountall2($thn = null, $count = null)
+    { 
+        $builder = $this->db->table('db_transaksi');  
+        $builder->select(); 
+        $builder->selectCount($count);
+        $builder->groupBy($count);
+        $builder->like('tgl_transaksi', $thn.'-');    
+ 
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
+
+
+    /* spc */
+    function getcountallENDWHERE($bln = null, $thn = null, $count = null)
+    { 
+        $builder = $this->db->table('db_transaksi');  
+        $builder->select(); 
+        $builder->selectCount($count);
+        $builder->groupBy($count);
+        $builder->where('tipe_pesanan', 'Online Order');
+        $builder->orwhere('tipe_pesanan', 'Offline Order');
+        $builder->like('tgl_transaksi', $thn.'-'.$bln);    
+ 
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
+
+    function getcountallENDWHERE2($thn = null, $count = null)
+    { 
+        $builder = $this->db->table('db_transaksi');  
+        $builder->select(); 
+        $builder->selectCount($count);
+        $builder->groupBy($count);
+        $builder->where('tipe_pesanan', 'Online Order');
+        $builder->orwhere('tipe_pesanan', 'Offline Order');
+        $builder->like('tgl_transaksi', $thn.'-');    
+ 
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
+
+
+
+
+
+
+
+    /*  */
 
     function getjoinall()
     {

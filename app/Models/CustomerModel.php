@@ -13,19 +13,29 @@ class CustomerModel extends Model
 
 
 
-     /* 
-    function getlikeall($bln1 = null, $bln2 = null, $bln3 = null)
+     
+    function getwhere_bulanandtahun($bln = null, $thn = null)
     {
-        $builder = $this->db->table('db_customers');
-        $builder->like('created_at', $bln1);   
-        $builder->orLike('created_at', $bln2);  
-        $builder->orLike('created_at', $bln3);  
+        $builder = $this->db->table('db_customers'); 
+        $builder->like('created_at', $thn.'-'.$bln);    
+
         $query = $builder->get();
 
         return $query->getResult();
     }
 
+       
+    function getwhere_tahun($thn = null)
+    {
+        $builder = $this->db->table('db_customers'); 
+        $builder->like('created_at', $thn.'-');    
 
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
+
+ /*
     function getjoinall()
     {
         $builder = $this->db->table('db_customers');

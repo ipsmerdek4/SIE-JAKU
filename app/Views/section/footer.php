@@ -21,12 +21,13 @@
 
  
 
-
 <!-- AdminLTE App -->
 <script src="../../dist/js/adminlte.min.js"></script> 
  
  <script src="../../dist/js/sweetalert2/package/dist/sweetalert2.all.min.js"></script>
 
+
+            
 
   <?php   
       $btsjv = ''; 
@@ -92,6 +93,8 @@
                       /*  */ 
             } );
 
+              
+ 
 
               
               $('.btnremove').on('click', function (e)
@@ -172,343 +175,207 @@
  
 
 
-        <script>
-          $(function () {
- 
+        <script> 
+                $(document).ready(function () {      
+                  
+                      $('#chrt_tahun').show();
+                      $('#chrt_bulan').show();
+                });
+
+                $("#vew_set").change(function (){
+                    var values = $(this).val(); 
+                    if (values == 1) {
+                      $('#chrt_tahun').show();
+                      $('#chrt_bulan').show();
+                    } else if(values == 2) {
+                      $('#chrt_tahun').show();
+                      $('#chrt_bulan').hide();
+                      
+                    }
+                }) 
 
 
-                  /*  */
+  $(function () { 
+                /*  */
                 var barChartOptions = {
-                    responsive              : true,
-                    maintainAspectRatio     : false,
-                    datasetFill             : false
-                  };
-
-
+                        responsive              : true,
+                        maintainAspectRatio     : false,
+                        datasetFill             : false
+                }; 
                 var ctx = document.getElementById('myprdChart').getContext('2d');
                 var chart = new Chart(ctx, {
-                    // The type of chart we want to create
-                    type: 'bar',
-                    // The data for our dataset
-                    data: { 
-                        labels: [
-                          <?php
-                            if ($getbulan == 1) {
-                                echo " 'Januari','Februari','Maret' "; 
-                            }elseif($getbulan == 2) {
-                                echo " 'April','Mei','Juni' "; 
-                            }elseif($getbulan == 3) {
-                                echo " 'Juli','Agustus','September' "; 
-                            }elseif($getbulan == 4) {
-                                echo " 'Oktober','November','Desember' "; 
-                            } 
-                        ?> 
-                        ],
-                        datasets: [
-                          <?php
-                            $keys = 0; 
-                            foreach ($datatransaksi2 as $value) {   
-                                $keys++;
-                                foreach ($datatransaksi as $value2) {
-                                  if ($value2->kode_transaksi == $value->kode_transaksi) { 
-
-                                    if ( $keys % 2 == 0 ) {  ?>
-                                       {
-                                          label :'<?=$value2->nama_jenis_kayu?>',
-                                          backgroundColor     : 'rgb(189,183,107)', 
-                                          pointRadius : false,  
-                                          borderColor: ['rgb(60, 179, 113)'],
-                                          data: [
+                      // The type of chart we want to create
+                      type: 'bar',
+                      // The data for our dataset
+                      data: { 
+                          labels: [
+                                      <?php
+                                          if($getstatus == 1) :  
+                                            echo '"'.$getbulan.'-'.$gettahun.'"';
+                                          elseif($getstatus == 2): 
+                                            echo '"'.$gettahun.'"'; 
+                                          endif; 
+                                      ?> 
+                                  ],
+                            datasets: [ 
                                             <?php
-                                                        $jml_pembeliaanview1 = 0;
-                                                        $jml_pembeliaanview2 = 0;
-                                                        $jml_pembeliaanview3 = 0;
-                                                        $jml_pembeliaanview4 = 0;
-                                                        $jml_pembeliaanview5 = 0;
-                                                        $jml_pembeliaanview6 = 0;
-                                                        $jml_pembeliaanview7 = 0;
-                                                        $jml_pembeliaanview8 = 0;
-                                                        $jml_pembeliaanview9 = 0;
-                                                        $jml_pembeliaanview10 = 0;
-                                                        $jml_pembeliaanview11 = 0;
-                                                        $jml_pembeliaanview12 = 0;
-                                              foreach ($datatransaksi as $value3) {
-                                                  if ( $value3->id_jenis_kayu == $value2->id_jenis_kayu) {
-                                                        $pecahtgl1 = explode(" ", $value3->tgl_transaksi);
-                                                        $pecahtgl2 = explode("-", $pecahtgl1[0]); 
+                                              $keys = 0; 
+                                              foreach ($datatransaksi2 as $value) {   
+                                                $keys++;
+ 
+                                                foreach ($datatransaksi as $value2) {
+                                                  if ($value2->kode_transaksi == $value->kode_transaksi) {  
 
-                                                        if ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-01-') {
-                                                            $jml_pembeliaanview1 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-02-') {
-                                                            $jml_pembeliaanview2 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-03-') {
-                                                            $jml_pembeliaanview3 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-04-') {
-                                                            $jml_pembeliaanview4 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-05-') {
-                                                            $jml_pembeliaanview5 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-06-') {
-                                                            $jml_pembeliaanview6 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-07-') {
-                                                            $jml_pembeliaanview7 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-08-') {
-                                                            $jml_pembeliaanview8 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-09-') {
-                                                            $jml_pembeliaanview9 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-10-') {
-                                                            $jml_pembeliaanview10 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-11-') {
-                                                            $jml_pembeliaanview11 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-12-') {
-                                                            $jml_pembeliaanview12 += $value3->jumlah_pembelian;
-                                                        }
+                                                            $jml_pembeliaanview = 0;  
+                                                    if ( $keys % 2 == 0 ) {   
+                                                            foreach ($datatransaksi as $value3) {
+                                                              if ( $value3->id_jenis_kayu == $value2->id_jenis_kayu) { 
+                                                                    $jml_pembeliaanview += $value3->jumlah_pembelian; 
+                                                              };
+                                                            }; 
+                                                            echo "
+                                                                    {
+                                                                      label :'".$value2->nama_jenis_kayu."',
+                                                                      backgroundColor     : 'rgb(189,183,107)', 
+                                                                      pointRadius : false,  
+                                                                      borderColor: ['rgb(60, 179, 113)'],
+                                                                      data: [".$jml_pembeliaanview."]
+                                                                    }, 
+                                                                "; 
+  
+
+                                                    }elseif ( $keys % 3 == 0 ) {
+                                                              foreach ($datatransaksi as $value3) {
+                                                                if ( $value3->id_jenis_kayu == $value2->id_jenis_kayu) { 
+                                                                      $jml_pembeliaanview += $value3->jumlah_pembelian; 
+                                                                };
+                                                              }; 
+                                                              echo "
+                                                                      {
+                                                                        label :'".$value2->nama_jenis_kayu."',
+                                                                        backgroundColor     : 'rgb(255,218,185)', 
+                                                                        pointRadius : false,  
+                                                                        borderColor: ['rgb(60, 179, 113)'],
+                                                                        data: [".$jml_pembeliaanview."]
+                                                                      }, 
+                                                                  ";  
+
+                                                    }else{ 
+                                                              foreach ($datatransaksi as $value3) {
+                                                                if ( $value3->id_jenis_kayu == $value2->id_jenis_kayu) { 
+                                                                      $jml_pembeliaanview += $value3->jumlah_pembelian; 
+                                                                };
+                                                              }; 
+                                                              echo "
+                                                                      {
+                                                                        label :'".$value2->nama_jenis_kayu."',
+                                                                        backgroundColor     : 'rgb(255,218,185)', 
+                                                                        pointRadius : false,  
+                                                                        borderColor: ['rgb(60, 179, 113)'],
+                                                                        data: [".$jml_pembeliaanview."]
+                                                                      }, 
+                                                                  ";  
+                                                    } 
+
                                                   }
-                                                
+                                                } 
                                               } 
-                                                if ($getbulan == 1) {
-                                                        echo $jml_pembeliaanview1 .', '. $jml_pembeliaanview2.', '. $jml_pembeliaanview3;
-                                                }elseif($getbulan == 2) {
-                                                        echo $jml_pembeliaanview4.', '. $jml_pembeliaanview5.', '. $jml_pembeliaanview6;
-                                                }elseif($getbulan == 3) {
-                                                        echo $jml_pembeliaanview7.', '. $jml_pembeliaanview8.', '. $jml_pembeliaanview9;
-                                                }elseif($getbulan == 4) {
-                                                        echo $jml_pembeliaanview10.', '. $jml_pembeliaanview11.', '. $jml_pembeliaanview12;
-                                                }
-
-
                                             ?> 
-                                          
-                                          ]
-                                        },  
-                                    <?php   
-                                    }elseif ( $keys % 3 == 0 ) {  ?>
-                                       {
-                                          label :'<?=$value2->nama_jenis_kayu?>',
-                                          backgroundColor     : 'rgb(255,218,185)', 
-                                          pointRadius : false,  
-                                          borderColor: ['rgb(60, 179, 113)'],
-                                          data: [
-                                            <?php
-                                                        $jml_pembeliaanview1 = 0;
-                                                        $jml_pembeliaanview2 = 0;
-                                                        $jml_pembeliaanview3 = 0;
-                                                        $jml_pembeliaanview4 = 0;
-                                                        $jml_pembeliaanview5 = 0;
-                                                        $jml_pembeliaanview6 = 0;
-                                                        $jml_pembeliaanview7 = 0;
-                                                        $jml_pembeliaanview8 = 0;
-                                                        $jml_pembeliaanview9 = 0;
-                                                        $jml_pembeliaanview10 = 0;
-                                                        $jml_pembeliaanview11 = 0;
-                                                        $jml_pembeliaanview12 = 0;
-                                              foreach ($datatransaksi as $value3) {
-                                                  if ( $value3->id_jenis_kayu == $value2->id_jenis_kayu) {
-                                                        $pecahtgl1 = explode(" ", $value3->tgl_transaksi);
-                                                        $pecahtgl2 = explode("-", $pecahtgl1[0]); 
 
-                                                        if ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-01-') {
-                                                            $jml_pembeliaanview1 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-02-') {
-                                                            $jml_pembeliaanview2 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-03-') {
-                                                            $jml_pembeliaanview3 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-04-') {
-                                                            $jml_pembeliaanview4 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-05-') {
-                                                            $jml_pembeliaanview5 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-06-') {
-                                                            $jml_pembeliaanview6 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-07-') {
-                                                            $jml_pembeliaanview7 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-08-') {
-                                                            $jml_pembeliaanview8 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-09-') {
-                                                            $jml_pembeliaanview9 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-10-') {
-                                                            $jml_pembeliaanview10 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-11-') {
-                                                            $jml_pembeliaanview11 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-12-') {
-                                                            $jml_pembeliaanview12 += $value3->jumlah_pembelian;
-                                                        }
-                                                  }
-                                                
-                                              } 
-                                                if ($getbulan == 1) {
-                                                        echo $jml_pembeliaanview1 .', '. $jml_pembeliaanview2.', '. $jml_pembeliaanview3;
-                                                }elseif($getbulan == 2) {
-                                                        echo $jml_pembeliaanview4.', '. $jml_pembeliaanview5.', '. $jml_pembeliaanview6;
-                                                }elseif($getbulan == 3) {
-                                                        echo $jml_pembeliaanview7.', '. $jml_pembeliaanview8.', '. $jml_pembeliaanview9;
-                                                }elseif($getbulan == 4) {
-                                                        echo $jml_pembeliaanview10.', '. $jml_pembeliaanview11.', '. $jml_pembeliaanview12;
-                                                }
-
-
-                                            ?> 
-                                          
-                                          ]
-                                        },  
-
-
-                                     <?php 
-                                    }else{ ?>
-                                        {
-                                          label :'<?=$value2->nama_jenis_kayu?>',
-                                          backgroundColor     : 'rgb(60, 179, 113)', 
-                                          pointRadius : false,  
-                                          borderColor: ['rgb(60, 179, 113)'],
-                                          data: [
-                                            <?php  
-                                                        $jml_pembeliaanview1 = 0;
-                                                        $jml_pembeliaanview2 = 0;
-                                                        $jml_pembeliaanview3 = 0;
-                                                        $jml_pembeliaanview4 = 0;
-                                                        $jml_pembeliaanview5 = 0;
-                                                        $jml_pembeliaanview6 = 0;
-                                                        $jml_pembeliaanview7 = 0;
-                                                        $jml_pembeliaanview8 = 0;
-                                                        $jml_pembeliaanview9 = 0;
-                                                        $jml_pembeliaanview10 = 0;
-                                                        $jml_pembeliaanview11 = 0;
-                                                        $jml_pembeliaanview12 = 0;
-                                              foreach ($datatransaksi as $value3) {
-                                                  if ( $value3->id_jenis_kayu == $value2->id_jenis_kayu) {
-                                                        $pecahtgl1 = explode(" ", $value3->tgl_transaksi);
-                                                        $pecahtgl2 = explode("-", $pecahtgl1[0]); 
-
-                                                        if ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-01-') {
-                                                            $jml_pembeliaanview1 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-02-') {
-                                                            $jml_pembeliaanview2 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-03-') {
-                                                            $jml_pembeliaanview3 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-04-') {
-                                                            $jml_pembeliaanview4 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-05-') {
-                                                            $jml_pembeliaanview5 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-06-') {
-                                                            $jml_pembeliaanview6 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-07-') {
-                                                            $jml_pembeliaanview7 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-08-') {
-                                                            $jml_pembeliaanview8 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-09-') {
-                                                            $jml_pembeliaanview9 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-10-') {
-                                                            $jml_pembeliaanview10 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-11-') {
-                                                            $jml_pembeliaanview11 += $value3->jumlah_pembelian;
-                                                        }elseif ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun.'-12-') {
-                                                            $jml_pembeliaanview12 += $value3->jumlah_pembelian;
-                                                        }
-                                                  }
-                                                
-                                              } 
-                                                if ($getbulan == 1) {
-                                                        echo $jml_pembeliaanview1 .', '. $jml_pembeliaanview2.', '. $jml_pembeliaanview3;
-                                                }elseif($getbulan == 2) {
-                                                        echo $jml_pembeliaanview4.', '. $jml_pembeliaanview5.', '. $jml_pembeliaanview6;
-                                                }elseif($getbulan == 3) {
-                                                        echo $jml_pembeliaanview7.', '. $jml_pembeliaanview8.', '. $jml_pembeliaanview9;
-                                                }elseif($getbulan == 4) {
-                                                        echo $jml_pembeliaanview10.', '. $jml_pembeliaanview11.', '. $jml_pembeliaanview12;
-                                                }
-
-                                            ?> 
-                                          
-                                          ]
-                                        },  
-                                    <?php
-                                    }
-                                    ?>
-                          
-                          <?php 
-                            
-                                  }
-                                } 
-                            } 
-                          ?>
-
-
-
-                        ]
-                    },
-                    // Configuration options go here
-                    options: barChartOptions,
-                    
-                    
+                                      ]
+                      },
+                      // Configuration options go here
+                      options: barChartOptions,
+                  
+                  
                 });
 
 
+                  
 
 
-
-
-
-
-
-
-
-
-            //-------------
-            //- DONUT CHART -
-            //-------------
-            // Get context with jQuery - using jQuery's .get() method.
-            var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
-            var donutData        = {
-              labels: [
-                <?php
-                  foreach ($datatransaksi3 as $v_transaksi3) {
-                      foreach ($datatransaksi as $v_transaksi3_1) {
-                        if ( $v_transaksi3->kode_transaksi == $v_transaksi3_1->kode_transaksi) {
-                            echo "'".$v_transaksi3_1->tipe_pesanan."', ";
-                        } 
-                      } 
+                  //-------------
+                  //- DONUT CHART -
+                  //-------------
+                  // Get context with jQuery - using jQuery's .get() method.
+                  var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+                  var donutData        = {
+                                            labels: [ 'Offline Order', 'Online Order'],
+                                            datasets: [
+                                              {
+                                                  data: [
+                                                    <?php
+                                                        foreach ($datatransaksi3 as $v_transaksi3_step_2) {   
+                                                            foreach ($datatransaksi as $v_transaksi3_step_2_1) {
+                                                              if ( $v_transaksi3_step_2->kode_transaksi == $v_transaksi3_step_2_1->kode_transaksi) { 
+                                                                  echo $v_transaksi3_step_2->tipe_pesanan.", ";
+                                                              } 
+                                                            }  
+                                                        } 
+                                                    ?> 
+                                                  ],
+                                                  backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+                                              }
+                                            ]
+                                          }
+                  var donutOptions     = {
+                      maintainAspectRatio : false,
+                      responsive : true,
                   }
-                ?>
-              ],
-              datasets: [
-                {
-                  data: [
-                    <?php
-                        foreach ($datatransaksi3 as $v_transaksi3_step_2) { 
-                            foreach ($datatransaksi as $v_transaksi3_step_2_1) {
-                              if ( $v_transaksi3_step_2->kode_transaksi == $v_transaksi3_step_2_1->kode_transaksi) { 
-                                  echo $v_transaksi3_step_2->tipe_pesanan.", ";
-                              } 
-                            } 
-                        }
-
-
-                    ?>
- 
-
-                  ],
-                  backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
-                }
-              ]
-            }
-            var donutOptions     = {
-              maintainAspectRatio : false,
-              responsive : true,
-            }
-            //Create pie or douhnut chart
-            // You can switch between pie and douhnut using the method below.
-            new Chart(donutChartCanvas, {
-              type: 'doughnut',
-              data: donutData,
-              options: donutOptions
-            })
-
-       
- 
- 
+                  //Create pie or douhnut chart
+                  // You can switch between pie and douhnut using the method below.
+                  new Chart(donutChartCanvas, {
+                      type: 'doughnut',
+                      data: donutData,
+                      options: donutOptions
+                  })
 
 
 
-            /*  */
-            var barChartOptions2 = {
+
+
+                  //-------------
+                  //- DONUT CHART - 2
+                  //-------------
+                  // Get context with jQuery - using jQuery's .get() method.
+                  var donutChartCanvas = $('#donutChart2').get(0).getContext('2d')
+                  var donutData        = {
+                                            labels: [ 'Tunai', 'Transfer', 'COD'],
+                                            datasets: [
+                                              {
+                                                  data: [
+                                                    <?php
+                                                        foreach ($datatransaksi32 as $v_transaksi3_step_22) {   
+                                                            foreach ($datatransaksi as $v_transaksi3_step_2_12) {
+                                                              if ( $v_transaksi3_step_22->kode_transaksi == $v_transaksi3_step_2_12->kode_transaksi) { 
+                                                                  echo $v_transaksi3_step_22->tipe_pesanan.", ";
+                                                              } 
+                                                            }  
+                                                        } 
+                                                    ?> 
+                                                  ],
+                                                  backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+                                              }
+                                            ]
+                                          }
+                  var donutOptions     = {
+                      maintainAspectRatio : false,
+                      responsive : true,
+                  }
+                  //Create pie or douhnut chart
+                  // You can switch between pie and douhnut using the method below.
+                  new Chart(donutChartCanvas, {
+                      type: 'doughnut',
+                      data: donutData,
+                      options: donutOptions
+                  })
+
+
+
+
+
+                  /* CHART 3 */
+                  var barChartOptions2 = {
                   responsive              : true,
                   maintainAspectRatio     : false,
                   datasetFill             : false,
@@ -526,7 +393,7 @@
                       }
                     }]
                   },
-                   tooltips: {
+                    tooltips: {
                                 callbacks: {
                                     label: function(tooltipItem, data) {
                                         return "Rp " + Number(tooltipItem.yLabel).toFixed(0).replace(/./g, function(c, i, a) {
@@ -535,7 +402,7 @@
                                     }
                                 }
                             },
-                   legend: {
+                    legend: {
                         display: false,
                           onClick: null
                       }
@@ -546,174 +413,105 @@
 
 
 
-                };
+                  };
+ 
+                  var ctx2 = document.getElementById('myprdCharwt22').getContext('2d');
+                  var chart2 = new Chart(ctx2, { 
+                          type: 'bar', 
+                          data: { 
+                              labels: [
+                                <?php
+                                      if($getstatus == 1) :  
+                                        echo '"'.$getbulan.'-'.$gettahun.'"';
+                                      elseif($getstatus == 2): 
+                                        echo '"'.$gettahun.'"'; 
+                                      endif; 
+                                ?>  
+                                
+                              ],
+                              datasets: [{
+                                  label: 'Penjualan Perbulan',
+                                  data: [ 
+                                        <?php 
 
+                                            $v_jml_perbulan = "0";
 
-                var ctx2 = document.getElementById('myprdCharwt22').getContext('2d');
-                var chart2 = new Chart(ctx2, { 
-                    type: 'bar', 
-                    data: { 
-                        labels: [
-                          <?php
-                                if ($getbulan == 1) {
-                                    echo "'Januari', 'Februari', 'Maret'";
-                                }elseif ($getbulan == 2) {
-                                    echo "'April', 'Mei', 'Juni'";
-                                }elseif ($getbulan == 3) {
-                                    echo "'Juli', 'Agustus', 'September'";
-                                }elseif ($getbulan == 4) {
-                                    echo "'Oktober', 'November', 'Desember'";
-                                } 
-                          ?>
+                                            foreach ($datatransaksi as $vtransaksi_step4) {     
+                                                  $v_jml_perbulan += $vtransaksi_step4->total_harga;
+                                            }
 
-                          
-                        ],
-                        datasets: [{
-                            label: 'Penjualan Perbulan',
-                            data: [
-                              <?php 
-                                $v_jml_perbulan1 = "0";
-                                $v_jml_perbulan2 = "0";
-                                $v_jml_perbulan3 = "0";
-                                $v_jml_perbulan4 = "0";
-                                $v_jml_perbulan5 = "0";
-                                $v_jml_perbulan6 = "0";
-                                $v_jml_perbulan7 = "0";
-                                $v_jml_perbulan8 = "0";
-                                $v_jml_perbulan9 = "0";
-                                $v_jml_perbulan10 = "0";
-                                $v_jml_perbulan11 = "0";
-                                $v_jml_perbulan12 = "0";
-                                foreach ($datatransaksi as $vtransaksi_step4) {     
-                                    $pecahtgl1 = explode(' ', $vtransaksi_step4->tgl_transaksi);
-                                    $pecahtgl2 = explode('-', $vtransaksi_step4->tgl_transaksi);
-                                    if ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-01-' )  {
-                                        $v_jml_perbulan1 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-02-' )  {
-                                        $v_jml_perbulan2 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-03-' )  {
-                                        $v_jml_perbulan3 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-04-' )  {
-                                        $v_jml_perbulan4 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-05-' )  {
-                                        $v_jml_perbulan5 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-06-' )  {
-                                        $v_jml_perbulan6 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-07-' )  {
-                                        $v_jml_perbulan7 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-08-' )  {
-                                        $v_jml_perbulan8 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-09-' )  {
-                                        $v_jml_perbulan9 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-10-' )  {
-                                        $v_jml_perbulan10 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-11-' )  {
-                                        $v_jml_perbulan11 += $vtransaksi_step4->total_harga;
-                                    }elseif  ($pecahtgl2[0].'-'.$pecahtgl2[1].'-' == $gettahun .'-12-' )  {
-                                        $v_jml_perbulan12 += $vtransaksi_step4->total_harga;
-                                    } 
-
-                                } 
-                                if ($getbulan == 1) {
-                                    echo $v_jml_perbulan1.', '.$v_jml_perbulan2.', '.$v_jml_perbulan3;
-                                }elseif ($getbulan == 2) {
-                                    echo$v_jml_perbulan4.', '.$v_jml_perbulan5.', '.$v_jml_perbulan6;
-                                }elseif ($getbulan == 3) {
-                                    echo $v_jml_perbulan7.', '.$v_jml_perbulan8.', '.$v_jml_perbulan9;
-                                }elseif ($getbulan == 4) {
-                                    echo $v_jml_perbulan10.', '.$v_jml_perbulan11.', '.$v_jml_perbulan12;
-                                }
-
-                              
-                            ?> 
-
-
-                            ],
-                            backgroundColor: [
-                                'rgba(75, 192, 192, 0.2)','rgba(255, 99, 132, 0.2)','rgba(255, 99, 132, 0.2)',
-                            ],
-                            borderColor: [
-                                'rgba(75, 192, 192, 1)',
-                            ],
-                            borderWidth: 1
-                        }]
-                    },
-                    // Configuration options go here
-                    options: barChartOptions2,
-                    
-                    
-                });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          
-          /* BAR CHART */
-          var bar_data = {
-            data : [
+                                            echo $v_jml_perbulan;
               
-            ],
-            bars: { show: true }
-          }
-          $.plot('#bar-chart', [bar_data], {
-            grid  : {
-              borderWidth: 1,
-              borderColor: '#f3f3f3',
-              tickColor  : '#f3f3f3',
-              hoverable: true
-            },
-            series: {
-              bars: {
-                show: true, barWidth: 0.5, align: 'center',
-              },
-            },
-            colors: ['#3c8dbc'],
-            xaxis : {
-              ticks: [[1,'January'], [2,'February'], [3,'March'], [4,'April'], [5,'May'], [6,'June']]
-            },
-            yaxis: { 
-              tickFormatter: function numberWithCommas(x) {
-                  return "Rp " + x.toString().replace(/\B(?=(?:\d{3})+(?!\d))/g, ",");
-                }
-            }, 
-            
-
-
-
-
-
-
-
-
-            
-          })
-          /* END BAR CHART */
+                                        ?>  
+                                  ],
+                                  backgroundColor: [
+                                      'rgba(75, 192, 192, 0.2)','rgba(255, 99, 132, 0.2)','rgba(255, 99, 132, 0.2)',
+                                  ],
+                                  borderColor: [
+                                      'rgba(75, 192, 192, 1)',
+                                  ],
+                                  borderWidth: 1
+                              }]
+                          },
+                          // Configuration options go here
+                          options: barChartOptions2, 
+                  });
 
  
 
+                var barChartOptions3 = {
+                    responsive              : true,
+                    maintainAspectRatio     : false,
+                    datasetFill             : false
+                }; 
+
+                  var ctx3 = document.getElementById('myprdCharwt33').getContext('2d');
+                  var chart3 = new Chart(ctx3, { 
+                          type: 'bar', 
+                          data: { 
+                              labels: [
+                                <?php
+                                      if($getstatus == 1) :  
+                                        echo '"'.$getbulan.'-'.$gettahun.'"';
+                                      elseif($getstatus == 2): 
+                                        echo '"'.$gettahun.'"'; 
+                                      endif; 
+                                ?>  
+                                
+                              ],
+                              datasets: [{
+                                  label: 'Total Costumers',
+                                  data: [ 
+ 
+                                        <?php  
+                                            echo $getcountcostumer;  
+                                        ?>  
+                                  ],
+                                  backgroundColor: [
+                                      'rgba(243, 39, 144, 0.38)',
+                                  ],
+                                  borderColor: [
+                                      'rgba(243, 39, 144, 0.8)',
+                                  ],
+                                  borderWidth: 1
+                              }]
+                          },
+                          // Configuration options go here
+                          options: barChartOptions3, 
+                  });
 
 
 
 
 
-          
 
-          //end function  
-          });
+
+
+
+        //end function  
+        });         
+
+                
 
 
         </script>

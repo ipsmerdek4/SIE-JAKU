@@ -72,6 +72,8 @@ $routes->get('/customers/d/(:any)', 'Customers::deletedata/$1',['filter' => 'aut
 $routes->get('/customers/(:any)', 'Customers::customeredit/$1',['filter' => 'auth']); 
 $routes->post('/customers/u/(:any)', 'Customers::customerprosess/$1',['filter' => 'auth']);
 
+
+/* 
 //jenis kayu
 $routes->get('/jenis-kayu', 'Stock::jenis',['filter' => 'auth']);
 
@@ -96,7 +98,7 @@ $routes->get('/tipe-kayu/(:any)', 'Stock::tipe_edit/$1',['filter' => 'auth']);
 $routes->post('/tipe-kayu/e/(:any)', 'Stock::tipe_editproses/$1',['filter' => 'auth']);
  
 
-
+ */
 
 //ukuran kayu
 $routes->get('/ukuran-kayu', 'Stock::ukuran',['filter' => 'auth']);

@@ -25,64 +25,55 @@
         <div class="card ">  
         <div class="card-body">  
 
-        
-        <form method="post" action="<?= base_url(); ?>"> 
-              <div class="row" > 
+
+
+
+       
+          <form method="post" action="<?= base_url(); ?>"> 
+          <div class="row" > 
                 <div class="col-12 col-sm-12 col-lg-1 mb-1"> 
-                        <label for="name" class="form-label mt-1 ">Bulan :</label>  
+                    <label for="name" class="form-label mt-1 ">View :</label>  
                 </div>
                 <div class="col-12 col-sm-12 col-lg-2 mb-3">
-                        <?php 
-                          /* menetapkan select pada bulan */
-                                $tampil1 = "";
-                                $tampil2 = "";
-                                $tampil3 = "";
-                                $tampil4 = "";
-
-                                if ($getbulan == 1) {
-                                  $tampil1 = "selected";
-                                }elseif ($getbulan == 2) {
-                                  $tampil2 = "selected"; 
-                                }elseif ($getbulan == 3) {
-                                  $tampil3 = "selected"; 
-                                }elseif ($getbulan == 4) {
-                                  $tampil4 = "selected"; 
-                                }  
-                          /* END */
-                        ?> 
-                        <select name="p_bulan" class="form-control " >  
-                            <option value='1' <?=$tampil1?>  > Januari - Maret</option> 
-                            <option value='2' <?=$tampil2?>  > April - Juni</option> 
-                            <option value='3' <?=$tampil3?>  > Juli - September</option> 
-                            <option value='4' <?=$tampil4?>  > Oktober - Desember</option>  
+                    <select name="getstatus" id="vew_set" class="form-control " >  
+                      <option value="1">Bulan</option>
+                      <option value="2">Tahun</option>
+                    </select>
+                </div>
+                <div id="chrt_bulan" class="col-12 col-sm-12 col-lg-2 mb-3">
+                        <select name="bulan_view" class="form-control " >   
+                            <?php 
+                                $bulan = [
+                                  '1' => 'Januari', '2' => 'Februari', '3' => 'Maret', '4' => 'April', '5' => 'Mei', '6' => 'Juni', '7' => 'Juli', '8' => 'Agustus', '9' => 'September', '10' => 'Oktober', '11' => 'November', '12' => 'Desember'
+                                ];
+                                foreach ($bulan as $key1 => $value1): ?>
+                                <?php ($key1 < 10)? $newkeys = '0'.$key1 : $newkeys = $key1; ?>
+                                <option value="<?=$newkeys?>" <?php echo ($newkeys == $getbulan ) ? "selected" : ""?>   ><?=$value1?></option> 
+                            <?php endforeach;  ?> 
                         </select> 
                 </div>
-                <div class="col-12 col-sm-12 col-lg-2 mb-3">
-                        <select name="p_tahun" class="form-control " >  
+                <div id="chrt_tahun" class="col-12 col-sm-12 col-lg-2 mb-3">
+                       <select name="tahun_view" class="form-control " >   
                             <?php 
                                 $jaraktahun = 2021;
                                 for ($i=$jaraktahun; $i < date('Y')+1 ; $i++) { 
                             ?>
-                                <option value="<?=$i?>" <?php echo ($i == $gettahun) ? "selected" : ""?>   ><?=$i?></option> 
+                                <option value="<?=$i?>" <?php echo ($i == $gettahun) ? "selected" : ""?>   ><?=$i ?></option> 
                             <?php       
                                 }
                             ?> 
-                        </select> 
+                        </select>   
                 </div>
                 <div class="col-12 col-sm-12 col-lg-3">
-                        <button type="submit"  class="btn btn-danger">
-                        <i class="fa-solid fa-box-open"></i> | 
-                        Buka
-                        </button>
-      
-                </div>
-        </form>
-
-
+                  <button type="submit"  class="btn btn-danger">
+                    <i class="fa-solid fa-box-open"></i> | 
+                    Buka
+                  </button> 
+                </div> 
+            </form>
+ 
                 <div class="col-12 col-sm-12 col-lg-12">
-                    <br>
-                        
-                    
+                    <br> 
                 </div>
                 <div class="col-12 col-sm-12 col-lg-3">
                     <div class="info-box bg-dark">
@@ -142,7 +133,7 @@
                       <span class="info-box-text text-lime"><b> Stock</b></span>
                       <span class="info-box-number"><?=$presenstock?> % Redy</span>
                       <div class="progress">
-                        <div class="progress-bar bg-info" style="width: <?=$presenstock?>%"></div>
+                        <div class="progress-bar bg-info" style="width: <?php //$presenstock?>%"></div>
                       </div>
                       <span class="progress-description text-warning">
                         Persedian Barang
@@ -166,14 +157,23 @@
                 </div>
 
                 <div class="col-lg-6">
-                  <label for="" class="text-center w-100">Pengiriman Terlaris</label> <!-- menampilkan urutan pembelian contoh barang A-total transaksi 10.000 -->
+                  <label for="" class="text-center w-100">Jenis Pemesanan Terlaris</label> <!-- menampilkan urutan pembelian contoh barang A-total transaksi 10.000 -->
                   <div class="card ">  
                     <div class="card-body">  
                       <canvas id="donutChart" style="min-height: 250px; height: 3000px; max-height: 300px; max-width: 100%; "></canvas> 
                     </div>
                   </div>
                 </div>
- 
+
+                <div class="col-lg-6">
+                  <label for="" class="text-center w-100"> Jenis Pembayaran Terlaris</label> <!-- menampilkan urutan pembelian contoh barang A-total transaksi 10.000 -->
+                  <div class="card ">  
+                    <div class="card-body">  
+                      <canvas id="donutChart2" style="min-height: 250px; height: 3000px; max-height: 300px; max-width: 100%; "></canvas> 
+                    </div>
+                  </div>
+                </div>
+                
                 
 
                 <div class="col-12 col-sm-12 col-lg-6">
@@ -185,6 +185,14 @@
                 </div> 
                 </div>
 
+                <div class="col-12 col-sm-12 col-lg-6">
+                <label for="" class="text-center w-100">Laju Costumers</label>  
+                <div class="card ">  
+                    <div class="card-body">   
+                      <canvas id="myprdCharwt33" style="min-height: 250px; height: 300px; max-height: 300px; max-width: 100%;"></canvas>
+                   </div>
+                </div> 
+                </div>
 
 
  

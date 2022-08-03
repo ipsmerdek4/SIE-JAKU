@@ -1,0 +1,133 @@
+CRITICAL - 2022-08-03 00:13:23 --> Undefined variable $datatransaksi
+in APPPATH\Controllers\Home.php on line 50.
+ 1 APPPATH\Controllers\Home.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi', 'APPPATH\\Controllers\\Home.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 00:13:43 --> foreach() argument must be of type array|object, string given
+in APPPATH\Controllers\Home.php on line 50.
+ 1 APPPATH\Controllers\Home.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Controllers\\Home.php', 50)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-03 01:00:50 --> Unknown column 'created_at' in 'where clause'
+CRITICAL - 2022-08-03 01:00:50 --> Unknown column 'created_at' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_persediaan_kayu`
+WHERE `created_at` LIKE \'%2022-%\' ESCAPE \'!\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(695): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_persediaan_kayu`
+WHERE `created_at` LIKE \'%2022-%\' ESCAPE \'!\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(609): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_persediaan_kayu`
+WHERE `created_at` LIKE \'%2022-%\' ESCAPE \'!\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_persediaan_kayu`
+WHERE `created_at` LIKE :created_at: ESCAPE \'!\'', [...], false)
+ 5 APPPATH\Models\PersediaanKayuModel.php(57): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(51): App\Models\PersediaanKayuModel->getwhere_tahun('2022')
+ 7 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 01:16:07 --> Undefined variable $bulan
+in APPPATH\Controllers\Home.php on line 128.
+ 1 APPPATH\Controllers\Home.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bulan', 'APPPATH\\Controllers\\Home.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 01:16:41 --> Undefined variable $bulan
+in APPPATH\Controllers\Home.php on line 128.
+ 1 APPPATH\Controllers\Home.php(128): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bulan', 'APPPATH\\Controllers\\Home.php', 128)
+ 2 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 01:50:57 --> Undefined variable $datatransaksi2
+in APPPATH\Views\section\footer.php on line 233.
+ 1 APPPATH\Views\section\footer.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi2', 'APPPATH\\Views\\section\\footer.php', 233)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(140): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 01:51:00 --> Undefined variable $datatransaksi2
+in APPPATH\Views\section\footer.php on line 233.
+ 1 APPPATH\Views\section\footer.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi2', 'APPPATH\\Views\\section\\footer.php', 233)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(140): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 01:51:07 --> Undefined variable $datatransaksi2
+in APPPATH\Views\section\footer.php on line 233.
+ 1 APPPATH\Views\section\footer.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi2', 'APPPATH\\Views\\section\\footer.php', 233)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(140): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 01:51:08 --> Undefined variable $datatransaksi2
+in APPPATH\Views\section\footer.php on line 233.
+ 1 APPPATH\Views\section\footer.php(233): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi2', 'APPPATH\\Views\\section\\footer.php', 233)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(140): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 01:56:46 --> Undefined variable $datatransaksi
+in APPPATH\Views\section\footer.php on line 235.
+ 1 APPPATH\Views\section\footer.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi', 'APPPATH\\Views\\section\\footer.php', 235)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(153): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 10:31:13 --> Undefined variable $jml_pembeliaanview1
+in APPPATH\Views\section\footer.php on line 234.
+ 1 APPPATH\Views\section\footer.php(234): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jml_pembeliaanview1', 'APPPATH\\Views\\section\\footer.php', 234)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(157): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 10:31:30 --> Unsupported operand types: string + string
+in APPPATH\Views\section\footer.php on line 235.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(157): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-08-03 11:45:23 --> CodeIgniter\Database\BaseBuilder::selectCount(): Argument #1 ($select) must be of type string, null given, called in C:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php on line 87
+in SYSTEMPATH\Database\BaseBuilder.php on line 456.
+ 1 APPPATH\Models\TransaksiModel.php(87): CodeIgniter\Database\BaseBuilder->selectCount(null)
+ 2 APPPATH\Controllers\Home.php(61): App\Models\TransaksiModel->getcountallENDWHERE('2022', 'tipe_pesanan')
+ 3 SYSTEMPATH\CodeIgniter.php(896): App\Controllers\Home->index()
+ 4 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 5 SYSTEMPATH\CodeIgniter.php(349): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

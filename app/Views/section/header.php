@@ -259,8 +259,8 @@
           <li class="nav-item dropdown" >
             <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle <?=$mactive3?>">Persedian</a>
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              <li><a href="<?=base_url('jenis-kayu') ?>" class="dropdown-item">Jenis Kayu </a></li>
-              <li><a href="<?=base_url('tipe-kayu') ?>" class="dropdown-item">Tipe Kayu</a></li>
+              <!-- <li><a href="<?=base_url('jenis-kayu') ?>" class="dropdown-item">Jenis Kayu </a></li>
+              <li><a href="<?=base_url('tipe-kayu') ?>" class="dropdown-item">Tipe Kayu</a></li> -->
               <li><a href="<?=base_url('ukuran-kayu') ?>" class="dropdown-item">Ukuran Kayu</a></li>
               <li><a href="<?=base_url('harga-kayu') ?>" class="dropdown-item">Harga Satuan Kayu</a></li>
 
