@@ -23,7 +23,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://sie-jaku.local/';
+    public $baseURL = BASE;
 
     /**
      * --------------------------------------------------------------------------

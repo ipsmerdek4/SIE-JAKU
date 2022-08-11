@@ -49,20 +49,15 @@ class DbTransaksi extends Migration
 			],
 			'tipe_pesanan' => [
 				'type'           => 'VARCHAR',
-				'constraint'     => '25',
+				'constraint'     => '255',
+			],
+			'tipe_pembayaran' => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '255',
 			],
 			'tgl_transaksi' => [
 				'type'           => 'DATETIME',
-			],
-			/*
-			'created_at' => [
-				'type'           => 'DATETIME',
-				'null'       	 => true,
-			],
-			'updated_at' => [
-				'type'           => 'DATETIME',
-				'null'       	 => true,
-			]*/
+			], 
  
 		]);
 		$this->forge->addPrimaryKey('id_transaksi', true);

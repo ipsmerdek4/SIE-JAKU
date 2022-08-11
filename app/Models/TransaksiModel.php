@@ -10,7 +10,7 @@ class TransaksiModel extends Model{
     protected $primaryKey = "id_transaksi";
     protected $returnType = "object";
    // protected $useTimestamps = true;
-    protected $allowedFields = ['kode_transaksi','id_customers','jumlah_pembelian','total_harga','id_jenis_kayu','id_tipe_kayu','id_ukuran_kayu','id_persediaan','tipe_pesanan','tgl_transaksi'];
+    protected $allowedFields = ['kode_transaksi','id_customers','jumlah_pembelian','total_harga','id_jenis_kayu','id_tipe_kayu','id_ukuran_kayu','id_persediaan','tipe_pesanan','tipe_pembayaran','tgl_transaksi'];
 
 
 
@@ -65,6 +65,19 @@ class TransaksiModel extends Model{
         return $query->getResult();
     }
  
+    function getcountallnocount($bln = null, $thn = null, $count = null)
+    { 
+        $builder = $this->db->table('db_transaksi');  
+        $builder->select();  
+        $builder->groupBy($count);
+        $builder->like('tgl_transaksi', $thn.'-'.$bln);    
+ 
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
+
+ 
     function getcountall2($thn = null, $count = null)
     { 
         $builder = $this->db->table('db_transaksi');  
@@ -78,6 +91,17 @@ class TransaksiModel extends Model{
         return $query->getResult();
     }
 
+    function getcountall2nocount($thn = null, $count = null)
+    { 
+        $builder = $this->db->table('db_transaksi');  
+        $builder->select();  
+        $builder->groupBy($count);
+        $builder->like('tgl_transaksi', $thn.'-');    
+ 
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
 
     /* spc */
     function getcountallENDWHERE($bln = null, $thn = null, $count = null)

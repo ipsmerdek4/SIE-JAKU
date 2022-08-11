@@ -146,12 +146,13 @@ class Transaksi extends Controller{
  
             $sisa =  $darapersediaan[0]->sisa_persediaan - $jmlpembelian ;
            
-  
+   
             $Transaksis->insert([ 
                 'kode_transaksi' => $kodetransaksi2,
                 'jumlah_pembelian' => $jmlpembelian,
-                'total_harga' => $this->request->getVar('ttl_harga'),
+                'total_harga' => $this->request->getVar('ttl_harga'), 
                 'tipe_pesanan' => $this->request->getVar('tipe_pesanan'),
+                'tipe_pembayaran' => $this->request->getVar('tipe_pembayaran'), 
                 'id_customers' => $this->request->getVar('namacus'),
                 'id_persediaan' => $id_persediaan,
                 'id_jenis_kayu' => $id_jenis_kayu,

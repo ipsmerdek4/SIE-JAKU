@@ -195,7 +195,7 @@
                 }) 
 
 
-  $(function () { 
+              $(function () { 
                 /*  */
                 var barChartOptions = {
                         responsive              : true,
@@ -300,7 +300,17 @@
                   // Get context with jQuery - using jQuery's .get() method.
                   var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
                   var donutData        = {
-                                            labels: [ 'Offline Order', 'Online Order'],
+                                            labels: [ 
+                                                    <?php
+                                                        foreach ($datagetbulantransaksi32txt as $v_transaksi32txt) {   
+                                                            foreach ($datatransaksi as $v_transaksi32txt_same) {
+                                                              if ( $v_transaksi32txt->kode_transaksi == $v_transaksi32txt_same->kode_transaksi) { 
+                                                                  echo "'".$v_transaksi32txt->tipe_pesanan."', ";
+                                                              } 
+                                                            }  
+                                                        } 
+                                                    ?>   
+                                                    ],
                                             datasets: [
                                               {
                                                   data: [
@@ -340,15 +350,25 @@
                   // Get context with jQuery - using jQuery's .get() method.
                   var donutChartCanvas = $('#donutChart2').get(0).getContext('2d')
                   var donutData        = {
-                                            labels: [ 'Tunai', 'Transfer', 'COD'],
+                                            labels: [
+                                                    <?php
+                                                        foreach ($datagetbulantransaksi33txt as $v_transaksi33txt) {   
+                                                            foreach ($datatransaksi as $v_transaksi33txt_same) {
+                                                              if ( $v_transaksi33txt->kode_transaksi == $v_transaksi33txt_same->kode_transaksi) { 
+                                                                  echo "'".$v_transaksi33txt->tipe_pembayaran."', ";
+                                                              } 
+                                                            }  
+                                                        } 
+                                                    ?>   
+                                              ],
                                             datasets: [
                                               {
                                                   data: [
                                                     <?php
-                                                        foreach ($datatransaksi32 as $v_transaksi3_step_22) {   
+                                                        foreach ($datatransaksi33 as $v_transaksi3_step_22) {   
                                                             foreach ($datatransaksi as $v_transaksi3_step_2_12) {
                                                               if ( $v_transaksi3_step_22->kode_transaksi == $v_transaksi3_step_2_12->kode_transaksi) { 
-                                                                  echo $v_transaksi3_step_22->tipe_pesanan.", ";
+                                                                  echo $v_transaksi3_step_22->tipe_pembayaran.", ";
                                                               } 
                                                             }  
                                                         } 
@@ -508,8 +528,8 @@
 
 
 
-        //end function  
-        });         
+                //end function  
+                });         
 
                 
 

@@ -40,8 +40,14 @@ class Home extends BaseController
                 /*  */
                 $datagetbulantransaksi2 = $Transaksi->getcountall($bulan, $tahun, 'id_jenis_kayu');       
                 /*  */
-                $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE($bulan, $tahun, 'tipe_pesanan');     
-                $datagetbulantransaksi32 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pesanan');    
+                $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE($bulan, $tahun, 'tipe_pesanan');  
+
+                $datagetbulantransaksi32txt = $Transaksi->getcountallnocount($bulan, $tahun, 'tipe_pesanan');       
+                $datagetbulantransaksi32 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pesanan');       
+    
+                $datagetbulantransaksi33txt = $Transaksi->getcountallnocount($bulan, $tahun, 'tipe_pembayaran');       
+                $datagetbulantransaksi33 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pembayaran');   
+                
 
                 
             } elseif ($getstatus == 2) {
@@ -59,7 +65,15 @@ class Home extends BaseController
                 $datagetbulantransaksi2 = $Transaksi->getcountall2($tahun, 'id_jenis_kayu');       
                 /*  */
                 $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE2($tahun, 'tipe_pesanan');    
-                $datagetbulantransaksi32 = $Transaksi->getcountall2($tahun, 'tipe_pesanan');    
+
+                $datagetbulantransaksi32txt = $Transaksi->getcountall2nocount($tahun, 'tipe_pesanan');       
+                $datagetbulantransaksi32 = $Transaksi->getcountall2($tahun, 'tipe_pesanan');       
+                
+                $datagetbulantransaksi33txt = $Transaksi->getcountall2nocount($tahun, 'tipe_pembayaran');       
+                $datagetbulantransaksi33 = $Transaksi->getcountall2($tahun, 'tipe_pembayaran');   
+
+                
+
             }
             $getstatus = $getstatus;
 
@@ -76,10 +90,17 @@ class Home extends BaseController
             /*  */
             $datagetbulantransaksi2 = $Transaksi->getcountall($bulan, $tahun, 'id_jenis_kayu');     
             /*  */
-            $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE($bulan, $tahun, 'tipe_pesanan');  
-            $datagetbulantransaksi32 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pesanan');       
-            $getstatus = '1';
+            $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE($bulan, $tahun, 'tipe_pesanan'); 
 
+            $datagetbulantransaksi32txt = $Transaksi->getcountallnocount($bulan, $tahun, 'tipe_pesanan');       
+            $datagetbulantransaksi32 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pesanan');       
+
+            $datagetbulantransaksi33txt = $Transaksi->getcountallnocount($bulan, $tahun, 'tipe_pembayaran');       
+            $datagetbulantransaksi33 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pembayaran');   
+            
+            
+            $getstatus = '1';
+            
         }
         
  
@@ -127,6 +148,7 @@ class Home extends BaseController
             $datatransaksi2 = $datagetbulantransaksi2; 
             $datatransaksi3 = $datagetbulantransaksi3;
             $datatransaksi32 = $datagetbulantransaksi32;
+            $datatransaksi33 = $datagetbulantransaksi33;
             
             
            
@@ -135,7 +157,7 @@ class Home extends BaseController
             print_r($datagetbulantransaksi3);
                     */    
  
- 
+  
  
         $data = array(
 			'menu' => '1a',
@@ -149,7 +171,10 @@ class Home extends BaseController
               'getbulan' => $bulan, 
               'gettahun' => $tahun,  
            // footer 
+           'datatransaksi33'    => $datatransaksi33,
+           'datagetbulantransaksi33txt'    => $datagetbulantransaksi33txt,
            'datatransaksi32'    => $datatransaksi32,
+           'datagetbulantransaksi32txt'    => $datagetbulantransaksi32txt,
             'datatransaksi3' => $datatransaksi3,
             'datatransaksi2' => $datatransaksi2,
             'datatransaksi' => $datatransaksi,
