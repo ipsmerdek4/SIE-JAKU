@@ -72,16 +72,10 @@ class TransaksiModel extends Model{
 
     function getwhere_tahun_2($thn = null)
     {
-        $builder = $this->db->table('db_transaksi');
-        $builder->join('db_jenis_kayu', 'db_jenis_kayu.id_jenis_kayu = db_transaksi.id_jenis_kayu');
-        $builder->join('db_tipe_kayu', 'db_tipe_kayu.id_tipe_kayu = db_transaksi.id_tipe_kayu'); 
-        $builder->join('db_ukuran_kayu', 'db_ukuran_kayu.id_ukuran_kayu = db_transaksi.id_ukuran_kayu'); 
-        $builder->join('db_persediaan_kayu', 'db_persediaan_kayu.id_persediaan  = db_transaksi.id_persediaan '); 
-        $builder->join('db_customers', 'db_customers.id_customers = db_transaksi.id_customers');  
-
-        $builder->like('tgl_transaksi', $thn.'-');    
-        $builder->orderBy('tgl_transaksi', 'DESC');
-        $builder->groupBy('tgl_transaksi');
+        $builder = $this->db->table('db_transaksi');  
+        $builder->select('sum(total_harga) as hasil_ttl, DATE_FORMAT(tgl_transaksi, "%M") as tgl_transaksi, tgl_code');
+        $builder->like('tgl_code', $thn.'-');     
+        $builder->groupBy('tgl_code');  
         $query = $builder->get();
 
         return $query->getResult();

@@ -445,7 +445,7 @@
                   var chart2 = new Chart(ctx2, { 
                           type: 'bar', 
                           data: { 
-                              labels: [ /* '1','2','3' */
+                              labels: [  
                                 <?php
                                       if($getstatus == 1) :  
                                         //echo '"'.$getbulan.'-'.$gettahun.'"';
@@ -453,9 +453,10 @@
                                            echo '"'.$value_dtransaksi->tgl_transaksi.'", ';
                                         } 
                                       elseif($getstatus == 2): 
-                                        foreach ($datatransaksi_ttlpenjualan as $value_dtransaksi) {
-                                          echo '"'.$value_dtransaksi->tgl_transaksi.'", ';
-                                        } 
+                                        foreach ($datatransaksi_ttlpenjualan as $value_dtransaksi_Z) {
+                                          
+                                          echo '"'.$value_dtransaksi_Z->tgl_transaksi.'", ';
+                                       }  
                                       endif; 
                                 ?>  
                                 
@@ -469,9 +470,10 @@
                                                     echo $vtransaksi_step4->total_harga .', ';
                                               } 
                                             elseif($getstatus == 2): 
-                                              foreach ($datatransaksi_ttlpenjualan as $vtransaksi_step4) {     
-                                                echo $vtransaksi_step4->total_harga .', ';
-                                              } 
+                                              foreach ($datatransaksi_ttlpenjualan as $value_dtransaksi_Zz) {     
+                                                echo $value_dtransaksi_Zz->hasil_ttl .', ';
+                                              }    
+
                                             endif; 
                                            
               
