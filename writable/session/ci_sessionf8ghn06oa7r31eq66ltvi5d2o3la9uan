@@ -1,0 +1,11 @@
+__ci_last_regenerate|i:1662613627;_ci_previous_url|s:46:"http://sie-jaku.local\/index.php/transaksi/add";username|s:5:"admin";name|s:5:"Admin";logged_in|b:1;error|s:338:"<!-- DEBUG-VIEW START 1 SYSTEMPATH\Validation\Views\list.php -->
+	<div class="errors" role="alert">
+		<ul>
+					<li>Nama Customers Harus dipilih</li>
+					<li>Jumlah Pembelian Harus dipilih</li>
+					<li>The jumlah_pembelian.* field is required.</li>
+				</ul>
+	</div>
+
+<!-- DEBUG-VIEW ENDED 1 SYSTEMPATH\Validation\Views\list.php -->
+";__ci_vars|a:3:{s:5:"error";s:3:"old";s:13:"_ci_old_input";s:3:"old";s:21:"_ci_validation_errors";s:3:"old";}_ci_old_input|a:2:{s:3:"get";a:0:{}s:4:"post";a:11:{s:14:"csrf_test_name";s:32:"27361d4de302966c9de89f0278cc59eb";s:13:"kodetransaksi";s:27:"#JAKUTRANS13093908202209   ";s:7:"namacus";s:0:"";s:5:"jkayu";a:1:{i:0;s:0:"";}s:6:"t_kayu";a:1:{i:0;s:0:"";}s:6:"u_kayu";a:1:{i:0;s:0:"";}s:10:"persediaan";a:1:{i:0;s:0:"";}s:16:"jumlah_pembelian";a:1:{i:0;s:0:"";}s:9:"ttl_harga";a:1:{i:0;s:0:"";}s:12:"tipe_pesanan";a:1:{i:0;s:12:"Online Order";}s:15:"tipe_pembayaran";a:1:{i:0;s:5:"Tunai";}}}_ci_validation_errors|s:181:"a:3:{s:7:"namacus";s:28:"Nama Customers Harus dipilih";s:5:"j_pem";s:30:"Jumlah Pembelian Harus dipilih";s:18:"jumlah_pembelian.0";s:41:"The jumlah_pembelian.* field is required.";}";

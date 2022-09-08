@@ -5,10 +5,10 @@ use CodeIgniter\Model;
 
 class HargaKayuModel extends Model{
     protected $table = "db_harga_kayu";
-    protected $primaryKey = "id_harga_kayu ";
+    protected $primaryKey = "id_harga_kayu";
     protected $returnType = "object";
    // protected $useTimestamps = true;
-    protected $allowedFields = ['id_ukuran_kayu', 'nama_harga_modal', 'nama_harga_kayu', 'tgl_harga_kayu'];
+    protected $allowedFields = ['id_harga_kayu','id_ukuran_kayu', 'nama_harga_modal', 'nama_harga_kayu', 'tgl_harga_kayu'];
 
 
     function getjoinall()

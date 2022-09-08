@@ -1,0 +1,368 @@
+CRITICAL - 2022-09-08 11:14:45 --> Undefined variable $dataJenisKayus
+in APPPATH\Views\section\footer.php on line 1523.
+ 1 APPPATH\Views\section\footer.php(1523): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataJenisKayus', 'APPPATH\\Views\\section\\footer.php', 1523)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(44): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 11:14:57 --> Undefined variable $dataJenisKayus
+in APPPATH\Views\section\footer.php on line 1523.
+ 1 APPPATH\Views\section\footer.php(1523): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataJenisKayus', 'APPPATH\\Views\\section\\footer.php', 1523)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(44): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 11:15:23 --> Undefined variable $dataJenisKayus
+in APPPATH\Views\section\footer.php on line 1523.
+ 1 APPPATH\Views\section\footer.php(1523): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataJenisKayus', 'APPPATH\\Views\\section\\footer.php', 1523)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(44): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 11:15:31 --> Undefined variable $dataJenisKayus
+in APPPATH\Views\section\footer.php on line 1523.
+ 1 APPPATH\Views\section\footer.php(1523): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataJenisKayus', 'APPPATH\\Views\\section\\footer.php', 1523)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(44): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 11:15:53 --> Undefined variable $dataJenisKayus
+in APPPATH\Views\section\footer.php on line 1523.
+ 1 APPPATH\Views\section\footer.php(1523): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataJenisKayus', 'APPPATH\\Views\\section\\footer.php', 1523)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(44): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 11:16:33 --> Undefined variable $dataJenisKayus
+in APPPATH\Views\section\footer.php on line 1523.
+ 1 APPPATH\Views\section\footer.php(1523): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataJenisKayus', 'APPPATH\\Views\\section\\footer.php', 1523)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(44): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 11:16:38 --> Undefined variable $dataJenisKayus
+in APPPATH\Views\section\footer.php on line 1523.
+ 1 APPPATH\Views\section\footer.php(1523): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataJenisKayus', 'APPPATH\\Views\\section\\footer.php', 1523)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(43): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 11:16:53 --> Undefined variable $dataJenisKayus
+in APPPATH\Views\section\footer.php on line 1523.
+ 1 APPPATH\Views\section\footer.php(1523): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataJenisKayus', 'APPPATH\\Views\\section\\footer.php', 1523)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(42): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 11:18:09 --> Undefined variable $dataJenisKayus
+in APPPATH\Views\section\footer.php on line 1523.
+ 1 APPPATH\Views\section\footer.php(1523): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataJenisKayus', 'APPPATH\\Views\\section\\footer.php', 1523)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(42): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 11:18:51 --> Undefined variable $dataJenisKayus
+in APPPATH\Views\section\footer.php on line 1523.
+ 1 APPPATH\Views\section\footer.php(1523): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataJenisKayus', 'APPPATH\\Views\\section\\footer.php', 1523)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(42): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 12:45:32 --> explode(): Argument #2 ($string) must be of type string, array given
+in APPPATH\Controllers\Transaksi.php on line 133.
+ 1 APPPATH\Controllers\Transaksi.php(133): explode('-', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:35:07 --> [] operator not supported for strings
+in APPPATH\Controllers\Transaksi.php on line 147.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:35:24 --> [] operator not supported for strings
+in APPPATH\Controllers\Transaksi.php on line 147.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:35:30 --> [] operator not supported for strings
+in APPPATH\Controllers\Transaksi.php on line 147.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:36:08 --> [] operator not supported for strings
+in APPPATH\Controllers\Transaksi.php on line 147.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:36:22 --> [] operator not supported for strings
+in APPPATH\Controllers\Transaksi.php on line 147.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:39:17 --> syntax error, unexpected floating-point number ".0", expecting ")"
+in APPPATH\Controllers\Transaksi.php on line 152.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Transaksi.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Transaksi')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Transaksi')
+ 4 SYSTEMPATH\CodeIgniter.php(854): class_exists('\\App\\Controllers\\Transaksi', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:40:26 --> Array to string conversion
+in APPPATH\Controllers\Transaksi.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Transaksi.php', 153)
+ 2 APPPATH\Controllers\Transaksi.php(153): implode(', ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:41:41 --> Unclosed '{' on line 139 does not match ']'
+in APPPATH\Controllers\Transaksi.php on line 150.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Transaksi.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Transaksi')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Transaksi')
+ 4 SYSTEMPATH\CodeIgniter.php(854): class_exists('\\App\\Controllers\\Transaksi', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:41:49 --> implode(): Argument #2 ($array) must be of type ?array, string given
+in APPPATH\Controllers\Transaksi.php on line 147.
+ 1 APPPATH\Controllers\Transaksi.php(147): implode(', ', 'Jumlah Pembelian Pada Urutan [0] Belum di Pilih.')
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:42:32 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Transaksi.php on line 217.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Transaksi.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Transaksi')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Transaksi')
+ 4 SYSTEMPATH\CodeIgniter.php(854): class_exists('\\App\\Controllers\\Transaksi', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:43:38 --> Array to string conversion
+in APPPATH\Controllers\Transaksi.php on line 158.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Transaksi.php', 158)
+ 2 APPPATH\Controllers\Transaksi.php(158): implode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:44:02 --> Array to string conversion
+in APPPATH\Controllers\Transaksi.php on line 158.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Transaksi.php', 158)
+ 2 APPPATH\Controllers\Transaksi.php(158): implode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:44:03 --> Array to string conversion
+in APPPATH\Controllers\Transaksi.php on line 158.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Transaksi.php', 158)
+ 2 APPPATH\Controllers\Transaksi.php(158): implode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:44:37 --> Array to string conversion
+in APPPATH\Controllers\Transaksi.php on line 158.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Transaksi.php', 158)
+ 2 APPPATH\Controllers\Transaksi.php(158): implode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:44:47 --> Array to string conversion
+in APPPATH\Controllers\Transaksi.php on line 157.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Transaksi.php', 157)
+ 2 APPPATH\Controllers\Transaksi.php(157): implode(' ', [...])
+ 3 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:51:57 --> Array to string conversion
+in APPPATH\Views\v_add_transaksi.php on line 41.
+ 1 APPPATH\Views\v_add_transaksi.php(41): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\v_add_transaksi.php', 41)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_add_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_add_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(68): view('v_add_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->add_transaksi()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:55:30 --> Undefined variable $new_getallid
+in APPPATH\Views\v_add_transaksi.php on line 43.
+ 1 APPPATH\Views\v_add_transaksi.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $new_getallid', 'APPPATH\\Views\\v_add_transaksi.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_add_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_add_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(68): view('v_add_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->add_transaksi()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:57:07 --> Undefined variable $datax
+in APPPATH\Views\v_add_transaksi.php on line 43.
+ 1 APPPATH\Views\v_add_transaksi.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datax', 'APPPATH\\Views\\v_add_transaksi.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_add_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_add_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(68): view('v_add_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->add_transaksi()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:57:38 --> Array to string conversion
+in APPPATH\Views\v_add_transaksi.php on line 44.
+ 1 APPPATH\Views\v_add_transaksi.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\v_add_transaksi.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_add_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_add_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(68): view('v_add_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->add_transaksi()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 13:58:52 --> Attempt to read property "new_getallid" on array
+in APPPATH\Views\v_add_transaksi.php on line 44.
+ 1 APPPATH\Views\v_add_transaksi.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "new_getallid" on array', 'APPPATH\\Views\\v_add_transaksi.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_add_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_add_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(68): view('v_add_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->add_transaksi()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 14:00:33 --> foreach() argument must be of type array|object, null given
+in APPPATH\Views\v_add_transaksi.php on line 43.
+ 1 APPPATH\Views\v_add_transaksi.php(43): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'APPPATH\\Views\\v_add_transaksi.php', 43)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_add_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_add_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(68): view('v_add_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->add_transaksi()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 14:02:17 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\v_add_transaksi.php on line 44.
+ 1 APPPATH\Views\v_add_transaksi.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'APPPATH\\Views\\v_add_transaksi.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_add_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_add_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(68): view('v_add_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->add_transaksi()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 14:02:56 --> Undefined variable $retVal
+in APPPATH\Views\v_add_transaksi.php on line 44.
+ 1 APPPATH\Views\v_add_transaksi.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $retVal', 'APPPATH\\Views\\v_add_transaksi.php', 44)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\v_add_transaksi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('v_add_transaksi', [], true)
+ 5 APPPATH\Controllers\Transaksi.php(68): view('v_add_transaksi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->add_transaksi()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 14:09:00 --> Undefined variable $new_getallid
+in APPPATH\Controllers\Transaksi.php on line 151.
+ 1 APPPATH\Controllers\Transaksi.php(151): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $new_getallid', 'APPPATH\\Controllers\\Transaksi.php', 151)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Transaksi->transaksi_process()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Transaksi))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 14:10:33 --> syntax error, unexpected token "}", expecting "," or ";"
+in APPPATH\Controllers\Transaksi.php on line 218.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Transaksi.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Transaksi')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Transaksi')
+ 4 SYSTEMPATH\CodeIgniter.php(854): class_exists('\\App\\Controllers\\Transaksi', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 15:23:23 --> Undefined variable $datatransaksi_ttlpenjualan
+in APPPATH\Controllers\Home.php on line 185.
+ 1 APPPATH\Controllers\Home.php(185): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi_ttlpenjualan', 'APPPATH\\Controllers\\Home.php', 185)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 15:23:25 --> Undefined variable $datatransaksi_ttlpenjualan
+in APPPATH\Controllers\Home.php on line 185.
+ 1 APPPATH\Controllers\Home.php(185): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi_ttlpenjualan', 'APPPATH\\Controllers\\Home.php', 185)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 15:24:53 --> Undefined variable $datatransaksi_ttlpenjualan
+in APPPATH\Controllers\Home.php on line 190.
+ 1 APPPATH\Controllers\Home.php(190): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi_ttlpenjualan', 'APPPATH\\Controllers\\Home.php', 190)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 15:26:01 --> Undefined variable $datatransaksi_ttlpenjualan
+in APPPATH\Controllers\Home.php on line 193.
+ 1 APPPATH\Controllers\Home.php(193): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi_ttlpenjualan', 'APPPATH\\Controllers\\Home.php', 193)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-08 15:41:34 --> Undefined variable $datatransaksi_ttlpenjualan
+in APPPATH\Controllers\Home.php on line 174.
+ 1 APPPATH\Controllers\Home.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi_ttlpenjualan', 'APPPATH\\Controllers\\Home.php', 174)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

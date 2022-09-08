@@ -25,6 +25,8 @@ class Home extends BaseController
         $Customer = new CustomerModel;
 
         $getstatus = $this->request->getpost('getstatus'); 
+        // $getstatus = 1;
+
         if(isset($getstatus)){ 
             if ($getstatus == 1) { 
                 $bulan = $this->request->getpost('bulan_view');
@@ -32,6 +34,10 @@ class Home extends BaseController
 
                 $datagetbulantransaksi = $Transaksi->getwhere_bulanandtahun($bulan, $tahun);
                 $datatransaksi = $datagetbulantransaksi; 
+
+
+                $datagetbulantransaksi_2 = $Transaksi->getwhere_bulanandtahun_2($bulan, $tahun);
+                $datatransaksi_ttlpenjualan = $datagetbulantransaksi_2;   
                 /*  */ 
                 $datagetbulanCoustomer = $Customer->getwhere_bulanandtahun($bulan, $tahun);  
                 $datacountCoustomer =  $datagetbulanCoustomer;  
@@ -56,6 +62,10 @@ class Home extends BaseController
 
                 $datagetbulantransaksi = $Transaksi->getwhere_tahun($tahun);
                 $datatransaksi = $datagetbulantransaksi;  
+
+                $datagetbulantransaksi_2 = $Transaksi->getwhere_tahun_2($tahun);
+                $datatransaksi_ttlpenjualan = $datagetbulantransaksi_2;  
+ 
                 /*  */
                 $datagetbulanCoustomer = $Customer->getwhere_tahun($tahun);  
                 $datacountCoustomer =  $datagetbulanCoustomer;  
@@ -82,6 +92,10 @@ class Home extends BaseController
             $tahun = date("Y"); 
             $datagetbulantransaksi = $Transaksi->getwhere_bulanandtahun($bulan, $tahun);
             $datatransaksi = $datagetbulantransaksi; 
+                  
+            $datagetbulantransaksi_2 = $Transaksi->getwhere_bulanandtahun_2($bulan, $tahun);
+            $datatransaksi_ttlpenjualan = $datagetbulantransaksi_2;  
+
             /*  */ 
             $datagetbulanCoustomer = $Customer->getwhere_bulanandtahun($bulan, $tahun);  
             $datacountCoustomer =  $datagetbulanCoustomer;  
@@ -98,6 +112,7 @@ class Home extends BaseController
             $datagetbulantransaksi33txt = $Transaksi->getcountallnocount($bulan, $tahun, 'tipe_pembayaran');       
             $datagetbulantransaksi33 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pembayaran');   
             
+
             
             $getstatus = '1';
             
@@ -157,7 +172,9 @@ class Home extends BaseController
             print_r($datagetbulantransaksi3);
                     */    
  
-  
+        //    dd($datatransaksi_ttlpenjualan);
+
+
  
         $data = array(
 			'menu' => '1a',
@@ -178,6 +195,7 @@ class Home extends BaseController
             'datatransaksi3' => $datatransaksi3,
             'datatransaksi2' => $datatransaksi2,
             'datatransaksi' => $datatransaksi,
+            'datatransaksi_ttlpenjualan'    => $datatransaksi_ttlpenjualan,
  
 		);
 

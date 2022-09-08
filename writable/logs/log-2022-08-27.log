@@ -1,0 +1,111 @@
+ERROR - 2022-08-27 11:09:57 --> mysqli_sql_exception: Unknown column 'tipe_pembayaran' in 'group statement' in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(98): App\Models\TransaksiModel->getcountallnocount('08', '2022', 'tipe_pembayaran')
+#6 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(898): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-08-27 11:09:57 --> Unknown column 'tipe_pembayaran' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE \'%2022-08%\' ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE \'%2022-08%\' ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE \'%2022-08%\' ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE :tgl_transaksi: ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`', [...], false)
+ 5 APPPATH\Models\TransaksiModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(98): App\Models\TransaksiModel->getcountallnocount('08', '2022', 'tipe_pembayaran')
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-27 11:10:25 --> mysqli_sql_exception: Unknown column 'tipe_pembayaran' in 'group statement' in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(98): App\Models\TransaksiModel->getcountallnocount('08', '2022', 'tipe_pembayaran')
+#6 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-08-27 11:10:25 --> Unknown column 'tipe_pembayaran' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE \'%2022-08%\' ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE \'%2022-08%\' ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE \'%2022-08%\' ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE :tgl_transaksi: ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`', [...], false)
+ 5 APPPATH\Models\TransaksiModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(98): App\Models\TransaksiModel->getcountallnocount('08', '2022', 'tipe_pembayaran')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-08-27 11:10:26 --> mysqli_sql_exception: Unknown column 'tipe_pembayaran' in 'group statement' in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(98): App\Models\TransaksiModel->getcountallnocount('08', '2022', 'tipe_pembayaran')
+#6 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-08-27 11:10:26 --> Unknown column 'tipe_pembayaran' in 'group statement'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE \'%2022-08%\' ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE \'%2022-08%\' ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE \'%2022-08%\' ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_transaksi`
+WHERE `tgl_transaksi` LIKE :tgl_transaksi: ESCAPE \'!\'
+GROUP BY `tipe_pembayaran`', [...], false)
+ 5 APPPATH\Models\TransaksiModel.php(75): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(98): App\Models\TransaksiModel->getcountallnocount('08', '2022', 'tipe_pembayaran')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

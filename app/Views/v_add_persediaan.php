@@ -81,12 +81,33 @@
                             </div> 
  
 
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                 <label for="name" class="form-label">Harga </label>
                                 <select name="harga_k" id="harga_k" class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
                                     <option value=''>Select Harga Kayu -</option> 
                                 </select> 
-                            </div>
+                            </div> -->
+
+
+                            <div class="form-group">
+                                <label for="name" class="form-label">Harga Modal</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa-solid fa-rupiah-sign"></i></span>
+                                    </div>
+                                    <input type="text" name="harga_modal" class="form-control "  placeholder="Harga Modal" onkeypress="return hanyaAngka(event)">
+                                </div>
+                            </div> 
+
+                            <div class="form-group">
+                                <label for="name" class="form-label">Harga Jual</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa-solid fa-rupiah-sign"></i></span>
+                                    </div>
+                                    <input type="text" name="harga" class="form-control "  placeholder="Harga Jual" onkeypress="return hanyaAngka(event)">
+                                </div>
+                            </div> 
 
 
 

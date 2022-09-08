@@ -39,7 +39,8 @@
                             <th>Tipe Kayu</th> 
                             <th>Ukuran Kayu</th> 
                             <th>Persediaan</th> 
-                            <th>Harga</th>  
+                            <th>Harga Modal</th>  
+                            <th>Harga Jual</th>  
                             <th>Tanggal</th>  
                             <th>Opsi</th> 
                           </tr>
@@ -55,6 +56,7 @@
                                   <td><?=$item->nama_tipe_kayu?></td>  
                                   <td><?=$item->nama_Ukuran_kayu?></td>  
                                   <td><?=$item->sisa_persediaan.'/'.$item->jml_persediaan?></td>  
+                                  <td><?="Rp " . number_format($item->nama_harga_modal	,2,',','.') ?></td>   
                                   <td><?="Rp " . number_format($item->nama_harga_kayu	,2,',','.') ?></td>   
                                   <td><?=$item->Tanggal_persediaan?></td>  
                                   <td>

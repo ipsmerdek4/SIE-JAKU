@@ -769,6 +769,9 @@ class Stock extends Controller{
             'dataPersediaanKayus' => $PersediaanKayus->getjoinall(), 
 
     );   
+
+    // dd($PersediaanKayus->getjoinall());
+
     echo view('section/header', $data);
     echo view('v_persediaan', $data);
     echo view('section/footer', $data); 
@@ -804,12 +807,26 @@ class Stock extends Controller{
                         'max_length' => 'Persediaan Kayu Maksimal 5 Angka',  
                     ]
                 ], 
-                'harga_k' => [
+               /*  'harga_k' => [
                     'rules' => 'required',
                     'errors' => [
                         'required'   => 'Harga Kayu Harus dipilih', 
                     ]
+                ],  */
+                'harga' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required'   => 'Harga Jual Kayu Harus diisi', 
+                        'max_length' => 'Harga Jual Kayu Maksimal 100 Karakter',  
+                    ]
                 ], 
+                'harga_modal' => [
+                    'rules' => 'required|max_length[100]',
+                    'errors' => [
+                        'required'   => 'Harga Modal Kayu Harus diisi', 
+                        'max_length' => 'Harga Modal Kayu Maksimal 100 Karakter',  
+                    ]
+                ],
                 'j_kayu' => [
                     'rules' => 'required',
                     'errors' => [
@@ -832,22 +849,38 @@ class Stock extends Controller{
                 session()->setFlashdata('error', $this->validator->listErrors());
                 return redirect()->to(base_url('/persediaan-kayu/add'))->withInput(); 
             } 
-  
-            $PersediaanKayus = new PersediaanKayuModel(); 
-
-
-           // print_r($this->request->getVar('harga_k'));
 
              
+
+            $HargaKayus = new HargaKayuModel();  
+            $last_id_harga = $HargaKayus->select('id_harga_kayu')->orderBy('id_harga_kayu', 'DESC')->first(); 
+            $last_id_harga = (isset($last_id_harga)) ? $last_id_harga->id_harga_kayu : 0 ; 
+            $last_id_harga = $last_id_harga+1;
+            
+            
+            $HargaKayus->insert([ 
+                'id_harga_kayu'     => $last_id_harga,
+                'nama_harga_modal'  => $this->request->getVar('harga_modal'),
+                'nama_harga_kayu'   => $this->request->getVar('harga'),
+                'id_ukuran_kayu'    => $this->request->getVar('ukayu'),
+                'tgl_harga_kayu'    => $this->request->getVar('tgl')
+            ]);
+
+
+
+            
+
+
+            $PersediaanKayus = new PersediaanKayuModel();  
             $PersediaanKayus->insert([ 
                 'Tanggal_persediaan' => $this->request->getVar('tgl'),
                 'jml_persediaan' => $this->request->getVar('p_kayu'),
                 'sisa_persediaan' => $this->request->getVar('p_kayu'),
-                'id_harga_kayu' => $this->request->getVar('harga_k'),
+                'id_harga_kayu' => $last_id_harga,
                 'id_jenis_kayu' => $this->request->getVar('j_kayu'),
                 'id_tipe_kayu' => $this->request->getVar('t_kayu'),
                 'id_ukuran_kayu' => $this->request->getVar('ukayu'),
-            ]);
+            ]);  
  
 
             session()->setFlashdata('alert', 'Berhasil Menambah Data.');

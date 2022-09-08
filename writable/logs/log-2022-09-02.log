@@ -1,0 +1,19 @@
+CRITICAL - 2022-09-02 11:51:49 --> Unsupported operand types: stdClass + int
+in APPPATH\Controllers\Stock.php on line 858.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Stock->persediaan_process()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-02 11:52:38 --> Unsupported operand types: stdClass + int
+in APPPATH\Controllers\Stock.php on line 860.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Stock->persediaan_process()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-02 11:53:24 --> Object of class stdClass could not be converted to int
+in APPPATH\Controllers\Stock.php on line 857.
+ 1 APPPATH\Controllers\Stock.php(857): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Object of class stdClass could not be converted to int', 'APPPATH\\Controllers\\Stock.php', 857)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Stock->persediaan_process()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Stock))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

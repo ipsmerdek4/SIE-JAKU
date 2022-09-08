@@ -176,12 +176,20 @@
             <link rel="stylesheet" href="../../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
             <link rel="stylesheet" href="../../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
             <link rel="stylesheet" href="../../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+           
+  
+        ';
+ 
+        
+      }elseif ($batascss == 'c5s') {
+        $btscss = '
+            
             <!-- Select2 -->
             <link rel="stylesheet" href="../../plugins/select2/css/select2.min.css">
             <link rel="stylesheet" href="../../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
 
             <style>
-
+            
             .select2-selection__rendered {
                 line-height: 27px !important; 
             }
@@ -196,7 +204,6 @@
             </style>
         ';
  
-        
       } 
  
     ?>
@@ -257,12 +264,12 @@
             <a href="<?=base_url('customers') ?>" class="nav-link <?=$mactive2?>">Customer</a>
           </li> 
           <li class="nav-item dropdown" >
-            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle <?=$mactive3?>">Persedian</a>
+            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle <?=$mactive3?>">Persediaan</a>
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              <!-- <li><a href="<?=base_url('jenis-kayu') ?>" class="dropdown-item">Jenis Kayu </a></li>
-              <li><a href="<?=base_url('tipe-kayu') ?>" class="dropdown-item">Tipe Kayu</a></li> -->
+              <li><a href="<?=base_url('jenis-kayu') ?>" class="dropdown-item">Jenis Kayu </a></li>
+              <li><a href="<?=base_url('tipe-kayu') ?>" class="dropdown-item">Tipe Kayu</a></li>
               <li><a href="<?=base_url('ukuran-kayu') ?>" class="dropdown-item">Ukuran Kayu</a></li>
-              <li><a href="<?=base_url('harga-kayu') ?>" class="dropdown-item">Harga Satuan Kayu</a></li>
+              <!-- <li><a href="<?=base_url('harga-kayu') ?>" class="dropdown-item">Harga Satuan Kayu</a></li> -->
 
               <li class="dropdown-divider"></li>
               <li><a href="<?=base_url('persediaan-kayu') ?>" class="dropdown-item">Persediaan Kayu</a></li>

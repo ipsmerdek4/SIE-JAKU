@@ -15,7 +15,13 @@
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- <script src="../../plugins/jquery/jquery.min.js"></script> -->
+<script
+  src="https://code.jquery.com/jquery-3.6.1.min.js"
+  integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+  crossorigin="anonymous"></script>
+
+
 <!-- Bootstrap 4 -->
 <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
@@ -439,12 +445,17 @@
                   var chart2 = new Chart(ctx2, { 
                           type: 'bar', 
                           data: { 
-                              labels: [
+                              labels: [ /* '1','2','3' */
                                 <?php
                                       if($getstatus == 1) :  
-                                        echo '"'.$getbulan.'-'.$gettahun.'"';
+                                        //echo '"'.$getbulan.'-'.$gettahun.'"';
+                                        foreach ($datatransaksi as $value_dtransaksi) {
+                                           echo '"'.$value_dtransaksi->tgl_transaksi.'", ';
+                                        } 
                                       elseif($getstatus == 2): 
-                                        echo '"'.$gettahun.'"'; 
+                                        foreach ($datatransaksi_ttlpenjualan as $value_dtransaksi) {
+                                          echo '"'.$value_dtransaksi->tgl_transaksi.'", ';
+                                        } 
                                       endif; 
                                 ?>  
                                 
@@ -453,17 +464,19 @@
                                   label: 'Penjualan Perbulan',
                                   data: [ 
                                         <?php 
-
-                                            $v_jml_perbulan = "0";
-
-                                            foreach ($datatransaksi as $vtransaksi_step4) {     
-                                                  $v_jml_perbulan += $vtransaksi_step4->total_harga;
-                                            }
-
-                                            echo $v_jml_perbulan;
+                                            if($getstatus == 1) :   
+                                              foreach ($datatransaksi as $vtransaksi_step4) {     
+                                                    echo $vtransaksi_step4->total_harga .', ';
+                                              } 
+                                            elseif($getstatus == 2): 
+                                              foreach ($datatransaksi_ttlpenjualan as $vtransaksi_step4) {     
+                                                echo $vtransaksi_step4->total_harga .', ';
+                                              } 
+                                            endif; 
+                                           
               
-                                        ?>  
-                                  ],
+                                        ?>   
+                                        ],
                                   backgroundColor: [
                                       'rgba(75, 192, 192, 0.2)','rgba(255, 99, 132, 0.2)','rgba(255, 99, 132, 0.2)',
                                   ],
@@ -1221,7 +1234,10 @@
       }elseif ($batascss == 'c5') {
         $btsjv = '
             <!-- Select2 -->
-            <script src="../../plugins/select2/js/select2.full.min.js"></script> 
+            <!--script src="../../plugins/select2/js/select2.full.min.js"></script--> 
+            <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+            
             <!-- DataTables  & Plugins -->
             <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
             <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -1240,9 +1256,9 @@
         ';  
       ?>
 
-         
-          <script>
-
+          
+          <script type="text/javascript">
+                  /* 
                   window.setTimeout("waktu()",1000);  
                   function waktu() {   
                     var namabulan = ("Januari Februari Maret April Mei Juni Juli Agustus September Oktober November Desember");
@@ -1250,179 +1266,139 @@
                     var tanggal = new Date();  
                     setTimeout("waktu()",1000);   
                     document.getElementById("jam").value = tanggal.getDate()+"-"+namabulan[tanggal.getMonth()]+"-"+tanggal.getFullYear()+" "+tanggal.getHours()+":"+tanggal.getMinutes()+":"+tanggal.getSeconds();
-                  }
-
-
+                  } */
  
  
-                  $(document).ready(function() {
-
-
-                      $('.select2').select2() 
-
-                      $("#j_kayu").change(function (){ 
-                        var url = "<?php echo site_url('/transaksi/g-tipe-kayu');?>/"+$(this).val();
-                        $('#t_kayu').load(url);
-                        return false; 
-                      })
-
-                      $("#t_kayu").change(function (){ 
-                        var url = "<?php echo site_url('/transaksi/g-ukuran-kayu');?>/"+$(this).val();
-                        $('#u_kayu').load(url);
-                        return false; 
-                      })
-
-
-
-                      $("#u_kayu").change(function (){ 
-                        var url = "<?php echo site_url('/transaksi/g-persediaan-kayu');?>/"+$(this).val();
-                        $('#persediaan').load(url);
-                        return false; 
-                      })
-
-                      $("#persediaan").change(function (){ 
-                        var url = "<?php echo site_url('/transaksi/g-jmlp-kayu');?>/"+$(this).val();
-                        $('#j_pem').load(url);
-                        return false; 
-                      })
-
-
-                      $("#j_pem").change(function (){ 
-                        var url = "<?php echo site_url('/transaksi/g-gharga-kayu');?>/"+$(this).val();
-                        $('#get_harga').load(url);
-                        return false; 
-                      })
-
-
-
-                      const rupiah = (number)=>{
-                        return new Intl.NumberFormat("id-ID", {
-                          style: "currency",
-                          currency: "IDR"
-                        }).format(number);
-                      }
-      
-        
-      
-
-                    $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
-                    var table =$('#vtransaksi').DataTable( { 
-
+                  $(document).ready(function() {  
 
                       
+ 
+                        const rupiah = (number)=>{
+                          return new Intl.NumberFormat("id-ID", {
+                            style: "currency",
+                            currency: "IDR"
+                          }).format(number);
+                        }
+        
+            
+                        $.fn.dataTable.Buttons.defaults.dom.button.className = 'btn'; 
+                        var table =$('#vtransaksi').DataTable( { 
 
-                      footerCallback : function ( row, data, start, end, display ) {
-                            var api = this.api();
-                
-                            // Remove the formatting to get integer data for summation
-                            var intVal = function ( i ) {
-                                return typeof i === 'string' ?
-                                    i.replace(/[\$,]/g, ' ')*1 :
-                                    typeof i === 'number' ?
-                                        i : 0;
-                            };
-                
-                            // Total over all pages
-                            total = api
-                                .column( 6 )
-                                .data()
-                                .reduce( function (a, b) {
-                                    return intVal(a) + intVal(b);
-                                }, 0 );
-                
-                            // Total over this page
-                            pageTotal = api
-                                .column( 6, { page: 'current'} )
-                                .data()
-                                .reduce( function (a, b) {
-                                    return intVal(a) + intVal(b);
-                                }, 0 );
-                
 
-                            if ($(window).width() >= 1000 ) {
-                                // Update footer
-                                $( api.column( 5 ).footer() ).html( 
-                                      'Total :' 
-                                );
-                                // Update footer
-                                $( api.column( 6 ).footer() ).html( 
-                                    ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
-                                );
-                            }else if($(window).width() >= 285 ){
-                                // Update footer
-                                $( api.column( 0 ).footer() ).html( 
-                                      'Total :' 
-                                );
-                                  // Update footer
-                                  $( api.column( 1 ).footer() ).html( 
-                                  ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
-                                );
-                            }else{  
-                                // Update footer
-                                $( api.column( 0 ).footer() ).html( 
-                                  ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
-                                );
+                          
 
-                            }
+                          footerCallback : function ( row, data, start, end, display ) {
+                                var api = this.api();
+                    
+                                // Remove the formatting to get integer data for summation
+                                var intVal = function ( i ) {
+                                    return typeof i === 'string' ?
+                                        i.replace(/[\$,]/g, ' ')*1 :
+                                        typeof i === 'number' ?
+                                            i : 0;
+                                };
+                    
+                                // Total over all pages
+                                total = api
+                                    .column( 6 )
+                                    .data()
+                                    .reduce( function (a, b) {
+                                        return intVal(a) + intVal(b);
+                                    }, 0 );
+                    
+                                // Total over this page
+                                pageTotal = api
+                                    .column( 6, { page: 'current'} )
+                                    .data()
+                                    .reduce( function (a, b) {
+                                        return intVal(a) + intVal(b);
+                                    }, 0 );
+                    
 
-                        },
-                        buttons: [
-                            {
-                              text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
-                              className: ' btn-primary',
-                              action:     function ( e, dt, node, config ) {
-                                            window.location.href = '/transaksi/add';
+                                if ($(window).width() >= 1000 ) {
+                                    // Update footer
+                                    $( api.column( 5 ).footer() ).html( 
+                                          'Total :' 
+                                    );
+                                    // Update footer
+                                    $( api.column( 6 ).footer() ).html( 
+                                        ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
+                                    );
+                                }else if($(window).width() >= 285 ){
+                                    // Update footer
+                                    $( api.column( 0 ).footer() ).html( 
+                                          'Total :' 
+                                    );
+                                      // Update footer
+                                      $( api.column( 1 ).footer() ).html( 
+                                      ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
+                                    );
+                                }else{  
+                                    // Update footer
+                                    $( api.column( 0 ).footer() ).html( 
+                                      ' '+  rupiah(pageTotal)  +'<hr class="my-1">('+ rupiah(total) +' total)' 
+                                    );
+
+                                }
+
+                            },
+                            buttons: [
+                                {
+                                  text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
+                                  className: ' btn-primary',
+                                  action:     function ( e, dt, node, config ) {
+                                                window.location.href = '/transaksi/add';
+                                              },
+                                              
+                                }, 
+                                {
+                                    text: '<i class="fa-solid fa-print"></i> <b>| Cetak</b>',
+                                    className: ' btn-danger ml-3', 
+                                    action:     function ( e, dt, node, config ) {
+                                                var value = $('.dataTables_filter input').val(); 
+                                                if (value == false) {
+                                                      window.open('/transaksi/view/semua', '_blank'); 
+                                                } else {
+                                                      window.open('/transaksi/view/'+ value, '_blank');   
+                                                }
+                                              },  
+                                }  /*
+                                {
+                                    extend: 'print',
+                                    text: '<i class="fa-solid fa-print"></i> <b>| Cetak</b>',
+                                    className: ' btn-danger ml-3', 
+                                    footer: true,  
+                                }  */
+                            ],
+                            
+                            //order: [[1, "asc" ]],
+                            responsive: true, 
+                            lengthChange: true, 
+                            autoWidth: false,   
+                            columnDefs : [     
+                                          {
+                                              targets: 0,
+                                              className: ' text-sm-center', 
                                           },
-                                          
-                            }, 
-                            {
-                                text: '<i class="fa-solid fa-print"></i> <b>| Cetak</b>',
-                                className: ' btn-danger ml-3', 
-                                action:     function ( e, dt, node, config ) {
-                                            var value = $('.dataTables_filter input').val(); 
-                                            if (value == false) {
-                                                  window.open('/transaksi/view/semua', '_blank'); 
-                                            } else {
-                                                  window.open('/transaksi/view/'+ value, '_blank');   
-                                            }
-                                          },  
-                            }  /*
-                            {
-                                extend: 'print',
-                                text: '<i class="fa-solid fa-print"></i> <b>| Cetak</b>',
-                                className: ' btn-danger ml-3', 
-                                footer: true,  
-                            }  */
-                        ],
-                        
-                        //order: [[1, "asc" ]],
-                        responsive: true, 
-                        lengthChange: true, 
-                        autoWidth: false,   
-                        columnDefs : [     
-                                      {
-                                          targets: 0,
-                                          className: ' text-sm-center', 
-                                      },
-                                      {
-                                          targets: 5,
-                                          className: ' text-sm-center', 
-                                      },
-                                      {
-                                          targets: 6,
-                                          className: ' text-sm-center',
-                                          render: $.fn.dataTable.render.number( ',', '.', 2, 'Rp ' ),
-                                      },
-                                    ]
+                                          {
+                                              targets: 5,
+                                              className: ' text-sm-center', 
+                                          },
+                                          {
+                                              targets: 6,
+                                              className: ' text-sm-center',
+                                              render: $.fn.dataTable.render.number( ',', '.', 2, 'Rp ' ),
+                                          },
+                                        ]
 
-                    } ); 
-                    table.on( 'order.dt search.dt', function () {
-                      table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
-                            cell.innerHTML = i+1;
-                        } );
-                    } ).draw();  
+                        } ); 
+                        table.on( 'order.dt search.dt', function () {
+                          table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+                                cell.innerHTML = i+1;
+                            } );
+                        } ).draw();  
 
-                    table.buttons().container().appendTo("#vtransaksi_wrapper .col-md-6:eq(0)"); 
+                        table.buttons().container().appendTo("#vtransaksi_wrapper .col-md-6:eq(0)"); 
  
                         /*  */
 
@@ -1437,10 +1413,9 @@
                         <?php } ?> 
 
                         /*  */
+ 
 
-
-
-                } );
+                  } );
 
 
 
@@ -1462,10 +1437,219 @@
                         }
                       })  
                 });
-
-
+ 
+ 
           </script>
 
+      
+      <?php  
+      }elseif ($batascss == 'c5s') {
+        $btsjv = '
+                    <!-- Select2 -->
+                    <script src="../../plugins/select2/js/select2.full.min.js"></script> 
+                    <!-- DataTables  & Plugins -->
+                    <script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+                    <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+                    <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+                    <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+                    <script src="../../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+                    <script src="../../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+                    <script src="../../plugins/jszip/jszip.min.js"></script>
+                    <script src="../../plugins/pdfmake/pdfmake.min.js"></script>
+                    <script src="../../plugins/pdfmake/vfs_fonts.js"></script>
+                    <script src="../../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+                    <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+                    <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>  
+                
+                ';  
+      ?>
+          <script>
+
+              $(document).ready(function () { 
+ 
+
+                      $(".j_kayu").change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-tipe-kayu');?>/"+$(this).val();
+                        $('.t_kayu').load(url);
+                        return false; 
+                      })
+
+                      $("#t_kayu").change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-ukuran-kayu');?>/"+$(this).val();
+                        $('#u_kayu').load(url);
+                        return false; 
+                      })
+ 
+                      $("#u_kayu").change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-persediaan-kayu');?>/"+$(this).val();
+                        $('#persediaan').load(url);
+                        return false; 
+                      })
+
+                      $("#persediaan").change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-jmlp-kayu');?>/"+$(this).val();
+                        $('#j_pem').load(url);
+                        return false; 
+                      })
+ 
+                      $("#j_pem").change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-gharga-kayu');?>/"+$(this).val();
+                        $('#get_harga').load(url);
+                        return false; 
+                      })
+
+              });
+            
+
+              $('.v_form').on('click', '.remove_transaksi', function(e) {
+                  e.preventDefault(); 
+                  $(this).parent().remove();
+              });
+
+              $(document).on('click', '#multiple_create_transaksi', function() {
+
+              // $('#multiple_create_transaksi').on('click', function () {   
+                      let number = $('.numb').val();
+ 
+                      let hasil = (parseInt(number) + parseInt(1));  
+                      $('.numb').val(hasil);
+
+                      getform(hasil);
+ 
+
+                      //  new_selec2 = $('.ambilin').first().clone();
+                      // $('.v_form').append( new_selec2 ); 
+                      // $('.v_form').append( '<button id="ermv" type="button" class="btn btn-sm btn-danger remove_transaksi mx-auto" >Hapus Transaksi</button>' ); 
+                     
+
+                      $(".j_kayu" + hasil).change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-tipe-kayu');?>/"+$(this).val();
+                        $('.t_kayu' + hasil).load(url);
+                        return false; 
+                      })
+
+                      $(".t_kayu" + hasil).change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-ukuran-kayu');?>/"+$(this).val();
+                        $('.u_kayu' + hasil).load(url);
+                        return false; 
+                      })
+ 
+                      $(".u_kayu" + hasil).change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-persediaan-kayu');?>/"+$(this).val();
+                        $('.persediaan' + hasil).load(url);
+                        return false; 
+                      })
+
+                      $(".persediaan" + hasil).change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-jmlp-kayu');?>/"+$(this).val();
+                        $('.j_pem' + hasil).load(url);
+                        return false; 
+                      })
+ 
+                      $(".j_pem" + hasil).change(function (){ 
+                        var url = "<?php echo site_url('/transaksi/g-gharga-kayu');?>/"+$(this).val();
+                        $('.get_harga' + hasil).load(url);
+                        return false; 
+                      })
+
+
+                
+              });
+
+                         
+              function getform(hasil)
+              { 
+ 
+                  $('.v_form').append('<div class="row"> ' + 
+                                    '<div class="col-md-12"> <hr>  </div>' + 
+                                    '<div class="col-md-6">' + 
+
+                                      '<div class="form-group">' + 
+                                          '<label for="name" class="form-label">Jenis Kayu <span class="badge badge-danger">1</span></label>' + 
+                                          '<select name="jkayu[]" id="j_kayu" class="form-control select2 j_kayu' + hasil + ' "  style="width: 100%;"> ' + 
+                                              '<option value="">Select Jenis Kayu -</option> ' + 
+                                              '<?php  foreach ($dataJenisKayus as $item1): ?>  ' + 
+                                                  '<?='<option value="'.$item1->id_jenis_kayu .'">'.$item1->nama_jenis_kayu.'</option>'?> ' + 
+                                              '<?php endforeach; ?>  ' + 
+                                          '</select> ' + 
+                                      '</div>' + 
+
+                                      '<div class="form-group">' + 
+                                          '<label for="name" class="form-label">Tipe Kayu <span class="badge badge-danger">2</span></label>' + 
+                                          '<select name="t_kayu[]" id="t_kayu" class="form-control select2 select2-primary t_kayu' + hasil + '" data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
+                                              '<option value="">Select Tipe Kayu -</option> ' + 
+                                          '</select> ' + 
+                                      '</div>' + 
+
+
+                                      '<div class="form-group">' + 
+                                          '<label for="name" class="form-label">Ukuran Kayu <span class="badge badge-danger">3</span></label>' + 
+                                          '<select name="u_kayu[]" id="u_kayu" class="form-control select2 select2-primary u_kayu' + hasil + ' " data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
+                                              '<option value="">Select Ukuran Kayu -</option> ' + 
+                                          '</select> ' + 
+                                      '</div>' + 
+
+                                    '</div>' + 
+                                    '<div class="col-md-6">  ' + 
+                                      '<div class="form-group ">' + 
+                                          '<div class="row"> ' + 
+                                              '<div class="col-sm-6">' + 
+                                                  '<label for="name" class="form-label">Persediaan</label> ' + 
+                                                  '<select name="persediaan[]" id="persediaan" class="form-control select2 select2-primary persediaan' + hasil + ' " data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
+                                                      '<option value="">Select Persediaan -</option> ' + 
+                                                  '</select>' + 
+                                              '</div>' + 
+                                              '<div class="col-sm-6">' + 
+                                                  '<label for="name" class="form-label">Jumlah Pembelian</label> ' + 
+                                                  '<select name="j_pem[]" id="j_pem" class="form-control select2 select2-primary j_pem' + hasil + ' " data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
+                                                      '<option value="-">Select Jumlah Pembelian -</option> ' + 
+                                                  '</select>' + 
+                                              '</div> ' + 
+                                          '</div> ' + 
+                                      '</div>' + 
+ 
+                                      '<div class="form-group ">' + 
+                                          '<label for="name" class="form-label">Total Harga</label> ' + 
+                                          '<select name="ttl_harga[]"  id="get_harga" class="form-control select2 select2-primary get_harga' + hasil + '" data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
+                                              '<option value="">Rp 0,00-</option> ' + 
+                                          '</select>      ' +  
+                                      '</div>' + 
+
+                                      '<div class="form-group ">' + 
+                                          '<label for="name" class="form-label">Tipe Pemesanan</label> ' + 
+                                          '<select name="tipe_pesanan[]"  id="tipe_pesanan" class="form-control select2 select2-primary tipe_pesanan' + hasil + ' " data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
+                                                  '<option value="Online Order">Online Order</option> ' + 
+                                                  '<option value="Offline Order">Offline Order</option>  ' + 
+                                          '</select>       ' + 
+                                      '</div>' + 
+
+                                      '<div class="form-group ">' + 
+                                          '<label for="name" class="form-label">Tipe Pembayaran</label> ' + 
+                                          '<select name="tipe_pembayaran[]"  id="tipe_pembayaran" class="form-control select2 select2-primary tipe_pembayaran' + hasil + ' " data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
+                                                  '<option value="Tunai">Tunai</option> ' + 
+                                                  '<option value="Transfer">Transfer</option> ' + 
+                                                  '<option value="Debit">Debit</option> ' + 
+                                          '</select>' + 
+                                      '</div>' + 
+ 
+                                    '</div>' + 
+ 
+ 
+                                    '<button type="button" class="btn btn-sm btn-danger remove_transaksi mx-auto btnrmv' + hasil +'" >Hapus Transaksi</button>' + 
+                                     
+                                  '</div> ' + 
+                                   
+                                  '');
+                 
+              
+ 
+              
+              }  
+
+
+ 
+
+          </script>
 
 
       <?php  
