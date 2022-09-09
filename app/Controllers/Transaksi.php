@@ -183,6 +183,7 @@ class Transaksi extends Controller{
                         'id_tipe_kayu' => $id_tipe_kayu,
                         'id_ukuran_kayu' => $id_ukuran_kayu,
                         'tgl_transaksi' => date("Y-m-d H:i:s"),
+                        'tgl_code' => date("Y-m"),
                     ]);
         
              

@@ -10,7 +10,7 @@ class TransaksiModel extends Model{
     protected $primaryKey = "id_transaksi";
     protected $returnType = "object";
    // protected $useTimestamps = true;
-    protected $allowedFields = ['kode_transaksi','id_customers','jumlah_pembelian','total_harga','id_jenis_kayu','id_tipe_kayu','id_ukuran_kayu','id_persediaan','tipe_pesanan','tipe_pembayaran','tgl_transaksi'];
+    protected $allowedFields = ['kode_transaksi','id_customers','jumlah_pembelian','total_harga','id_jenis_kayu','id_tipe_kayu','id_ukuran_kayu','id_persediaan','tipe_pesanan','tipe_pembayaran','tgl_transaksi','tgl_code'];
 
 
 
