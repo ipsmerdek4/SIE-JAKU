@@ -58,6 +58,10 @@ class DbTransaksi extends Migration
 			'tgl_transaksi' => [
 				'type'           => 'DATETIME',
 			], 
+			'tgl_code' => [
+				'type'           => 'VARCHAR',
+				'constraint'     => '20',
+			], 
  
 		]);
 		$this->forge->addPrimaryKey('id_transaksi', true);
