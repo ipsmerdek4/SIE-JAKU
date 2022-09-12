@@ -55,7 +55,7 @@
                 <div id="chrt_tahun" class="col-12 col-sm-12 col-lg-2 mb-3">
                        <select name="tahun_view" class="form-control " >   
                             <?php 
-                                $jaraktahun = 2021;
+                                $jaraktahun = 1990;
                                 for ($i=$jaraktahun; $i < date('Y')+1 ; $i++) { 
                             ?>
                                 <option value="<?=$i?>" <?php echo ($i == $gettahun) ? "selected" : ""?>   ><?=$i ?></option> 
