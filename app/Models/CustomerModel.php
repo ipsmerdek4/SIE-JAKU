@@ -9,7 +9,7 @@ class CustomerModel extends Model
     protected $primaryKey = "id_customers";
     protected $returnType = "object";
     protected $useTimestamps = true;
-    protected $allowedFields = ['customers', 'nama', 'telp', 'hp', 'wa', 'nama_provinsi', 'nama_kabupaten', 'nama_kecamatan', 'nama_desa', 'alamat'];
+    protected $allowedFields = ['customers', 'nama', 'telp', 'hp', 'wa', 'nama_provinsi', 'nama_kabupaten', 'nama_kecamatan', 'nama_desa', 'alamat','tgl_code'];
 
 
 
@@ -19,10 +19,25 @@ class CustomerModel extends Model
         $builder = $this->db->table('db_customers'); 
         $builder->like('created_at', $thn.'-'.$bln);    
 
-        $query = $builder->get();
+        $query = $builder->get();   
 
         return $query->getResult();
     }
+
+
+
+     
+    function getChartwhere_bulanandtahun($bln = null, $thn = null)
+    {
+        $builder = $this->db->table('db_customers'); 
+        $builder->like('tgl_code', $thn.'-'.$bln);    
+        $builder->groupBy('tgl_code');  
+
+        $query = $builder->get();   
+
+        return $query->getResult();
+    }
+
 
        
     function getwhere_tahun($thn = null)

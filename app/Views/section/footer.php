@@ -201,93 +201,74 @@
                 }) 
 
 
-              $(function () { 
+    $(function () { 
                 /*  */
                 var barChartOptions = {
                         responsive              : true,
                         maintainAspectRatio     : false,
-                        datasetFill             : false
+                        datasetFill             : false,
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true,
+                                    userCallback: function(label, index, labels) {
+                                        // when the floored value is the same as the value we have a whole number
+                                        if (Math.floor(label) === label) {
+                                            return label;
+                                        }
+
+                                    },
+                                }
+                            }],
+                        },
                 }; 
                 var ctx = document.getElementById('myprdChart').getContext('2d');
                 var chart = new Chart(ctx, {
                       // The type of chart we want to create
                       type: 'bar',
-                      // The data for our dataset
+                      // The data for our dataset 
                       data: { 
-                          labels: [
+                          labels: [  
                                       <?php
                                           if($getstatus == 1) :  
                                             echo '"'.$getbulan.'-'.$gettahun.'"';
                                           elseif($getstatus == 2): 
                                             echo '"'.$gettahun.'"'; 
-                                          endif; 
+                                          endif;  
                                       ?> 
                                   ],
-                            datasets: [ 
-                                            <?php
-                                              $keys = 0; 
-                                              foreach ($datatransaksi2 as $value) {   
-                                                $keys++;
- 
-                                                foreach ($datatransaksi as $value2) {
-                                                  if ($value2->kode_transaksi == $value->kode_transaksi) {  
+                            datasets: [  
+                                        <?php  $keys = 0; foreach ($chart_PPT as $K_PPT => $V_PPT) : $keys++;?> 
+                                                <?php if ( $keys % 2 == 0 ) : ?>  
+                                                      {
+                                                        label :'<?=$V_PPT['nama_jenis_kayu']?>',
+                                                        backgroundColor     : 'rgb(189,183,107)', 
+                                                        pointRadius : false,  
+                                                        borderColor: ['rgb(60, 179, 113)'],
+                                                        data: ["<?=$V_PPT['hasil_ttl']?>"]
+                                                      }, 
+                                                <?php elseif ( $keys % 3 == 0 ) :?> 
+                                                
+                                                      {
+                                                        label :'<?=$V_PPT['nama_jenis_kayu']?>',
+                                                        backgroundColor     : 'rgb(255,218,185)', 
+                                                        pointRadius : false,  
+                                                        borderColor: ['rgb(60, 179, 113)'],
+                                                        data: ["<?=$V_PPT['hasil_ttl']?>"]
+                                                      }, 
 
-                                                            $jml_pembeliaanview = 0;  
-                                                    if ( $keys % 2 == 0 ) {   
-                                                            foreach ($datatransaksi as $value3) {
-                                                              if ( $value3->id_jenis_kayu == $value2->id_jenis_kayu) { 
-                                                                    $jml_pembeliaanview += $value3->jumlah_pembelian; 
-                                                              };
-                                                            }; 
-                                                            echo "
-                                                                    {
-                                                                      label :'".$value2->nama_jenis_kayu."',
-                                                                      backgroundColor     : 'rgb(189,183,107)', 
-                                                                      pointRadius : false,  
-                                                                      borderColor: ['rgb(60, 179, 113)'],
-                                                                      data: [".$jml_pembeliaanview."]
-                                                                    }, 
-                                                                "; 
-  
-
-                                                    }elseif ( $keys % 3 == 0 ) {
-                                                              foreach ($datatransaksi as $value3) {
-                                                                if ( $value3->id_jenis_kayu == $value2->id_jenis_kayu) { 
-                                                                      $jml_pembeliaanview += $value3->jumlah_pembelian; 
-                                                                };
-                                                              }; 
-                                                              echo "
-                                                                      {
-                                                                        label :'".$value2->nama_jenis_kayu."',
-                                                                        backgroundColor     : 'rgb(255,218,185)', 
-                                                                        pointRadius : false,  
-                                                                        borderColor: ['rgb(60, 179, 113)'],
-                                                                        data: [".$jml_pembeliaanview."]
-                                                                      }, 
-                                                                  ";  
-
-                                                    }else{ 
-                                                              foreach ($datatransaksi as $value3) {
-                                                                if ( $value3->id_jenis_kayu == $value2->id_jenis_kayu) { 
-                                                                      $jml_pembeliaanview += $value3->jumlah_pembelian; 
-                                                                };
-                                                              }; 
-                                                              echo "
-                                                                      {
-                                                                        label :'".$value2->nama_jenis_kayu."',
-                                                                        backgroundColor     : 'rgb(255,218,185)', 
-                                                                        pointRadius : false,  
-                                                                        borderColor: ['rgb(60, 179, 113)'],
-                                                                        data: [".$jml_pembeliaanview."]
-                                                                      }, 
-                                                                  ";  
-                                                    } 
-
-                                                  }
-                                                } 
-                                              } 
-                                            ?> 
-
+                                                <?php else :?> 
+                                                
+                                                      {
+                                                        label :'<?=$V_PPT['nama_jenis_kayu']?>',
+                                                        backgroundColor     : 'rgb(255,218,185)', 
+                                                        pointRadius : false,  
+                                                        borderColor: ['rgb(60, 179, 113)'],
+                                                        data: ["<?=$V_PPT['hasil_ttl']?>"]
+                                                      }, 
+                                                  
+                                                <?php endif;?>  
+                                        <?php endforeach; ?> 
                                       ]
                       },
                       // Configuration options go here
@@ -297,39 +278,27 @@
                 });
 
 
-                  
+           
 
 
-                  //-------------
-                  //- DONUT CHART -
-                  //-------------
-                  // Get context with jQuery - using jQuery's .get() method.
+                   //-------------
+                    //- DONUT CHART -
+                   //-------------
+                    // Get context with jQuery - using jQuery's .get() method.
                   var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
                   var donutData        = {
                                             labels: [ 
-                                                    <?php
-                                                        foreach ($datagetbulantransaksi32txt as $v_transaksi32txt) {   
-                                                            foreach ($datatransaksi as $v_transaksi32txt_same) {
-                                                              if ( $v_transaksi32txt->kode_transaksi == $v_transaksi32txt_same->kode_transaksi) { 
-                                                                  echo "'".$v_transaksi32txt->tipe_pesanan."', ";
-                                                              } 
-                                                            }  
-                                                        } 
-                                                    ?>   
-                                                    ],
+                                                  <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
+                                                      '<?=$v_JPT['nama_JPT']?>', 
+                                                  <?php endforeach; ?>
+                                              ],
                                             datasets: [
                                               {
-                                                  data: [
-                                                    <?php
-                                                        foreach ($datatransaksi3 as $v_transaksi3_step_2) {   
-                                                            foreach ($datatransaksi as $v_transaksi3_step_2_1) {
-                                                              if ( $v_transaksi3_step_2->kode_transaksi == $v_transaksi3_step_2_1->kode_transaksi) { 
-                                                                  echo $v_transaksi3_step_2->tipe_pesanan.", ";
-                                                              } 
-                                                            }  
-                                                        } 
-                                                    ?> 
-                                                  ],
+                                                  data: [ 
+                                                    <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
+                                                        '<?=$v_JPT['count_JPT']?>', 
+                                                    <?php endforeach; ?>
+                                                   ],
                                                   backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
                                               }
                                             ]
@@ -348,8 +317,6 @@
 
 
 
-
-
                   //-------------
                   //- DONUT CHART - 2
                   //-------------
@@ -357,28 +324,16 @@
                   var donutChartCanvas = $('#donutChart2').get(0).getContext('2d')
                   var donutData        = {
                                             labels: [
-                                                    <?php
-                                                        foreach ($datagetbulantransaksi33txt as $v_transaksi33txt) {   
-                                                            foreach ($datatransaksi as $v_transaksi33txt_same) {
-                                                              if ( $v_transaksi33txt->kode_transaksi == $v_transaksi33txt_same->kode_transaksi) { 
-                                                                  echo "'".$v_transaksi33txt->tipe_pembayaran."', ";
-                                                              } 
-                                                            }  
-                                                        } 
-                                                    ?>   
+                                                  <?php foreach ($chart_JPYT as $k_JPYT => $v_JPYT) : ?> 
+                                                      '<?=$v_JPYT['nama_JPYT']?>', 
+                                                  <?php endforeach; ?>
                                               ],
                                             datasets: [
                                               {
                                                   data: [
-                                                    <?php
-                                                        foreach ($datatransaksi33 as $v_transaksi3_step_22) {   
-                                                            foreach ($datatransaksi as $v_transaksi3_step_2_12) {
-                                                              if ( $v_transaksi3_step_22->kode_transaksi == $v_transaksi3_step_2_12->kode_transaksi) { 
-                                                                  echo $v_transaksi3_step_22->tipe_pembayaran.", ";
-                                                              } 
-                                                            }  
-                                                        } 
-                                                    ?> 
+                                                    <?php foreach ($chart_JPYT as $k_JPYT => $v_JPYT) : ?> 
+                                                        '<?=$v_JPYT['count_JPYT']?>', 
+                                                    <?php endforeach; ?>
                                                   ],
                                                   backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
                                               }
@@ -445,39 +400,17 @@
                   var chart2 = new Chart(ctx2, { 
                           type: 'bar', 
                           data: { 
-                              labels: [  
-                                <?php
-                                      if($getstatus == 1) :  
-                                        //echo '"'.$getbulan.'-'.$gettahun.'"';
-                                        foreach ($datatransaksi as $value_dtransaksi) {
-                                           echo '"'.$value_dtransaksi->tgl_transaksi.'", ';
-                                        } 
-                                      elseif($getstatus == 2): 
-                                        foreach ($datatransaksi_ttlpenjualan as $value_dtransaksi_Z) {
-                                          
-                                          echo '"'.$value_dtransaksi_Z->tgl_transaksi.'", ';
-                                       }  
-                                      endif; 
-                                ?>  
-                                
+                              labels: [    
+                                    <?php foreach ($chart_TP as $k_TP => $v_TP) : ?> 
+                                        '<?=$v_TP['date_TP']?>', 
+                                    <?php endforeach; ?> 
                               ],
                               datasets: [{
                                   label: 'Penjualan Perbulan',
                                   data: [ 
-                                        <?php 
-                                            if($getstatus == 1) :   
-                                              foreach ($datatransaksi as $vtransaksi_step4) {     
-                                                    echo $vtransaksi_step4->total_harga .', ';
-                                              } 
-                                            elseif($getstatus == 2): 
-                                              foreach ($datatransaksi_ttlpenjualan as $value_dtransaksi_Zz) {     
-                                                echo $value_dtransaksi_Zz->hasil_ttl .', ';
-                                              }    
-
-                                            endif; 
-                                           
-              
-                                        ?>   
+                                          <?php foreach ($chart_TP as $k_TP => $v_TP) : ?> 
+                                              '<?=$v_TP['total_harga']?>', 
+                                          <?php endforeach; ?> 
                                         ],
                                   backgroundColor: [
                                       'rgba(75, 192, 192, 0.2)','rgba(255, 99, 132, 0.2)','rgba(255, 99, 132, 0.2)',
@@ -504,23 +437,17 @@
                   var chart3 = new Chart(ctx3, { 
                           type: 'bar', 
                           data: { 
-                              labels: [
-                                <?php
-                                      if($getstatus == 1) :  
-                                        echo '"'.$getbulan.'-'.$gettahun.'"';
-                                      elseif($getstatus == 2): 
-                                        echo '"'.$gettahun.'"'; 
-                                      endif; 
-                                ?>  
-                                
+                              labels: [ 
+                                          <?php foreach ($chart_CCC as $v_CCC) : ?> 
+                                              '<?=$v_CCC['date_cc']?>', 
+                                          <?php endforeach; ?>  
                               ],
                               datasets: [{
                                   label: 'Total Costumers',
                                   data: [ 
- 
-                                        <?php  
-                                            echo $getcountcostumer;  
-                                        ?>  
+                                          <?php foreach ($chart_CCC as $v_CCC) : ?> 
+                                              '<?=$v_CCC['total_cc']?>', 
+                                          <?php endforeach; ?> 
                                   ],
                                   backgroundColor: [
                                       'rgba(243, 39, 144, 0.38)',
@@ -537,14 +464,12 @@
 
 
 
+          });
 
 
 
 
-
-
-                //end function  
-                });         
+ 
 
                 
 

@@ -62,6 +62,10 @@ class DbCustomers extends Migration
 			'updated_at'         => [
 				'type'           => 'DATETIME',
 				'null'       	 => true,
+			],
+			'tgl_code'         	 => [
+				'type'           => 'VARCHAR',
+				'constraint'	 => '20',
 			]
  
 		]);

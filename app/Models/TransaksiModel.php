@@ -25,14 +25,16 @@ class TransaksiModel extends Model{
         $builder->join('db_ukuran_kayu', 'db_ukuran_kayu.id_ukuran_kayu = db_transaksi.id_ukuran_kayu'); 
         $builder->join('db_persediaan_kayu', 'db_persediaan_kayu.id_persediaan  = db_transaksi.id_persediaan '); 
         $builder->join('db_customers', 'db_customers.id_customers = db_transaksi.id_customers');  
-
+ 
         $builder->like('tgl_transaksi', $thn.'-'.$bln);    
         $builder->orderBy('tgl_transaksi', 'DESC');
-
+    
         $query = $builder->get();
 
         return $query->getResult();
     }
+
+
 
     function getwhere_tahun($thn = null)
     {
@@ -50,6 +52,55 @@ class TransaksiModel extends Model{
 
         return $query->getResult();
     }
+
+
+
+
+
+
+    function Chartgetwhere_bulanandtahun($bln = null, $thn = null)
+    {
+        $builder = $this->db->table('db_transaksi');   
+
+        $builder->select('sum(total_harga) as hasil_ttl, tgl_code, id_jenis_kayu, tgl_transaksi'); 
+        // $builder->select();
+        $builder->like('tgl_transaksi', $thn.'-'.$bln);    
+        $builder->orderBy('tgl_transaksi', 'DESC');
+
+        $builder->groupBy('id_jenis_kayu');  
+        // $builder->groupBy('tgl_code');  
+
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
+
+
+    
+    function ChartTTPgetwhere_bulanandtahun($bln = null, $thn = null)
+    {
+        $builder = $this->db->table('db_transaksi');   
+
+        // $builder->select('sum(total_harga) as hasil_ttl, tgl_code, id_jenis_kayu, tgl_transaksi'); 
+        // $builder->select();
+        $builder->like('tgl_transaksi', $thn.'-'.$bln);    
+        $builder->orderBy('tgl_transaksi', 'DESC');
+
+        // $builder->groupBy('id_jenis_kayu');  
+        // $builder->groupBy('tgl_code');  
+
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
+
+
+
+   
+
+
+
+
 
 
     

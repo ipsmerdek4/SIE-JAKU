@@ -1,0 +1,604 @@
+CRITICAL - 2022-09-09 14:41:37 --> Undefined property: stdClass::$nama_jenis_kay
+in APPPATH\Views\section\footer.php on line 277.
+ 1 APPPATH\Views\section\footer.php(277): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$nama_jenis_kay', 'APPPATH\\Views\\section\\footer.php', 277)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(204): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 14:42:26 --> Cannot use object of type stdClass as array
+in APPPATH\Views\section\footer.php on line 277.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(204): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:00:35 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Views\section\footer.php on line 243.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(204): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:01:01 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Views\section\footer.php on line 243.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(204): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:01:20 --> count(): Argument #1 ($value) must be of type Countable|array, string given
+in APPPATH\Views\section\footer.php on line 243.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(204): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:05:47 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\Home.php on line 181.
+ 1 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:22:02 --> Undefined variable $getbulan
+in APPPATH\Views\home.php on line 51.
+ 1 APPPATH\Views\home.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getbulan', 'APPPATH\\Views\\home.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(212): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:23:28 --> Undefined variable $bulan
+in APPPATH\Controllers\Home.php on line 213.
+ 1 APPPATH\Controllers\Home.php(213): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $bulan', 'APPPATH\\Controllers\\Home.php', 213)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:23:52 --> Undefined variable $productsold
+in APPPATH\Views\home.php on line 83.
+ 1 APPPATH\Views\home.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $productsold', 'APPPATH\\Views\\home.php', 83)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(224): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:24:54 --> Undefined variable $datatransaksi
+in APPPATH\Controllers\Home.php on line 45.
+ 1 APPPATH\Controllers\Home.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi', 'APPPATH\\Controllers\\Home.php', 45)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:26:04 --> Undefined variable $getprofit
+in APPPATH\Views\home.php on line 100.
+ 1 APPPATH\Views\home.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getprofit', 'APPPATH\\Views\\home.php', 100)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(248): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:26:31 --> Undefined variable $getcountcostumer
+in APPPATH\Views\home.php on line 117.
+ 1 APPPATH\Views\home.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getcountcostumer', 'APPPATH\\Views\\home.php', 117)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(248): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:27:17 --> Undefined variable $presenstock
+in APPPATH\Views\home.php on line 134.
+ 1 APPPATH\Views\home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $presenstock', 'APPPATH\\Views\\home.php', 134)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(247): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:28:12 --> Undefined variable $presenstock
+in APPPATH\Views\home.php on line 134.
+ 1 APPPATH\Views\home.php(134): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $presenstock', 'APPPATH\\Views\\home.php', 134)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\home.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('home', [], true)
+ 5 APPPATH\Controllers\Home.php(252): view('home', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:28:26 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(253): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:32:29 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(260): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:32:47 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(260): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:32:53 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(260): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:32:58 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(260): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:32:59 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(260): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:32:59 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(260): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:33:07 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(260): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:34:23 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(260): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:35:03 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(260): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:35:04 --> Undefined variable $getstatus
+in APPPATH\Views\section\footer.php on line 219.
+ 1 APPPATH\Views\section\footer.php(219): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getstatus', 'APPPATH\\Views\\section\\footer.php', 219)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(260): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-09 15:46:20 --> mysqli_sql_exception: Column 'id_jenis_kayu' in group statement is ambiguous in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT sum(tota...', 0)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(tota...')
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(tota...')
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT sum(tota...', Array, false)
+#4 C:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(40): App\Models\TransaksiModel->getwhere_bulanandtahun('09', '2022')
+#6 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(904): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-09 15:46:20 --> Column 'id_jenis_kayu' in group statement is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT sum(total_harga) as hasil_ttl, `tgl_code`
+FROM `db_transaksi`
+JOIN `db_jenis_kayu` ON `db_jenis_kayu`.`id_jenis_kayu` = `db_transaksi`.`id_jenis_kayu`
+JOIN `db_tipe_kayu` ON `db_tipe_kayu`.`id_tipe_kayu` = `db_transaksi`.`id_tipe_kayu`
+JOIN `db_ukuran_kayu` ON `db_ukuran_kayu`.`id_ukuran_kayu` = `db_transaksi`.`id_ukuran_kayu`
+JOIN `db_persediaan_kayu` ON `db_persediaan_kayu`.`id_persediaan`  = `db_transaksi`.`id_persediaan`
+JOIN `db_customers` ON `db_customers`.`id_customers` = `db_transaksi`.`id_customers`
+WHERE `tgl_transaksi` LIKE \'%2022-09%\' ESCAPE \'!\'
+GROUP BY `id_jenis_kayu`, `tgl_code`
+ORDER BY `tgl_transaksi` DESC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT sum(total_harga) as hasil_ttl, `tgl_code`
+FROM `db_transaksi`
+JOIN `db_jenis_kayu` ON `db_jenis_kayu`.`id_jenis_kayu` = `db_transaksi`.`id_jenis_kayu`
+JOIN `db_tipe_kayu` ON `db_tipe_kayu`.`id_tipe_kayu` = `db_transaksi`.`id_tipe_kayu`
+JOIN `db_ukuran_kayu` ON `db_ukuran_kayu`.`id_ukuran_kayu` = `db_transaksi`.`id_ukuran_kayu`
+JOIN `db_persediaan_kayu` ON `db_persediaan_kayu`.`id_persediaan`  = `db_transaksi`.`id_persediaan`
+JOIN `db_customers` ON `db_customers`.`id_customers` = `db_transaksi`.`id_customers`
+WHERE `tgl_transaksi` LIKE \'%2022-09%\' ESCAPE \'!\'
+GROUP BY `id_jenis_kayu`, `tgl_code`
+ORDER BY `tgl_transaksi` DESC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT sum(total_harga) as hasil_ttl, `tgl_code`
+FROM `db_transaksi`
+JOIN `db_jenis_kayu` ON `db_jenis_kayu`.`id_jenis_kayu` = `db_transaksi`.`id_jenis_kayu`
+JOIN `db_tipe_kayu` ON `db_tipe_kayu`.`id_tipe_kayu` = `db_transaksi`.`id_tipe_kayu`
+JOIN `db_ukuran_kayu` ON `db_ukuran_kayu`.`id_ukuran_kayu` = `db_transaksi`.`id_ukuran_kayu`
+JOIN `db_persediaan_kayu` ON `db_persediaan_kayu`.`id_persediaan`  = `db_transaksi`.`id_persediaan`
+JOIN `db_customers` ON `db_customers`.`id_customers` = `db_transaksi`.`id_customers`
+WHERE `tgl_transaksi` LIKE \'%2022-09%\' ESCAPE \'!\'
+GROUP BY `id_jenis_kayu`, `tgl_code`
+ORDER BY `tgl_transaksi` DESC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT sum(total_harga) as hasil_ttl, `tgl_code`
+FROM `db_transaksi`
+JOIN `db_jenis_kayu` ON `db_jenis_kayu`.`id_jenis_kayu` = `db_transaksi`.`id_jenis_kayu`
+JOIN `db_tipe_kayu` ON `db_tipe_kayu`.`id_tipe_kayu` = `db_transaksi`.`id_tipe_kayu`
+JOIN `db_ukuran_kayu` ON `db_ukuran_kayu`.`id_ukuran_kayu` = `db_transaksi`.`id_ukuran_kayu`
+JOIN `db_persediaan_kayu` ON `db_persediaan_kayu`.`id_persediaan`  = `db_transaksi`.`id_persediaan`
+JOIN `db_customers` ON `db_customers`.`id_customers` = `db_transaksi`.`id_customers`
+WHERE `tgl_transaksi` LIKE :tgl_transaksi: ESCAPE \'!\'
+GROUP BY `id_jenis_kayu`, `tgl_code`
+ORDER BY `tgl_transaksi` DESC', [...], false)
+ 5 APPPATH\Models\TransaksiModel.php(40): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Home.php(40): App\Models\TransaksiModel->getwhere_bulanandtahun('09', '2022')
+ 7 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:46:42 --> Undefined property: stdClass::$jumlah_pembelian
+in APPPATH\Controllers\Home.php on line 55.
+ 1 APPPATH\Controllers\Home.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$jumlah_pembelian', 'APPPATH\\Controllers\\Home.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:47:57 --> Undefined property: stdClass::$hasil_ttl
+in APPPATH\Controllers\Home.php on line 92.
+ 1 APPPATH\Controllers\Home.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$hasil_ttl', 'APPPATH\\Controllers\\Home.php', 92)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:55:13 --> syntax error, unexpected token "foreach"
+in APPPATH\Controllers\Home.php on line 90.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Home.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Home')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Home')
+ 4 SYSTEMPATH\CodeIgniter.php(854): class_exists('\\App\\Controllers\\Home', true)
+ 5 SYSTEMPATH\CodeIgniter.php(444): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 15:58:39 --> Undefined variable $variable
+in APPPATH\Views\section\footer.php on line 227.
+ 1 APPPATH\Views\section\footer.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $variable', 'APPPATH\\Views\\section\\footer.php', 227)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(266): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 16:07:08 --> Undefined variable $datatransaksi
+in APPPATH\Controllers\Home.php on line 64.
+ 1 APPPATH\Controllers\Home.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi', 'APPPATH\\Controllers\\Home.php', 64)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 16:07:46 --> Undefined variable $datacountCoustomer
+in APPPATH\Controllers\Home.php on line 82.
+ 1 APPPATH\Controllers\Home.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datacountCoustomer', 'APPPATH\\Controllers\\Home.php', 82)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 16:08:47 --> Undefined variable $dataCHRTtransaksi
+in APPPATH\Controllers\Home.php on line 109.
+ 1 APPPATH\Controllers\Home.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataCHRTtransaksi', 'APPPATH\\Controllers\\Home.php', 109)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 16:15:31 --> Undefined variable $datatransaksi3
+in APPPATH\Views\section\footer.php on line 283.
+ 1 APPPATH\Views\section\footer.php(283): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi3', 'APPPATH\\Views\\section\\footer.php', 283)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(290): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 16:22:35 --> Undefined variable $datagetbulantransaksi33txt
+in APPPATH\Views\section\footer.php on line 308.
+ 1 APPPATH\Views\section\footer.php(308): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datagetbulantransaksi33txt', 'APPPATH\\Views\\section\\footer.php', 308)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(290): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 16:57:20 --> Undefined variable $datatransaksi
+in APPPATH\Views\section\footer.php on line 393.
+ 1 APPPATH\Views\section\footer.php(393): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi', 'APPPATH\\Views\\section\\footer.php', 393)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(336): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 16:57:22 --> Undefined variable $datatransaksi
+in APPPATH\Views\section\footer.php on line 393.
+ 1 APPPATH\Views\section\footer.php(393): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datatransaksi', 'APPPATH\\Views\\section\\footer.php', 393)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(336): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:07:18 --> Undefined array key "nama_TP"
+in APPPATH\Views\section\footer.php on line 391.
+ 1 APPPATH\Views\section\footer.php(391): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_TP"', 'APPPATH\\Views\\section\\footer.php', 391)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(351): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:07:49 --> Undefined variable $dataCHRTTTPtransaksi
+in APPPATH\Controllers\Home.php on line 176.
+ 1 APPPATH\Controllers\Home.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataCHRTTTPtransaksi', 'APPPATH\\Controllers\\Home.php', 176)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:24:58 --> Undefined variable $dataCHRTCCtransaksi
+in APPPATH\Controllers\Home.php on line 191.
+ 1 APPPATH\Controllers\Home.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataCHRTCCtransaksi', 'APPPATH\\Controllers\\Home.php', 191)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:25:02 --> Cannot access offset of type string on string
+in APPPATH\Views\section\footer.php on line 429.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:27:54 --> Cannot access offset of type string on string
+in APPPATH\Views\section\footer.php on line 428.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:30:14 --> Cannot access offset of type string on string
+in APPPATH\Views\section\footer.php on line 428.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:30:36 --> Cannot access offset of type string on string
+in APPPATH\Views\section\footer.php on line 428.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:31:43 --> Array to string conversion
+in APPPATH\Views\section\footer.php on line 428.
+ 1 APPPATH\Views\section\footer.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\section\\footer.php', 428)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:32:53 --> Array to string conversion
+in APPPATH\Views\section\footer.php on line 428.
+ 1 APPPATH\Views\section\footer.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\section\\footer.php', 428)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:32:59 --> Undefined array key 0
+in APPPATH\Views\section\footer.php on line 428.
+ 1 APPPATH\Views\section\footer.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'APPPATH\\Views\\section\\footer.php', 428)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:33:12 --> Attempt to read property "date_cc" on array
+in APPPATH\Views\section\footer.php on line 428.
+ 1 APPPATH\Views\section\footer.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "date_cc" on array', 'APPPATH\\Views\\section\\footer.php', 428)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:34:51 --> Cannot access offset of type string on string
+in APPPATH\Views\section\footer.php on line 428.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:35:09 --> Attempt to read property "date_cc" on string
+in APPPATH\Views\section\footer.php on line 428.
+ 1 APPPATH\Views\section\footer.php(428): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "date_cc" on string', 'APPPATH\\Views\\section\\footer.php', 428)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:46:35 --> Undefined variable $dataCHRTCCtransaksi
+in APPPATH\Controllers\Home.php on line 191.
+ 1 APPPATH\Controllers\Home.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataCHRTCCtransaksi', 'APPPATH\\Controllers\\Home.php', 191)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:46:36 --> Array to string conversion
+in APPPATH\Views\section\footer.php on line 435.
+ 1 APPPATH\Views\section\footer.php(435): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\section\\footer.php', 435)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(374): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:46:39 --> Array to string conversion
+in APPPATH\Views\section\footer.php on line 435.
+ 1 APPPATH\Views\section\footer.php(435): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\section\\footer.php', 435)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\section\\footer.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 5 APPPATH\Controllers\Home.php(374): view('section/footer', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:46:52 --> Undefined variable $getcont
+in APPPATH\Controllers\Home.php on line 196.
+ 1 APPPATH\Controllers\Home.php(196): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $getcont', 'APPPATH\\Controllers\\Home.php', 196)
+ 2 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:47:16 --> Cannot access offset of type string on string
+in APPPATH\Views\section\footer.php on line 428.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-09 17:47:18 --> Cannot access offset of type string on string
+in APPPATH\Views\section\footer.php on line 428.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('section/footer', [], true)
+ 4 APPPATH\Controllers\Home.php(369): view('section/footer', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(904): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()

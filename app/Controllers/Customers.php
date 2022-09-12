@@ -114,6 +114,7 @@ class Customers extends Controller{
             'nama_kecamatan'    => $this->request->getVar('kecamatan_id'),
             'nama_desa'         => $this->request->getVar('desa_id'),
             'alamat'            => $this->request->getVar('alamat'), 
+            'tgl_code'          => date("Y-m"), 
         ]);
         
         session()->setFlashdata('alert', 'Berhasil Menambah Data. Dengan [ ID = '.'#'.$this->request->getVar('customers').' ]');
