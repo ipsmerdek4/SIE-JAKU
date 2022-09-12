@@ -59,7 +59,7 @@ class Home extends BaseController
                 //chart
                 $dataCHRTtransaksi = $Transaksi->Chartgetwhere_bulanandtahun($bulan, $tahun);
 
-                $dataCHRTTTPtransaksi = $Transaksi->ChartTTPgetwhere_bulanandtahun($bulan, $tahun);
+                $dataCHRTTTPtransaksi = $Transaksi->ChartTTPgetwhere_tahun($bulan, $tahun);
 
                 $dataCHRTCCtransaksi = $Customer->getChartwhere_bulanandtahun($bulan, $tahun);
 
@@ -186,11 +186,22 @@ class Home extends BaseController
  
 
                     $chart_TP = [];
-                    foreach ($dataCHRTTTPtransaksi as $key => $value_TP) {
-                        
+                    foreach ($dataCHRTTTPtransaksi as $key => $value_TP) { 
+
+                   
+                        if ($getstatus == 1){ 
+                            $timestamp = strtotime($value_TP->tgl_transaksi);  
+                            $data_tp = date('Y-m-d', $timestamp);
+                            $total_harga = $value_TP->total_harga;
+                        }elseif ($getstatus == 2){ 
+                            $data_tp = $value_TP->tgl_transaksi; 
+                            $total_harga = $value_TP->hasil_ttl;
+                        } 
+
+
                         $chart_TP[] = [
-                            'date_TP'               => $value_TP->tgl_transaksi,
-                            'total_harga'           => $value_TP->total_harga,
+                            'date_TP'               => $data_tp,
+                            'total_harga'           => $total_harga,
                         ];
 
                     }
@@ -206,144 +217,7 @@ class Home extends BaseController
                             'total_cc'      =>  $getcont,
                         ];
                     } 
- 
- 
-        /*
-        if(isset($getstatus)){ 
-            if ($getstatus == 1) {    
-
-                $bulan = $this->request->getpost('bulan_view');
-                $tahun = $this->request->getpost('tahun_view');
-
-                $datagetbulantransaksi = $Transaksi->getwhere_bulanandtahun($bulan, $tahun);
-                $datatransaksi = $datagetbulantransaksi; 
-
-
-                $datagetbulantransaksi_2 = $Transaksi->getwhere_bulanandtahun_2($bulan, $tahun);
-                $datatransaksi_ttlpenjualan = $datagetbulantransaksi_2;   
-                  
-                $datagetbulanCoustomer = $Customer->getwhere_bulanandtahun($bulan, $tahun);  
-                $datacountCoustomer =  $datagetbulanCoustomer;  
-                 
-                $datagetbulanpersediaan = $Persediaan->getwhere_bulanandtahun($bulan, $tahun);    
-                 
-                $datagetbulantransaksi2 = $Transaksi->getcountall($bulan, $tahun, 'id_jenis_kayu');       
-                / 
-                $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE($bulan, $tahun, 'tipe_pesanan');  
-
-                $datagetbulantransaksi32txt = $Transaksi->getcountallnocount($bulan, $tahun, 'tipe_pesanan');       
-                $datagetbulantransaksi32 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pesanan');       
-    
-                $datagetbulantransaksi33txt = $Transaksi->getcountallnocount($bulan, $tahun, 'tipe_pembayaran');       
-                $datagetbulantransaksi33 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pembayaran');   
-                
-
-                
-            } elseif ($getstatus == 2) {
-                $bulan = ''; 
-                $tahun = $this->request->getpost('tahun_view');
-
-                $datagetbulantransaksi = $Transaksi->getwhere_tahun($tahun);
-                $datatransaksi = $datagetbulantransaksi;  
-
-                $datagetbulantransaksi_2 = $Transaksi->getwhere_tahun_2($tahun);
-                $datatransaksi_ttlpenjualan = $datagetbulantransaksi_2;  
- 
-                
-                $datagetbulanCoustomer = $Customer->getwhere_tahun($tahun);  
-                $datacountCoustomer =  $datagetbulanCoustomer;  
-                
-                $datagetbulanpersediaan = $Persediaan->getwhere_tahun($tahun);
-                 
-                $datagetbulantransaksi2 = $Transaksi->getcountall2($tahun, 'id_jenis_kayu');       
-                 
-                $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE2($tahun, 'tipe_pesanan');    
-
-                $datagetbulantransaksi32txt = $Transaksi->getcountall2nocount($tahun, 'tipe_pesanan');       
-                $datagetbulantransaksi32 = $Transaksi->getcountall2($tahun, 'tipe_pesanan');       
-                
-                $datagetbulantransaksi33txt = $Transaksi->getcountall2nocount($tahun, 'tipe_pembayaran');       
-                $datagetbulantransaksi33 = $Transaksi->getcountall2($tahun, 'tipe_pembayaran');   
-
-                
-
-            }
-            $getstatus = $getstatus;
-
-        }else{ 
-            $bulan = date("m");
-            $tahun = date("Y"); 
-            $datagetbulantransaksi = $Transaksi->getwhere_bulanandtahun($bulan, $tahun);
-            $datatransaksi = $datagetbulantransaksi; 
-                  
-            $datagetbulantransaksi_2 = $Transaksi->getwhere_bulanandtahun_2($bulan, $tahun);
-            $datatransaksi_ttlpenjualan = $datagetbulantransaksi_2;  
-
-             
-            
-             
-            
-            $datagetbulantransaksi2 = $Transaksi->getcountall($bulan, $tahun, 'id_jenis_kayu');     
-            
-            $datagetbulantransaksi3 = $Transaksi->getcountallENDWHERE($bulan, $tahun, 'tipe_pesanan'); 
-
-            $datagetbulantransaksi32txt = $Transaksi->getcountallnocount($bulan, $tahun, 'tipe_pesanan');       
-            $datagetbulantransaksi32 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pesanan');       
-
-            $datagetbulantransaksi33txt = $Transaksi->getcountallnocount($bulan, $tahun, 'tipe_pembayaran');       
-            $datagetbulantransaksi33 = $Transaksi->getcountall($bulan, $tahun, 'tipe_pembayaran');   
-            
-
-            
-            $getstatus = '1';
-            
-        }
-        
- 
-            $productsold = 0;
-            $getprofit = 0;
-            foreach ($datatransaksi as $value) { 
-                // get product sold
-                $productsold += $value->jumlah_pembelian;
-                // END get product sold
-
-                // get profil  
-                $data1 = $Persediaan->where('id_persediaan', $value->id_persediaan)->findAll();
-                $data2 = $Harga->where('id_harga_kayu', $data1[0]->id_harga_kayu)->findAll();
-
-                $getmodal = ($data2[0]->nama_harga_modal * $value->jumlah_pembelian); 
-                $getprofit += $value->total_harga - $getmodal;
-                // END get profit  
-            }
- 
- 
-            $datatransaksi2 = $datagetbulantransaksi2; 
-            $datatransaksi3 = $datagetbulantransaksi3;
-            $datatransaksi32 = $datagetbulantransaksi32;
-            $datatransaksi33 = $datagetbulantransaksi33;
-            
-             
- 
-        $data = array(
-			'menu' => '1a',
-			'title' => 'Home [SIE-JAKU]', 
-            'batascss' => 'chome', 
-              'getstatus' => $getstatus,
-              'getbulan' => $bulan, 
-              'gettahun' => $tahun,  
-           // footer 
-           'datatransaksi33'    => $datatransaksi33,
-           'datagetbulantransaksi33txt'    => $datagetbulantransaksi33txt,
-           'datatransaksi32'    => $datatransaksi32,
-           'datagetbulantransaksi32txt'    => $datagetbulantransaksi32txt,
-            'datatransaksi3' => $datatransaksi3,
-            'datatransaksi2' => $datatransaksi2,
-            'datatransaksi' => $datatransaksi,
-            'datatransaksi_ttlpenjualan'    => $datatransaksi_ttlpenjualan,
- 
-		);
-
-        */
+  
 
 
         $data = [

@@ -430,7 +430,21 @@
                 var barChartOptions3 = {
                     responsive              : true,
                     maintainAspectRatio     : false,
-                    datasetFill             : false
+                    datasetFill             : false, 
+                    scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true,
+                                    userCallback: function(label, index, labels) {
+                                        // when the floored value is the same as the value we have a whole number
+                                        if (Math.floor(label) === label) {
+                                            return label;
+                                        }
+
+                                    },
+                                }
+                            }],
+                        },
                 }; 
 
                   var ctx3 = document.getElementById('myprdCharwt33').getContext('2d');
