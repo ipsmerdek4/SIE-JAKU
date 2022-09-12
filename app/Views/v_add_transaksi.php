@@ -77,6 +77,15 @@
                                             </div>
                                     </div>   
 
+<div class="col-md-12 "> 
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label for="name" class="form-label">Tanggal Transaksi</label>
+            <input type="date"  class="form-control " value="<?=old('tanggal_transaksi')?>" name="tanggal_transaksi">  
+        </div>
+    </div>
+</div>   
+
                                     <input type="hidden" class="numb" value="0"> 
                                     <div id="ambilin" class="col ambilin"> 
                                         

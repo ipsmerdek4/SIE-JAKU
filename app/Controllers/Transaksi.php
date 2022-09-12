@@ -88,6 +88,12 @@ class Transaksi extends Controller{
                         'required'   => 'Nama Customers Harus dipilih', 
                     ]
                 ],  
+                'tanggal_transaksi' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Tanggal Transaksi Harus dipilih', 
+                    ]
+                ],  
                 
                 
                 /* 
@@ -171,6 +177,11 @@ class Transaksi extends Controller{
          
                     $sisa =  $darapersediaan[0]->sisa_persediaan - $jmlpembelian ;
 
+                    $timestamp = strtotime($this->request->getVar('tanggal_transaksi'));  
+                    $tanggal_transaksi = date('Y-m-d', $timestamp);
+                    $tgl_code = date('Y-m', $timestamp);
+
+                    
                     $hasil1 = $Transaksis->insert([ 
                         'kode_transaksi' => $kodetransaksi2,
                         'jumlah_pembelian' => $jmlpembelian,
@@ -181,9 +192,12 @@ class Transaksi extends Controller{
                         'id_persediaan' => $id_persediaan,
                         'id_jenis_kayu' => $id_jenis_kayu,
                         'id_tipe_kayu' => $id_tipe_kayu,
-                        'id_ukuran_kayu' => $id_ukuran_kayu,
-                        'tgl_transaksi' => date("Y-m-d H:i:s"),
-                        'tgl_code' => date("Y-m"),
+                        'id_ukuran_kayu' => $id_ukuran_kayu, 
+                        'tgl_transaksi' => $tanggal_transaksi.' '.date("H:i:s"),
+                        'tgl_code' => $tgl_code,
+
+                       /*  'tgl_transaksi' => date("Y-m-d H:i:s"),
+                        'tgl_code' => date("Y-m"), */
                     ]);
         
              
