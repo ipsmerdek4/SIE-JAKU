@@ -194,7 +194,7 @@ class Home extends BaseController
                             $data_tp = date('Y-m-d', $timestamp);
                             $total_harga = $value_TP->total_harga;
                         }elseif ($getstatus == 2){ 
-                            $data_tp = $value_TP->tgl_transaksi; 
+                            $data_tp = $value_TP->tgl_transaksiz; 
                             $total_harga = $value_TP->hasil_ttl;
                         } 
 
@@ -210,10 +210,23 @@ class Home extends BaseController
                     $chart_CCC = []; 
                     foreach ($dataCHRTCCtransaksi as $key => $value_CC) { 
 
-                        $getcont = $Customer->where('tgl_code', $value_CC->tgl_code)->countAllResults();
- 
+                        
+                        
+                        if ($getstatus == 1){ 
+                            // $timestamp = strtotime($value_CC->created_at);  
+                            $data_cc = $value_CC->tgl_regis; 
+                            $getcont = $value_CC->totalcs;
+
+                        }elseif ($getstatus == 2){ 
+
+                            $data_cc = $value_CC->tgl_regis; 
+                            $getcont = $value_CC->totalcs;
+
+                        } 
+
+
                         $chart_CCC[] = [
-                            'date_cc'       =>  $value_CC->created_at,
+                            'date_cc'       =>  $data_cc,
                             'total_cc'      =>  $getcont,
                         ];
                     } 

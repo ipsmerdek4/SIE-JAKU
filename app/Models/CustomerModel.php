@@ -29,13 +29,27 @@ class CustomerModel extends Model
      
     function getChartwhere_bulanandtahun($bln = null, $thn = null)
     {
-        $builder = $this->db->table('db_customers'); 
+       /*  $builder = $this->db->table('db_customers'); 
         $builder->like('tgl_code', $thn.'-'.$bln);    
         $builder->groupBy('tgl_code');  
 
         $query = $builder->get();   
 
+        return $query->getResult(); */
+
+
+
+        $builder = $this->db->table('db_customers');    
+        $builder->select('COUNT(created_at) as totalcs, DATE_FORMAT(created_at, "%Y-%m-%d") as tgl_regis, created_at');
+        $builder->like('created_at', $thn.'-'.$bln);    
+         
+        $builder->groupBy('tgl_regis');  
+        // $builder->orderBy('created_at', 'DESC'); 
+        $query = $builder->get();
+
         return $query->getResult();
+
+
     }
 
 

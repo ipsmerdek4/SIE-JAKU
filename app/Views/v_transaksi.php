@@ -72,7 +72,7 @@
                           
                         <?php endforeach; ?>  
                         </tbody>
-                        <tfoot>
+                        <!-- <tfoot>
                             <tr>
                                 <th></th> 
                                 <th></th>
@@ -84,7 +84,7 @@
                                 <th></th>
                                 <th></th>
                             </tr>
-                        </tfoot>
+                        </tfoot> -->
                 </table>
 
 

@@ -66,7 +66,15 @@
                                     </div>   
 
                                     <div class="col-md-6"> 
-                                            <div class="form-group">
+                                            <div class="form-group  ">
+                                                <label for="name" class="form-label">Tanggal Transaksi</label>
+                                                <input type="date"  class="form-control " value="<?=old('tanggal_transaksi')?>" name="tanggal_transaksi">  
+                                            </div>  
+                                    </div>   
+
+                                    <div class="col-md-12 ">  
+                                        <div class="row">
+                                            <div class="form-group col-md-6">
                                                 <label for="name" class="form-label">Nama Customers</label>
                                                 <select name="namacus"  class="form-control select2 select2-primary" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
                                                     <option value=''>Select Nama Customers -</option> 
@@ -75,16 +83,17 @@
                                                     <?php endforeach; ?>  
                                                 </select> 
                                             </div>
+
+
+                                        </div>
+                                        <hr>
                                     </div>   
 
-<div class="col-md-12 "> 
-    <div class="row">
-        <div class="form-group col-md-6">
-            <label for="name" class="form-label">Tanggal Transaksi</label>
-            <input type="date"  class="form-control " value="<?=old('tanggal_transaksi')?>" name="tanggal_transaksi">  
-        </div>
-    </div>
-</div>   
+
+
+
+                                    
+
 
                                     <input type="hidden" class="numb" value="0"> 
                                     <div id="ambilin" class="col ambilin"> 
@@ -137,29 +146,18 @@
 
 
                                                         <div class="form-group ">
-                                                            <label for="name" class="form-label">Total Harga</label> 
-                                                            <select name="ttl_harga[]"  id="get_harga" class="form-control select2 select2-primary get_harga" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                            <label for="name" class="form-label">Harga</label> 
+                                                            <input type='text'  class='form-control get_harga k_harga0' value='0' readonly>
+                                                            <input type='hidden'  name='ttl_harga[]' class='form-control get_harga s_harga0' value='0' readonly>
+
+                                                            <div id="get_harga" class="get_harga0"> </div>
+                                                            <!-- 
+                                                            <select name="ttl_harga[]"  id="get_harga" class="form-control select2 select2-primary get_harga k_harga" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
                                                                 <option value=''>Rp 0,00-</option> 
-                                                            </select>       
+                                                            </select>  -->      
                                                         </div>
             
-                                                        <div class="form-group ">
-                                                            <label for="name" class="form-label">Tipe Pemesanan</label> 
-                                                            <select name="tipe_pesanan[]"  id="tipe_pesanan" class="form-control select2 select2-primary tipe_pesanan" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
-                                                                    <option value='Online Order'>Online Order</option> 
-                                                                    <option value='Offline Order'>Offline Order</option>  
-                                                            </select>       
-                                                        </div>
-
-                                                        <div class="form-group ">
-                                                            <label for="name" class="form-label">Tipe Pembayaran</label> 
-                                                            <select name="tipe_pembayaran[]"  id="tipe_pembayaran" class="form-control select2 select2-primary tipe_pembayaran" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
-                                                                    <option value='Tunai'>Tunai</option> 
-                                                                    <option value='Transfer'>Transfer</option> 
-                                                                    <option value='Debit'>Debit</option> 
-                                                            </select>       
-                                                        </div>
-
+                                                      
 
 
                                                 </div>
@@ -171,13 +169,55 @@
 
 
 
+                                       
+                                    <div class="v_form col-12 "></div> 
 
-                                    <div class="v_form col-12 "></div>
-
+                                    
                                     <div class="col-md-12"> 
                                         <hr> 
                                         <button type="button" class="btn btn-success" id="multiple_create_transaksi">Tambah Transaksi</button>
                                     </div>
+                                    
+
+
+
+                                    <div class="col-md-12"> 
+                                        <hr> 
+                                        <div class="row">
+                                                                    
+
+                                            <div class="col-md-6 ">  
+                                                <div class="form-group ">
+                                                    <label for="name" class="form-label">Tipe Pemesanan</label> 
+                                                    <select name="tipe_pesanan"  id="tipe_pesanan" class="form-control select2 select2-primary tipe_pesanan" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                            <option value='Online Order'>Online Order</option> 
+                                                            <option value='Offline Order'>Offline Order</option>  
+                                                    </select>       
+                                                </div>  
+                                            </div>   
+
+                                            <div class="col-md-6 ">  
+                                                <div class="form-group">   
+                                                    <label for="name" class="form-label">Tipe Pembayaran</label> 
+                                                    <select name="tipe_pembayaran"  id="tipe_pembayaran" class="form-control select2 select2-primary tipe_pembayaran" data-dropdown-css-class="select2-primary" style="width: 100%;"> 
+                                                            <option value='Tunai'>Tunai</option> 
+                                                            <option value='Transfer'>Transfer</option> 
+                                                            <option value='Debit'>Debit</option> 
+                                                    </select>       
+                                                </div> 
+                                            </div>   
+
+
+                                            <div class="offset-md-6 col-md-6">  
+                                                <div class="form-group">
+                                                    <label for="name" class="form-label">Total Harga</label> 
+                                                    <input type="text" id="rupiah" class="form-control ttlharga" value="0" readonly>   
+                                                </div> 
+                                            </div> 
+
+
+                                        </div> 
+                                    </div> 
 
 
 

@@ -1228,7 +1228,7 @@
 
                           
 
-                          footerCallback : function ( row, data, start, end, display ) {
+                          /* footerCallback : function ( row, data, start, end, display ) {
                                 var api = this.api();
                     
                                 // Remove the formatting to get integer data for summation
@@ -1282,7 +1282,11 @@
 
                                 }
 
-                            },
+                            }, */
+
+
+
+
                             buttons: [
                                 {
                                   text:      '<i class="fa-solid fa-user-plus"></i>  <b>| Tambah Data</b>', 
@@ -1333,6 +1337,9 @@
                                         ]
 
                         } ); 
+
+
+
                         table.on( 'order.dt search.dt', function () {
                           table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
                                 cell.innerHTML = i+1;
@@ -1402,13 +1409,21 @@
                     <script src="../../plugins/datatables-buttons/js/buttons.print.min.js"></script>
                     <script src="../../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>  
                 
-                ';  
+        <script src="'.base_url().'/dist/js/jQuery-Mask-Plugin/src/jquery.mask.js"></script>
+
+
+                    ';  
       ?>
+
+
+
           <script>
 
               $(document).ready(function () { 
- 
+  
+                
 
+                
                       $(".j_kayu").change(function (){ 
                         var url = "<?php echo site_url('/transaksi/g-tipe-kayu');?>/"+$(this).val();
                         $('.t_kayu').load(url);
@@ -1434,17 +1449,28 @@
                       })
  
                       $("#j_pem").change(function (){ 
-                        var url = "<?php echo site_url('/transaksi/g-gharga-kayu');?>/"+$(this).val();
-                        $('#get_harga').load(url);
+  
+                        
+                        var numsroll = $('.numb').val();
+                        var hasil = 0;
+                        var url = "<?php echo site_url('/transaksi/g-gharga-kayu');?>/"+$(this).val() + '^' + hasil + "*" + numsroll ;
+                        $('.get_harga0').load(url);
+  
+                        
                         return false; 
                       })
 
-              });
+                      
+               });
             
 
               $('.v_form').on('click', '.remove_transaksi', function(e) {
                   e.preventDefault(); 
                   $(this).parent().remove();
+
+                  let number = $('.numb').val();
+                  let hasil = (parseInt(number) - parseInt(1));  
+                  $('.numb').val(hasil);
               });
 
               $(document).on('click', '#multiple_create_transaksi', function() {
@@ -1458,6 +1484,7 @@
                       getform(hasil);
  
 
+               
                       //  new_selec2 = $('.ambilin').first().clone();
                       // $('.v_form').append( new_selec2 ); 
                       // $('.v_form').append( '<button id="ermv" type="button" class="btn btn-sm btn-danger remove_transaksi mx-auto" >Hapus Transaksi</button>' ); 
@@ -1488,15 +1515,23 @@
                       })
  
                       $(".j_pem" + hasil).change(function (){ 
-                        var url = "<?php echo site_url('/transaksi/g-gharga-kayu');?>/"+$(this).val();
+                        
+                        var numsroll = $('.numb').val();
+                          
+                          
+                        var url = "<?php echo site_url('/transaksi/g-gharga-kayu');?>/"+$(this).val() + '^' + hasil + "*" + numsroll ;
                         $('.get_harga' + hasil).load(url);
+
+   
+                       
+
                         return false; 
                       })
 
 
+                      
                 
-              });
-
+              }); 
                          
               function getform(hasil)
               { 
@@ -1551,28 +1586,15 @@
  
                                       '<div class="form-group ">' + 
                                           '<label for="name" class="form-label">Total Harga</label> ' + 
-                                          '<select name="ttl_harga[]"  id="get_harga" class="form-control select2 select2-primary get_harga' + hasil + '" data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
+                                          '<input type="text"  class="form-control get_harga k_harga' + hasil + '" value="0" readonly> '+
+                                          '<input type="hidden"  name="ttl_harga[]" class="form-control get_harga s_harga' + hasil + '" value="0" readonly> '+
+                                          
+                                          '<div id="get_harga" class="get_harga' + hasil + '"> </div>' +
+                                          '<!-- select name="ttl_harga[]"  id="get_harga" class="form-control select2 select2-primary get_harga' + hasil + '" data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
                                               '<option value="">Rp 0,00-</option> ' + 
-                                          '</select>      ' +  
-                                      '</div>' + 
-
-                                      '<div class="form-group ">' + 
-                                          '<label for="name" class="form-label">Tipe Pemesanan</label> ' + 
-                                          '<select name="tipe_pesanan[]"  id="tipe_pesanan" class="form-control select2 select2-primary tipe_pesanan' + hasil + ' " data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
-                                                  '<option value="Online Order">Online Order</option> ' + 
-                                                  '<option value="Offline Order">Offline Order</option>  ' + 
-                                          '</select>       ' + 
-                                      '</div>' + 
-
-                                      '<div class="form-group ">' + 
-                                          '<label for="name" class="form-label">Tipe Pembayaran</label> ' + 
-                                          '<select name="tipe_pembayaran[]"  id="tipe_pembayaran" class="form-control select2 select2-primary tipe_pembayaran' + hasil + ' " data-dropdown-css-class="select2-primary" style="width: 100%;"> ' + 
-                                                  '<option value="Tunai">Tunai</option> ' + 
-                                                  '<option value="Transfer">Transfer</option> ' + 
-                                                  '<option value="Debit">Debit</option> ' + 
-                                          '</select>' + 
-                                      '</div>' + 
- 
+                                          '</select-->      ' +  
+                                      '</div>' +  
+                                      
                                     '</div>' + 
  
  

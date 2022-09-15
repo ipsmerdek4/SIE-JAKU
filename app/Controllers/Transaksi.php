@@ -78,14 +78,14 @@ class Transaksi extends Controller{
                 'kodetransaksi' => [
                     'rules' => 'required|max_length[100]',
                     'errors' => [
-                        'required'   => 'Kode Transaksi Harus diisi Harus diisi', 
+                        'required'   => 'Kode Transaksi Harus diisi ', 
                         'max_length' => 'Persediaan Kayu Maksimal 100 Angka',  
                     ]
                 ], 
                 'namacus' => [
                     'rules' => 'required',
                     'errors' => [
-                        'required'   => 'Nama Customers Harus dipilih', 
+                        'required'   => 'Nama Customers Harus diisi', 
                     ]
                 ],  
                 'tanggal_transaksi' => [
@@ -95,6 +95,18 @@ class Transaksi extends Controller{
                     ]
                 ],  
                 
+                'tipe_pesanan' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Tipe Pembayaran Harus diisi', 
+                    ]
+                ],  
+                'tipe_pembayaran' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Tipe Pembayaran Harus diisi',                                                                           
+                    ]
+                ],  
                 
                 /* 
                 'ttl_harga' => [
@@ -186,8 +198,8 @@ class Transaksi extends Controller{
                         'kode_transaksi' => $kodetransaksi2,
                         'jumlah_pembelian' => $jmlpembelian,
                         'total_harga' => $this->request->getVar('ttl_harga')[$key2], 
-                        'tipe_pesanan' => $this->request->getVar('tipe_pesanan')[$key2], 
-                        'tipe_pembayaran' => $this->request->getVar('tipe_pembayaran')[$key2],  
+                        'tipe_pesanan' => $this->request->getVar('tipe_pesanan'), 
+                        'tipe_pembayaran' => $this->request->getVar('tipe_pembayaran'),  
                         'id_customers' => $this->request->getVar('namacus'), 
                         'id_persediaan' => $id_persediaan,
                         'id_jenis_kayu' => $id_jenis_kayu,
@@ -285,6 +297,8 @@ class Transaksi extends Controller{
             'datatransaksi' => $idnew, 
 		); 
 
+        // echo view('v_view_transksi', $data); 
+ 
         $html = view('v_view_transksi', $data); 
         $dompdfs->set_option('isRemoteEnabled', TRUE);
         $dompdfs->set_option("isPhpEnabled", true); 
@@ -294,7 +308,7 @@ class Transaksi extends Controller{
         $dompdfs->stream('Transaksi'.date('Ymdhis').'.pdf', array(
                 "Attachment" => false
 
-        ));
+        ));     
 
  
     }
@@ -419,8 +433,13 @@ class Transaksi extends Controller{
 
     function add_ajax_gharga($id = null)
     {
+        
+        $pecaht = explode("^", $id);  
+        $pecahtt = explode("*", $pecaht[1]);  
 
-        $pecah = explode("-",$id); 
+        // print_r($pecahtt);
+
+        $pecah = explode("-", $pecaht[0]); 
 
         $id_jenis_kayu = $pecah[0];
         $id_tipe_kayu = $pecah[1];
@@ -434,14 +453,54 @@ class Transaksi extends Controller{
         // $dataPersediaanKayus = $PersediaanKayus->getwharepersediaan($id_jenis_kayu, $id_tipe_kayu, $id_ukuran_kayu);
         // $dataHargaKayus = $HargaKayus->where('id_harga_kayu', $dataPersediaanKayus[0]->id_harga_kayu)->findAll(); 
   
-        $dataPersediaanKayus = $PersediaanKayus->where('id_persediaan ', $id_persediaan)->first();   
-        $dataHargaKayus = $HargaKayus->where('id_harga_kayu', $dataPersediaanKayus->id_harga_kayu)->findAll(); 
-        
-        $totalharga = ($jmlpembelian * $dataHargaKayus[0]->nama_harga_kayu);
-        echo "<option value='".$totalharga."'> Rp " . number_format($totalharga,2,',','.')." </option>";
+
+
+                $dataPersediaanKayus = $PersediaanKayus->where('id_persediaan ', $id_persediaan)->first();   
+                $dataHargaKayus = $HargaKayus->where('id_harga_kayu', $dataPersediaanKayus->id_harga_kayu)->findAll(); 
+                
+                $totalharga = ($jmlpembelian * $dataHargaKayus[0]->nama_harga_kayu); 
+                // echo "<option value='".$totalharga."'> Rp " . number_format($totalharga,2,',','.')." </option>";
   
+     
+      
+             
+            echo "  <script> 
+                        $('.k_harga".$pecahtt[0]."').val('Rp " . number_format($totalharga,0,',','.')."') 
+                        $('.s_harga".$pecahtt[0]."').val(".$totalharga.") 
+                    </script>";
  
  
+            echo "  <script>  
+
+                        var num = 0;
+                        for (let index = 0; index <= ".$pecahtt[1]."; index++) {
+                            var ambilhhrg = $('.s_harga'+ index).val();
+                            num += parseInt(ambilhhrg);  
+
+                            
+                        } 
+                        num = '' + num + '';
+                        var number_string = num.replace(/[^,\d]/g, '').toString(),
+                            split   		= number_string.split(','),
+                            sisa     		= split[0].length % 3,
+                            rupiah     		= split[0].substr(0, sisa),
+                            ribuan     		= split[0].substr(sisa).match(/\d{3}/gi);
+
+                            if(ribuan){
+                                separator = sisa ? '.' : '';
+                                rupiah += separator + ribuan.join('.');
+                            }
+
+
+                        $('.ttlharga').val('Rp ' + rupiah);
+
+
+
+                </script>";  
+
+ 
+
+
     }
 
     
