@@ -91,7 +91,7 @@ class TransaksiModel extends Model{
 
         $query = $builder->get();
 
-        return $query->getResult();
+        return $query->getResult(); 
     }
 
 
