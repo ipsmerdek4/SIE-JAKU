@@ -9,7 +9,7 @@ class CustomerModel extends Model
     protected $primaryKey = "id_customers";
     protected $returnType = "object";
     protected $useTimestamps = true;
-    protected $allowedFields = ['customers', 'nama', 'telp', 'hp', 'wa', 'nama_provinsi', 'nama_kabupaten', 'nama_kecamatan', 'nama_desa', 'alamat','tgl_code'];
+    protected $allowedFields = ['customers', 'nama', 'telp', 'hp', 'wa', 'nama_provinsi', 'nama_kabupaten', 'nama_kecamatan', 'nama_desa', 'alamat','tgl_code','created_at','updated_at'];
 
 
 

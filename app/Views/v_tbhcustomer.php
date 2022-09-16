@@ -53,15 +53,19 @@
                 <div class="row"> 
                     <div class="col-md-6"> 
                             <div class="form-group">
-                                <label for="username" class="form-label">Customers# <b class="text-danger">*</b></label>
+                                <label for="Tanggal" class="form-label">Tanggal <b class="text-danger">*</b></label>
+                                <input type="date" class="form-control" id="" name="tanggal" placeholder="">
+                            </div> 
+                            <div class="form-group">
+                                <label for="Customers" class="form-label">Customers# <b class="text-danger">*</b></label>
                                 <input type="text" class="form-control" id="" name="customers" placeholder="Masukan Nama Singkat Customer">
                             </div> 
                             <div class="form-group">
-                                <label for="username" class="form-label">Nama Lengkap <b class="text-danger">*</b></label>
+                                <label for="Nama Lengkap " class="form-label">Nama Lengkap <b class="text-danger">*</b></label>
                                 <input type="text" class="form-control" id="" name="nama" placeholder="Masukan Nama Lengkap Customer">
                             </div> 
                             <div class="form-group">
-                                <label for="username" class="form-label">Nomer Telp</label> 
+                                <label for="Nomer Telp" class="form-label">Nomer Telp</label> 
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fas fa-phone"></i></span>
@@ -70,7 +74,7 @@
                                 </div> 
                              </div> 
                             <div class="form-group">
-                                <label for="username" class="form-label">Nomer Hp <b class="text-danger">*</b></label>
+                                <label for="Nomer Hp " class="form-label">Nomer Hp <b class="text-danger">*</b></label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fa-solid fa-mobile-screen-button"></i></span>
@@ -79,7 +83,7 @@
                                 </div> 
                             </div> 
                             <div class="form-group">
-                                <label for="username" class="form-label">Nomer WhatsApp</label>
+                                <label for="Nomer WhatsApp" class="form-label">Nomer WhatsApp</label>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                     <span class="input-group-text"><i class="fa-brands fa-whatsapp"></i></span>
@@ -91,25 +95,25 @@
                     </div>
                     <div class="col-md-6">  
                             <div class="form-group">
-                                <label for="username" class="form-label">Provinsi <b class="text-danger">*</b></label>
+                                <label for="Provinsi" class="form-label">Provinsi <b class="text-danger">*</b></label>
                                 <input type="text" name="provinsi_id" class="form-control">
                                  
                             </div> 
                             <div class="form-group">
-                                <label for="username" class="form-label">Kabupaten <b class="text-danger">*</b></label>
+                                <label for="Kabupaten" class="form-label">Kabupaten <b class="text-danger">*</b></label>
                                 <input type="text" name="kabupaten_id" class="form-control"> 
                             </div> 
                             <div class="form-group">
-                                <label for="username" class="form-label">Kecamatan <b class="text-danger">*</b></label>
+                                <label for="Kecamatan" class="form-label">Kecamatan <b class="text-danger">*</b></label>
                                 <input type="text" name="kecamatan_id" class="form-control">  
                             </div> 
                             <div class="form-group">
-                                <label for="username" class="form-label">Desa <b class="text-danger">*</b></label>
+                                <label for="Desa" class="form-label">Desa <b class="text-danger">*</b></label>
                                 <input type="text" name="desa_id" class="form-control">   
                             </div> 
 
                             <div class="form-group">
-                                <label for="username" class="form-label" >Alamat <b class="text-danger">*</b></label>
+                                <label for="Alamat" class="form-label" >Alamat <b class="text-danger">*</b></label>
                                 <textarea placeholder="Masukan Alamat Lengkap Customer" name="alamat"  class="form-control" ></textarea> 
                             </div> 
 

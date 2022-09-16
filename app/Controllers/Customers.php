@@ -49,6 +49,12 @@ class Customers extends Controller{
                         'max_length' => 'Nama Customer Maksimal 20 Karakter',  
                     ]
                 ], 
+                'tanggal' => [
+                    'rules' => 'required',
+                    'errors' => [
+                        'required'   => 'Tanggal Harus diisi',  
+                    ]
+                ], 
                 'nama' => [
                     'rules' => 'required|min_length[4]|max_length[50]',
                     'errors' => [
@@ -101,7 +107,12 @@ class Customers extends Controller{
                 session()->setFlashdata('error', $this->validator->listErrors());
                 return redirect()->to(base_url('customers/add/'))->withInput(); 
             } 
- 
+            
+            
+            $timestamp = strtotime($this->request->getVar('tanggal'));  
+            $tanggal_buat = date('Y-m-d', $timestamp).' '.date('H:s:i');
+            $tgl_code = date('Y-m', $timestamp);
+
         $Customer = new CustomerModel(); 
         $Customer->insert([
             'customers'         => '#'.$this->request->getVar('customers'), 
@@ -114,7 +125,9 @@ class Customers extends Controller{
             'nama_kecamatan'    => $this->request->getVar('kecamatan_id'),
             'nama_desa'         => $this->request->getVar('desa_id'),
             'alamat'            => $this->request->getVar('alamat'), 
-            'tgl_code'          => date("Y-m"), 
+            'tgl_code'          => $tgl_code, 
+            'created_at'        => $tanggal_buat, 
+            'updated_at'        => '0-0-0 0:0:0', 
         ]);
         
         session()->setFlashdata('alert', 'Berhasil Menambah Data. Dengan [ ID = '.'#'.$this->request->getVar('customers').' ]');
