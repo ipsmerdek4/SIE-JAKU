@@ -193,8 +193,11 @@ class Home extends BaseController
                             $timestamp = strtotime($value_TP->tgl_transaksi);  
                             $data_tp = date('Y-m-d', $timestamp);
                             $total_harga = $value_TP->total_harga;
-                        }elseif ($getstatus == 2){ 
-                            $data_tp = $value_TP->tgl_transaksiz; 
+                        }elseif ($getstatus == 2){  
+                            $timestamp = strtotime($value_TP->tgl_transaksiz);  
+                            $data_tp = date('Y-M', $timestamp);
+
+
                             $total_harga = $value_TP->hasil_ttl;
                         } 
 
@@ -219,8 +222,12 @@ class Home extends BaseController
 
                         }elseif ($getstatus == 2){ 
 
-                            $data_cc = $value_CC->tgl_regis; 
-                            $getcont = $value_CC->totalcs;
+                            // $data_cc = $value_CC->tgl_regis; 
+                            
+                            $timestamp = strtotime($value_CC->tgl_regis);  
+                            $data_cc = date('Y-M', $timestamp);
+
+                            $getcont = $value_CC->totalcs; 
 
                         } 
 
