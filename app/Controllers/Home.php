@@ -61,7 +61,7 @@ class Home extends BaseController
 
                 $dataCHRTTTPtransaksi = $Transaksi->ChartTTPgetwhere_tahun($bulan, $tahun);
 
-                $dataCHRTCCtransaksi = $Customer->getChartwhere_bulanandtahun($bulan, $tahun);
+                $dataCHRTCCtransaksi = $Customer->getChartwhere_tahun($tahun);
 
 
             }
@@ -128,16 +128,47 @@ class Home extends BaseController
                     
                     $chart_PPT = [];
                     foreach ($dataCHRTtransaksi as $key1 => $value1) { 
-
-                            $getjeniskayu = $JenisKayu->where('id_jenis_kayu', $value1->id_jenis_kayu)->first();
-                            $getcont = $Transaksi->where('tgl_code', $value1->tgl_code)->where('id_jenis_kayu', $value1->id_jenis_kayu)->countAllResults();
-
-                            $chart_PPT[] = [
-                                'nama_jenis_kayu'   => $getjeniskayu->nama_jenis_kayu,
-                                'hasil_ttl'         => $getcont,
-                            ];  
  
-                    }
+                    
+                        $getjeniskayu = $JenisKayu->where('id_jenis_kayu', $value1->id_jenis_kayu)->first();
+                        
+                        if ($getstatus == 1) {
+                            $date = date_create($value1->tgl_transaksi);
+                            $date = date_format($date,"Y-m-");
+                            $getcont = $Transaksi 
+                                            ->like('tgl_transaksi', $date)
+                                            ->where('id_jenis_kayu', $value1->id_jenis_kayu)
+                                            ->findAll();
+
+                            $ttlX = 0;
+                            foreach ($getcont as $vttlX) {
+                                $ttlX += $vttlX->jumlah_pembelian;
+                            }
+
+                        } elseif ($getstatus == 2){
+                            $date = date_create($value1->tgl_transaksi);
+                            $date = date_format($date,"Y-");
+                            $getcont = $Transaksi 
+                                            ->like('tgl_transaksi', $date)
+                                            ->where('id_jenis_kayu', $value1->id_jenis_kayu)
+                                            ->findAll();
+
+                            $ttlX = 0;
+                            foreach ($getcont as $vttlX) {
+                                $ttlX += $vttlX->jumlah_pembelian;
+                            }
+                        }
+
+                          
+
+                        $chart_PPT[] = [
+                            'nama_jenis_kayu'   => $getjeniskayu->nama_jenis_kayu,
+                            'hasil_ttl'         => $ttlX,
+                        ];  
+ 
+                    } 
+
+ 
 
                     $chart_JPT = [];
                     $dataX_JPT = [
@@ -211,9 +242,7 @@ class Home extends BaseController
 
                    
                     $chart_CCC = []; 
-                    foreach ($dataCHRTCCtransaksi as $key => $value_CC) { 
-
-                        
+                    foreach ($dataCHRTCCtransaksi as $key => $value_CC) {  
                         
                         if ($getstatus == 1){ 
                             // $timestamp = strtotime($value_CC->created_at);  
@@ -226,7 +255,7 @@ class Home extends BaseController
                             
                             $timestamp = strtotime($value_CC->tgl_regis);  
                             $data_cc = date('Y-M', $timestamp);
-
+ 
                             $getcont = $value_CC->totalcs; 
 
                         } 

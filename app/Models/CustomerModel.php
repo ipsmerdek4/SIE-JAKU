@@ -52,8 +52,23 @@ class CustomerModel extends Model
 
     }
 
-
+    
+    function getChartwhere_tahun($thn = null)
+    {
        
+
+        $builder = $this->db->table('db_customers');    
+        $builder->select('COUNT(created_at) as totalcs, DATE_FORMAT(created_at, "%Y-%m") as tgl_regis, created_at');
+        $builder->like('created_at', $thn);    
+         
+        $builder->groupBy('tgl_regis');  
+        // $builder->orderBy('created_at', 'DESC'); 
+        $query = $builder->get();
+
+        return $query->getResult();
+    }
+
+        
     function getwhere_tahun($thn = null)
     {
         $builder = $this->db->table('db_customers'); 
@@ -62,8 +77,9 @@ class CustomerModel extends Model
         $query = $builder->get();
 
         return $query->getResult();
-    }
+    } 
 
+    
  /*
     function getjoinall()
     {

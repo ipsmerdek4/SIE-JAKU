@@ -1,0 +1,217 @@
+ERROR - 2022-09-28 09:36:50 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('127.0.0.1', 'root', 'berasputih', 'siejaku', 3306, '', 0)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sie-jaku\app\Controllers\Login.php(33): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Login->process()
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sie-jaku\app\Controllers\Login.php(33): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Login->process()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-28 09:36:50 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(33): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Login->process()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-28 09:37:06 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('127.0.0.1', 'root', 'berasputih', 'siejaku', 3306, '', 0)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sie-jaku\app\Controllers\Login.php(33): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Login->process()
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sie-jaku\app\Controllers\Login.php(33): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Login->process()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-28 09:37:06 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(33): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Login->process()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-28 09:37:12 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('127.0.0.1', 'root', 'berasputih', 'siejaku', 3306, '', 0)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sie-jaku\app\Controllers\Login.php(33): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Login->process()
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sie-jaku\app\Controllers\Login.php(33): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Login->process()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+CRITICAL - 2022-09-28 09:37:12 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_users`
+WHERE `username` = :username:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(33): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Login->process()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 10:37:43 --> Undefined property: stdClass::$tgl_cod
+in APPPATH\Controllers\Home.php on line 132.
+ 1 APPPATH\Controllers\Home.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tgl_cod', 'APPPATH\\Controllers\\Home.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 10:37:45 --> Undefined property: stdClass::$tgl_cod
+in APPPATH\Controllers\Home.php on line 132.
+ 1 APPPATH\Controllers\Home.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tgl_cod', 'APPPATH\\Controllers\\Home.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 10:37:47 --> Undefined property: stdClass::$tgl_cod
+in APPPATH\Controllers\Home.php on line 132.
+ 1 APPPATH\Controllers\Home.php(132): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$tgl_cod', 'APPPATH\\Controllers\\Home.php', 132)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ERROR - 2022-09-28 10:43:56 --> mysqli_sql_exception: Unknown column 'tgl_transaksiout' in 'where clause' in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT DATE_FOR...', 0)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DATE_FOR...')
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DATE_FOR...')
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT DATE_FOR...', Array, false)
+#4 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(145): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Home->index()
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#9 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-09-28 10:43:56 --> Unknown column 'tgl_transaksiout' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT DATE_FORMAT(tgl_transaksi, "%Y-%m") as tgl_transaksiout
+FROM `db_transaksi`
+WHERE `tgl_transaksiout` = \'2022-08\'
+AND `id_jenis_kayu` = \'2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT DATE_FORMAT(tgl_transaksi, "%Y-%m") as tgl_transaksiout
+FROM `db_transaksi`
+WHERE `tgl_transaksiout` = \'2022-08\'
+AND `id_jenis_kayu` = \'2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT DATE_FORMAT(tgl_transaksi, "%Y-%m") as tgl_transaksiout
+FROM `db_transaksi`
+WHERE `tgl_transaksiout` = \'2022-08\'
+AND `id_jenis_kayu` = \'2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT DATE_FORMAT(tgl_transaksi, "%Y-%m") as tgl_transaksiout
+FROM `db_transaksi`
+WHERE `tgl_transaksiout` = :tgl_transaksiout:
+AND `id_jenis_kayu` = :id_jenis_kayu:', [...], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Home.php(145): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 9 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+10 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 10:47:45 --> Undefined variable $ttlX
+in APPPATH\Controllers\Home.php on line 157.
+ 1 APPPATH\Controllers\Home.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ttlX', 'APPPATH\\Controllers\\Home.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 10:59:31 --> Call to undefined method App\Models\CustomerModel::getwhere_tahun
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Home.php(56): CodeIgniter\Model->__call('getwhere_tahun', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 10:59:54 --> Call to undefined method App\Models\CustomerModel::getwhere_tahun
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Home.php(56): CodeIgniter\Model->__call('getwhere_tahun', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-28 11:00:21 --> Call to undefined method App\Models\CustomerModel::getwhere_tahun
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Home.php(56): CodeIgniter\Model->__call('getwhere_tahun', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
