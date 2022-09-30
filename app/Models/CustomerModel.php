@@ -44,7 +44,7 @@ class CustomerModel extends Model
         $builder->like('created_at', $thn.'-'.$bln);    
          
         $builder->groupBy('tgl_regis');  
-        // $builder->orderBy('created_at', 'DESC'); 
+        $builder->orderBy('created_at', 'DESC'); 
         $query = $builder->get();
 
         return $query->getResult();

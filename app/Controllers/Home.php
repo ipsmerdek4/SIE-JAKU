@@ -223,7 +223,9 @@ class Home extends BaseController
                         if ($getstatus == 1){ 
                             $timestamp = strtotime($value_TP->tgl_transaksi);  
                             $data_tp = date('Y-m-d', $timestamp);
-                            $total_harga = $value_TP->total_harga;
+
+                            $total_harga = $value_TP->hasil_ttl;
+ 
                         }elseif ($getstatus == 2){  
                             $timestamp = strtotime($value_TP->tgl_transaksiz);  
                             $data_tp = date('Y-M', $timestamp);

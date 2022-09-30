@@ -1,0 +1,52 @@
+ERROR - 2022-09-30 23:22:05 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('127.0.0.1', 'root', 'berasputih', 'siejaku', 3306, '', 0)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(74): App\Models\TransaksiModel->getwhere_bulanandtahun('09', '2022')
+#6 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sie-jaku\app\Models\TransaksiModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sie-jaku\app\Controllers\Home.php(74): App\Models\TransaksiModel->getwhere_bulanandtahun('09', '2022')
+#5 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(907): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\sie-jaku\vendor\codeigniter4\framework\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\sie-jaku\public\index.php(55): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2022-09-30 23:22:05 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `db_transaksi`
+JOIN `db_jenis_kayu` ON `db_jenis_kayu`.`id_jenis_kayu` = `db_transaksi`.`id_jenis_kayu`
+JOIN `db_tipe_kayu` ON `db_tipe_kayu`.`id_tipe_kayu` = `db_transaksi`.`id_tipe_kayu`
+JOIN `db_ukuran_kayu` ON `db_ukuran_kayu`.`id_ukuran_kayu` = `db_transaksi`.`id_ukuran_kayu`
+JOIN `db_persediaan_kayu` ON `db_persediaan_kayu`.`id_persediaan`  = `db_transaksi`.`id_persediaan`
+JOIN `db_customers` ON `db_customers`.`id_customers` = `db_transaksi`.`id_customers`
+WHERE `tgl_transaksi` LIKE :tgl_transaksi: ESCAPE \'!\'
+ORDER BY `tgl_transaksi` DESC', [...], false)
+ 3 APPPATH\Models\TransaksiModel.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Home.php(74): App\Models\TransaksiModel->getwhere_bulanandtahun('09', '2022')
+ 5 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 6 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 7 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2022-09-30 23:30:02 --> Undefined property: stdClass::$total_harga
+in APPPATH\Controllers\Home.php on line 227.
+ 1 APPPATH\Controllers\Home.php(227): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$total_harga', 'APPPATH\\Controllers\\Home.php', 227)
+ 2 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\Home->index()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
