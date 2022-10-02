@@ -98,7 +98,7 @@ class TransaksiModel extends Model{
     function ChartTTPgetwhere_tahun($bln = null, $thn = null)
     {
         $builder = $this->db->table('db_transaksi');  
-        $builder->select('sum(total_harga) as hasil_ttl, DATE_FORMAT(tgl_transaksi, "%Y-%M-%d") as tgl_transaksiz, tgl_transaksi');
+        $builder->select('sum(total_harga) as hasil_ttl, DATE_FORMAT(tgl_transaksi, "%Y-%M") as tgl_transaksiz, tgl_transaksi');
 
         $builder->like('tgl_transaksi', $thn.'-'.$bln);   
                
