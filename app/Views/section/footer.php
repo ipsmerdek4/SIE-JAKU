@@ -186,6 +186,14 @@
                   
                       $('#chrt_tahun').show();
                       $('#chrt_bulan').show();
+
+                      <?php if ($getstatus == 2) : ?>  
+
+                        
+                        $('#chrt_tahun').show();
+                        $('#chrt_bulan').hide();
+                      <?php endif; ?>
+
                 });
 
                 $("#vew_set").change(function (){
@@ -222,6 +230,10 @@
                             }],
                         },
                 }; 
+
+                <?php if ($show_hide == 0) : ?>  
+
+                
                 var ctx = document.getElementById('myprdChart').getContext('2d');
                 var chart = new Chart(ctx, {
                       // The type of chart we want to create
@@ -277,43 +289,106 @@
                   
                 });
 
+ 
+                <?php endif; ?>
 
-           
 
-
-                   //-------------
-                    //- DONUT CHART -
-                   //-------------
-                    // Get context with jQuery - using jQuery's .get() method.
-                  var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
-                  var donutData        = {
-                                            labels: [ 
-                                                  <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
-                                                      '<?=$v_JPT['nama_JPT']?>', 
-                                                  <?php endforeach; ?>
-                                              ],
-                                            datasets: [
-                                              {
-                                                  data: [ 
-                                                    <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
-                                                        '<?=$v_JPT['count_JPT']?>', 
-                                                    <?php endforeach; ?>
-                                                   ],
-                                                  backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
-                                              }
-                                            ]
+                /*  */
+                  var barChartOptions_JPT = {
+                      responsive              : true,
+                      maintainAspectRatio     : false,
+                      datasetFill             : false, 
+                      scales: {
+                              yAxes: [{
+                                  ticks: {
+                                      beginAtZero: true,
+                                      userCallback: function(label, index, labels) {
+                                          // when the floored value is the same as the value we have a whole number
+                                          if (Math.floor(label) === label) {
+                                              return label;
                                           }
-                  var donutOptions     = {
-                      maintainAspectRatio : false,
-                      responsive : true,
-                  }
-                  //Create pie or douhnut chart
-                  // You can switch between pie and douhnut using the method below.
-                  new Chart(donutChartCanvas, {
-                      type: 'doughnut',
-                      data: donutData,
-                      options: donutOptions
-                  })
+
+                                      },
+                                  }
+                              }],
+                          },
+                      legend: {
+                          display: false,
+                            onClick: null
+                        }
+                  }; 
+
+                  var ctx_JPT = document.getElementById('JPTCHART').getContext('2d');
+                  var chart_JPT = new Chart(ctx_JPT, { 
+                          type: 'bar', 
+                          data: { 
+                              labels: [ 
+                                    <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
+                                      '<?=$v_JPT['nama_JPT']?>', 
+                                    <?php endforeach; ?>
+                              ],
+                              datasets: [{
+                                  // label: 'Total Costumers',
+                                  data: [ 
+                                        <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
+                                              '<?=$v_JPT['count_JPT']?>', 
+                                          <?php endforeach; ?>
+                                  ],
+                                  backgroundColor: [
+                                      'rgba(243, 39, 144, 0.38)',
+                                  ],
+                                  borderColor: [
+                                      'rgba(243, 39, 144, 0.8)',
+                                  ],
+                                  borderWidth: 1
+                              }]
+                          },
+                          // Configuration options go here
+                          options: barChartOptions_JPT, 
+                  });
+
+
+
+                  /*  */
+
+
+
+
+
+                        //-------------
+                        //- DONUT CHART -
+                        //-------------
+                        // Get context with jQuery - using jQuery's .get() method.
+
+
+                        /*  var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+                        var donutData        = {
+                                                  labels: [ 
+                                                        
+                                                    ],
+                                                  datasets: [
+                                                    {
+                                                        data: [ 
+                                                        
+                                                          ],
+                                                        backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+                                                    }
+                                                  ]
+                                                }
+                        var donutOptions     = {
+                            maintainAspectRatio : false,
+                            responsive : true,
+                        } */
+
+
+
+                          //Create pie or douhnut chart
+                          // You can switch between pie and douhnut using the method below.
+                          /*  new Chart(donutChartCanvas, {
+                              type: 'doughnut',
+                              data: donutData,
+                              options: donutOptions
+                          }) */
 
 
 
@@ -387,12 +462,7 @@
                         display: false,
                           onClick: null
                       }
-
-
-
-
-
-
+ 
 
                   };
  
@@ -425,7 +495,7 @@
                           options: barChartOptions2, 
                   });
 
- 
+                    /*  */
 
                 var barChartOptions3 = {
                     responsive              : true,

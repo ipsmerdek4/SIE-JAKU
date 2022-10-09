@@ -77,12 +77,17 @@ class TransaksiModel extends Model{
 
 
     
-    function ChartTTPgetwhere_bulanandtahun($bln = null, $thn = null)
+    function ChartTTPgetwhere_bulanandtahun($bln = null, $thn = null, $typekayu = null)
     {
         $builder = $this->db->table('db_transaksi');   
 
         $builder->select('sum(total_harga) as hasil_ttl, DATE_FORMAT(tgl_transaksi, "%Y-%M-%d") as tgl_transaksiz, id_jenis_kayu, tgl_transaksi'); 
         // $builder->select();
+
+        if ($typekayu != 0) {
+            $builder->where('id_jenis_kayu', $typekayu);        
+        }
+
         $builder->like('tgl_transaksi', $thn.'-'.$bln);    
         $builder->orderBy('tgl_transaksi', 'DESC');
 
@@ -95,14 +100,20 @@ class TransaksiModel extends Model{
     }
 
 
-    function ChartTTPgetwhere_tahun($bln = null, $thn = null)
+    function ChartTTPgetwhere_tahun($bln = null, $thn = null, $typekayu = null)
     {
         $builder = $this->db->table('db_transaksi');  
         $builder->select('sum(total_harga) as hasil_ttl, DATE_FORMAT(tgl_transaksi, "%Y-%M") as tgl_transaksiz, tgl_transaksi');
 
+
+        if ($typekayu != 0) {
+            $builder->where('id_jenis_kayu', $typekayu);        
+        }
+
         $builder->like('tgl_transaksi', $thn.'-'.$bln);   
                
         $builder->orderBy('tgl_transaksi', 'ASC');
+        
         $builder->groupBy('tgl_transaksiz');  
         $query = $builder->get();
 

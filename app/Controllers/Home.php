@@ -25,8 +25,18 @@ class Home extends BaseController
         $Customer = new CustomerModel;
 
         $getstatus = $this->request->getpost('getstatus');  
+        $typekayu = $this->request->getpost('typekayu');  
  
+        if ($typekayu == 0) { 
+            $show_hide = 0; 
+        }else{ 
+            $show_hide = 1;
+        }
+
+
         if(isset($getstatus)){ 
+        //    echo  $typekayu;
+
             if ($getstatus == 1) {  
                 $bulan = $this->request->getpost('bulan_view');
                 $tahun = $this->request->getpost('tahun_view');
@@ -41,7 +51,7 @@ class Home extends BaseController
                 //chart
                 $dataCHRTtransaksi = $Transaksi->Chartgetwhere_bulanandtahun($bulan, $tahun);
 
-                $dataCHRTTTPtransaksi = $Transaksi->ChartTTPgetwhere_bulanandtahun($bulan, $tahun);
+                $dataCHRTTTPtransaksi = $Transaksi->ChartTTPgetwhere_bulanandtahun($bulan, $tahun, $typekayu);
 
                 $dataCHRTCCtransaksi = $Customer->getChartwhere_bulanandtahun($bulan, $tahun);
 
@@ -59,13 +69,14 @@ class Home extends BaseController
                 //chart
                 $dataCHRTtransaksi = $Transaksi->Chartgetwhere_bulanandtahun($bulan, $tahun);
 
-                $dataCHRTTTPtransaksi = $Transaksi->ChartTTPgetwhere_tahun($bulan, $tahun);
+                $dataCHRTTTPtransaksi = $Transaksi->ChartTTPgetwhere_tahun($bulan, $tahun, $typekayu);
 
                 $dataCHRTCCtransaksi = $Customer->getChartwhere_tahun($tahun);
 
 
             }
         }else{
+            
             $bulan = date("m");
             $tahun = date("Y"); 
             $x_BULAN_TAHUN = $tahun.'-'.$bulan;
@@ -177,11 +188,22 @@ class Home extends BaseController
                     ];
                     foreach ($dataX_JPT as $key2 => $value_JPT) {  
 
-                            $count_JPT = $Transaksi
-                                            ->where('tipe_pesanan', $value_JPT)
-                                            ->like('tgl_transaksi', $x_BULAN_TAHUN)    
-                                            ->countAllResults();
-                         
+                            
+                            $count_JPT = $Transaksi;
+                            
+                            if ($typekayu != 0) {
+                                $count_JPT = $count_JPT
+                                                        ->where('id_jenis_kayu', $typekayu)   
+                                                        ->where('tipe_pesanan', $value_JPT)
+                                                        ->like('tgl_transaksi', $x_BULAN_TAHUN)    
+                                                        ->countAllResults();     
+                            }else{
+                                $count_JPT = $count_JPT 
+                                                        ->where('tipe_pesanan', $value_JPT)
+                                                        ->like('tgl_transaksi', $x_BULAN_TAHUN)    
+                                                        ->countAllResults();     
+                            }
+ 
                             if ($count_JPT > 0) {
                                 $chart_JPT[] = [
                                     'nama_JPT'          => $value_JPT,
@@ -201,10 +223,23 @@ class Home extends BaseController
                     ];
                     foreach ($dataX_JPYT as $key2 => $value_JPYT) {  
 
-                            $count_JPYT = $Transaksi
-                                            ->where('tipe_pembayaran', $value_JPYT)
-                                            ->like('tgl_transaksi', $x_BULAN_TAHUN)    
-                                            ->countAllResults();
+ 
+                            $count_JPYT = $Transaksi;
+                        
+                            if ($typekayu != 0) {
+                                $count_JPYT = $count_JPYT
+                                                        ->where('id_jenis_kayu', $typekayu)   
+                                                        ->where('tipe_pembayaran', $value_JPYT)
+                                                        ->like('tgl_transaksi', $x_BULAN_TAHUN)    
+                                                        ->countAllResults();
+                            }else{
+                                $count_JPYT = $count_JPYT  
+                                                        ->where('tipe_pembayaran', $value_JPYT)
+                                                        ->like('tgl_transaksi', $x_BULAN_TAHUN)    
+                                                        ->countAllResults();  
+                            }
+
+ 
                          
                             if ($count_JPYT > 0) {
                                 $chart_JPYT[] = [
@@ -272,6 +307,9 @@ class Home extends BaseController
 
 
         $data = [
+            'typekayu'              => $typekayu,
+            'JenisKayu'             => $JenisKayu->findAll(),
+            'show_hide'             => $show_hide,
             'menu'                  => '1a',
 			'title'                 => 'Home [SIE-JAKU]', 
             'batascss'              => 'chome',

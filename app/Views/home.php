@@ -36,8 +36,8 @@
                 </div>
                 <div class="col-12 col-sm-12 col-lg-2 mb-3">
                     <select name="getstatus" id="vew_set" class="form-control " >  
-                      <option value="1">Bulan</option>
-                      <option value="2">Tahun</option>
+                      <option value="1" <?= ($getstatus == 1) ? 'selected' : ''?>  >Bulan</option>
+                      <option value="2" <?= ($getstatus == 2) ? 'selected' : ''?>  >Tahun</option>
                     </select>
                 </div>
                 <div id="chrt_bulan" class="col-12 col-sm-12 col-lg-2 mb-3">
@@ -63,6 +63,14 @@
                                 }
                             ?> 
                         </select>   
+                </div>
+                <div class="col-12 col-sm-12 col-lg-2 mb-3">
+                    <select name="typekayu"  class="form-control " >  
+                      <option value="0">Type Kayu</option>
+                      <?php foreach ($JenisKayu as $k_Jk => $v_Jk) : ?>  
+                          <option value="<?= $v_Jk->id_jenis_kayu ?>" <?= ( $v_Jk->id_jenis_kayu == $typekayu)? 'selected' : '' ?>><?= $v_Jk->nama_jenis_kayu ?></option>
+                      <?php endforeach; ?>
+                    </select>
                 </div>
                 <div class="col-12 col-sm-12 col-lg-3">
                   <button type="submit"  class="btn btn-danger">
@@ -94,7 +102,7 @@
               
                 <div class="col-12 col-sm-12 col-lg-3">
                   <div class="info-box bg-dark">
-                    <span class="info-box-icon bg-success"> <i class="fa-solid fa-dollar-sign"></i> </span>
+                    <span class="info-box-icon bg-success"> <i class="fa-solid fa-money-bill-wave"></i> </span>
                     <div class="info-box-content">
                       <span class="info-box-text text-lime"><b>Net Profit</b> </span>
                       <span class="info-box-number"> <?="Rp " . number_format($getprofit,2,',','.')?></span>
@@ -143,24 +151,53 @@
                       <!-- /.info-box -->
                 </div>
 
-                <div class="col-12">
-                      <hr class="bg-dark">
-                      <label for=""> Perbandingan Produk Terjual</label>
-      
-                      <div class="chart">
-                        <canvas id="myprdChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
-                      </div>
-                  
-                      <hr class="bg-dark">
 
 
+
+                
+
+                <div class="col-12 col-sm-12 col-lg-6">
+                  <label for="" class="text-center w-100">Total Penjualan</label>  
+                  <div class="card ">  
+                      <div class="card-body">   
+                        <canvas id="myprdCharwt22" style="min-height: 250px; height: 300px; max-height: 300px; max-width: 100%;"></canvas>
+                    </div>
+                  </div> 
                 </div>
+
+                <div class="col-12 col-sm-12 col-lg-6">
+                  <label for="" class="text-center w-100">Laju Costumers</label>  
+                  <div class="card ">  
+                      <div class="card-body">   
+                        <canvas id="myprdCharwt33" style="min-height: 250px; height: 300px; max-height: 300px; max-width: 100%;"></canvas>
+                    </div>
+                  </div> 
+                </div>
+ 
+
+                <?php if ($show_hide == 0) : ?>  
+
+                    <div class="col-12">
+                          <hr class="bg-dark">
+                          <label for=""> Perbandingan Produk Terjual</label>
+          
+                          <div class="chart">
+                            <canvas id="myprdChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                          </div>
+                      
+                          <hr class="bg-dark"> 
+                    </div>
+
+                <?php endif; ?>
+                 
+
 
                 <div class="col-lg-6">
                   <label for="" class="text-center w-100">Jenis Pemesanan Terlaris</label> <!-- menampilkan urutan pembelian contoh barang A-total transaksi 10.000 -->
                   <div class="card ">  
                     <div class="card-body">  
-                      <canvas id="donutChart" style="min-height: 250px; height: 3000px; max-height: 300px; max-width: 100%; "></canvas> 
+                    <!-- <canvas id="donutChart" style="min-height: 250px; height: 3000px; max-height: 300px; max-width: 100%; "></canvas>  -->
+                    <canvas id="JPTCHART" style="min-height: 250px; height: 3000px; max-height: 300px; max-width: 100%; "></canvas> 
                     </div>
                   </div>
                 </div>
@@ -173,29 +210,6 @@
                     </div>
                   </div>
                 </div>
-                
-                
-
-                <div class="col-12 col-sm-12 col-lg-6">
-                <label for="" class="text-center w-100">Total Penjualan</label>  
-                <div class="card ">  
-                    <div class="card-body">   
-                      <canvas id="myprdCharwt22" style="min-height: 250px; height: 300px; max-height: 300px; max-width: 100%;"></canvas>
-                   </div>
-                </div> 
-                </div>
-
-                <div class="col-12 col-sm-12 col-lg-6">
-                <label for="" class="text-center w-100">Laju Costumers</label>  
-                <div class="card ">  
-                    <div class="card-body">   
-                      <canvas id="myprdCharwt33" style="min-height: 250px; height: 300px; max-height: 300px; max-width: 100%;"></canvas>
-                   </div>
-                </div> 
-                </div>
-
-
- 
 
  
             </div>
