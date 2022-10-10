@@ -186,9 +186,7 @@ class Home extends BaseController
                         'Online Order',
                         'Offline Order'
                     ];
-                    foreach ($dataX_JPT as $key2 => $value_JPT) {  
-
-                            
+                    foreach ($dataX_JPT as $key2 => $value_JPT) {   
                             $count_JPT = $Transaksi;
                             
                             if ($typekayu != 0) {
@@ -212,6 +210,12 @@ class Home extends BaseController
                             } 
  
                     }  
+					
+					
+					
+					
+					
+					
 
 
 

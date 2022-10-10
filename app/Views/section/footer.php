@@ -293,102 +293,80 @@
                 <?php endif; ?>
 
 
-                /*  */
-                  var barChartOptions_JPT = {
-                      responsive              : true,
-                      maintainAspectRatio     : false,
-                      datasetFill             : false, 
-                      scales: {
-                              yAxes: [{
-                                  ticks: {
-                                      beginAtZero: true,
-                                      userCallback: function(label, index, labels) {
-                                          // when the floored value is the same as the value we have a whole number
-                                          if (Math.floor(label) === label) {
-                                              return label;
-                                          }
+ 
+ 
+  /*
+  
+ var xValues = [
+				0,
+				
+  
+ ];
 
-                                      },
-                                  }
-                              }],
-                          },
-                      legend: {
-                          display: false,
-                            onClick: null
-                        }
-                  }; 
-
-                  var ctx_JPT = document.getElementById('JPTCHART').getContext('2d');
-                  var chart_JPT = new Chart(ctx_JPT, { 
-                          type: 'bar', 
-                          data: { 
-                              labels: [ 
-                                    <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
-                                      '<?=$v_JPT['nama_JPT']?>', 
-                                    <?php endforeach; ?>
-                              ],
-                              datasets: [{
-                                  // label: 'Total Costumers',
-                                  data: [ 
-                                        <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
-                                              '<?=$v_JPT['count_JPT']?>', 
-                                          <?php endforeach; ?>
-                                  ],
-                                  backgroundColor: [
-                                      'rgba(243, 39, 144, 0.38)',
-                                  ],
-                                  borderColor: [
-                                      'rgba(243, 39, 144, 0.8)',
-                                  ],
-                                  borderWidth: 1
-                              }]
-                          },
-                          // Configuration options go here
-                          options: barChartOptions_JPT, 
-                  });
-
-
-
-                  /*  */
-
-
-
-
-
+new Chart("JPTCHART", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{ 
+		label: 'offline',
+      data: [0, 860 ],
+      borderColor: "red",
+      fill: false
+    }, { 
+		label: 'online',
+      data: [0, 1600 ],
+      borderColor: "green",
+      fill: false
+    }, ]
+  },
+  options: {
+    legend: {display: true}
+  }
+});
+  
+  
+  */
+  
+   
                         //-------------
                         //- DONUT CHART -
                         //-------------
                         // Get context with jQuery - using jQuery's .get() method.
 
 
-                        /*  var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+						var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
                         var donutData        = {
                                                   labels: [ 
-                                                        
+                                                        <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
+														  '<?=$v_JPT['nama_JPT']?>', 
+														<?php endforeach; ?> 
                                                     ],
                                                   datasets: [
                                                     {
                                                         data: [ 
-                                                        
+															<?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
+																'<?=$v_JPT['count_JPT']?>', 
+															<?php endforeach; ?>
                                                           ],
                                                         backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
                                                     }
                                                   ]
                                                 }
+												
                         var donutOptions     = {
                             maintainAspectRatio : false,
                             responsive : true,
-                        } */
+                        }  
 
 
 
-                          //Create pie or douhnut chart
-                          // You can switch between pie and douhnut using the method below.
-                          /*  new Chart(donutChartCanvas, {
-                              type: 'doughnut',
-                              data: donutData,
-                              options: donutOptions
-                          }) */
+						//Create pie or douhnut chart
+						// You can switch between pie and douhnut using the method below.
+						new Chart(donutChartCanvas, {
+							type: 'doughnut',
+							data: donutData,
+							options: donutOptions
+						})  
 
 
 

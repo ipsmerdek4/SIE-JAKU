@@ -196,8 +196,7 @@
                   <label for="" class="text-center w-100">Jenis Pemesanan Terlaris</label> <!-- menampilkan urutan pembelian contoh barang A-total transaksi 10.000 -->
                   <div class="card ">  
                     <div class="card-body">  
-                    <!-- <canvas id="donutChart" style="min-height: 250px; height: 3000px; max-height: 300px; max-width: 100%; "></canvas>  -->
-                    <canvas id="JPTCHART" style="min-height: 250px; height: 3000px; max-height: 300px; max-width: 100%; "></canvas> 
+                    <canvas id="donutChart" style="min-height: 250px; height: 3000px; max-height: 300px; max-width: 100%; "></canvas>  
                     </div>
                   </div>
                 </div>
