@@ -168,12 +168,11 @@
         $btsjv = ' 
                 <!-- ChartJS -->
                 <script src="../../plugins/chart.js/Chart.min.js"></script>
-                <!-- FLOT CHARTS -->
-                <script src="../../plugins/flot/jquery.flot.js"></script>
-                <!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
-                <script src="../../plugins/flot/plugins/jquery.flot.resize.js"></script>
-                <!-- FLOT PIE PLUGIN - also used to draw donut charts -->
-                <script src="../../plugins/flot/plugins/jquery.flot.pie.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+
+
+
+
         ';
       
  
@@ -209,6 +208,16 @@
                 }) 
 
 
+  /*               function labelFormatter(label, series) {
+    return '<div style="font-size:13px; text-align:center; padding:2px; color: #fff; font-weight: 600;">'
+      + label
+      + '<br>'
+      + Math.round(series.percent) + '%</div>'
+  }
+
+ */
+
+
     $(function () { 
                 /*  */
                 var barChartOptions = {
@@ -228,7 +237,8 @@
                                     },
                                 }
                             }],
-                        },
+                        },   
+                        
                 }; 
 
                 <?php if ($show_hide == 0) : ?>  
@@ -284,12 +294,10 @@
                                       ]
                       },
                       // Configuration options go here
-                      options: barChartOptions,
+                      options: barChartOptions,  
                   
-                  
-                });
-
- 
+                }); 
+                Chart.plugins.unregister( ChartDataLabels ); 
                 <?php endif; ?>
 
 
@@ -327,46 +335,155 @@ new Chart("JPTCHART", {
   
   */
   
+
+/* 
+
+  var donutData = [
+      {
+        label: 'Series2',
+        data : 30,
+        color: '#3c8dbc'
+      },
+      {
+        label: 'Series3',
+        data : 20,
+        color: '#0073b7'
+      },
+      {
+        label: 'Series4',
+        data : 50,
+        color: '#00c0ef'
+      }
+    ];
+    $.plot('#donutChart', donutData, {
+      series: {
+        pie: {
+          show       : true,
+          radius     : 1,
+          innerRadius: 0.5,
+          label      : {
+            show     : true,
+            radius   : 2 / 3,
+            formatter: labelFormatter,
+            threshold: 0.1
+          }
+
+        }
+      },
+      legend: {
+        show: false
+      }
+    }) */
+
+
+
+
+
+
+
+
+
+
+
    
                         //-------------
                         //- DONUT CHART -
                         //-------------
                         // Get context with jQuery - using jQuery's .get() method.
 
+                       
 
-						var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
-                        var donutData        = {
+
+					  	          // var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
+                        var data = [{
+                                      data: [
+                                        <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
+                                          <?=$v_JPT['count_JPT']?>, 
+                                        <?php endforeach; ?>
+                                      ],
+                                      backgroundColor: [
+                                        'rgba(58, 115, 54, 0.5)',
+                                        'rgba(255, 0, 0, 0.5)',
+                                      ],
+                                      borderColor: [
+                                        'rgba(58, 115, 54, 0.5)',
+                                        'rgba(255, 0, 0, 0.5)',
+                                      ],
+                                      borderWidth: 1
+                            }];
+
+                        var options = {
+                                      tooltips: {
+                                        enabled: true
+                                      }, 
+                                      plugins:{         
+                                              datalabels: {
+                                                color: 'white',
+                                                formatter: function(value, context) {                  
+                                                  return Math.round(value/context.chart.getDatasetMeta(0).total * 100) + "%" ;
+                                                }
+                                              }
+                                      }
+                            };  
+                        var labels = [
+                                      <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
+                                        '<?=$v_JPT['nama_JPT']?>', 
+                                      <?php endforeach; ?> 
+                            ];
+
+                        var ctx = document.getElementById("donutChart").getContext('2d');
+                        var myChart = new Chart(ctx, {
+                                      type: 'doughnut',
+                                      data: {
+                                        labels: labels,
+                                        datasets: data
+                                      },
+                                      options: options,
+                                      plugins: [ChartDataLabels],
+                            });
+
+
+
+
+                       /*  var ctx  = document.getElementById("donutChart").getContext('2d');
+                        var myChart = new Chart(ctx, {
+                                    type: 'pie',
+                                    data: {
+                                      labels: labels,
+                                      datasets: data
+                                    },
+                                    options: options,
+                                    plugins: [ChartDataLabels],
+                                  }); */
+
+                      /*   var donutData        = {
                                                   labels: [ 
-                                                        <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
-														  '<?=$v_JPT['nama_JPT']?>', 
-														<?php endforeach; ?> 
+                                                          
                                                     ],
                                                   datasets: [
                                                     {
                                                         data: [ 
-															<?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
-																'<?=$v_JPT['count_JPT']?>', 
-															<?php endforeach; ?>
+                                                              
                                                           ],
                                                         backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
                                                     }
                                                   ]
-                                                }
+                                                } */
 												
-                        var donutOptions     = {
+                      /*   var donutOptions     = {
                             maintainAspectRatio : false,
-                            responsive : true,
-                        }  
+                            responsive : true,    
 
+                        }   */
+ 
 
-
-						//Create pie or douhnut chart
-						// You can switch between pie and douhnut using the method below.
-						new Chart(donutChartCanvas, {
-							type: 'doughnut',
-							data: donutData,
-							options: donutOptions
-						})  
+                        //Create pie or douhnut chart
+                        // You can switch between pie and douhnut using the method below.
+                      /*   new Chart(donutChartCanvas, {
+                          type: 'pie',
+                          data: donutData,
+                          options: donutOptions
+                        })  */ 
 
 
 
@@ -377,16 +494,12 @@ new Chart("JPTCHART", {
                   var donutChartCanvas = $('#donutChart2').get(0).getContext('2d')
                   var donutData        = {
                                             labels: [
-                                                  <?php foreach ($chart_JPYT as $k_JPYT => $v_JPYT) : ?> 
-                                                      '<?=$v_JPYT['nama_JPYT']?>', 
-                                                  <?php endforeach; ?>
+                                                 
                                               ],
                                             datasets: [
                                               {
                                                   data: [
-                                                    <?php foreach ($chart_JPYT as $k_JPYT => $v_JPYT) : ?> 
-                                                        '<?=$v_JPYT['count_JPYT']?>', 
-                                                    <?php endforeach; ?>
+                                                   
                                                   ],
                                                   backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
                                               }
@@ -403,6 +516,64 @@ new Chart("JPTCHART", {
                       data: donutData,
                       options: donutOptions
                   })
+
+                  // **********************************************************************************************8
+
+                        var data2 = [{
+                                      data: [
+                                          <?php foreach ($chart_JPYT as $k_JPYT => $v_JPYT) : ?> 
+                                              <?=$v_JPYT['count_JPYT']?>, 
+                                          <?php endforeach; ?>
+                                      ],
+                                      backgroundColor: [
+                                        'rgba(0, 28, 242, 0.5)',
+                                        'rgba(41, 156, 31, 0.5)',
+                                      ],
+                                      borderColor: [
+                                        'rgba(0, 28, 242, 0.5)',
+                                        'rgba(21, 255, 0, 0.5)',
+                                      ],
+                                      borderWidth: 1
+                            }];
+
+                        var options2 = {
+                                      tooltips: {
+                                        enabled: true
+                                      }, 
+                                      plugins:{         
+                                              datalabels: {
+                                                color: 'white',
+                                                formatter: function(value, context) {                  
+                                                  return Math.round(value/context.chart.getDatasetMeta(0).total * 100) + "%" ;
+                                                }
+                                              }
+                                      }
+                            };  
+                        var labels2 = [
+                                    <?php foreach ($chart_JPYT as $k_JPYT => $v_JPYT) : ?> 
+                                        '<?=$v_JPYT['nama_JPYT']?>', 
+                                    <?php endforeach; ?>
+                            ];
+
+                        var ctx2 = document.getElementById("donutChart2").getContext('2d');
+                        var myChart2 = new Chart(ctx2, {
+                                      type: 'doughnut',
+                                      data: {
+                                        labels: labels2,
+                                        datasets: data2
+                                      },
+                                      options: options2,
+                                      plugins: [ChartDataLabels],
+                            });
+
+
+
+
+
+
+
+
+
 
 
 
