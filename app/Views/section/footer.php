@@ -402,8 +402,8 @@ new Chart("JPTCHART", {
                                         <?php endforeach; ?>
                                       ],
                                       backgroundColor: [
-                                        'rgba(58, 115, 54, 0.5)',
-                                        'rgba(255, 0, 0, 0.5)',
+                                        'rgba(58, 115, 54, 0.4)',
+                                        'rgba(255, 0, 0, 0.4)',
                                       ],
                                       borderColor: [
                                         'rgba(58, 115, 54, 0.5)',
@@ -433,7 +433,7 @@ new Chart("JPTCHART", {
 
                         var ctx = document.getElementById("donutChart").getContext('2d');
                         var myChart = new Chart(ctx, {
-                                      type: 'doughnut',
+                                      type: 'pie',
                                       data: {
                                         labels: labels,
                                         datasets: data
@@ -491,7 +491,7 @@ new Chart("JPTCHART", {
                   //- DONUT CHART - 2
                   //-------------
                   // Get context with jQuery - using jQuery's .get() method.
-                  var donutChartCanvas = $('#donutChart2').get(0).getContext('2d')
+             /*      var donutChartCanvas = $('#donutChart2').get(0).getContext('2d')
                   var donutData        = {
                                             labels: [
                                                  
@@ -508,14 +508,14 @@ new Chart("JPTCHART", {
                   var donutOptions     = {
                       maintainAspectRatio : false,
                       responsive : true,
-                  }
+                  } */
                   //Create pie or douhnut chart
                   // You can switch between pie and douhnut using the method below.
-                  new Chart(donutChartCanvas, {
+                 /*  new Chart(donutChartCanvas, {
                       type: 'doughnut',
                       data: donutData,
                       options: donutOptions
-                  })
+                  }) */
 
                   // **********************************************************************************************8
 
@@ -526,8 +526,8 @@ new Chart("JPTCHART", {
                                           <?php endforeach; ?>
                                       ],
                                       backgroundColor: [
-                                        'rgba(0, 28, 242, 0.5)',
-                                        'rgba(41, 156, 31, 0.5)',
+                                        'rgba(0, 28, 242, 0.4)',
+                                        'rgba(41, 156, 31, 0.4)',
                                       ],
                                       borderColor: [
                                         'rgba(0, 28, 242, 0.5)',
@@ -557,7 +557,7 @@ new Chart("JPTCHART", {
 
                         var ctx2 = document.getElementById("donutChart2").getContext('2d');
                         var myChart2 = new Chart(ctx2, {
-                                      type: 'doughnut',
+                                      type: 'pie',
                                       data: {
                                         labels: labels2,
                                         datasets: data2
