@@ -168,7 +168,7 @@
         $btsjv = ' 
                 <!-- ChartJS -->
                 <script src="../../plugins/chart.js/Chart.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+                <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
 
 
 
@@ -220,181 +220,240 @@
 
     $(function () { 
                 /*  */
-                var barChartOptions = {
-                        responsive              : true,
-                        maintainAspectRatio     : false,
-                        datasetFill             : false,
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true,
-                                    userCallback: function(label, index, labels) {
-                                        // when the floored value is the same as the value we have a whole number
-                                        if (Math.floor(label) === label) {
-                                            return label;
-                                        }
-
-                                    },
-                                }
-                            }],
-                        },   
-                        
-                }; 
-
+                
                 <?php if ($show_hide == 0) : ?>  
 
-                
-                var ctx = document.getElementById('myprdChart').getContext('2d');
-                var chart = new Chart(ctx, {
-                      // The type of chart we want to create
-                      type: 'bar',
-                      // The data for our dataset 
-                      data: { 
-                          labels: [  
-                                      <?php
-                                          if($getstatus == 1) :  
-                                            echo '"'.$getbulan.'-'.$gettahun.'"';
-                                          elseif($getstatus == 2): 
-                                            echo '"'.$gettahun.'"'; 
-                                          endif;  
-                                      ?> 
-                                  ],
-                            datasets: [  
-                                        <?php  $keys = 0; foreach ($chart_PPT as $K_PPT => $V_PPT) : $keys++;?> 
-                                                <?php if ( $keys % 2 == 0 ) : ?>  
-                                                      {
-                                                        label :'<?=$V_PPT['nama_jenis_kayu']?>',
-                                                        backgroundColor     : 'rgb(189,183,107)', 
-                                                        pointRadius : false,  
-                                                        borderColor: ['rgb(60, 179, 113)'],
-                                                        data: ["<?=$V_PPT['hasil_ttl']?>"]
-                                                      }, 
-                                                <?php elseif ( $keys % 3 == 0 ) :?> 
-                                                
-                                                      {
-                                                        label :'<?=$V_PPT['nama_jenis_kayu']?>',
-                                                        backgroundColor     : 'rgb(255,218,185)', 
-                                                        pointRadius : false,  
-                                                        borderColor: ['rgb(60, 179, 113)'],
-                                                        data: ["<?=$V_PPT['hasil_ttl']?>"]
-                                                      }, 
+                      var barChartOptionsPPT = {
+                              responsive              : true,
+                              maintainAspectRatio     : false,
+                              datasetFill             : false,
+                              scales: {
+                                  yAxes: [{
+                                      ticks: {
+                                          beginAtZero: true,
+                                          userCallback: function(label, index, labels) {
+                                              // when the floored value is the same as the value we have a whole number
+                                              if (Math.floor(label) === label) {
+                                                  return label;
+                                              }
 
-                                                <?php else :?> 
-                                                
-                                                      {
-                                                        label :'<?=$V_PPT['nama_jenis_kayu']?>',
-                                                        backgroundColor     : 'rgb(255,218,185)', 
-                                                        pointRadius : false,  
-                                                        borderColor: ['rgb(60, 179, 113)'],
-                                                        data: ["<?=$V_PPT['hasil_ttl']?>"]
-                                                      }, 
-                                                  
-                                                <?php endif;?>  
-                                        <?php endforeach; ?> 
-                                      ]
-                      },
-                      // Configuration options go here
-                      options: barChartOptions,  
-                  
-                }); 
-                Chart.plugins.unregister( ChartDataLabels ); 
+                                          },
+                                      }
+                                  }],
+                              },   
+                              plugins: {
+                                datalabels: {
+                                  display: false
+                                }
+                              }
+                              
+                      }; 
+
+                      
+                      var ctx = document.getElementById('myprdChart').getContext('2d');
+                      var chart = new Chart(ctx, {
+                            // The type of chart we want to create
+                            type: 'bar',
+                            // The data for our dataset 
+                            data: { 
+                                labels: [  
+                                            <?php
+                                                if($getstatus == 1) :  
+                                                  echo '"'.$getbulan.'-'.$gettahun.'"';
+                                                elseif($getstatus == 2): 
+                                                  echo '"'.$gettahun.'"'; 
+                                                endif;  
+                                            ?> 
+                                        ],
+                                  datasets: [  
+                                              <?php  $keys = 0; foreach ($chart_PPT as $K_PPT => $V_PPT) : $keys++;?> 
+                                                      <?php if ( $keys % 2 == 0 ) : ?>  
+                                                            {
+                                                              label :'<?=$V_PPT['nama_jenis_kayu']?>',
+                                                              backgroundColor     : 'rgb(189,183,107)', 
+                                                              pointRadius : false,  
+                                                              borderColor: ['rgb(60, 179, 113)'],
+                                                              data: ["<?=$V_PPT['hasil_ttl']?>"]
+                                                            }, 
+                                                      <?php elseif ( $keys % 3 == 0 ) :?> 
+                                                      
+                                                            {
+                                                              label :'<?=$V_PPT['nama_jenis_kayu']?>',
+                                                              backgroundColor     : 'rgb(255,218,185)', 
+                                                              pointRadius : false,  
+                                                              borderColor: ['rgb(60, 179, 113)'],
+                                                              data: ["<?=$V_PPT['hasil_ttl']?>"]
+                                                            }, 
+
+                                                      <?php else :?> 
+                                                      
+                                                            {
+                                                              label :'<?=$V_PPT['nama_jenis_kayu']?>',
+                                                              backgroundColor     : 'rgb(255,218,185)', 
+                                                              pointRadius : false,  
+                                                              borderColor: ['rgb(60, 179, 113)'],
+                                                              data: ["<?=$V_PPT['hasil_ttl']?>"]
+                                                            }, 
+                                                        
+                                                      <?php endif;?>  
+                                              <?php endforeach; ?> 
+                                            ]
+                            },
+                            // Configuration options go here
+                            options: barChartOptionsPPT,  
+                      });  
                 <?php endif; ?>
 
 
+                  /* CHART 3 */
+                   
+                    var xValues = [  0, <?php foreach ($chart_TP as $k_TP => $v_TP) : ?> 
+                                          '<?=$v_TP['date_TP']?>', 
+                                      <?php endforeach; ?> 
+                                  ];
+
+                    new Chart("myprdCharwt22", {
+                                      type: "line",
+                                      data: {
+                                        labels: xValues,
+                                        datasets: [
+                                                      {
+                                                      data: [
+                                                        0, 
+                                                        <?php foreach ($chart_TP as $k_TP => $v_TP) : ?> 
+                                                            <?=$v_TP['total_harga']?>, 
+                                                        <?php endforeach; ?>
+                                                      
+                                                      ],
+                                                      borderColor: "red",
+                                                      fill: false,
+                                                      lineTension: 0,
+                                                      }
+                                                    
+                                                  ]
+                                      },
+                                      options: {
+                                                  legend: {
+                                                      display: false,
+                                                        onClick: null
+                                                    },
+                                                  tooltips: {
+                                                              callbacks: {
+                                                                  label: function(tooltipItem, data) {
+                                                                      return "Rp " + Number(tooltipItem.yLabel).toFixed(0).replace(/./g, function(c, i, a) {
+                                                                          return i > 0 && c !== "." && (a.length - i) % 3 === 0 ? "," + c : c;
+                                                                      });
+                                                                  }
+                                                              }
+                                                          },
+                                                  plugins: {
+                                                    datalabels: {
+                                                      display: false
+                                                    }
+                                                  },
+                                                  scales: {
+                                                    yAxes: [{
+                                                      ticks: {
+                                                        beginAtZero: true,
+                                                        callback: function(value, index, values) {
+                                                          if(parseInt(value) >= 1000){
+                                                            return 'Rp ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                                                          } else {
+                                                            return 'Rp ' + value;
+                                                          }
+                                                        }
+                                                      }
+                                                    }]
+                                                  },
+                                                  responsive              : true,
+                                                  maintainAspectRatio     : false,
+                                                  datasetFill             : false, 
+                                      }
+                    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    /*  */
+
+
+
+                    var xValues_LC = [  0,  <?php foreach ($chart_CCC as $v_CCC) : ?> 
+                                              '<?=$v_CCC['date_cc']?>', 
+                                            <?php endforeach; ?>  
+                                  ];
+
+                    new Chart("myprdCharwt33", {
+                                      type: "line",
+                                      data: {
+                                        labels: xValues_LC,
+                                        datasets: [
+                                                      {
+                                                            data: [
+                                                              0, 
+                                                              <?php foreach ($chart_CCC as $v_CCC) : ?> 
+                                                                  <?=$v_CCC['total_cc']?>, 
+                                                              <?php endforeach; ?> 
+                                                            
+                                                            ],
+                                                            borderColor: "blue",
+                                                            fill: false,
+                                                            lineTension: 0,
+                                                      }
+                                                    
+                                                  ]
+                                      },
+                                      options: {
+                                                  legend: {
+                                                      display: false,
+                                                        onClick: null
+                                                    },
+                                                    responsive              : true,
+                                                    maintainAspectRatio     : false,
+                                                    datasetFill             : false, 
+                                                    scales: {
+                                                            yAxes: [{
+                                                                ticks: {
+                                                                    beginAtZero: true,
+                                                                    userCallback: function(label, index, labels) {
+                                                                        // when the floored value is the same as the value we have a whole number
+                                                                        if (Math.floor(label) === label) {
+                                                                            return label;
+                                                                        }
+
+                                                                    },
+                                                                }
+                                                            }],
+                                                        },
+                                                    plugins: {
+                                                      datalabels: {
+                                                        display: false
+                                                      }
+                                                    } 
+                                      }
+                    });
+
  
+
+                   /*  */
+
+
+                    
+
  
-  /*
-  
- var xValues = [
-				0,
-				
-  
- ];
-
-new Chart("JPTCHART", {
-  type: "line",
-  data: {
-    labels: xValues,
-    datasets: [{ 
-		label: 'offline',
-      data: [0, 860 ],
-      borderColor: "red",
-      fill: false
-    }, { 
-		label: 'online',
-      data: [0, 1600 ],
-      borderColor: "green",
-      fill: false
-    }, ]
-  },
-  options: {
-    legend: {display: true}
-  }
-});
-  
-  
-  */
-  
-
-/* 
-
-  var donutData = [
-      {
-        label: 'Series2',
-        data : 30,
-        color: '#3c8dbc'
-      },
-      {
-        label: 'Series3',
-        data : 20,
-        color: '#0073b7'
-      },
-      {
-        label: 'Series4',
-        data : 50,
-        color: '#00c0ef'
-      }
-    ];
-    $.plot('#donutChart', donutData, {
-      series: {
-        pie: {
-          show       : true,
-          radius     : 1,
-          innerRadius: 0.5,
-          label      : {
-            show     : true,
-            radius   : 2 / 3,
-            formatter: labelFormatter,
-            threshold: 0.1
-          }
-
-        }
-      },
-      legend: {
-        show: false
-      }
-    }) */
-
-
-
-
-
-
-
-
-
-
-
-   
-                        //-------------
-                        //- DONUT CHART -
-                        //-------------
-                        // Get context with jQuery - using jQuery's .get() method.
-
-                       
-
-
-					  	          // var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
                         var data = [{
                                       data: [
                                         <?php foreach ($chart_JPT as $k_JPT => $v_JPT) : ?> 
@@ -442,81 +501,7 @@ new Chart("JPTCHART", {
                                       plugins: [ChartDataLabels],
                             });
 
-
-
-
-                       /*  var ctx  = document.getElementById("donutChart").getContext('2d');
-                        var myChart = new Chart(ctx, {
-                                    type: 'pie',
-                                    data: {
-                                      labels: labels,
-                                      datasets: data
-                                    },
-                                    options: options,
-                                    plugins: [ChartDataLabels],
-                                  }); */
-
-                      /*   var donutData        = {
-                                                  labels: [ 
-                                                          
-                                                    ],
-                                                  datasets: [
-                                                    {
-                                                        data: [ 
-                                                              
-                                                          ],
-                                                        backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
-                                                    }
-                                                  ]
-                                                } */
-												
-                      /*   var donutOptions     = {
-                            maintainAspectRatio : false,
-                            responsive : true,    
-
-                        }   */
  
-
-                        //Create pie or douhnut chart
-                        // You can switch between pie and douhnut using the method below.
-                      /*   new Chart(donutChartCanvas, {
-                          type: 'pie',
-                          data: donutData,
-                          options: donutOptions
-                        })  */ 
-
-
-
-                  //-------------
-                  //- DONUT CHART - 2
-                  //-------------
-                  // Get context with jQuery - using jQuery's .get() method.
-             /*      var donutChartCanvas = $('#donutChart2').get(0).getContext('2d')
-                  var donutData        = {
-                                            labels: [
-                                                 
-                                              ],
-                                            datasets: [
-                                              {
-                                                  data: [
-                                                   
-                                                  ],
-                                                  backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
-                                              }
-                                            ]
-                                          }
-                  var donutOptions     = {
-                      maintainAspectRatio : false,
-                      responsive : true,
-                  } */
-                  //Create pie or douhnut chart
-                  // You can switch between pie and douhnut using the method below.
-                 /*  new Chart(donutChartCanvas, {
-                      type: 'doughnut',
-                      data: donutData,
-                      options: donutOptions
-                  }) */
-
                   // **********************************************************************************************8
 
                         var data2 = [{
@@ -564,137 +549,8 @@ new Chart("JPTCHART", {
                                       },
                                       options: options2,
                                       plugins: [ChartDataLabels],
-                            });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                  /* CHART 3 */
-                  var barChartOptions2 = {
-                  responsive              : true,
-                  maintainAspectRatio     : false,
-                  datasetFill             : false,
-                  scales: {
-                    yAxes: [{
-                      ticks: {
-                        beginAtZero: true,
-                        callback: function(value, index, values) {
-                          if(parseInt(value) >= 1000){
-                            return 'Rp ' + value.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-                          } else {
-                            return 'Rp ' + value;
-                          }
-                        }
-                      }
-                    }]
-                  },
-                    tooltips: {
-                                callbacks: {
-                                    label: function(tooltipItem, data) {
-                                        return "Rp " + Number(tooltipItem.yLabel).toFixed(0).replace(/./g, function(c, i, a) {
-                                            return i > 0 && c !== "." && (a.length - i) % 3 === 0 ? "," + c : c;
-                                        });
-                                    }
-                                }
-                            },
-                    legend: {
-                        display: false,
-                          onClick: null
-                      }
+                        });
  
-
-                  };
- 
-                  var ctx2 = document.getElementById('myprdCharwt22').getContext('2d');
-                  var chart2 = new Chart(ctx2, { 
-                          type: 'bar', 
-                          data: { 
-                              labels: [    
-                                    <?php foreach ($chart_TP as $k_TP => $v_TP) : ?> 
-                                        '<?=$v_TP['date_TP']?>', 
-                                    <?php endforeach; ?> 
-                              ],
-                              datasets: [{
-                                  label: 'Penjualan Perbulan',
-                                  data: [ 
-                                          <?php foreach ($chart_TP as $k_TP => $v_TP) : ?> 
-                                              '<?=$v_TP['total_harga']?>', 
-                                          <?php endforeach; ?> 
-                                        ],
-                                  backgroundColor: [
-                                      'rgba(75, 192, 192, 0.2)','rgba(255, 99, 132, 0.2)','rgba(255, 99, 132, 0.2)',
-                                  ],
-                                  borderColor: [
-                                      'rgba(75, 192, 192, 1)',
-                                  ],
-                                  borderWidth: 1
-                              }]
-                          },
-                          // Configuration options go here
-                          options: barChartOptions2, 
-                  });
-
-                    /*  */
-
-                var barChartOptions3 = {
-                    responsive              : true,
-                    maintainAspectRatio     : false,
-                    datasetFill             : false, 
-                    scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true,
-                                    userCallback: function(label, index, labels) {
-                                        // when the floored value is the same as the value we have a whole number
-                                        if (Math.floor(label) === label) {
-                                            return label;
-                                        }
-
-                                    },
-                                }
-                            }],
-                        },
-                }; 
-
-                  var ctx3 = document.getElementById('myprdCharwt33').getContext('2d');
-                  var chart3 = new Chart(ctx3, { 
-                          type: 'bar', 
-                          data: { 
-                              labels: [ 
-                                          <?php foreach ($chart_CCC as $v_CCC) : ?> 
-                                              '<?=$v_CCC['date_cc']?>', 
-                                          <?php endforeach; ?>  
-                              ],
-                              datasets: [{
-                                  label: 'Total Costumers',
-                                  data: [ 
-                                          <?php foreach ($chart_CCC as $v_CCC) : ?> 
-                                              '<?=$v_CCC['total_cc']?>', 
-                                          <?php endforeach; ?> 
-                                  ],
-                                  backgroundColor: [
-                                      'rgba(243, 39, 144, 0.38)',
-                                  ],
-                                  borderColor: [
-                                      'rgba(243, 39, 144, 0.8)',
-                                  ],
-                                  borderWidth: 1
-                              }]
-                          },
-                          // Configuration options go here
-                          options: barChartOptions3, 
-                  });
-
 
 
           });

@@ -93,7 +93,7 @@ class TransaksiModel extends Model{
         }
 
         $builder->like('tgl_transaksi', $thn.'-'.$bln);    
-        $builder->orderBy('tgl_transaksi', 'DESC');
+        $builder->orderBy('tgl_transaksi', 'ASC');
 
         // $builder->groupBy('id_jenis_kayu');  
         $builder->groupBy('tgl_transaksiz');  
